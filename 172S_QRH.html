@@ -15,44 +15,45 @@
             display: flex;
             height: 100vh;
             overflow: hidden;
+            font-size: 16px; /* Base font size for rem units */
         }
 
         .container {
             display: flex;
-            flex-direction: row; /* Always row, no change on mobile */
+            flex-direction: row;
             width: 100%;
             height: 100%;
         }
 
         .content-area {
-            flex: 1; /* Takes available space */
-            padding: 20px;
+            flex: 1;
+            padding: 2vw; /* Scales with viewport width */
             background: #fff;
-            border-radius: 10px;
-            margin: 20px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 1vw;
+            margin: 2vw;
+            box-shadow: 0 0.4vw 0.8vw rgba(0, 0, 0, 0.1);
             overflow-y: auto;
             transition: all 0.3s ease;
         }
 
         .content-area h1 {
             color: #073763;
-            font-size: 28px;
-            margin-bottom: 20px;
-            border-bottom: 2px solid #073763;
-            padding-bottom: 10px;
+            font-size: clamp(1.5rem, 4vw, 2.5rem); /* Dynamic scaling with min/max */
+            margin-bottom: 2vw;
+            border-bottom: 0.2vw solid #073763;
+            padding-bottom: 1vw;
         }
 
         .procedure-btn {
             width: 100%;
             text-align: left;
             color: #000;
-            font-size: 20px;
+            font-size: clamp(1rem, 2.5vw, 1.5rem); /* Scales dynamically */
             font-weight: bold;
-            padding: 12px;
-            margin-top: 20px;
+            padding: 1vw;
+            margin-top: 2vw;
             border: none;
-            border-radius: 5px;
+            border-radius: 0.5vw;
             cursor: pointer;
             transition: opacity 0.3s ease;
         }
@@ -75,11 +76,11 @@
 
         .procedure-content {
             display: none;
-            margin-top: 10px;
+            margin-top: 1vw;
             background: #f9f9f9;
-            padding: 15px;
-            border-radius: 5px;
-            box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05);
+            padding: 1.5vw;
+            border-radius: 0.5vw;
+            box-shadow: inset 0 0.2vw 0.4vw rgba(0, 0, 0, 0.05);
         }
 
         .procedure-content ul {
@@ -91,9 +92,9 @@
         .procedure-content ul li {
             display: flex;
             justify-content: space-between;
-            padding: 8px 0;
-            font-size: 16px;
-            border-bottom: 1px solid #ddd;
+            padding: 0.8vw 0;
+            font-size: clamp(0.9rem, 2vw, 1.2rem); /* Scales dynamically */
+            border-bottom: 0.1vw solid #ddd;
         }
 
         .procedure-content ul li:last-child {
@@ -102,7 +103,7 @@
 
         .procedure-content ul li span:first-child {
             flex-grow: 1;
-            margin-right: 10px;
+            margin-right: 1vw;
             overflow: hidden;
             white-space: nowrap;
             text-overflow: ellipsis;
@@ -115,26 +116,26 @@
         }
 
         .sidebar {
-            width: 60px; /* Fixed width */
+            width: clamp(40px, 6vw, 60px); /* Scales but has min/max */
             background: linear-gradient(135deg, #073763, #0d47a1);
-            padding: 40px 0;
+            padding: clamp(20px, 4vw, 40px) 0;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: flex-start;
-            box-shadow: -4px 0 8px rgba(0, 0, 0, 0.2);
-            flex-shrink: 0; /* Prevents sidebar from shrinking */
+            box-shadow: -0.4vw 0 0.8vw rgba(0, 0, 0, 0.2);
+            flex-shrink: 0;
         }
 
         .sidebar button {
-            min-width: 60px;
-            height: 30px;
-            padding: 0 10px;
-            margin: 50px 0;
-            font-size: 14px;
+            min-width: clamp(40px, 6vw, 60px);
+            height: clamp(20px, 3vw, 30px);
+            padding: 0 1vw;
+            margin: clamp(20px, 5vw, 50px) 0;
+            font-size: clamp(0.8rem, 1.5vw, 1rem); /* Scales dynamically */
             color: #000;
             border: none;
-            border-radius: 8px;
+            border-radius: 0.8vw;
             cursor: pointer;
             transform: rotate(90deg);
             transform-origin: center;
@@ -159,7 +160,7 @@
 
         .sidebar button:hover {
             opacity: 0.9;
-            transform: rotate(90deg) translateY(-2px);
+            transform: rotate(90deg) translateY(-0.2vw);
         }
 
         .sidebar button.active {
@@ -168,14 +169,14 @@
 
         @media (max-width: 768px) {
             .content-area {
-                margin: 10px; /* Slightly smaller margin for mobile */
-                padding: 15px;
+                margin: 1vw;
+                padding: 1.5vw;
             }
             .sidebar {
-                padding: 20px 0; /* Reduced padding for smaller screens */
+                padding: clamp(10px, 2vw, 20px) 0;
             }
             .sidebar button {
-                margin: 30px 0; /* Reduced margin for mobile */
+                margin: clamp(15px, 3vw, 30px) 0;
             }
         }
     </style>
