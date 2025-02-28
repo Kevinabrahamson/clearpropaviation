@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aviation Risk Management Assessment</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto&display=swap">
+    <style>
+        :root {
+            --primary-color: #073763;
+            --border-color: #000;
+            --option-padding: 10px;
+            --low-risk-color: #28a745;
+            --medium-risk-color: #ffc107;
+            --high-risk-color: #dc3545;
+            --default-text-color: #073763;
+            --emergency-heading-color: #ff0000;
+            --emergency-banner-color: #ffcccc;
+            --scale-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            color: var(--primary-color);
+            margin: 0;
+            padding: 20px;
+        }
+
+        h2, h3.category-heading {
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+
+        h3.category-heading {
+            margin-top: 30px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        td {
+            border: 1px solid var(--border-color);
+            padding: var(--option-padding);
+        }
+
+        .options-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+        }
+
+        .option {
+            padding: var(--option-padding);
+            border: 2px solid var(--border-color);
+            cursor: pointer;
+            transition: all 0.2s ease;
+            text-align: center;
+            min-width: 100px;
+        }
+
+        .option:hover {
+            background: #f0f0f0;
+        }
+
+        .option.selected {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        .scale-container {
+            position: relative;
+            height: 30px;
+            margin-top: 20px;
+            display: flex;
+            width: 100%;
+            border-radius: 0;
+            box-shadow: var(--scale-shadow);
+            z-index: 0;
+        }
+
+        .scale-section {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-size: 14px;
+            font-weight: bold;
+            text-align: center;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+            z-index: 2;
+        }
+
+        .low-risk { background: var(--low-risk-color); width: 37.5%; }
+        .medium-risk { background: var(--medium-risk-color); width: 35%; }
+        .high-risk { background: var(--high-risk-color); width: 27.5%; }
+
+        .scale-marker-top, .scale-marker-bottom {
+            position: absolute;
+            width: 0;
+            height: 0;
+            border: 6px solid transparent;
+            transition: left 0.3s ease;
+            z-index: 1;
+        }
+
+        .scale-marker-top {
+            top: -6px;
+            border-top-color: var(--border-color);
+            transform: translateX(-50%);
+        }
+
+        .scale-marker-bottom {
+            bottom: -6px;
+            border-bottom-color: var(--border-color);
+            transform: translateX(-50%);
+        }
+
+        .emergency-container {
+            margin: 20px 0;
+            padding: 15px;
+            border: 1px solid var(--border-color);
+            background: #f9f9f9;
+        }
+
+        .emergency-container h3 {
+            margin: 0 0 15px 0;
+            padding: 5px 10px;
+            color: var(--emergency-heading-color);
+            background: var(--emergency-banner-color);
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .emergency-container #emergencyTitle {
+            color: var(--default-text-color);
+            margin-left: 10px;
+            font-size: 1.17em;
+            font-weight: bold;
+        }
+
+        .emergency-container button {
+            display: block;
+            margin: 10px 0 0 10px;
+            padding: 5px 10px;
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            transition: background 0.2s ease;
+        }
+
+        .emergency-container button:hover {
+            background: #05294d;
+        }
+
+        #emergencyChecklist {
+            margin-top: 10px;
+            color: var(--default-text-color);
+        }
+
+        #emergencyChecklist ol {
+            margin: 0;
+            padding-left: 25px;
+            display: none;
+        }
+
+        #totalScore {
+            padding: 2px 6px;
+            border-radius: 3px;
+            transition: background-color 0.3s ease;
+            color: var(--default-text-color);
+        }
+
+        #riskAdvice {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid var(--border-color);
+            background: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
+    <h2>Aviation Risk Management Assessment</h2>
+    <div class="emergency-container">
+        <h3>Emergency of the Day</h3>
+        <div>
+            <strong id="emergencyTitle"></strong>
+        </div>
+        <button>Show Checklist</button>
+        <div id="emergencyChecklist"></div>
+    </div>
+
+    <h3 class="category-heading">Pilot</h3>
+    <table id="pilotFactors"></table>
+
+    <h3 class="category-heading">Aircraft</h3>
+    <table id="aircraftFactors"></table>
+
+    <h3 class="category-heading">Environment</h3>
+    <table id="environmentFactors"></table>
+
+    <h3 class="category-heading">External Pressures</h3>
+    <table id="externalPressuresFactors"></table>
+
+    <h3>Total Weighted Score: <span id="totalScore">0</span></h3>
+    <div class="scale-container">
+        <div class="scale-section low-risk">Low Risk (<2.5)</div>
+        <div class="scale-section medium-risk">Medium Risk (2.5-3.9)</div>
+        <div class="scale-section high-risk">High Risk (≥4)</div>
+        <div id="scaleMarkerTop" class="scale-marker-top"></div>
+        <div id="scaleMarkerBottom" class="scale-marker-bottom"></div>
+    </div>
+    <div id="riskAdvice"></div>
+
+    <script>
+        const riskFactors = {
+            pilot: [
+                { name: 'Certificate Level', options: [['Student', 0], ['Private', 0], ['Commercial', 0]] },
+                { name: 'Instrument Rating', options: [['Yes', 0], ['No', 0]] },
+                { name: 'Fatigue', options: [['Well-Rested', 1], ['Slightly Tired', 2], ['Moderately Fatigued', 3], ['Very Tired', 4], ['Exhausted', 5]], weight: 5 },
+                { name: 'Experience Level', options: [['Very Experienced', 1], ['Moderately Experienced', 2], ['Some Experience', 3], ['Limited Experience', 4], ['First Time', 5]], weight: 4 },
+                { name: 'Health Status', options: [['Excellent', 1], ['Good', 2], ['Fair', 3], ['Minor Issues', 4], ['Significant Issues', 5]], weight: 3 },
+                { name: 'Training Recency', options: [['Within 1 Month', 1], ['1-3 Months', 2], ['3-6 Months', 3], ['6-12 Months', 4], ['Over 1 Year', 5]], weight: 2 },
+                { name: 'Stress Level', options: [['Calm', 1], ['Slightly Stressed', 2], ['Moderately Stressed', 3], ['Highly Stressed', 4], ['Overwhelmed', 5]], weight: 3 },
+                { name: 'Decision-Making', options: [['Excellent', 1], ['Good', 2], ['Fair', 3], ['Poor', 4], ['Very Poor', 5]], weight: 4 }
+            ],
+            aircraft: [
+                { name: 'Squawks', options: [['No Squawks', 1], ['Minor Squawk (e.g., cosmetic)', 2], ['Moderate Squawk (e.g., non-critical system)', 3], ['Major Squawk (e.g., affects performance)', 4], ['Critical Squawk (e.g., engine, controls)', 5]], weight: 5 },
+                { name: 'Fuel Levels', options: [['Full Tanks', 1], ['More Than Enough', 2], ['Adequate', 3], ['Minimum Required', 4], ['Risk of Shortage', 5]], weight: 5 },
+                { name: 'Equipment Functionality', options: [['All Working', 1], ['Minor Issues', 2], ['Some Issues', 3], ['Major Issues', 4], ['Critical Failure', 5]], weight: 3 },
+                { name: 'Age of Aircraft', options: [['Under 5 Years', 1], ['5-10 Years', 2], ['10-15 Years', 3], ['15-20 Years', 4], ['Over 20 Years', 5]], weight: 2 },
+                { name: 'Load Balance', options: [['Perfectly Balanced', 1], ['Slightly Off', 2], ['Moderately Unbalanced', 3], ['Significantly Unbalanced', 4], ['Severely Unbalanced', 5]], weight: 3 }
+            ],
+            environment: [
+                { name: 'Weather Conditions', options: [['VFR (>5 SM, >3000 ft)', 1], ['MVFR (3-5 SM, 1000-3000 ft)', 2], ['IFR (1-3 SM, 500-1000 ft)', 3], ['LIFR (<1 SM, <500 ft)', 4], ['Extreme (e.g., storms, icing)', 5]], weight: 5 },
+                { name: 'Visibility (Statute Miles)', options: [['>10 SM', 1], ['5-10 SM', 2], ['3-5 SM', 3], ['1-3 SM', 4], ['<1 SM', 5]], weight: 4 },
+                { name: 'Terrain', options: [['Flat/Open', 1], ['Gentle Hills', 2], ['Rolling Terrain', 3], ['Hilly', 4], ['Mountainous', 5]], weight: 3 },
+                { name: 'Turbulence Potential', options: [['None Expected', 1], ['Light', 2], ['Moderate', 3], ['Significant', 4], ['Severe', 5]], weight: 3 },
+                { name: 'Air Traffic Density', options: [['Very Low', 1], ['Low', 2], ['Moderate', 3], ['High', 4], ['Very High', 5]], weight: 2 }
+            ],
+            externalPressures: [
+                { name: 'Time Constraints', options: [['None', 1], ['Slight Pressure', 2], ['Moderate Pressure', 3], ['Tight Schedule', 4], ['Extreme Pressure', 5]], weight: 2 },
+                { name: 'Passenger Expectations', options: [['None', 1], ['Low', 2], ['Moderate', 3], ['High', 4], ['Very High', 5]], weight: 1 },
+                { name: 'Operational Demands', options: [['None', 1], ['Minor', 2], ['Moderate', 3], ['Significant', 4], ['Heavy', 5]], weight: 2 },
+                { name: 'Regulatory Compliance', options: [['Fully Compliant', 1], ['Minor Issues', 2], ['Moderate Issues', 3], ['Significant Issues', 4], ['Major Violations', 5]], weight: 2 },
+                { name: 'Crew Coordination', options: [['Excellent', 1], ['Good', 2], ['Fair', 3], ['Poor', 4], ['Very Poor', 5]], weight: 3 }
+            ]
+        };
+
+        const emergencies = [
+            { title: 'Engine Failure After Takeoff', checklist: ['Airspeed - 70 KIAS (flaps UP), 65 KIAS (flaps DOWN)', 'Mixture - IDLE CUT-OFF', 'Fuel Shutoff Valve - OFF', 'Ignition Switch - OFF', 'Wing Flaps - AS REQUIRED', 'Master Switch - OFF'] },
+            { title: 'Engine Fire In Flight', checklist: ['Mixture - IDLE CUT-OFF', 'Fuel Shutoff Valve - OFF', 'Master Switch - OFF', 'Cabin Heat and Air - OFF', 'Airspeed - 100 KIAS', 'Forced Landing - EXECUTE'] },
+            { title: 'Electrical Fire In Flight', checklist: ['Master Switch - OFF', 'Avionics Switch - OFF', 'All Other Switches - OFF', 'Vents/Cabin Air/Heat - CLOSED', 'Fire Extinguisher - ACTIVATE', 'Land - AS SOON AS POSSIBLE'] },
+            { title: 'Loss of Oil Pressure', checklist: ['Oil Pressure - CHECK', 'If low oil pressure confirmed:', 'Engine - REDUCE POWER', 'Land - AS SOON AS PRACTICAL', 'Be prepared for engine failure'] }
+        ];
+
+        const TOTAL_FACTORS = 23;
+        const tables = {
+            pilot: document.getElementById('pilotFactors'),
+            aircraft: document.getElementById('aircraftFactors'),
+            environment: document.getElementById('environmentFactors'),
+            externalPressures: document.getElementById('externalPressuresFactors')
+        };
+        const totalScoreElement = document.getElementById('totalScore');
+        const scaleMarkerTop = document.getElementById('scaleMarkerTop');
+        const scaleMarkerBottom = document.getElementById('scaleMarkerBottom');
+        const emergencyTitle = document.getElementById('emergencyTitle');
+        const emergencyChecklist = document.getElementById('emergencyChecklist');
+        const riskAdvice = document.getElementById('riskAdvice');
+
+        function createRiskFactorRow(factor) {
+            const tr = document.createElement('tr');
+            tr.innerHTML = `
+                <td>${factor.name}${factor.weight ? ` (Weight: ${factor.weight})` : ''}</td>
+                <td><div class="options-container">${factor.options.map(([text, value]) => `<div class="option" data-value="${value}">${text}</div>`).join('')}</div></td>
+            `;
+            return tr;
+        }
+
+        function selectOption(element) {
+            element.parentElement.querySelectorAll('.option').forEach(opt => opt.classList.remove('selected'));
+            element.classList.add('selected');
+            calculateRisk();
+        }
+
+        function getTopFactors(values, weights) {
+            const factors = Object.keys(weights).map(key => {
+                const value = values[key] || 0;
+                const factor = [].concat(...Object.values(riskFactors)).find(f => f.name === key);
+                return { name: key, value: value * weights[key], text: factor.options.find(opt => opt[1] === value)?.[0] || '' };
+            });
+            factors.sort((a, b) => b.value - a.value);
+            const threshold = factors.length >= 3 ? factors[2].value : factors[0]?.value || 0;
+            return factors.filter(f => f.value >= threshold);
+        }
+
+        function getUnselectedFactors() {
+            const allRows = document.querySelectorAll('tbody tr');
+            const selectedNames = new Set(Array.from(document.querySelectorAll('.option.selected'))
+                .map(opt => opt.parentElement.parentElement.previousElementSibling.textContent.split(' (')[0]));
+            return Array.from(allRows).map(row => row.cells[0].textContent.split(' (')[0]).filter(name => !selectedNames.has(name));
+        }
+
+        function calculateRisk() {
+            const selections = Array.from(document.querySelectorAll('.option.selected'));
+            const values = Object.fromEntries(selections.map(opt => [opt.parentElement.parentElement.previousElementSibling.textContent.split(' (')[0], parseInt(opt.dataset.value)]));
+            const certLevel = values['Certificate Level'] || 'Private';
+            const instrumentRating = values['Instrument Rating'] === 0 ? (certLevel === 'Private' ? 'yes' : 'no') : values['Instrument Rating'] === 1 ? 'yes' : 'no';
+
+            const weights = {
+                'Fatigue': 5, 'Experience Level': 4, 'Health Status': 3, 'Training Recency': 2, 'Stress Level': 3, 'Decision-Making': 4,
+                'Squawks': 5, 'Fuel Levels': 5, 'Equipment Functionality': 3, 'Age of Aircraft': 2, 'Load Balance': 3,
+                'Weather Conditions': 5, 'Visibility (Statute Miles)': 4, 'Terrain': 3, 'Turbulence Potential': 3, 'Air Traffic Density': 2,
+                'Time Constraints': 2, 'Passenger Expectations': 1, 'Operational Demands': 2, 'Regulatory Compliance': 2, 'Crew Coordination': 3
+            };
+
+            if (certLevel === 'Student') {
+                weights['Experience Level'] = 5;
+                weights['Weather Conditions'] = 6;
+                weights['Visibility (Statute Miles)'] = 5;
+            }
+            if (instrumentRating === 'no') {
+                weights['Weather Conditions'] += 1;
+                weights['Visibility (Statute Miles)'] += 1;
+            }
+            if (certLevel === 'Commercial' && instrumentRating === 'yes') {
+                weights['Weather Conditions'] = 4;
+                weights['Visibility (Statute Miles)'] = 3;
+            }
+
+            const totalScore = Object.entries(weights).reduce((sum, [key, weight]) => sum + (values[key] || 0) * weight, 0);
+            const sumOfWeights = Object.values(weights).reduce((a, b) => a + b, 0);
+            let weightedAverage = totalScore / sumOfWeights;
+
+            let riskLevel = weightedAverage < 2.5 ? 'Low Risk' : weightedAverage < 4 ? 'Medium Risk' : 'High Risk';
+            let overrideReason = '';
+
+            const standaloneHighRisk = [
+                { key: 'Fatigue', value: 5, reason: 'Pilot exhaustion is an immediate safety hazard.' },
+                { key: 'Squawks', value: 5, reason: 'Critical squawks (e.g., engine or controls) make the flight unsafe.' },
+                { key: 'Fuel Levels', value: 5, reason: 'Risk of fuel shortage is unacceptable.' },
+                { key: 'Weather Conditions', value: 5, reason: 'Extreme weather conditions (e.g., storms, icing) render the flight extremely dangerous.' }
+            ];
+            for (const { key, value, reason } of standaloneHighRisk) {
+                if (values[key] === value) {
+                    riskLevel = 'High Risk';
+                    overrideReason = reason;
+                    break;
+                }
+            }
+
+            if (!overrideReason) {
+                const combos = [
+                    { condition: certLevel === 'Student' && values['Weather Conditions'] === 2, level: 'Medium Risk', reason: 'Student Pilot in MVFR weather increases risk.' },
+                    { condition: certLevel === 'Private' && instrumentRating === 'no' && values['Weather Conditions'] === 2, level: 'Medium Risk', reason: 'Non-instrument-rated Private Pilot in MVFR weather increases risk.' },
+                    { condition: certLevel === 'Private' && instrumentRating === 'yes' && values['Weather Conditions'] === 3, level: 'Medium Risk', reason: 'Instrument-rated Private Pilot in IFR weather increases risk.' },
+                    { condition: values['Fatigue'] >= 3 && values['Weather Conditions'] >= 2, level: 'Medium Risk', reason: 'Moderate fatigue in MVFR or worse weather increases risk.' },
+                    { condition: values['Experience Level'] >= 3 && values['Weather Conditions'] >= 2, level: 'Medium Risk', reason: 'Moderate inexperience in MVFR or worse weather increases risk.' },
+                    { condition: values['Decision-Making'] >= 3 && values['Weather Conditions'] >= 2, level: 'Medium Risk', reason: 'Fair or worse decision-making in MVFR or worse weather increases risk.' },
+                    { condition: certLevel === 'Student' && values['Visibility (Statute Miles)'] >= 3, level: 'Medium Risk', reason: 'Student Pilot with visibility at 3-5 SM or less increases risk.' },
+                    { condition: certLevel === 'Private' && instrumentRating === 'no' && values['Visibility (Statute Miles)'] >= 3, level: 'Medium Risk', reason: 'Non-instrument-rated Private Pilot with visibility at 3-5 SM or less increases risk.' },
+                    { condition: values['Squawks'] >= 3 && values['Fuel Levels'] >= 3, level: 'Medium Risk', reason: 'Moderate squawks with adequate fuel increases risk.' },
+                    { condition: values['Fatigue'] >= 3 && values['Squawks'] >= 3, level: 'Medium Risk', reason: 'Moderate fatigue with moderate squawks increases risk.' },
+                    { condition: values['Experience Level'] >= 3 && values['Squawks'] >= 3, level: 'Medium Risk', reason: 'Moderate inexperience with moderate squawks increases risk.' },
+                    { condition: values['Decision-Making'] >= 3 && values['Fuel Levels'] >= 3, level: 'Medium Risk', reason: 'Fair or worse decision-making with adequate fuel increases risk.' },
+                    { condition: values['Stress Level'] >= 3 && values['Time Constraints'] >= 3, level: 'Medium Risk', reason: 'Moderate stress with moderate time constraints increases risk.' },
+
+                    { condition: certLevel === 'Student' && values['Weather Conditions'] >= 3, level: 'High Risk', reason: 'Student Pilot in IFR or worse weather is highly unsafe and exceeds training limitations.' },
+                    { condition: certLevel === 'Private' && instrumentRating === 'no' && values['Weather Conditions'] >= 3, level: 'High Risk', reason: 'Non-instrument-rated Private Pilot in IFR or worse weather is illegal (14 CFR 61.3(e)) and highly unsafe.' },
+                    { condition: certLevel === 'Student' && values['Visibility (Statute Miles)'] >= 4, level: 'High Risk', reason: 'Student Pilot with visibility below 3 SM is highly unsafe and exceeds training limitations.' },
+                    { condition: certLevel === 'Private' && instrumentRating === 'no' && values['Visibility (Statute Miles)'] >= 4, level: 'High Risk', reason: 'Non-instrument-rated Private Pilot with visibility below 3 SM is illegal in IFR conditions and highly unsafe.' },
+                    { condition: values['Fatigue'] >= 4 && values['Weather Conditions'] >= 3, level: 'High Risk', reason: 'Severe fatigue in IFR or worse weather significantly increases risk.' },
+                    { condition: values['Experience Level'] >= 4 && values['Weather Conditions'] >= 3, level: 'High Risk', reason: 'Limited experience in IFR or worse weather is highly risky.' },
+                    { condition: values['Decision-Making'] >= 4 && values['Weather Conditions'] >= 3, level: 'High Risk', reason: 'Poor decision-making in IFR or worse weather is highly risky.' },
+                    { condition: values['Squawks'] >= 4 && values['Fuel Levels'] >= 4, level: 'High Risk', reason: 'Major squawks with low fuel levels is a severe risk.' },
+                    { condition: values['Fuel Levels'] >= 4 && values['Weather Conditions'] >= 3, level: 'High Risk', reason: 'Low fuel in IFR or worse weather reduces safety margins.' },
+                    { condition: values['Experience Level'] >= 4 && values['Visibility (Statute Miles)'] >= 4, level: 'High Risk', reason: 'Inexperience with visibility below 3 SM is highly dangerous.' },
+                    { condition: values['Fatigue'] >= 4 && values['Squawks'] >= 4, level: 'High Risk', reason: 'Severe fatigue with major squawks compounds risk.' },
+                    { condition: values['Stress Level'] >= 4 && values['Time Constraints'] >= 4, level: 'High Risk', reason: 'High stress under tight time constraints impairs decision-making.' },
+                    { condition: values['Decision-Making'] >= 4 && values['Fuel Levels'] >= 4, level: 'High Risk', reason: 'Poor decision-making with low fuel levels is a severe risk.' },
+                    { condition: certLevel === 'Commercial' && values['Fatigue'] >= 4 && values['Squawks'] >= 4, level: 'High Risk', reason: 'Severe fatigue with major squawks is highly risky, even for a Commercial Pilot.' },
+                    { condition: values['Health Status'] >= 4 && values['Weather Conditions'] >= 3, level: 'High Risk', reason: 'Health issues in IFR or worse weather increase vulnerability.' },
+                    { condition: values['Fatigue'] >= 3 && values['Fuel Levels'] >= 4, level: 'High Risk', reason: 'Moderate fatigue with low fuel levels is a severe risk.' },
+                    { condition: values['Squawks'] >= 3 && values['Weather Conditions'] >= 3, level: 'High Risk', reason: 'Moderate squawks in IFR or worse weather is highly risky.' },
+                    { condition: values['Experience Level'] >= 3 && values['Fuel Levels'] >= 4, level: 'High Risk', reason: 'Moderate inexperience with low fuel levels is highly risky.' },
+                    { condition: values['Training Recency'] >= 4 && values['Weather Conditions'] >= 3, level: 'High Risk', reason: 'Outdated training in IFR or worse weather is highly risky.' }
+                ];
+
+                for (const { condition, level, reason } of combos) {
+                    if (condition) {
+                        riskLevel = level === 'Medium Risk' && riskLevel === 'Low Risk' ? 'Medium Risk' : level;
+                        overrideReason = reason;
+                        break;
+                    }
+                }
+            }
+
+            const scalePositions = { 'Low Risk': 18.75, 'Medium Risk': 55, 'High Risk': 86.25 };
+            const scalePosition = scalePositions[riskLevel];
+            scaleMarkerTop.style.left = `${scalePosition}%`;
+            scaleMarkerBottom.style.left = `${scalePosition}%`;
+
+            totalScoreElement.style.backgroundColor = {
+                'Low Risk': 'var(--low-risk-color)',
+                'Medium Risk': 'var(--medium-risk-color)',
+                'High Risk': 'var(--high-risk-color)'
+            }[riskLevel];
+
+            const topFactors = getTopFactors(values, weights);
+            const topFactorsList = topFactors.length > 0 
+                ? `<ul>${topFactors.map(f => `<li>${f.name}: ${f.text} (${f.value})</li>`).join('')}</ul>`
+                : '<p>No factors selected yet.</p>';
+
+            const selectedCount = selections.length;
+            if (selectedCount === TOTAL_FACTORS) {
+                riskAdvice.innerHTML = {
+                    'Low Risk': `
+                        <strong>Cleared for takeoff!</strong> Your score suggests minimum risk. Maintain standard safety protocols.
+                        <h4>Top Factors Affecting Your Score:</h4>
+                        ${topFactorsList}
+                    `,
+                    'Medium Risk': `
+                        <strong>Proceed with caution!</strong> Your score suggests manageable but increased risk. ${overrideReason || 'Review and mitigate key risk factors (e.g., fatigue, weather, fuel, squawks) before proceeding.'}
+                        <h4>Top Factors Affecting Your Score:</h4>
+                        ${topFactorsList}
+                    `,
+                    'High Risk': `
+                        <strong>Reject!</strong> Consider postponing or canceling the flight. ${overrideReason || 'Address critical factors like fatigue, weather, squawks, or fuel immediately.'}
+                        <h4>Top Factors Affecting Your Score:</h4>
+                        ${topFactorsList}
+                    `
+                }[riskLevel];
+            } else {
+                totalScoreElement.style.backgroundColor = '';
+                const unselectedFactors = getUnselectedFactors();
+                const unselectedList = unselectedFactors.length > 0 
+                    ? `<ul>${unselectedFactors.map(f => `<li>${f}</li>`).join('')}</ul>`
+                    : '';
+                riskAdvice.innerHTML = `
+                    <p>Please select an option for each risk factor to receive advice.</p>
+                    ${unselectedFactors.length > 0 ? '<p>Missing selections:</p>' + unselectedList : ''}
+                `;
+            }
+        }
+
+        function displayRandomEmergency() {
+            const randomEmergency = emergencies[Math.floor(Math.random() * emergencies.length)];
+            emergencyTitle.textContent = randomEmergency.title;
+            emergencyChecklist.innerHTML = `<ol>${randomEmergency.checklist.map(item => `<li>${item}</li>`).join('')}</ol>`;
+        }
+
+        function toggleChecklist(event) {
+            const checklist = emergencyChecklist.querySelector('ol');
+            checklist.style.display = checklist.style.display === 'block' ? 'none' : 'block';
+            event.target.textContent = checklist.style.display === 'block' ? 'Hide Checklist' : 'Show Checklist';
+        }
+
+        // Initialize tables and add event listeners
+        Object.entries(riskFactors).forEach(([category, factors]) => {
+            factors.forEach(factor => tables[category].appendChild(createRiskFactorRow(factor)));
+        });
+        document.querySelectorAll('.option').forEach(option => option.addEventListener('click', () => selectOption(option)));
+        document.querySelector('.emergency-container button').addEventListener('click', toggleChecklist);
+
+        // Initial setup
+        displayRandomEmergency();
+        calculateRisk();
+    </script>
+</body>
+</html>
