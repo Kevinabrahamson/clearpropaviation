@@ -15,7 +15,7 @@
             display: flex;
             height: 100vh;
             overflow: hidden;
-            font-size: 16px; /* Base font size for rem units */
+            font-size: 16px;
         }
 
         .container {
@@ -118,7 +118,7 @@
         .sidebar {
             width: clamp(40px, 6vw, 60px);
             background: linear-gradient(135deg, #073763, #0d47a1);
-            padding: clamp(30px, 6vw, 60px) 0; /* Increased padding */
+            padding: clamp(10px, 2vw, 20px) 0; /* Minimal padding */
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -131,11 +131,11 @@
             min-width: clamp(40px, 6vw, 60px); /* Effective height after rotation */
             height: clamp(20px, 3vw, 30px); /* Effective width after rotation */
             padding: 0 1vw;
-            margin: clamp(60px, 10vh, 100px) 0; /* Increased spacing with vh for vertical */
+            margin: clamp(5px, 1vh, 10px) 0; /* Tight spacing like binder dividers */
             font-size: clamp(0.8rem, 1.5vw, 1rem);
             color: #000;
             border: none;
-            border-radius: 0.8vw;
+            border-radius: 0; /* Sharp edges for divider look */
             cursor: pointer;
             transform: rotate(90deg);
             transform-origin: center;
@@ -144,6 +144,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            box-shadow: 0 0.2vw 0.4vw rgba(0, 0, 0, 0.1); /* Subtle tab effect */
         }
 
         #normalBtn {
@@ -165,6 +166,7 @@
 
         .sidebar button.active {
             font-weight: bold;
+            box-shadow: 0 0.4vw 0.8vw rgba(0, 0, 0, 0.2); /* Enhanced shadow when active */
         }
 
         @media (max-width: 768px) {
@@ -173,10 +175,10 @@
                 padding: 1.5vw;
             }
             .sidebar {
-                padding: clamp(20px, 4vw, 40px) 0; /* Adjusted for smaller screens */
+                padding: clamp(5px, 1vw, 10px) 0; /* Even tighter for mobile */
             }
             .sidebar button {
-                margin: clamp(40px, 8vh, 80px) 0; /* Reduced but sufficient spacing */
+                margin: clamp(3px, 0.8vh, 8px) 0; /* Minimal spacing for mobile */
             }
         }
     </style>
