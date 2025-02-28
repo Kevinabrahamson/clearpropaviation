@@ -118,7 +118,7 @@
         .sidebar {
             width: clamp(40px, 6vw, 60px);
             background: linear-gradient(135deg, #073763, #0d47a1);
-            padding-top: clamp(2vw, 4vw, 5vw); /* Aligns Normal button with header line */
+            padding-top: clamp(2vw, 4vw, 5vw); /* Aligns Normal with header line */
             padding-bottom: clamp(10px, 2vw, 20px);
             display: flex;
             flex-direction: column;
@@ -132,11 +132,11 @@
             min-width: clamp(40px, 6vw, 60px); /* Effective height after rotation */
             height: clamp(20px, 3vw, 30px); /* Effective width after rotation */
             padding: 0 1vw;
-            margin: clamp(15px, 2vh, 20px) 0; /* Close but no overlap */
+            margin: clamp(25px, 3vh, 35px) 0; /* Increased spacing to prevent overlap */
             font-size: clamp(0.8rem, 1.5vw, 1rem);
             color: #000;
             border: none;
-            border-radius: 0; /* Sharp edges for divider look */
+            border-radius: 0;
             cursor: pointer;
             transform: rotate(90deg);
             transform-origin: center;
@@ -176,11 +176,11 @@
                 padding: 1.5vw;
             }
             .sidebar {
-                padding-top: clamp(1.5vw, 3vw, 4vw); /* Adjusted for mobile alignment */
+                padding-top: clamp(1.5vw, 3vw, 4vw);
                 padding-bottom: clamp(5px, 1vw, 10px);
             }
             .sidebar button {
-                margin: clamp(10px, 1.5vh, 15px) 0; /* Slightly tighter but safe */
+                margin: clamp(20px, 2.5vh, 30px) 0; /* Adjusted for mobile */
             }
         }
     </style>
