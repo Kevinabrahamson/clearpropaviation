@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clear Prop Aviation - Flight Training</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            color: #333;
+            line-height: 1.6;
+            background-color: #f4f7fa;
+        }
+
+        /* Header */
+        header {
+            background: #073763; /* Aviation blue */
+            color: #fff;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header h1 {
+            font-size: 28px;
+            font-weight: 700;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 400;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #ffa500; /* Orange accent */
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            background: url('https://images.unsplash.com/photo-1508614589041-895b88991e3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80') no-repeat center/cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: #fff;
+            padding: 0 20px;
+            position: relative;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(7, 55, 99, 0.6); /* Blue overlay */
+            z-index: 1;
+        }
+
+        .hero h2, .hero p, .hero .cta-btn {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero h2 {
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 30px;
+            max-width: 600px;
+        }
+
+        .cta-btn {
+            background: #ffa500;
+            color: #fff;
+            padding: 15px 30px;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: 700;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+        }
+
+        .cta-btn:hover {
+            background: #e69500;
+        }
+
+        /* Features Section */
+        .features {
+            padding: 80px 40px;
+            background: #fff;
+            text-align: center;
+        }
+
+        .features h3 {
+            font-size: 36px;
+            color: #073763;
+            margin-bottom: 40px;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .feature-item {
+            padding: 20px;
+            background: #f9f9f9;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .feature-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-item h4 {
+            font-size: 24px;
+            color: #073763;
+            margin-bottom: 15px;
+        }
+
+        .feature-item p {
+            font-size: 16px;
+        }
+
+        /* Testimonials Section */
+        .testimonials {
+            padding: 80px 40px;
+            background: #073763;
+            color: #fff;
+            text-align: center;
+        }
+
+        .testimonials h3 {
+            font-size: 36px;
+            margin-bottom: 40px;
+        }
+
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .testimonial-item {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .testimonial-item p {
+            font-size: 16px;
+            margin-bottom: 15px;
+        }
+
+        .testimonial-item cite {
+            font-style: italic;
+            font-size: 14px;
+        }
+
+        /* Footer */
+        footer {
+            background: #073763;
+            color: #fff;
+            padding: 20px 40px;
+            text-align: center;
+            border-top: 1px solid #0d47a1;
+        }
+
+        footer p {
+            font-size: 14px;
+        }
+
+        footer a {
+            color: #ffa500;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>Clear Prop Aviation</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <h2>Take Flight with Clear Prop Aviation</h2>
+        <p>Your journey to becoming a pilot starts here. Expert training, modern aircraft, and a passion for aviation.</p>
+        <a href="#contact" class="cta-btn">Start Your Wings Today</a>
+    </section>
+
+    <!-- Features/Services Section -->
+    <section class="features" id="services">
+        <h3>Why Choose Us?</h3>
+        <div class="feature-grid">
+            <div class="feature-item">
+                <h4>Expert Instructors</h4>
+                <p>Learn from certified pilots with years of experience in the cockpit and classroom.</p>
+            </div>
+            <div class="feature-item">
+                <h4>Modern Fleet</h4>
+                <p>Train on well-maintained Cessna aircraft equipped with the latest avionics.</p>
+            </div>
+            <div class="feature-item">
+                <h4>Flexible Scheduling</h4>
+                <p>Fly on your terms with personalized training plans tailored to your life.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="testimonials">
+        <h3>What Our Students Say</h3>
+        <div class="testimonial-grid">
+            <div class="testimonial-item">
+                <p>"Clear Prop Aviation made my dream of flying a reality. The instructors are top-notch!"</p>
+                <cite>- John D., Private Pilot</cite>
+            </div>
+            <div class="testimonial-item">
+                <p>"The flexibility and hands-on training were perfect for my busy schedule."</p>
+                <cite>- Sarah M., Student Pilot</cite>
+            </div>
+            <div class="testimonial-item">
+                <p>"I felt confident and prepared for my checkride thanks to Clear Prop."</p>
+                <cite>- Mike R., Commercial Pilot</cite>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <p>&copy; 2025 Clear Prop Aviation. All rights reserved. | <a href="mailto:info@clearpropaviation.com">info@clearpropaviation.com</a></p>
+    </footer>
+</body>
+</html>
