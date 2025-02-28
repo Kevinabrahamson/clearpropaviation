@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cessna 172S Skyhawk QRH</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f2f5;
+            color: #333;
+            display: flex;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: row; /* Always row, no change on mobile */
+            width: 100%;
+            height: 100%;
+        }
+
+        .content-area {
+            flex: 1; /* Takes available space */
+            padding: 20px;
+            background: #fff;
+            border-radius: 10px;
+            margin: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow-y: auto;
+            transition: all 0.3s ease;
+        }
+
+        .content-area h1 {
+            color: #073763;
+            font-size: 28px;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #073763;
+            padding-bottom: 10px;
+        }
+
+        .procedure-btn {
+            width: 100%;
+            text-align: left;
+            color: #000;
+            font-size: 20px;
+            font-weight: bold;
+            padding: 12px;
+            margin-top: 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: opacity 0.3s ease;
+        }
+
+        .procedure-btn:hover {
+            opacity: 0.9;
+        }
+
+        .normal-btn {
+            background: #fff;
+        }
+
+        .non-normal-btn {
+            background: #ffa500;
+        }
+
+        .emergency-btn {
+            background: #d32f2f;
+        }
+
+        .procedure-content {
+            display: none;
+            margin-top: 10px;
+            background: #f9f9f9;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+
+        .procedure-content ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .procedure-content ul li {
+            display: flex;
+            justify-content: space-between;
+            padding: 8px 0;
+            font-size: 16px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .procedure-content ul li:last-child {
+            border-bottom: none;
+        }
+
+        .procedure-content ul li span:first-child {
+            flex-grow: 1;
+            margin-right: 10px;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+
+        .procedure-content ul li span:last-child {
+            font-weight: bold;
+            color: #073763;
+            flex-shrink: 0;
+        }
+
+        .sidebar {
+            width: 60px; /* Fixed width */
+            background: linear-gradient(135deg, #073763, #0d47a1);
+            padding: 40px 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            box-shadow: -4px 0 8px rgba(0, 0, 0, 0.2);
+            flex-shrink: 0; /* Prevents sidebar from shrinking */
+        }
+
+        .sidebar button {
+            min-width: 60px;
+            height: 30px;
+            padding: 0 10px;
+            margin: 50px 0;
+            font-size: 14px;
+            color: #000;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transform: rotate(90deg);
+            transform-origin: center;
+            transition: all 0.3s ease;
+            white-space: nowrap;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #normalBtn {
+            background: #fff;
+        }
+
+        #nonNormalBtn {
+            background: #ffa500;
+        }
+
+        #emergencyBtn {
+            background: #d32f2f;
+        }
+
+        .sidebar button:hover {
+            opacity: 0.9;
+            transform: rotate(90deg) translateY(-2px);
+        }
+
+        .sidebar button.active {
+            font-weight: bold;
+        }
+
+        @media (max-width: 768px) {
+            .content-area {
+                margin: 10px; /* Slightly smaller margin for mobile */
+                padding: 15px;
+            }
+            .sidebar {
+                padding: 20px 0; /* Reduced padding for smaller screens */
+            }
+            .sidebar button {
+                margin: 30px 0; /* Reduced margin for mobile */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="content-area" id="content">
+            <h1>Cessna 172S Skyhawk QRH</h1>
+            <p>Select a category from the right to view details.</p>
+        </div>
+        <div class="sidebar">
+            <button onclick="showNormal()" id="normalBtn">Normal</button>
+            <button onclick="showNonNormal()" id="nonNormalBtn">Non-Normal</button>
+            <button onclick="showEmergency()" id="emergencyBtn">Emergency</button>
+        </div>
+    </div>
+
+    <script>
+        const content = document.getElementById('content');
+        const buttons = document.querySelectorAll('.sidebar button');
+
+        function clearActive() {
+            buttons.forEach(btn => btn.classList.remove('active'));
+        }
+
+        function collapseAllProcedures() {
+            const contents = document.querySelectorAll('.procedure-content');
+            contents.forEach(content => content.style.display = 'none');
+        }
+
+        function toggleProcedure(button) {
+            const allContents = document.querySelectorAll('.procedure-content');
+            const content = button.nextElementSibling;
+            
+            if (content.style.display === 'block') {
+                content.style.display = 'none';
+            } else {
+                allContents.forEach(c => c.style.display = 'none');
+                content.style.display = 'block';
+            }
+        }
+
+        function showNormal() {
+            clearActive();
+            document.getElementById('normalBtn').classList.add('active');
+            content.innerHTML = `
+                <h1>Normal Procedures</h1>
+                <button class="procedure-btn normal-btn" onclick="toggleProcedure(this)">Preflight Inspection</button>
+                <div class="procedure-content">
+                    <ul>
+                        <li><span>Check fuel levels and secure caps</span><span>Complete</span></li>
+                        <li><span>Inspect wings and control surfaces</span><span>Complete</span></li>
+                        <li><span>Verify landing gear condition</span><span>Complete</span></li>
+                    </ul>
+                </div>
+                <button class="procedure-btn normal-btn" onclick="toggleProcedure(this)">Engine Start</button>
+                <div class="procedure-content">
+                    <ul>
+                        <li><span>Mixture rich, throttle cracked</span><span>Complete</span></li>
+                        <li><span>Master switch ON, prime as required</span><span>Complete</span></li>
+                        <li><span>Starter engage, monitor oil pressure</span><span>Complete</span></li>
+                    </ul>
+                </div>
+            `;
+        }
+
+        function showNonNormal() {
+            clearActive();
+            document.getElementById('nonNormalBtn').classList.add('active');
+            content.innerHTML = `
+                <h1>Non-Normal Procedures</h1>
+                <button class="procedure-btn non-normal-btn" onclick="toggleProcedure(this)">Electrical Malfunction</button>
+                <div class="procedure-content">
+                    <ul>
+                        <li><span>Turn off non-essential equipment</span><span>Complete</span></li>
+                        <li><span>Check circuit breakers, reset if safe</span><span>Complete</span></li>
+                        <li><span>Monitor battery voltage</span><span>Complete</span></li>
+                    </ul>
+                </div>
+                <button class="procedure-btn non-normal-btn" onclick="toggleProcedure(this)">Partial Power Loss</button>
+                <div class="procedure-content">
+                    <ul>
+                        <li><span>Apply full throttle, check mixture</span><span>Complete</span></li>
+                        <li><span>Select alternate air source</span><span>Complete</span></li>
+                        <li><span>Prepare for forced landing if necessary</span><span>Complete</span></li>
+                    </ul>
+                </div>
+            `;
+        }
+
+        function showEmergency() {
+            clearActive();
+            document.getElementById('emergencyBtn').classList.add('active');
+            content.innerHTML = `
+                <h1>Emergency Procedures</h1>
+                <button class="procedure-btn emergency-btn" onclick="toggleProcedure(this)">Engine Failure</button>
+                <div class="procedure-content">
+                    <ul>
+                        <li><span>Airspeed 65 KIAS (flaps up)</span><span>Complete</span></li>
+                        <li><span>Select best landing site</span><span>Complete</span></li>
+                        <li><span>Mixture idle cut-off, fuel selector OFF</span><span>Complete</span></li>
+                    </ul>
+                </div>
+                <button class="procedure-btn emergency-btn" onclick="toggleProcedure(this)">Cabin Fire</button>
+                <div class="procedure-content">
+                    <ul>
+                        <li><span>Master switch OFF</span><span>Complete</span></li>
+                        <li><span>Vents closed, heat OFF</span><span>Complete</span></li>
+                        <li><span>Use fire extinguisher, land ASAP</span><span>Complete</span></li>
+                    </ul>
+                </div>
+            `;
+        }
+    </script>
+</body>
+</html>
