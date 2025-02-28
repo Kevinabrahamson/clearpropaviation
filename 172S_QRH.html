@@ -118,22 +118,28 @@
         .sidebar {
             width: clamp(40px, 6vw, 60px);
             background: linear-gradient(135deg, #073763, #0d47a1);
-            padding-top: clamp(2vw, 4vw, 5vw); /* Aligns Normal with header line */
-            padding-bottom: clamp(20px, 4vw, 40px); /* Increased bottom padding */
+            padding: 0; /* Remove padding, control spacing via gap */
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: flex-start;
             box-shadow: -0.4vw 0 0.8vw rgba(0, 0, 0, 0.2);
             flex-shrink: 0;
-            overflow-y: auto; /* Scroll if needed */
+            overflow-y: auto;
+            padding-top: clamp(2vw, 4vw, 5vw); /* Aligns Normal with header line */
+        }
+
+        .button-container {
+            display: flex;
+            flex-direction: column;
+            gap: clamp(20px, 3vh, 30px); /* Equal gaps between buttons */
+            width: 100%;
         }
 
         .sidebar button {
-            min-width: clamp(40px, 6vw, 70px); /* Increased max height to fit "Non-Normal" */
+            min-width: clamp(40px, 6vw, 70px); /* Effective height after rotation */
             height: clamp(20px, 3vw, 30px); /* Effective width after rotation */
             padding: 0 1vw;
-            margin: clamp(40px, 5vh, 50px) 0; /* Increased spacing to prevent overlap */
             font-size: clamp(0.8rem, 1.5vw, 1rem);
             color: #000;
             border: none;
@@ -178,10 +184,9 @@
             }
             .sidebar {
                 padding-top: clamp(1.5vw, 3vw, 4vw);
-                padding-bottom: clamp(15px, 3vw, 30px);
             }
-            .sidebar button {
-                margin: clamp(35px, 4vh, 45px) 0; /* Adjusted for mobile */
+            .button-container {
+                gap: clamp(15px, 2.5vh, 25px); /* Adjusted for mobile */
             }
         }
     </style>
@@ -193,9 +198,11 @@
             <p>Select a category from the right to view details.</p>
         </div>
         <div class="sidebar">
-            <button onclick="showNormal()" id="normalBtn">Normal</button>
-            <button onclick="showNonNormal()" id="nonNormalBtn">Non-Normal</button>
-            <button onclick="showEmergency()" id="emergencyBtn">Emergency</button>
+            <div class="button-container">
+                <button onclick="showNormal()" id="normalBtn">Normal</button>
+                <button onclick="showNonNormal()" id="nonNormalBtn">Non-Normal</button>
+                <button onclick="showEmergency()" id="emergencyBtn">Emergency</button>
+            </div>
         </div>
     </div>
 
