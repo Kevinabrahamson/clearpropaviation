@@ -27,7 +27,7 @@
 
         .content-area {
             flex: 1;
-            padding: 2vw; /* Scales with viewport width */
+            padding: 2vw;
             background: #fff;
             border-radius: 1vw;
             margin: 2vw;
@@ -38,7 +38,7 @@
 
         .content-area h1 {
             color: #073763;
-            font-size: clamp(1.5rem, 4vw, 2.5rem); /* Dynamic scaling with min/max */
+            font-size: clamp(1.5rem, 4vw, 2.5rem);
             margin-bottom: 2vw;
             border-bottom: 0.2vw solid #073763;
             padding-bottom: 1vw;
@@ -48,7 +48,7 @@
             width: 100%;
             text-align: left;
             color: #000;
-            font-size: clamp(1rem, 2.5vw, 1.5rem); /* Scales dynamically */
+            font-size: clamp(1rem, 2.5vw, 1.5rem);
             font-weight: bold;
             padding: 1vw;
             margin-top: 2vw;
@@ -93,7 +93,7 @@
             display: flex;
             justify-content: space-between;
             padding: 0.8vw 0;
-            font-size: clamp(0.9rem, 2vw, 1.2rem); /* Scales dynamically */
+            font-size: clamp(0.9rem, 2vw, 1.2rem);
             border-bottom: 0.1vw solid #ddd;
         }
 
@@ -116,9 +116,9 @@
         }
 
         .sidebar {
-            width: clamp(40px, 6vw, 60px); /* Scales but has min/max */
+            width: clamp(40px, 6vw, 60px);
             background: linear-gradient(135deg, #073763, #0d47a1);
-            padding: clamp(20px, 4vw, 40px) 0;
+            padding: clamp(30px, 6vw, 60px) 0; /* Increased padding */
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -128,11 +128,11 @@
         }
 
         .sidebar button {
-            min-width: clamp(40px, 6vw, 60px);
-            height: clamp(20px, 3vw, 30px);
+            min-width: clamp(40px, 6vw, 60px); /* Effective height after rotation */
+            height: clamp(20px, 3vw, 30px); /* Effective width after rotation */
             padding: 0 1vw;
-            margin: clamp(20px, 5vw, 50px) 0;
-            font-size: clamp(0.8rem, 1.5vw, 1rem); /* Scales dynamically */
+            margin: clamp(60px, 10vh, 100px) 0; /* Increased spacing with vh for vertical */
+            font-size: clamp(0.8rem, 1.5vw, 1rem);
             color: #000;
             border: none;
             border-radius: 0.8vw;
@@ -173,10 +173,10 @@
                 padding: 1.5vw;
             }
             .sidebar {
-                padding: clamp(10px, 2vw, 20px) 0;
+                padding: clamp(20px, 4vw, 40px) 0; /* Adjusted for smaller screens */
             }
             .sidebar button {
-                margin: clamp(15px, 3vw, 30px) 0;
+                margin: clamp(40px, 8vh, 80px) 0; /* Reduced but sufficient spacing */
             }
         }
     </style>
