@@ -119,20 +119,21 @@
             width: clamp(40px, 6vw, 60px);
             background: linear-gradient(135deg, #073763, #0d47a1);
             padding-top: clamp(2vw, 4vw, 5vw); /* Aligns Normal with header line */
-            padding-bottom: clamp(10px, 2vw, 20px);
+            padding-bottom: clamp(20px, 4vw, 40px); /* Increased bottom padding */
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: flex-start;
             box-shadow: -0.4vw 0 0.8vw rgba(0, 0, 0, 0.2);
             flex-shrink: 0;
+            overflow-y: auto; /* Scroll if needed */
         }
 
         .sidebar button {
-            min-width: clamp(40px, 6vw, 60px); /* Effective height after rotation */
+            min-width: clamp(40px, 6vw, 70px); /* Increased max height to fit "Non-Normal" */
             height: clamp(20px, 3vw, 30px); /* Effective width after rotation */
             padding: 0 1vw;
-            margin: clamp(25px, 3vh, 35px) 0; /* Increased spacing to prevent overlap */
+            margin: clamp(40px, 5vh, 50px) 0; /* Increased spacing to prevent overlap */
             font-size: clamp(0.8rem, 1.5vw, 1rem);
             color: #000;
             border: none;
@@ -177,10 +178,10 @@
             }
             .sidebar {
                 padding-top: clamp(1.5vw, 3vw, 4vw);
-                padding-bottom: clamp(5px, 1vw, 10px);
+                padding-bottom: clamp(15px, 3vw, 30px);
             }
             .sidebar button {
-                margin: clamp(20px, 2.5vh, 30px) 0; /* Adjusted for mobile */
+                margin: clamp(35px, 4vh, 45px) 0; /* Adjusted for mobile */
             }
         }
     </style>
