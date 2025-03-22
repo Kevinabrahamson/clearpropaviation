@@ -1,0 +1,2697 @@
+[
+  {
+    "Area of Operation": "I. Preflight Preparation",
+    "Task": "A. Pilot Qualifications",
+    "Type": "Objective",
+    "ACS Code": "PA.I.A",
+    "Description": "To determine that the applicant exhibits satisfactory knowledge, risk management, and skills associated with pilot certification, recent experience requirements, and privileges and limitations associated with the private pilot certificate."
+  },
+  {
+    "Area of Operation": "I. Preflight Preparation",
+    "Task": "A. Pilot Qualifications",
+    "Type": "Knowledge",
+    "ACS Code": "PA.I.A.K1",
+    "Description": "Regulatory requirements for private pilot certification, ratings, privileges, and limitations."
+  },
+  {
+    "Area of Operation": "I. Preflight Preparation",
+    "Task": "A. Pilot Qualifications",
+    "Type": "Knowledge",
+    "ACS Code": "PA.I.A.K2",
+    "Description": "Medical certificates: class, expiration dates, privileges, temporary disqualifications, and limitations."
+  },
+  {
+    "Area of Operation": "I. Preflight Preparation",
+    "Task": "A. Pilot Qualifications",
+    "Type": "Knowledge",
+    "ACS Code": "PA.I.A.K3",
+    "Description": "Recency of experience requirements and effects of not meeting those requirements."
+  },
+  {
+    "Area of Operation": "I. Preflight Preparation",
+    "Task": "A. Pilot Qualifications",
+    "Type": "Knowledge",
+    "ACS Code": "PA.I.A.K4",
+    "Description": "Privileges and limitations of the private pilot certificate."
+  },
+  {
+    "Area of Operation": "I. Preflight Preparation",
+    "Task": "A. Pilot Qualifications",
+    "Type": "Risk Management",
+    "ACS Code": "PA.I.A.R1a",
+    "Description": "Maintaining medical fitness and compliance with applicable regulations."
+  },
+  {
+    "Area of Operation": "I. Preflight Preparation",
+    "Task": "A. Pilot Qualifications",
+    "Type": "Risk Management",
+    "ACS Code": "PA.I.A.R1b",
+    "Description": "Temporary medical conditions and their effect on the ability to operate an airplane legally and safely."
+  },
+  {
+    "Area of Operation": "I. Preflight Preparation",
+    "Task": "A. Pilot Qualifications",
+    "Type": "Skills",
+    "ACS Code": "PA.I.A.S1",
+    "Description": "Locate and describe private pilot eligibility, aeronautical knowledge, proficiency, privileges, limitations, and recency of experience requirements."
+  },
+  {
+    "Area of Operation": "I. Preflight Preparation",
+    "Task": "B. Airworthiness Requirements",
+    "Type": "Objective",
+    "ACS Code": "PA.I.B",
+    "Description": "To determine that the applicant exhibits satisfactory knowledge, risk management, and skills associated with airworthiness requirements, including airplane certificates, required inspections, and documentation."
+  },
+  {
+    "Area of Operation": "I. Preflight Preparation",
+    "Task": "B. Airworthiness Requirements",
+    "Type": "Knowledge",
+    "ACS Code": "PA.I.B.K1",
+    "Description": "Required airplane certificates and documents (e.g., airworthiness certificate, registration certificate, operating limitations, weight and balance data)."
+  },
+  {
+    "Area of Operation": "I. Preflight Preparation",
+    "Task": "B. Airworthiness Requirements",
+    "Type": "Knowledge",
+    "ACS Code": "PA.I.B.K2",
+    "Description": "Airplane maintenance and inspection requirements (e.g., annual, 100-hour, Airworthiness Directives (ADs), preventive maintenance)."
+  },
+  {
+    "Area of Operation": "I. Preflight Preparation",
+    "Task": "B. Airworthiness Requirements",
+    "Type": "Knowledge",
+    "ACS Code": "PA.I.B.K3",
+    "Description": "Pilot-performed preventive maintenance."
+  },
+  {
+    "Area of Operation": "I. Preflight Preparation",
+    "Task": "B. Airworthiness Requirements",
+    "Type": "Knowledge",
+    "ACS Code": "PA.I.B.K4",
+    "Description": "Equipment requirements for day and night VFR flight."
+  },
+  {
+    "Area of Operation": "I. Preflight Preparation",
+    "Task": "B. Airworthiness Requirements",
+    "Type": "Risk Management",
+    "ACS Code": "PA.I.B.R1a",
+    "Description": "Inoperative instruments or equipment and determining if they constitute a hazard to safe flight."
+  },
+  {
+    "Area of Operation": "I. Preflight Preparation",
+    "Task": "B. Airworthiness Requirements",
+    "Type": "Risk Management",
+    "ACS Code": "PA.I.B.R1b",
+    "Description": "Minimum equipment list (MEL) and operations with inoperative equipment."
+  },
+  {
+    "Area of Operation": "I. Preflight Preparation",
+    "Task": "B. Airworthiness Requirements",
+    "Type": "Skills",
+    "ACS Code": "PA.I.B.S1",
+    "Description": "Determine the airplane is airworthy by locating and explaining the required airplane certificates, documents, and inspection requirements."
+  },
+  {
+    "Area of Operation": "I. Preflight Preparation",
+    "Task": "C. Weather Information",
+    "Type": "Objective",
+    "ACS Code": "PA.I.C",
+    "Description": "To determine that the applicant exhibits satisfactory knowledge, risk management, and skills associated with obtaining, understanding, and applying weather information for a flight under VFR."
+  },
+  {
+    "Area of Operation": "I. Preflight Preparation",
+    "Task": "C. Weather Information",
+    "Type": "Knowledge",
+    "ACS Code": "PA.I.C.K1",
+    "Description": "Sources of weather data (e.g., National Weather Service, Flight Service) for flight planning purposes."
+  },
+  {
+    "Area of Operation": "I. Preflight Preparation",
+    "Task": "C. Weather Information",
+    "Type": "Knowledge",
+    "ACS Code": "PA.I.C.K2",
+    "Description": "Weather products and their uses (e.g., METAR, TAF, FA, winds aloft, weather charts, radar reports, PIREPs, SIGMETs, AIRMETs)."
+  },
+  {
+    "Area of Operation": "I. Preflight Preparation",
+    "Task": "C. Weather Information",
+    "Type": "Knowledge",
+    "ACS Code": "PA.I.C.K3",
+    "Description": "Meteorology to include:"
+  },
+  {
+    "Area of Operation": "I. Preflight Preparation",
+    "Task": "C. Weather Information",
+    "Type": "Knowledge",
+    "ACS Code": "PA.I.C.K3a",
+    "Description": "Characteristics of air masses and fronts."
+  },
+  {
+    "Area of Operation": "I. Preflight Preparation",
+    "Task": "C. Weather Information",
+    "Type": "Knowledge",
+    "ACS Code": "PA.I.C.K3b",
+    "Description": "Sources and effects of weather hazards on aviation (e.g., thunderstorms, turbulence, icing, fog)."
+  },
+  {
+    "Area of Operation": "I. Preflight Preparation",
+    "Task": "C. Weather Information",
+    "Type": "Knowledge",
+    "ACS Code": "PA.I.C.K3c",
+    "Description": "Relationship between weather and airplane performance."
+  },
+  {
+    "Area of Operation": "I. Preflight Preparation",
+    "Task": "C. Weather Information",
+    "Type": "Risk Management",
+    "ACS Code": "PA.I.C.R1",
+    "Description": "Making a competent go/no-go decision based on available weather information."
+  },
+  {
+    "Area of Operation": "I. Preflight Preparation",
+    "Task": "C. Weather Information",
+    "Type": "Risk Management",
+    "ACS Code": "PA.I.C.R2",
+    "Description": "Recognizing weather hazards during flight planning and making a competent decision to alter the planned route or cancel the flight."
+  },
+  {
+    "Area of Operation": "I. Preflight Preparation",
+    "Task": "C. Weather Information",
+    "Type": "Skills",
+    "ACS Code": "PA.I.C.S1",
+    "Description": "Use available aviation weather resources to obtain an adequate weather briefing for the route of flight."
+  },
+  {
+    "Area of Operation": "I. Preflight Preparation",
+    "Task": "C. Weather Information",
+    "Type": "Skills",
+    "ACS Code": "PA.I.C.S2",
+    "Description": "Correlate weather information to make a competent go/no-go decision."
+  },
+  {
+    "Area of Operation": "I. Preflight Preparation",
+    "Task": "D. Cross-Country Flight Planning",
+    "Type": "Objective",
+    "ACS Code": "PA.I.D",
+    "Description": "To determine that the applicant exhibits satisfactory knowledge, risk management, and skills associated with planning a VFR cross-country flight."
+  },
+  {
+    "Area of Operation": "I. Preflight Preparation",
+    "Task": "D. Cross-Country Flight Planning",
+    "Type": "Knowledge",
+    "ACS Code": "PA.I.D.K1",
+    "Description": "Route planning, including consideration of alternate airports and suitable checkpoints."
+  },
+  {
+    "Area of Operation": "I. Preflight Preparation",
+    "Task": "D. Cross-Country Flight Planning",
+    "Type": "Knowledge",
+    "ACS Code": "PA.I.D.K2",
+    "Description": "Altitude selection accounting for terrain, obstacles, glide distance, and emergency considerations."
+  },
+  {
+    "Area of Operation": "I. Preflight Preparation",
+    "Task": "D. Cross-Country Flight Planning",
+    "Type": "Knowledge",
+    "ACS Code": "PA.I.D.K3",
+    "Description": "Obtaining and interpreting applicable NOTAM information."
+  },
+  {
+    "Area of Operation": "I. Preflight Preparation",
+    "Task": "D. Cross-Country Flight Planning",
+    "Type": "Knowledge",
+    "ACS Code": "PA.I.D.K4",
+    "Description": "Plotting a course with wind correction and computing time, speed, distance, and fuel requirements."
+  },
+  {
+    "Area of Operation": "I. Preflight Preparation",
+    "Task": "D. Cross-Country Flight Planning",
+    "Type": "Knowledge",
+    "ACS Code": "PA.I.D.K5",
+    "Description": "Completing a navigation log and filing a VFR flight plan."
+  },
+  {
+    "Area of Operation": "I. Preflight Preparation",
+    "Task": "D. Cross-Country Flight Planning",
+    "Type": "Risk Management",
+    "ACS Code": "PA.I.D.R1",
+    "Description": "Fuel planning for normal and emergency situations."
+  },
+  {
+    "Area of Operation": "I. Preflight Preparation",
+    "Task": "D. Cross-Country Flight Planning",
+    "Type": "Risk Management",
+    "ACS Code": "PA.I.D.R2",
+    "Description": "Weather unsuitable for VFR flight."
+  },
+  {
+    "Area of Operation": "I. Preflight Preparation",
+    "Task": "D. Cross-Country Flight Planning",
+    "Type": "Risk Management",
+    "ACS Code": "PA.I.D.R3",
+    "Description": "Terrain and obstacle hazards during the planned route of flight."
+  },
+  {
+    "Area of Operation": "I. Preflight Preparation",
+    "Task": "D. Cross-Country Flight Planning",
+    "Type": "Skills",
+    "ACS Code": "PA.I.D.S1",
+    "Description": "Prepare, present, and explain a cross-country flight plan based on a scenario provided by the evaluator, including a completed navigation log and VFR flight plan."
+  },
+  {
+    "Area of Operation": "I. Preflight Preparation",
+    "Task": "D. Cross-Country Flight Planning",
+    "Type": "Skills",
+    "ACS Code": "PA.I.D.S2",
+    "Description": "Recalculate fuel reserves based on a scenario provided by the evaluator."
+  },
+  {
+    "Area of Operation": "I. Preflight Preparation",
+    "Task": "E. National Airspace System",
+    "Type": "Objective",
+    "ACS Code": "PA.I.E",
+    "Description": "To determine that the applicant exhibits satisfactory knowledge, risk management, and skills associated with the National Airspace System operating under VFR as a private pilot."
+  },
+  {
+    "Area of Operation": "I. Preflight Preparation",
+    "Task": "E. National Airspace System",
+    "Type": "Knowledge",
+    "ACS Code": "PA.I.E.K1",
+    "Description": "Types of airspace and associated requirements (e.g., Class A, B, C, D, E, G, special use airspace)."
+  },
+  {
+    "Area of Operation": "I. Preflight Preparation",
+    "Task": "E. National Airspace System",
+    "Type": "Knowledge",
+    "ACS Code": "PA.I.E.K2",
+    "Description": "Basic VFR weather minimums and operating requirements for each class of airspace."
+  },
+  {
+    "Area of Operation": "I. Preflight Preparation",
+    "Task": "E. National Airspace System",
+    "Type": "Knowledge",
+    "ACS Code": "PA.I.E.K3",
+    "Description": "Special use airspace (e.g., MOA, restricted areas) and operating limitations."
+  },
+  {
+    "Area of Operation": "I. Preflight Preparation",
+    "Task": "E. National Airspace System",
+    "Type": "Risk Management",
+    "ACS Code": "PA.I.E.R1",
+    "Description": "Inadvertent entry into controlled airspace or special use airspace without proper clearance or authorization."
+  },
+  {
+    "Area of Operation": "I. Preflight Preparation",
+    "Task": "E. National Airspace System",
+    "Type": "Skills",
+    "ACS Code": "PA.I.E.S1",
+    "Description": "Locate and identify airspace classes and special use airspace on a sectional chart and explain the operational requirements."
+  },
+  {
+    "Area of Operation": "I. Preflight Preparation",
+    "Task": "F. Performance and Limitations",
+    "Type": "Objective",
+    "ACS Code": "PA.I.F",
+    "Description": "To determine that the applicant exhibits satisfactory knowledge, risk management, and skills associated with operating an airplane safely within the parameters of its performance capabilities and limitations."
+  },
+  {
+    "Area of Operation": "I. Preflight Preparation",
+    "Task": "F. Performance and Limitations",
+    "Type": "Knowledge",
+    "ACS Code": "PA.I.F.K1",
+    "Description": "Elements and use of performance charts, tables, and data from the POH/AFM."
+  },
+  {
+    "Area of Operation": "I. Preflight Preparation",
+    "Task": "F. Performance and Limitations",
+    "Type": "Knowledge",
+    "ACS Code": "PA.I.F.K2",
+    "Description": "Effects of exceeding airplane limitations (e.g., weight, balance, airspeed)."
+  },
+  {
+    "Area of Operation": "I. Preflight Preparation",
+    "Task": "F. Performance and Limitations",
+    "Type": "Knowledge",
+    "ACS Code": "PA.I.F.K3",
+    "Description": "Effects of atmospheric conditions (e.g., density altitude, wind, temperature) on performance."
+  },
+  {
+    "Area of Operation": "I. Preflight Preparation",
+    "Task": "F. Performance and Limitations",
+    "Type": "Knowledge",
+    "ACS Code": "PA.I.F.K4",
+    "Description": "Weight and balance computations and associated impacts on performance."
+  },
+  {
+    "Area of Operation": "I. Preflight Preparation",
+    "Task": "F. Performance and Limitations",
+    "Type": "Risk Management",
+    "ACS Code": "PA.I.F.R1",
+    "Description": "Exceeding airplane performance limitations during flight."
+  },
+  {
+    "Area of Operation": "I. Preflight Preparation",
+    "Task": "F. Performance and Limitations",
+    "Type": "Risk Management",
+    "ACS Code": "PA.I.F.R2",
+    "Description": "Improper weight and balance planning and its effect on controllability."
+  },
+  {
+    "Area of Operation": "I. Preflight Preparation",
+    "Task": "F. Performance and Limitations",
+    "Type": "Skills",
+    "ACS Code": "PA.I.F.S1",
+    "Description": "Compute airplane performance and weight and balance for a given scenario using available charts and data."
+  },
+  {
+    "Area of Operation": "I. Preflight Preparation",
+    "Task": "G. Operation of Systems",
+    "Type": "Objective",
+    "ACS Code": "PA.I.G",
+    "Description": "To determine that the applicant exhibits satisfactory knowledge, risk management, and skills associated with the safe operation of systems on the airplane provided for the practical test."
+  },
+  {
+    "Area of Operation": "I. Preflight Preparation",
+    "Task": "G. Operation of Systems",
+    "Type": "Knowledge",
+    "ACS Code": "PA.I.G.K1",
+    "Description": "Airplane systems (e.g., powerplant, fuel, oil, electrical, hydraulic, avionics, environmental, landing gear, flight controls, anti-ice/deice)."
+  },
+  {
+    "Area of Operation": "I. Preflight Preparation",
+    "Task": "G. Operation of Systems",
+    "Type": "Knowledge",
+    "ACS Code": "PA.I.G.K2",
+    "Description": "Indications of system malfunctions and appropriate pilot responses."
+  },
+  {
+    "Area of Operation": "I. Preflight Preparation",
+    "Task": "G. Operation of Systems",
+    "Type": "Risk Management",
+    "ACS Code": "PA.I.G.R1",
+    "Description": "Failure to detect system malfunctions or failures prior to or during flight."
+  },
+  {
+    "Area of Operation": "I. Preflight Preparation",
+    "Task": "G. Operation of Systems",
+    "Type": "Risk Management",
+    "ACS Code": "PA.I.G.R2",
+    "Description": "Improper management of system failures during flight."
+  },
+  {
+    "Area of Operation": "I. Preflight Preparation",
+    "Task": "G. Operation of Systems",
+    "Type": "Skills",
+    "ACS Code": "PA.I.G.S1",
+    "Description": "Explain the operation and function of the airplane’s systems and associated instrumentation."
+  },
+  {
+    "Area of Operation": "I. Preflight Preparation",
+    "Task": "H. Human Factors",
+    "Type": "Objective",
+    "ACS Code": "PA.I.H",
+    "Description": "To determine that the applicant exhibits satisfactory knowledge, risk management, and skills associated with personal health, flight physiology, aeromedical factors, and aeronautical decision-making as it relates to safety of flight."
+  },
+  {
+    "Area of Operation": "I. Preflight Preparation",
+    "Task": "H. Human Factors",
+    "Type": "Knowledge",
+    "ACS Code": "PA.I.H.K1",
+    "Description": "Aeromedical factors and their effects on pilot performance (e.g., hypoxia, carbon monoxide poisoning, fatigue, dehydration, spatial disorientation)."
+  },
+  {
+    "Area of Operation": "I. Preflight Preparation",
+    "Task": "H. Human Factors",
+    "Type": "Knowledge",
+    "ACS Code": "PA.I.H.K2",
+    "Description": "Use of alcohol, over-the-counter medications, prescription medications, and illegal drugs and their effects on pilot performance."
+  },
+  {
+    "Area of Operation": "I. Preflight Preparation",
+    "Task": "H. Human Factors",
+    "Type": "Knowledge",
+    "ACS Code": "PA.I.H.K3",
+    "Description": "Aeronautical Decision-Making (ADM) and its application to flight planning and operations."
+  },
+  {
+    "Area of Operation": "I. Preflight Preparation",
+    "Task": "H. Human Factors",
+    "Type": "Risk Management",
+    "ACS Code": "PA.I.H.R1",
+    "Description": "Flying while impaired by illness, medication, alcohol, fatigue, or emotional distress."
+  },
+  {
+    "Area of Operation": "I. Preflight Preparation",
+    "Task": "H. Human Factors",
+    "Type": "Risk Management",
+    "ACS Code": "PA.I.H.R2",
+    "Description": "Failure to recognize personal limitations and make a timely decision to delay or discontinue a flight."
+  },
+  {
+    "Area of Operation": "I. Preflight Preparation",
+    "Task": "H. Human Factors",
+    "Type": "Skills",
+    "ACS Code": "PA.I.H.S1",
+    "Description": "Apply principles of ADM to a given scenario and associate personal health and aeromedical factors with safety of flight."
+  },
+  {
+    "Area of Operation": "II. Preflight Procedures",
+    "Task": "A. Preflight Assessment",
+    "Type": "Objective",
+    "ACS Code": "PA.II.A",
+    "Description": "To determine that the applicant exhibits satisfactory knowledge, risk management, and skills associated with preparing for safe flight."
+  },
+  {
+    "Area of Operation": "II. Preflight Procedures",
+    "Task": "A. Preflight Assessment",
+    "Type": "Knowledge",
+    "ACS Code": "PA.II.A.K1",
+    "Description": "Pilot self-assessment for flight (e.g., IMSAFE checklist)."
+  },
+  {
+    "Area of Operation": "II. Preflight Procedures",
+    "Task": "A. Preflight Assessment",
+    "Type": "Knowledge",
+    "ACS Code": "PA.II.A.K2",
+    "Description": "Airplane preflight inspection procedures and requirements per the POH/AFM."
+  },
+  {
+    "Area of Operation": "II. Preflight Procedures",
+    "Task": "A. Preflight Assessment",
+    "Type": "Risk Management",
+    "ACS Code": "PA.II.A.R1",
+    "Description": "Weather conditions unsuitable for the planned flight."
+  },
+  {
+    "Area of Operation": "II. Preflight Procedures",
+    "Task": "A. Preflight Assessment",
+    "Type": "Risk Management",
+    "ACS Code": "PA.II.A.R2",
+    "Description": "Improper or insufficient fuel planning for the intended flight."
+  },
+  {
+    "Area of Operation": "II. Preflight Procedures",
+    "Task": "A. Preflight Assessment",
+    "Type": "Risk Management",
+    "ACS Code": "PA.II.A.R3",
+    "Description": "Airplane condition or equipment deficiencies that would affect safety of flight."
+  },
+  {
+    "Area of Operation": "II. Preflight Procedures",
+    "Task": "A. Preflight Assessment",
+    "Type": "Skills",
+    "ACS Code": "PA.II.A.S1",
+    "Description": "Inspect the airplane with reference to an appropriate checklist."
+  },
+  {
+    "Area of Operation": "II. Preflight Procedures",
+    "Task": "A. Preflight Assessment",
+    "Type": "Skills",
+    "ACS Code": "PA.II.A.S2",
+    "Description": "Verify the airplane is in a condition for safe flight."
+  },
+  {
+    "Area of Operation": "II. Preflight Procedures",
+    "Task": "B. Cockpit Management",
+    "Type": "Objective",
+    "ACS Code": "PA.II.B",
+    "Description": "To determine that the applicant exhibits satisfactory knowledge, risk management, and skills associated with cockpit management."
+  },
+  {
+    "Area of Operation": "II. Preflight Procedures",
+    "Task": "B. Cockpit Management",
+    "Type": "Knowledge",
+    "ACS Code": "PA.II.B.K1",
+    "Description": "Cockpit management procedures (e.g., organizing charts, securing loose items, adjusting seats and belts)."
+  },
+  {
+    "Area of Operation": "II. Preflight Procedures",
+    "Task": "B. Cockpit Management",
+    "Type": "Knowledge",
+    "ACS Code": "PA.II.B.K2",
+    "Description": "Passenger briefing requirements (e.g., seatbelts, exits, sterile cockpit)."
+  },
+  {
+    "Area of Operation": "II. Preflight Procedures",
+    "Task": "B. Cockpit Management",
+    "Type": "Risk Management",
+    "ACS Code": "PA.II.B.R1",
+    "Description": "Distraction from unsecured items, poor cockpit organization, or ineffective passenger management."
+  },
+  {
+    "Area of Operation": "II. Preflight Procedures",
+    "Task": "B. Cockpit Management",
+    "Type": "Skills",
+    "ACS Code": "PA.II.B.S1",
+    "Description": "Ensure all loose items in the cockpit are secured."
+  },
+  {
+    "Area of Operation": "II. Preflight Procedures",
+    "Task": "B. Cockpit Management",
+    "Type": "Skills",
+    "ACS Code": "PA.II.B.S2",
+    "Description": "Brief passengers on the use of safety belts, shoulder harnesses, doors, and emergency exits."
+  },
+  {
+    "Area of Operation": "II. Preflight Procedures",
+    "Task": "C. Engine Starting",
+    "Type": "Objective",
+    "ACS Code": "PA.II.C",
+    "Description": "To determine that the applicant exhibits satisfactory knowledge, risk management, and skills associated with a safe engine start."
+  },
+  {
+    "Area of Operation": "II. Preflight Procedures",
+    "Task": "C. Engine Starting",
+    "Type": "Knowledge",
+    "ACS Code": "PA.II.C.K1",
+    "Description": "Engine starting procedures, including cold and hot starts, as recommended by the POH/AFM."
+  },
+  {
+    "Area of Operation": "II. Preflight Procedures",
+    "Task": "C. Engine Starting",
+    "Type": "Knowledge",
+    "ACS Code": "PA.II.C.K2",
+    "Description": "Starting under various atmospheric conditions (e.g., cold weather, hot weather)."
+  },
+  {
+    "Area of Operation": "II. Preflight Procedures",
+    "Task": "C. Engine Starting",
+    "Type": "Risk Management",
+    "ACS Code": "PA.II.C.R1",
+    "Description": "Propeller safety and avoiding hazards to people or property during engine start."
+  },
+  {
+    "Area of Operation": "II. Preflight Procedures",
+    "Task": "C. Engine Starting",
+    "Type": "Risk Management",
+    "ACS Code": "PA.II.C.R2",
+    "Description": "Engine fire or failure during start."
+  },
+  {
+    "Area of Operation": "II. Preflight Procedures",
+    "Task": "C. Engine Starting",
+    "Type": "Skills",
+    "ACS Code": "PA.II.C.S1",
+    "Description": "Position the airplane to minimize hazards to people and property during engine start."
+  },
+  {
+    "Area of Operation": "II. Preflight Procedures",
+    "Task": "C. Engine Starting",
+    "Type": "Skills",
+    "ACS Code": "PA.II.C.S2",
+    "Description": "Complete the appropriate checklist for engine starting."
+  },
+  {
+    "Area of Operation": "II. Preflight Procedures",
+    "Task": "D. Taxiing",
+    "Type": "Objective",
+    "ACS Code": "PA.II.D",
+    "Description": "To determine that the applicant exhibits satisfactory knowledge, risk management, and skills associated with safe taxi operations."
+  },
+  {
+    "Area of Operation": "II. Preflight Procedures",
+    "Task": "D. Taxiing",
+    "Type": "Knowledge",
+    "ACS Code": "PA.II.D.K1",
+    "Description": "Airport taxi procedures, including runway incursion avoidance and the use of taxi diagrams."
+  },
+  {
+    "Area of Operation": "II. Preflight Procedures",
+    "Task": "D. Taxiing",
+    "Type": "Knowledge",
+    "ACS Code": "PA.II.D.K2",
+    "Description": "Effects of wind and taxi speed on controllability."
+  },
+  {
+    "Area of Operation": "II. Preflight Procedures",
+    "Task": "D. Taxiing",
+    "Type": "Risk Management",
+    "ACS Code": "PA.II.D.R1",
+    "Description": "Collision hazards with obstacles, other aircraft, or personnel during taxi."
+  },
+  {
+    "Area of Operation": "II. Preflight Procedures",
+    "Task": "D. Taxiing",
+    "Type": "Risk Management",
+    "ACS Code": "PA.II.D.R2",
+    "Description": "Taxiing in adverse weather conditions (e.g., strong winds, low visibility)."
+  },
+  {
+    "Area of Operation": "II. Preflight Procedures",
+    "Task": "D. Taxiing",
+    "Type": "Skills",
+    "ACS Code": "PA.II.D.S1",
+    "Description": "Demonstrate proper taxi procedures and adhere to ATC instructions or local procedures."
+  },
+  {
+    "Area of Operation": "II. Preflight Procedures",
+    "Task": "D. Taxiing",
+    "Type": "Skills",
+    "ACS Code": "PA.II.D.S2",
+    "Description": "Maintain positive control of the airplane during taxi and position controls appropriately for wind conditions."
+  },
+  {
+    "Area of Operation": "II. Preflight Procedures",
+    "Task": "E. Before Takeoff Check",
+    "Type": "Objective",
+    "ACS Code": "PA.II.E",
+    "Description": "To determine that the applicant exhibits satisfactory knowledge, risk management, and skills associated with the before takeoff check."
+  },
+  {
+    "Area of Operation": "II. Preflight Procedures",
+    "Task": "E. Before Takeoff Check",
+    "Type": "Knowledge",
+    "ACS Code": "PA.II.E.K1",
+    "Description": "Purpose and procedures for the before takeoff check per the POH/AFM (e.g., run-up, system checks)."
+  },
+  {
+    "Area of Operation": "II. Preflight Procedures",
+    "Task": "E. Before Takeoff Check",
+    "Type": "Knowledge",
+    "ACS Code": "PA.II.E.K2",
+    "Description": "Division of attention between inside and outside the cockpit during the check."
+  },
+  {
+    "Area of Operation": "II. Preflight Procedures",
+    "Task": "E. Before Takeoff Check",
+    "Type": "Risk Management",
+    "ACS Code": "PA.II.E.R1",
+    "Description": "Failure to detect system malfunctions or anomalies prior to takeoff."
+  },
+  {
+    "Area of Operation": "II. Preflight Procedures",
+    "Task": "E. Before Takeoff Check",
+    "Type": "Risk Management",
+    "ACS Code": "PA.II.E.R2",
+    "Description": "Distraction or interruption during the before takeoff check."
+  },
+  {
+    "Area of Operation": "II. Preflight Procedures",
+    "Task": "E. Before Takeoff Check",
+    "Type": "Skills",
+    "ACS Code": "PA.II.E.S1",
+    "Description": "Perform the before takeoff checklist and confirm the airplane is in a safe condition for flight."
+  },
+  {
+    "Area of Operation": "II. Preflight Procedures",
+    "Task": "E. Before Takeoff Check",
+    "Type": "Skills",
+    "ACS Code": "PA.II.E.S2",
+    "Description": "Review takeoff performance, departure procedures, and emergency contingencies."
+  },
+  {
+    "Area of Operation": "III. Airport and Seaplane Base Operations",
+    "Task": "A. Communications, Light Signals, and Runway Lighting Systems",
+    "Type": "Objective",
+    "ACS Code": "PA.III.A",
+    "Description": "To determine that the applicant exhibits satisfactory knowledge, risk management, and skills associated with radio communications, light signals, and runway lighting systems."
+  },
+  {
+    "Area of Operation": "III. Airport and Seaplane Base Operations",
+    "Task": "A. Communications, Light Signals, and Runway Lighting Systems",
+    "Type": "Knowledge",
+    "ACS Code": "PA.III.A.K1",
+    "Description": "Radio communication procedures and phraseology at controlled and uncontrolled airports."
+  },
+  {
+    "Area of Operation": "III. Airport and Seaplane Base Operations",
+    "Task": "A. Communications, Light Signals, and Runway Lighting Systems",
+    "Type": "Knowledge",
+    "ACS Code": "PA.III.A.K2",
+    "Description": "Airport signage, markings, and lighting (e.g., runway, taxiway, threshold)."
+  },
+  {
+    "Area of Operation": "III. Airport and Seaplane Base Operations",
+    "Task": "A. Communications, Light Signals, and Runway Lighting Systems",
+    "Type": "Knowledge",
+    "ACS Code": "PA.III.A.K3",
+    "Description": "ATC light gun signals and their meanings."
+  },
+  {
+    "Area of Operation": "III. Airport and Seaplane Base Operations",
+    "Task": "A. Communications, Light Signals, and Runway Lighting Systems",
+    "Type": "Risk Management",
+    "ACS Code": "PA.III.A.R1",
+    "Description": "Misunderstanding or failure to comply with ATC instructions or light signals."
+  },
+  {
+    "Area of Operation": "III. Airport and Seaplane Base Operations",
+    "Task": "A. Communications, Light Signals, and Runway Lighting Systems",
+    "Type": "Risk Management",
+    "ACS Code": "PA.III.A.R2",
+    "Description": "Radio failure and its impact on airport operations."
+  },
+  {
+    "Area of Operation": "III. Airport and Seaplane Base Operations",
+    "Task": "A. Communications, Light Signals, and Runway Lighting Systems",
+    "Type": "Skills",
+    "ACS Code": "PA.III.A.S1",
+    "Description": "Use proper radio communication procedures or light signals to depart from or arrive at an airport."
+  },
+  {
+    "Area of Operation": "III. Airport and Seaplane Base Operations",
+    "Task": "A. Communications, Light Signals, and Runway Lighting Systems",
+    "Type": "Skills",
+    "ACS Code": "PA.III.A.S2",
+    "Description": "Interpret airport signage, markings, and lighting during taxi, takeoff, and landing."
+  },
+  {
+    "Area of Operation": "III. Airport and Seaplane Base Operations",
+    "Task": "B. Traffic Patterns",
+    "Type": "Objective",
+    "ACS Code": "PA.III.B",
+    "Description": "To determine that the applicant exhibits satisfactory knowledge, risk management, and skills associated with traffic patterns."
+  },
+  {
+    "Area of Operation": "III. Airport and Seaplane Base Operations",
+    "Task": "B. Traffic Patterns",
+    "Type": "Knowledge",
+    "ACS Code": "PA.III.B.K1",
+    "Description": "Airport traffic pattern procedures, altitudes, and entry/exit methods."
+  },
+  {
+    "Area of Operation": "III. Airport and Seaplane Base Operations",
+    "Task": "B. Traffic Patterns",
+    "Type": "Knowledge",
+    "ACS Code": "PA.III.B.K2",
+    "Description": "Right-of-way rules and collision avoidance during traffic pattern operations."
+  },
+  {
+    "Area of Operation": "III. Airport and Seaplane Base Operations",
+    "Task": "B. Traffic Patterns",
+    "Type": "Risk Management",
+    "ACS Code": "PA.III.B.R1",
+    "Description": "Collision hazards with other aircraft in the traffic pattern."
+  },
+  {
+    "Area of Operation": "III. Airport and Seaplane Base Operations",
+    "Task": "B. Traffic Patterns",
+    "Type": "Risk Management",
+    "ACS Code": "PA.III.B.R2",
+    "Description": "Wake turbulence avoidance during traffic pattern operations."
+  },
+  {
+    "Area of Operation": "III. Airport and Seaplane Base Operations",
+    "Task": "B. Traffic Patterns",
+    "Type": "Skills",
+    "ACS Code": "PA.III.B.S1",
+    "Description": "Comply with proper traffic pattern procedures at controlled and uncontrolled airports."
+  },
+  {
+    "Area of Operation": "III. Airport and Seaplane Base Operations",
+    "Task": "B. Traffic Patterns",
+    "Type": "Skills",
+    "ACS Code": "PA.III.B.S2",
+    "Description": "Maintain proper spacing from other aircraft in the traffic pattern."
+  },
+  {
+    "Area of Operation": "IV. Takeoffs, Landings, and Go-Arounds",
+    "Task": "A. Normal Takeoff and Climb",
+    "Type": "Objective",
+    "ACS Code": "PA.IV.A",
+    "Description": "To determine that the applicant exhibits satisfactory knowledge, risk management, and skills associated with a normal takeoff, climb operations, and collision avoidance."
+  },
+  {
+    "Area of Operation": "IV. Takeoffs, Landings, and Go-Arounds",
+    "Task": "A. Normal Takeoff and Climb",
+    "Type": "Knowledge",
+    "ACS Code": "PA.IV.A.K1",
+    "Description": "Normal takeoff and climb procedures per the POH/AFM."
+  },
+  {
+    "Area of Operation": "IV. Takeoffs, Landings, and Go-Arounds",
+    "Task": "A. Normal Takeoff and Climb",
+    "Type": "Knowledge",
+    "ACS Code": "PA.IV.A.K2",
+    "Description": "Effects of aircraft configuration (e.g., flaps) and atmospheric conditions on takeoff and climb performance."
+  },
+  {
+    "Area of Operation": "IV. Takeoffs, Landings, and Go-Arounds",
+    "Task": "A. Normal Takeoff and Climb",
+    "Type": "Risk Management",
+    "ACS Code": "PA.IV.A.R1",
+    "Description": "Runway conditions affecting takeoff performance (e.g., wet, contaminated, short)."
+  },
+  {
+    "Area of Operation": "IV. Takeoffs, Landings, and Go-Arounds",
+    "Task": "A. Normal Takeoff and Climb",
+    "Type": "Risk Management",
+    "ACS Code": "PA.IV.A.R2",
+    "Description": "Collision hazards with obstacles, terrain, or other aircraft during takeoff and climb."
+  },
+  {
+    "Area of Operation": "IV. Takeoffs, Landings, and Go-Arounds",
+    "Task": "A. Normal Takeoff and Climb",
+    "Type": "Risk Management",
+    "ACS Code": "PA.IV.A.R3",
+    "Description": "Wake turbulence avoidance during takeoff."
+  },
+  {
+    "Area of Operation": "IV. Takeoffs, Landings, and Go-Arounds",
+    "Task": "A. Normal Takeoff and Climb",
+    "Type": "Risk Management",
+    "ACS Code": "PA.IV.A.R4",
+    "Description": "Low altitude maneuvering and collision avoidance during climb."
+  },
+  {
+    "Area of Operation": "IV. Takeoffs, Landings, and Go-Arounds",
+    "Task": "A. Normal Takeoff and Climb",
+    "Type": "Skills",
+    "ACS Code": "PA.IV.A.S1",
+    "Description": "Complete the appropriate checklist."
+  },
+  {
+    "Area of Operation": "IV. Takeoffs, Landings, and Go-Arounds",
+    "Task": "A. Normal Takeoff and Climb",
+    "Type": "Skills",
+    "ACS Code": "PA.IV.A.S2",
+    "Description": "Make radio calls as appropriate."
+  },
+  {
+    "Area of Operation": "IV. Takeoffs, Landings, and Go-Arounds",
+    "Task": "A. Normal Takeoff and Climb",
+    "Type": "Skills",
+    "ACS Code": "PA.IV.A.S3",
+    "Description": "Verify and position flight controls appropriately for wind conditions and runway alignment."
+  },
+  {
+    "Area of Operation": "IV. Takeoffs, Landings, and Go-Arounds",
+    "Task": "A. Normal Takeoff and Climb",
+    "Type": "Skills",
+    "ACS Code": "PA.IV.A.S4",
+    "Description": "Align the airplane on the runway centerline and apply takeoff power smoothly."
+  },
+  {
+    "Area of Operation": "IV. Takeoffs, Landings, and Go-Arounds",
+    "Task": "A. Normal Takeoff and Climb",
+    "Type": "Skills",
+    "ACS Code": "PA.IV.A.S5",
+    "Description": "Rotate and lift off at the recommended airspeed and climb at an appropriate pitch attitude."
+  },
+  {
+    "Area of Operation": "IV. Takeoffs, Landings, and Go-Arounds",
+    "Task": "A. Normal Takeoff and Climb",
+    "Type": "Skills",
+    "ACS Code": "PA.IV.A.S6",
+    "Description": "Establish and maintain Vy or the appropriate climb speed ±10 knots."
+  },
+  {
+    "Area of Operation": "IV. Takeoffs, Landings, and Go-Arounds",
+    "Task": "A. Normal Takeoff and Climb",
+    "Type": "Skills",
+    "ACS Code": "PA.IV.A.S7",
+    "Description": "Maintain directional control and proper wind-drift correction throughout the takeoff and climb."
+  },
+  {
+    "Area of Operation": "IV. Takeoffs, Landings, and Go-Arounds",
+    "Task": "B. Normal Approach and Landing",
+    "Type": "Objective",
+    "ACS Code": "PA.IV.B",
+    "Description": "To determine that the applicant exhibits satisfactory knowledge, risk management, and skills associated with a normal approach and landing."
+  },
+  {
+    "Area of Operation": "IV. Takeoffs, Landings, and Go-Arounds",
+    "Task": "B. Normal Approach and Landing",
+    "Type": "Knowledge",
+    "ACS Code": "PA.IV.B.K1",
+    "Description": "Normal approach and landing procedures per the POH/AFM."
+  },
+  {
+    "Area of Operation": "IV. Takeoffs, Landings, and Go-Arounds",
+    "Task": "B. Normal Approach and Landing",
+    "Type": "Knowledge",
+    "ACS Code": "PA.IV.B.K2",
+    "Description": "Effects of aircraft configuration (e.g., flaps), wind, and atmospheric conditions on landing performance."
+  },
+  {
+    "Area of Operation": "IV. Takeoffs, Landings, and Go-Arounds",
+    "Task": "B. Normal Approach and Landing",
+    "Type": "Risk Management",
+    "ACS Code": "PA.IV.B.R1",
+    "Description": "Unstabilized approach and failure to execute a go-around when appropriate."
+  },
+  {
+    "Area of Operation": "IV. Takeoffs, Landings, and Go-Arounds",
+    "Task": "B. Normal Approach and Landing",
+    "Type": "Risk Management",
+    "ACS Code": "PA.IV.B.R2",
+    "Description": "Runway conditions affecting landing performance (e.g., wet, contaminated, short)."
+  },
+  {
+    "Area of Operation": "IV. Takeoffs, Landings, and Go-Arounds",
+    "Task": "B. Normal Approach and Landing",
+    "Type": "Risk Management",
+    "ACS Code": "PA.IV.B.R3",
+    "Description": "Collision hazards with obstacles, terrain, or other aircraft during approach and landing."
+  },
+  {
+    "Area of Operation": "IV. Takeoffs, Landings, and Go-Arounds",
+    "Task": "B. Normal Approach and Landing",
+    "Type": "Risk Management",
+    "ACS Code": "PA.IV.B.R4",
+    "Description": "Wake turbulence during approach and landing."
+  },
+  {
+    "Area of Operation": "IV. Takeoffs, Landings, and Go-Arounds",
+    "Task": "B. Normal Approach and Landing",
+    "Type": "Skills",
+    "ACS Code": "PA.IV.B.S1",
+    "Description": "Complete the appropriate checklist."
+  },
+  {
+    "Area of Operation": "IV. Takeoffs, Landings, and Go-Arounds",
+    "Task": "B. Normal Approach and Landing",
+    "Type": "Skills",
+    "ACS Code": "PA.IV.B.S2",
+    "Description": "Make radio calls as appropriate."
+  },
+  {
+    "Area of Operation": "IV. Takeoffs, Landings, and Go-Arounds",
+    "Task": "B. Normal Approach and Landing",
+    "Type": "Skills",
+    "ACS Code": "PA.IV.B.S3",
+    "Description": "Establish the recommended approach and landing configuration and airspeed, ±10 knots."
+  },
+  {
+    "Area of Operation": "IV. Takeoffs, Landings, and Go-Arounds",
+    "Task": "B. Normal Approach and Landing",
+    "Type": "Skills",
+    "ACS Code": "PA.IV.B.S4",
+    "Description": "Maintain a stabilized approach and recommended airspeed, or in its absence, not more than 1.3 Vso, ±10 knots, to the flare."
+  },
+  {
+    "Area of Operation": "IV. Takeoffs, Landings, and Go-Arounds",
+    "Task": "B. Normal Approach and Landing",
+    "Type": "Skills",
+    "ACS Code": "PA.IV.B.S5",
+    "Description": "Touch down smoothly at an appropriate airspeed within 400 feet beyond a specified point, with no drift, and aligned with the runway centerline."
+  },
+  {
+    "Area of Operation": "IV. Takeoffs, Landings, and Go-Arounds",
+    "Task": "B. Normal Approach and Landing",
+    "Type": "Skills",
+    "ACS Code": "PA.IV.B.S6",
+    "Description": "Maintain crosswind correction and directional control throughout the approach and landing."
+  },
+  {
+    "Area of Operation": "IV. Takeoffs, Landings, and Go-Arounds",
+    "Task": "C. Soft-Field Takeoff and Climb",
+    "Type": "Objective",
+    "ACS Code": "PA.IV.C",
+    "Description": "To determine that the applicant exhibits satisfactory knowledge, risk management, and skills associated with a soft-field takeoff and climb."
+  },
+  {
+    "Area of Operation": "IV. Takeoffs, Landings, and Go-Arounds",
+    "Task": "C. Soft-Field Takeoff and Climb",
+    "Type": "Knowledge",
+    "ACS Code": "PA.IV.C.K1",
+    "Description": "Soft-field takeoff and climb procedures per the POH/AFM."
+  },
+  {
+    "Area of Operation": "IV. Takeoffs, Landings, and Go-Arounds",
+    "Task": "C. Soft-Field Takeoff and Climb",
+    "Type": "Knowledge",
+    "ACS Code": "PA.IV.C.K2",
+    "Description": "Effects of soft or uneven surfaces on takeoff performance."
+  },
+  {
+    "Area of Operation": "IV. Takeoffs, Landings, and Go-Arounds",
+    "Task": "C. Soft-Field Takeoff and Climb",
+    "Type": "Risk Management",
+    "ACS Code": "PA.IV.C.R1",
+    "Description": "Surface conditions affecting takeoff performance (e.g., wet grass, mud)."
+  },
+  {
+    "Area of Operation": "IV. Takeoffs, Landings, and Go-Arounds",
+    "Task": "C. Soft-Field Takeoff and Climb",
+    "Type": "Risk Management",
+    "ACS Code": "PA.IV.C.R2",
+    "Description": "Collision hazards with obstacles or terrain during takeoff and climb from a soft field."
+  },
+  {
+    "Area of Operation": "IV. Takeoffs, Landings, and Go-Arounds",
+    "Task": "C. Soft-Field Takeoff and Climb",
+    "Type": "Risk Management",
+    "ACS Code": "PA.IV.C.R3",
+    "Description": "Premature liftoff or settling back onto the surface after liftoff."
+  },
+  {
+    "Area of Operation": "IV. Takeoffs, Landings, and Go-Arounds",
+    "Task": "C. Soft-Field Takeoff and Climb",
+    "Type": "Skills",
+    "ACS Code": "PA.IV.C.S1",
+    "Description": "Complete the appropriate checklist."
+  },
+  {
+    "Area of Operation": "IV. Takeoffs, Landings, and Go-Arounds",
+    "Task": "C. Soft-Field Takeoff and Climb",
+    "Type": "Skills",
+    "ACS Code": "PA.IV.C.S2",
+    "Description": "Make radio calls as appropriate."
+  },
+  {
+    "Area of Operation": "IV. Takeoffs, Landings, and Go-Arounds",
+    "Task": "C. Soft-Field Takeoff and Climb",
+    "Type": "Skills",
+    "ACS Code": "PA.IV.C.S3",
+    "Description": "Verify and position flight controls appropriately for wind conditions and surface."
+  },
+  {
+    "Area of Operation": "IV. Takeoffs, Landings, and Go-Arounds",
+    "Task": "C. Soft-Field Takeoff and Climb",
+    "Type": "Skills",
+    "ACS Code": "PA.IV.C.S4",
+    "Description": "Taxi onto the takeoff surface at a speed consistent with safety and apply takeoff power smoothly while maintaining directional control."
+  },
+  {
+    "Area of Operation": "IV. Takeoffs, Landings, and Go-Arounds",
+    "Task": "C. Soft-Field Takeoff and Climb",
+    "Type": "Skills",
+    "ACS Code": "PA.IV.C.S5",
+    "Description": "Lift off at the lowest possible airspeed and remain in ground effect until accelerating to an appropriate climb speed."
+  },
+  {
+    "Area of Operation": "IV. Takeoffs, Landings, and Go-Arounds",
+    "Task": "C. Soft-Field Takeoff and Climb",
+    "Type": "Skills",
+    "ACS Code": "PA.IV.C.S6",
+    "Description": "Climb at an appropriate speed (e.g., Vx or Vy) ±10 knots until obstacles are cleared, then transition to a normal climb."
+  },
+  {
+    "Area of Operation": "IV. Takeoffs, Landings, and Go-Arounds",
+    "Task": "C. Soft-Field Takeoff and Climb",
+    "Type": "Skills",
+    "ACS Code": "PA.IV.C.S7",
+    "Description": "Maintain directional control and proper wind-drift correction throughout the takeoff and climb."
+  },
+  {
+    "Area of Operation": "IV. Takeoffs, Landings, and Go-Arounds",
+    "Task": "D. Soft-Field Approach and Landing",
+    "Type": "Objective",
+    "ACS Code": "PA.IV.D",
+    "Description": "To determine that the applicant exhibits satisfactory knowledge, risk management, and skills associated with a soft-field approach and landing."
+  },
+  {
+    "Area of Operation": "IV. Takeoffs, Landings, and Go-Arounds",
+    "Task": "D. Soft-Field Approach and Landing",
+    "Type": "Knowledge",
+    "ACS Code": "PA.IV.D.K1",
+    "Description": "Soft-field approach and landing procedures per the POH/AFM."
+  },
+  {
+    "Area of Operation": "IV. Takeoffs, Landings, and Go-Arounds",
+    "Task": "D. Soft-Field Approach and Landing",
+    "Type": "Knowledge",
+    "ACS Code": "PA.IV.D.K2",
+    "Description": "Effects of soft or uneven surfaces on landing performance."
+  },
+  {
+    "Area of Operation": "IV. Takeoffs, Landings, and Go-Arounds",
+    "Task": "D. Soft-Field Approach and Landing",
+    "Type": "Risk Management",
+    "ACS Code": "PA.IV.D.R1",
+    "Description": "Unstabilized approach and failure to execute a go-around when appropriate."
+  },
+  {
+    "Area of Operation": "IV. Takeoffs, Landings, and Go-Arounds",
+    "Task": "D. Soft-Field Approach and Landing",
+    "Type": "Risk Management",
+    "ACS Code": "PA.IV.D.R2",
+    "Description": "Surface conditions affecting landing performance (e.g., wet grass, mud)."
+  },
+  {
+    "Area of Operation": "IV. Takeoffs, Landings, and Go-Arounds",
+    "Task": "D. Soft-Field Approach and Landing",
+    "Type": "Risk Management",
+    "ACS Code": "PA.IV.D.R3",
+    "Description": "Collision hazards with obstacles or terrain during approach and landing on a soft field."
+  },
+  {
+    "Area of Operation": "IV. Takeoffs, Landings, and Go-Arounds",
+    "Task": "D. Soft-Field Approach and Landing",
+    "Type": "Skills",
+    "ACS Code": "PA.IV.D.S1",
+    "Description": "Complete the appropriate checklist."
+  },
+  {
+    "Area of Operation": "IV. Takeoffs, Landings, and Go-Arounds",
+    "Task": "D. Soft-Field Approach and Landing",
+    "Type": "Skills",
+    "ACS Code": "PA.IV.D.S2",
+    "Description": "Make radio calls as appropriate."
+  },
+  {
+    "Area of Operation": "IV. Takeoffs, Landings, and Go-Arounds",
+    "Task": "D. Soft-Field Approach and Landing",
+    "Type": "Skills",
+    "ACS Code": "PA.IV.D.S3",
+    "Description": "Establish the recommended approach and landing configuration and airspeed, ±10 knots."
+  },
+  {
+    "Area of Operation": "IV. Takeoffs, Landings, and Go-Arounds",
+    "Task": "D. Soft-Field Approach and Landing",
+    "Type": "Skills",
+    "ACS Code": "PA.IV.D.S4",
+    "Description": "Maintain a stabilized approach and recommended airspeed, or in its absence, not more than 1.3 Vso, ±10 knots, to the flare."
+  },
+  {
+    "Area of Operation": "IV. Takeoffs, Landings, and Go-Arounds",
+    "Task": "D. Soft-Field Approach and Landing",
+    "Type": "Skills",
+    "ACS Code": "PA.IV.D.S5",
+    "Description": "Touch down softly at minimum controllable airspeed with no drift, and aligned with the runway centerline."
+  },
+  {
+    "Area of Operation": "IV. Takeoffs, Landings, and Go-Arounds",
+    "Task": "D. Soft-Field Approach and Landing",
+    "Type": "Skills",
+    "ACS Code": "PA.IV.D.S6",
+    "Description": "Maintain crosswind correction and directional control throughout the approach and landing, keeping weight off the nosewheel."
+  },
+  {
+    "Area of Operation": "IV. Takeoffs, Landings, and Go-Arounds",
+    "Task": "E. Short-Field Takeoff and Maximum Performance Climb",
+    "Type": "Objective",
+    "ACS Code": "PA.IV.E",
+    "Description": "To determine that the applicant exhibits satisfactory knowledge, risk management, and skills associated with a short-field takeoff and maximum performance climb."
+  },
+  {
+    "Area of Operation": "IV. Takeoffs, Landings, and Go-Arounds",
+    "Task": "E. Short-Field Takeoff and Maximum Performance Climb",
+    "Type": "Knowledge",
+    "ACS Code": "PA.IV.E.K1",
+    "Description": "Short-field takeoff and maximum performance climb procedures per the POH/AFM."
+  },
+  {
+    "Area of Operation": "IV. Takeoffs, Landings, and Go-Arounds",
+    "Task": "E. Short-Field Takeoff and Maximum Performance Climb",
+    "Type": "Knowledge",
+    "ACS Code": "PA.IV.E.K2",
+    "Description": "Effects of runway length, surface, and obstacles on takeoff and climb performance."
+  },
+  {
+    "Area of Operation": "IV. Takeoffs, Landings, and Go-Arounds",
+    "Task": "E. Short-Field Takeoff and Maximum Performance Climb",
+    "Type": "Risk Management",
+    "ACS Code": "PA.IV.E.R1",
+    "Description": "Runway conditions affecting takeoff performance (e.g., wet, contaminated)."
+  },
+  {
+    "Area of Operation": "IV. Takeoffs, Landings, and Go-Arounds",
+    "Task": "E. Short-Field Takeoff and Maximum Performance Climb",
+    "Type": "Risk Management",
+    "ACS Code": "PA.IV.E.R2",
+    "Description": "Collision hazards with obstacles or terrain during takeoff and climb from a short field."
+  },
+  {
+    "Area of Operation": "IV. Takeoffs, Landings, and Go-Arounds",
+    "Task": "E. Short-Field Takeoff and Maximum Performance Climb",
+    "Type": "Risk Management",
+    "ACS Code": "PA.IV.E.R3",
+    "Description": "Failure to achieve maximum performance during climb."
+  },
+  {
+    "Area of Operation": "IV. Takeoffs, Landings, and Go-Arounds",
+    "Task": "E. Short-Field Takeoff and Maximum Performance Climb",
+    "Type": "Skills",
+    "ACS Code": "PA.IV.E.S1",
+    "Description": "Complete the appropriate checklist."
+  },
+  {
+    "Area of Operation": "IV. Takeoffs, Landings, and Go-Arounds",
+    "Task": "E. Short-Field Takeoff and Maximum Performance Climb",
+    "Type": "Skills",
+    "ACS Code": "PA.IV.E.S2",
+    "Description": "Make radio calls as appropriate."
+  },
+  {
+    "Area of Operation": "IV. Takeoffs, Landings, and Go-Arounds",
+    "Task": "E. Short-Field Takeoff and Maximum Performance Climb",
+    "Type": "Skills",
+    "ACS Code": "PA.IV.E.S3",
+    "Description": "Verify and position flight controls appropriately for wind conditions and runway alignment."
+  },
+  {
+    "Area of Operation": "IV. Takeoffs, Landings, and Go-Arounds",
+    "Task": "E. Short-Field Takeoff and Maximum Performance Climb",
+    "Type": "Skills",
+    "ACS Code": "PA.IV.E.S4",
+    "Description": "Align the airplane on the runway centerline, utilizing maximum available takeoff area, and apply takeoff power smoothly."
+  },
+  {
+    "Area of Operation": "IV. Takeoffs, Landings, and Go-Arounds",
+    "Task": "E. Short-Field Takeoff and Maximum Performance Climb",
+    "Type": "Skills",
+    "ACS Code": "PA.IV.E.S5",
+    "Description": "Rotate and lift off at the recommended airspeed and climb at Vx ±5 knots until obstacles are cleared, then transition to Vy ±10 knots."
+  },
+  {
+    "Area of Operation": "IV. Takeoffs, Landings, and Go-Arounds",
+    "Task": "E. Short-Field Takeoff and Maximum Performance Climb",
+    "Type": "Skills",
+    "ACS Code": "PA.IV.E.S6",
+    "Description": "Maintain directional control and proper wind-drift correction throughout the takeoff and climb."
+  },
+  {
+    "Area of Operation": "IV. Takeoffs, Landings, and Go-Arounds",
+    "Task": "F. Short-Field Approach and Landing",
+    "Type": "Objective",
+    "ACS Code": "PA.IV.F",
+    "Description": "To determine that the applicant exhibits satisfactory knowledge, risk management, and skills associated with a short-field approach and landing."
+  },
+  {
+    "Area of Operation": "IV. Takeoffs, Landings, and Go-Arounds",
+    "Task": "F. Short-Field Approach and Landing",
+    "Type": "Knowledge",
+    "ACS Code": "PA.IV.F.K1",
+    "Description": "Short-field approach and landing procedures per the POH/AFM."
+  },
+  {
+    "Area of Operation": "IV. Takeoffs, Landings, and Go-Arounds",
+    "Task": "F. Short-Field Approach and Landing",
+    "Type": "Knowledge",
+    "ACS Code": "PA.IV.F.K2",
+    "Description": "Effects of runway length, surface, and wind on landing performance."
+  },
+  {
+    "Area of Operation": "IV. Takeoffs, Landings, and Go-Arounds",
+    "Task": "F. Short-Field Approach and Landing",
+    "Type": "Risk Management",
+    "ACS Code": "PA.IV.F.R1",
+    "Description": "Unstabilized approach and failure to execute a go-around when appropriate."
+  },
+  {
+    "Area of Operation": "IV. Takeoffs, Landings, and Go-Arounds",
+    "Task": "F. Short-Field Approach and Landing",
+    "Type": "Risk Management",
+    "ACS Code": "PA.IV.F.R2",
+    "Description": "Runway conditions affecting landing performance (e.g., wet, contaminated)."
+  },
+  {
+    "Area of Operation": "IV. Takeoffs, Landings, and Go-Arounds",
+    "Task": "F. Short-Field Approach and Landing",
+    "Type": "Risk Management",
+    "ACS Code": "PA.IV.F.R3",
+    "Description": "Collision hazards with obstacles or terrain during approach and landing on a short field."
+  },
+  {
+    "Area of Operation": "IV. Takeoffs, Landings, and Go-Arounds",
+    "Task": "F. Short-Field Approach and Landing",
+    "Type": "Skills",
+    "ACS Code": "PA.IV.F.S1",
+    "Description": "Complete the appropriate checklist."
+  },
+  {
+    "Area of Operation": "IV. Takeoffs, Landings, and Go-Arounds",
+    "Task": "F. Short-Field Approach and Landing",
+    "Type": "Skills",
+    "ACS Code": "PA.IV.F.S2",
+    "Description": "Make radio calls as appropriate."
+  },
+  {
+    "Area of Operation": "IV. Takeoffs, Landings, and Go-Arounds",
+    "Task": "F. Short-Field Approach and Landing",
+    "Type": "Skills",
+    "ACS Code": "PA.IV.F.S3",
+    "Description": "Establish the recommended approach and landing configuration and airspeed, ±10 knots."
+  },
+  {
+    "Area of Operation": "IV. Takeoffs, Landings, and Go-Arounds",
+    "Task": "F. Short-Field Approach and Landing",
+    "Type": "Skills",
+    "ACS Code": "PA.IV.F.S4",
+    "Description": "Maintain a stabilized approach and recommended airspeed, or in its absence, not more than 1.3 Vso, ±5 knots, to the flare."
+  },
+  {
+    "Area of Operation": "IV. Takeoffs, Landings, and Go-Arounds",
+    "Task": "F. Short-Field Approach and Landing",
+    "Type": "Skills",
+    "ACS Code": "PA.IV.F.S5",
+    "Description": "Touch down at or within 200 feet beyond a specified point, with no drift, and aligned with the runway centerline."
+  },
+  {
+    "Area of Operation": "IV. Takeoffs, Landings, and Go-Arounds",
+    "Task": "F. Short-Field Approach and Landing",
+    "Type": "Skills",
+    "ACS Code": "PA.IV.F.S6",
+    "Description": "Apply brakes as necessary to stop in the shortest distance consistent with safety."
+  },
+  {
+    "Area of Operation": "IV. Takeoffs, Landings, and Go-Arounds",
+    "Task": "F. Short-Field Approach and Landing",
+    "Type": "Skills",
+    "ACS Code": "PA.IV.F.S7",
+    "Description": "Maintain crosswind correction and directional control throughout the approach and landing."
+  },
+  {
+    "Area of Operation": "IV. Takeoffs, Landings, and Go-Arounds",
+    "Task": "G. Go-Around/Rejected Landing",
+    "Type": "Objective",
+    "ACS Code": "PA.IV.G",
+    "Description": "To determine that the applicant exhibits satisfactory knowledge, risk management, and skills associated with a go-around/rejected landing."
+  },
+  {
+    "Area of Operation": "IV. Takeoffs, Landings, and Go-Arounds",
+    "Task": "G. Go-Around/Rejected Landing",
+    "Type": "Knowledge",
+    "ACS Code": "PA.IV.G.K1",
+    "Description": "Go-around/rejected landing procedures per the POH/AFM."
+  },
+  {
+    "Area of Operation": "IV. Takeoffs, Landings, and Go-Arounds",
+    "Task": "G. Go-Around/Rejected Landing",
+    "Type": "Knowledge",
+    "ACS Code": "PA.IV.G.K2",
+    "Description": "Situations requiring a go-around (e.g., unstabilized approach, runway incursion)."
+  },
+  {
+    "Area of Operation": "IV. Takeoffs, Landings, and Go-Arounds",
+    "Task": "G. Go-Around/Rejected Landing",
+    "Type": "Risk Management",
+    "ACS Code": "PA.IV.G.R1",
+    "Description": "Delayed decision to initiate a go-around."
+  },
+  {
+    "Area of Operation": "IV. Takeoffs, Landings, and Go-Arounds",
+    "Task": "G. Go-Around/Rejected Landing",
+    "Type": "Risk Management",
+    "ACS Code": "PA.IV.G.R2",
+    "Description": "Collision hazards with obstacles or terrain during a go-around."
+  },
+  {
+    "Area of Operation": "IV. Takeoffs, Landings, and Go-Arounds",
+    "Task": "G. Go-Around/Rejected Landing",
+    "Type": "Risk Management",
+    "ACS Code": "PA.IV.G.R3",
+    "Description": "Improper application of power or configuration during a go-around."
+  },
+  {
+    "Area of Operation": "IV. Takeoffs, Landings, and Go-Arounds",
+    "Task": "G. Go-Around/Rejected Landing",
+    "Type": "Skills",
+    "ACS Code": "PA.IV.G.S1",
+    "Description": "Make a timely decision to discontinue the approach and initiate a go-around."
+  },
+  {
+    "Area of Operation": "IV. Takeoffs, Landings, and Go-Arounds",
+    "Task": "G. Go-Around/Rejected Landing",
+    "Type": "Skills",
+    "ACS Code": "PA.IV.G.S2",
+    "Description": "Apply takeoff power immediately and transition to a climb pitch attitude with appropriate configuration."
+  },
+  {
+    "Area of Operation": "IV. Takeoffs, Landings, and Go-Arounds",
+    "Task": "G. Go-Around/Rejected Landing",
+    "Type": "Skills",
+    "ACS Code": "PA.IV.G.S3",
+    "Description": "Climb at an appropriate airspeed (e.g., Vy or manufacturer’s recommended speed) ±10 knots."
+  },
+  {
+    "Area of Operation": "IV. Takeoffs, Landings, and Go-Arounds",
+    "Task": "G. Go-Around/Rejected Landing",
+    "Type": "Skills",
+    "ACS Code": "PA.IV.G.S4",
+    "Description": "Maintain directional control and proper wind-drift correction throughout the go-around."
+  },
+  {
+    "Area of Operation": "IV. Takeoffs, Landings, and Go-Arounds",
+    "Task": "G. Go-Around/Rejected Landing",
+    "Type": "Skills",
+    "ACS Code": "PA.IV.G.S5",
+    "Description": "Complete the appropriate checklist and make radio calls as appropriate."
+  },
+  {
+    "Area of Operation": "V. Performance and Ground Reference Maneuvers",
+    "Task": "A. Steep Turns",
+    "Type": "Objective",
+    "ACS Code": "PA.V.A",
+    "Description": "To determine that the applicant exhibits satisfactory knowledge, risk management, and skills associated with steep turns."
+  },
+  {
+    "Area of Operation": "V. Performance and Ground Reference Maneuvers",
+    "Task": "A. Steep Turns",
+    "Type": "Knowledge",
+    "ACS Code": "PA.V.A.K1",
+    "Description": "Purpose and procedures for performing steep turns."
+  },
+  {
+    "Area of Operation": "V. Performance and Ground Reference Maneuvers",
+    "Task": "A. Steep Turns",
+    "Type": "Knowledge",
+    "ACS Code": "PA.V.A.K2",
+    "Description": "Aerodynamics of steep turns (e.g., load factor, stall speed increase)."
+  },
+  {
+    "Area of Operation": "V. Performance and Ground Reference Maneuvers",
+    "Task": "A. Steep Turns",
+    "Type": "Risk Management",
+    "ACS Code": "PA.V.A.R1",
+    "Description": "Overbanking tendency and loss of control during steep turns."
+  },
+  {
+    "Area of Operation": "V. Performance and Ground Reference Maneuvers",
+    "Task": "A. Steep Turns",
+    "Type": "Risk Management",
+    "ACS Code": "PA.V.A.R2",
+    "Description": "Collision hazards during maneuvering flight."
+  },
+  {
+    "Area of Operation": "V. Performance and Ground Reference Maneuvers",
+    "Task": "A. Steep Turns",
+    "Type": "Risk Management",
+    "ACS Code": "PA.V.A.R3",
+    "Description": "Low altitude maneuvering and stall/spin awareness."
+  },
+  {
+    "Area of Operation": "V. Performance and Ground Reference Maneuvers",
+    "Task": "A. Steep Turns",
+    "Type": "Skills",
+    "ACS Code": "PA.V.A.S1",
+    "Description": "Establish the manufacturer’s recommended airspeed or, if not specified, a safe airspeed not to exceed VA."
+  },
+  {
+    "Area of Operation": "V. Performance and Ground Reference Maneuvers",
+    "Task": "A. Steep Turns",
+    "Type": "Skills",
+    "ACS Code": "PA.V.A.S2",
+    "Description": "Roll into a coordinated 45° bank turn (±5°), maintaining altitude ±100 feet and airspeed ±10 knots."
+  },
+  {
+    "Area of Operation": "V. Performance and Ground Reference Maneuvers",
+    "Task": "A. Steep Turns",
+    "Type": "Skills",
+    "ACS Code": "PA.V.A.S3",
+    "Description": "Reverse the turn to the opposite direction while maintaining altitude and airspeed within tolerances."
+  },
+  {
+    "Area of Operation": "V. Performance and Ground Reference Maneuvers",
+    "Task": "A. Steep Turns",
+    "Type": "Skills",
+    "ACS Code": "PA.V.A.S4",
+    "Description": "Maintain coordination throughout the maneuver (e.g., ball centered)."
+  },
+  {
+    "Area of Operation": "V. Performance and Ground Reference Maneuvers",
+    "Task": "B. Ground Reference Maneuvers",
+    "Type": "Objective",
+    "ACS Code": "PA.V.B",
+    "Description": "To determine that the applicant exhibits satisfactory knowledge, risk management, and skills associated with ground reference maneuvers."
+  },
+  {
+    "Area of Operation": "V. Performance and Ground Reference Maneuvers",
+    "Task": "B. Ground Reference Maneuvers",
+    "Type": "Knowledge",
+    "ACS Code": "PA.V.B.K1",
+    "Description": "Purpose and procedures for rectangular course, S-turns, and turns around a point."
+  },
+  {
+    "Area of Operation": "V. Performance and Ground Reference Maneuvers",
+    "Task": "B. Ground Reference Maneuvers",
+    "Type": "Knowledge",
+    "ACS Code": "PA.V.B.K2",
+    "Description": "Effects of wind on ground track and maneuvering flight."
+  },
+  {
+    "Area of Operation": "V. Performance and Ground Reference Maneuvers",
+    "Task": "B. Ground Reference Maneuvers",
+    "Type": "Risk Management",
+    "ACS Code": "PA.V.B.R1",
+    "Description": "Collision hazards with obstacles or other aircraft during ground reference maneuvers."
+  },
+  {
+    "Area of Operation": "V. Performance and Ground Reference Maneuvers",
+    "Task": "B. Ground Reference Maneuvers",
+    "Type": "Risk Management",
+    "ACS Code": "PA.V.B.R2",
+    "Description": "Low altitude maneuvering and stall/spin awareness."
+  },
+  {
+    "Area of Operation": "V. Performance and Ground Reference Maneuvers",
+    "Task": "B. Ground Reference Maneuvers",
+    "Type": "Risk Management",
+    "ACS Code": "PA.V.B.R3",
+    "Description": "Improper wind correction leading to drift off the intended ground track."
+  },
+  {
+    "Area of Operation": "V. Performance and Ground Reference Maneuvers",
+    "Task": "B. Ground Reference Maneuvers",
+    "Type": "Skills",
+    "ACS Code": "PA.V.B.S1",
+    "Description": "Select a suitable reference point or course and enter the maneuver at an appropriate altitude (600-1,000 feet AGL) and airspeed ±10 knots."
+  },
+  {
+    "Area of Operation": "V. Performance and Ground Reference Maneuvers",
+    "Task": "B. Ground Reference Maneuvers",
+    "Type": "Skills",
+    "ACS Code": "PA.V.B.S2",
+    "Description": "Apply proper wind-drift correction to maintain a consistent ground track around the selected reference point or course."
+  },
+  {
+    "Area of Operation": "V. Performance and Ground Reference Maneuvers",
+    "Task": "B. Ground Reference Maneuvers",
+    "Type": "Skills",
+    "ACS Code": "PA.V.B.S3",
+    "Description": "Divide attention between airplane control and maintaining the ground track, keeping altitude ±100 feet and bank angle ±10°."
+  },
+  {
+    "Area of Operation": "V. Performance and Ground Reference Maneuvers",
+    "Task": "B. Ground Reference Maneuvers",
+    "Type": "Skills",
+    "ACS Code": "PA.V.B.S4",
+    "Description": "Maintain coordination throughout the maneuver (e.g., ball centered)."
+  },
+  {
+    "Area of Operation": "VI. Navigation",
+    "Task": "A. Pilotage and Dead Reckoning",
+    "Type": "Objective",
+    "ACS Code": "PA.VI.A",
+    "Description": "To determine that the applicant exhibits satisfactory knowledge, risk management, and skills associated with pilotage and dead reckoning."
+  },
+  {
+    "Area of Operation": "VI. Navigation",
+    "Task": "A. Pilotage and Dead Reckoning",
+    "Type": "Knowledge",
+    "ACS Code": "PA.VI.A.K1",
+    "Description": "Pilotage and dead reckoning navigation techniques (e.g., use of charts, checkpoints, time/speed/distance)."
+  },
+  {
+    "Area of Operation": "VI. Navigation",
+    "Task": "A. Pilotage and Dead Reckoning",
+    "Type": "Knowledge",
+    "ACS Code": "PA.VI.A.K2",
+    "Description": "Effects of wind on navigation and groundspeed."
+  },
+  {
+    "Area of Operation": "VI. Navigation",
+    "Task": "A. Pilotage and Dead Reckoning",
+    "Type": "Risk Management",
+    "ACS Code": "PA.VI.A.R1",
+    "Description": "Disorientation or getting lost during navigation."
+  },
+  {
+    "Area of Operation": "VI. Navigation",
+    "Task": "A. Pilotage and Dead Reckoning",
+    "Type": "Risk Management",
+    "ACS Code": "PA.VI.A.R2",
+    "Description": "Fuel management during cross-country flight."
+  },
+  {
+    "Area of Operation": "VI. Navigation",
+    "Task": "A. Pilotage and Dead Reckoning",
+    "Type": "Risk Management",
+    "ACS Code": "PA.VI.A.R3",
+    "Description": "Collision hazards with terrain or obstacles during low-altitude navigation."
+  },
+  {
+    "Area of Operation": "VI. Navigation",
+    "Task": "A. Pilotage and Dead Reckoning",
+    "Type": "Skills",
+    "ACS Code": "PA.VI.A.S1",
+    "Description": "Navigate by pilotage using preplanned checkpoints and landmarks."
+  },
+  {
+    "Area of Operation": "VI. Navigation",
+    "Task": "A. Pilotage and Dead Reckoning",
+    "Type": "Skills",
+    "ACS Code": "PA.VI.A.S2",
+    "Description": "Navigate by dead reckoning using precomputed headings, groundspeeds, and elapsed time, ±10 minutes or 10 miles."
+  },
+  {
+    "Area of Operation": "VI. Navigation",
+    "Task": "A. Pilotage and Dead Reckoning",
+    "Type": "Skills",
+    "ACS Code": "PA.VI.A.S3",
+    "Description": "Verify position using ground references and adjust course as necessary."
+  },
+  {
+    "Area of Operation": "VI. Navigation",
+    "Task": "B. Navigation Systems and Radar Services",
+    "Type": "Objective",
+    "ACS Code": "PA.VI.B",
+    "Description": "To determine that the applicant exhibits satisfactory knowledge, risk management, and skills associated with navigation systems and radar services."
+  },
+  {
+    "Area of Operation": "VI. Navigation",
+    "Task": "B. Navigation Systems and Radar Services",
+    "Type": "Knowledge",
+    "ACS Code": "PA.VI.B.K1",
+    "Description": "Use and limitations of navigation systems (e.g., VOR, GPS) and their operating procedures."
+  },
+  {
+    "Area of Operation": "VI. Navigation",
+    "Task": "B. Navigation Systems and Radar Services",
+    "Type": "Knowledge",
+    "ACS Code": "PA.VI.B.K2",
+    "Description": "Radar services available to VFR pilots (e.g., flight following, weather radar)."
+  },
+  {
+    "Area of Operation": "VI. Navigation",
+    "Task": "B. Navigation Systems and Radar Services",
+    "Type": "Risk Management",
+    "ACS Code": "PA.VI.B.R1",
+    "Description": "Overreliance on navigation systems without cross-checking with other methods."
+  },
+  {
+    "Area of Operation": "VI. Navigation",
+    "Task": "B. Navigation Systems and Radar Services",
+    "Type": "Risk Management",
+    "ACS Code": "PA.VI.B.R2",
+    "Description": "Failure to recognize navigation system malfunctions or errors."
+  },
+  {
+    "Area of Operation": "VI. Navigation",
+    "Task": "B. Navigation Systems and Radar Services",
+    "Type": "Skills",
+    "ACS Code": "PA.VI.B.S1",
+    "Description": "Use an installed navigation system (e.g., VOR, GPS) to navigate to a specified point or along a predetermined route."
+  },
+  {
+    "Area of Operation": "VI. Navigation",
+    "Task": "B. Navigation Systems and Radar Services",
+    "Type": "Skills",
+    "ACS Code": "PA.VI.B.S2",
+    "Description": "Use radar services (e.g., flight following) when available and appropriate during navigation."
+  },
+  {
+    "Area of Operation": "VI. Navigation",
+    "Task": "C. Diversion",
+    "Type": "Objective",
+    "ACS Code": "PA.VI.C",
+    "Description": "To determine that the applicant exhibits satisfactory knowledge, risk management, and skills associated with diverting to an alternate airport."
+  },
+  {
+    "Area of Operation": "VI. Navigation",
+    "Task": "C. Diversion",
+    "Type": "Knowledge",
+    "ACS Code": "PA.VI.C.K1",
+    "Description": "Procedures for diverting to an alternate airport, including course, altitude, and fuel considerations."
+  },
+  {
+    "Area of Operation": "VI. Navigation",
+    "Task": "C. Diversion",
+    "Type": "Risk Management",
+    "ACS Code": "PA.VI.C.R1",
+    "Description": "Delayed decision to divert, leading to fuel exhaustion or encountering adverse conditions."
+  },
+  {
+    "Area of Operation": "VI. Navigation",
+    "Task": "C. Diversion",
+    "Type": "Risk Management",
+    "ACS Code": "PA.VI.C.R2",
+    "Description": "Collision hazards with terrain or obstacles during a diversion."
+  },
+  {
+    "Area of Operation": "VI. Navigation",
+    "Task": "C. Diversion",
+    "Type": "Skills",
+    "ACS Code": "PA.VI.C.S1",
+    "Description": "Select an appropriate alternate airport and route based on a scenario provided by the evaluator."
+  },
+  {
+    "Area of Operation": "VI. Navigation",
+    "Task": "C. Diversion",
+    "Type": "Skills",
+    "ACS Code": "PA.VI.C.S2",
+    "Description": "Estimate heading, groundspeed, ETA, and fuel required to reach the alternate airport, ±10 minutes or 10 miles."
+  },
+  {
+    "Area of Operation": "VI. Navigation",
+    "Task": "C. Diversion",
+    "Type": "Skills",
+    "ACS Code": "PA.VI.C.S3",
+    "Description": "Navigate to the alternate airport using available navigation methods."
+  },
+  {
+    "Area of Operation": "VI. Navigation",
+    "Task": "D. Lost Procedures",
+    "Type": "Objective",
+    "ACS Code": "PA.VI.D",
+    "Description": "To determine that the applicant exhibits satisfactory knowledge, risk management, and skills associated with lost procedures."
+  },
+  {
+    "Area of Operation": "VI. Navigation",
+    "Task": "D. Lost Procedures",
+    "Type": "Knowledge",
+    "ACS Code": "PA.VI.D.K1",
+    "Description": "Lost procedures (e.g., 5 Cs: Climb, Circle, Conserve, Communicate, Confess)."
+  },
+  {
+    "Area of Operation": "VI. Navigation",
+    "Task": "D. Lost Procedures",
+    "Type": "Risk Management",
+    "ACS Code": "PA.VI.D.R1",
+    "Description": "Disorientation leading to fuel exhaustion or controlled flight into terrain."
+  },
+  {
+    "Area of Operation": "VI. Navigation",
+    "Task": "D. Lost Procedures",
+    "Type": "Risk Management",
+    "ACS Code": "PA.VI.D.R2",
+    "Description": "Failure to seek assistance when lost."
+  },
+  {
+    "Area of Operation": "VI. Navigation",
+    "Task": "D. Lost Procedures",
+    "Type": "Skills",
+    "ACS Code": "PA.VI.D.S1",
+    "Description": "Use an appropriate lost procedure to determine position and navigate to a known location or airport."
+  },
+  {
+    "Area of Operation": "VI. Navigation",
+    "Task": "D. Lost Procedures",
+    "Type": "Skills",
+    "ACS Code": "PA.VI.D.S2",
+    "Description": "Communicate with ATC or other available resources to assist in determining position."
+  },
+  {
+    "Area of Operation": "VII. Slow Flight and Stalls",
+    "Task": "A. Maneuvering During Slow Flight",
+    "Type": "Objective",
+    "ACS Code": "PA.VII.A",
+    "Description": "To determine that the applicant exhibits satisfactory knowledge, risk management, and skills associated with maneuvering during slow flight in various configurations."
+  },
+  {
+    "Area of Operation": "VII. Slow Flight and Stalls",
+    "Task": "A. Maneuvering During Slow Flight",
+    "Type": "Knowledge",
+    "ACS Code": "PA.VII.A.K1",
+    "Description": "Aerodynamics of slow flight (e.g., increased angle of attack, decreased airspeed)."
+  },
+  {
+    "Area of Operation": "VII. Slow Flight and Stalls",
+    "Task": "A. Maneuvering During Slow Flight",
+    "Type": "Knowledge",
+    "ACS Code": "PA.VII.A.K2",
+    "Description": "Performance and limitations during slow flight in various configurations."
+  },
+  {
+    "Area of Operation": "VII. Slow Flight and Stalls",
+    "Task": "A. Maneuvering During Slow Flight",
+    "Type": "Risk Management",
+    "ACS Code": "PA.VII.A.R1",
+    "Description": "Inadvertent stall or spin during slow flight."
+  },
+  {
+    "Area of Operation": "VII. Slow Flight and Stalls",
+    "Task": "A. Maneuvering During Slow Flight",
+    "Type": "Risk Management",
+    "ACS Code": "PA.VII.A.R2",
+    "Description": "Collision hazards during low-altitude slow flight."
+  },
+  {
+    "Area of Operation": "VII. Slow Flight and Stalls",
+    "Task": "A. Maneuvering During Slow Flight",
+    "Type": "Skills",
+    "ACS Code": "PA.VII.A.S1",
+    "Description": "Establish and maintain an airspeed that results in minimum controllable airspeed or just above stall warning activation, ±10 knots."
+  },
+  {
+    "Area of Operation": "VII. Slow Flight and Stalls",
+    "Task": "A. Maneuvering During Slow Flight",
+    "Type": "Skills",
+    "ACS Code": "PA.VII.A.S2",
+    "Description": "Perform coordinated turns, climbs, and descents while maintaining altitude ±100 feet and bank ±10°."
+  },
+  {
+    "Area of Operation": "VII. Slow Flight and Stalls",
+    "Task": "A. Maneuvering During Slow Flight",
+    "Type": "Skills",
+    "ACS Code": "PA.VII.A.S3",
+    "Description": "Maintain coordination throughout the maneuver (e.g., ball centered)."
+  },
+  {
+    "Area of Operation": "VII. Slow Flight and Stalls",
+    "Task": "B. Power-Off Stalls",
+    "Type": "Objective",
+    "ACS Code": "PA.VII.B",
+    "Description": "To determine that the applicant exhibits satisfactory knowledge, risk management, and skills associated with power-off stalls."
+  },
+  {
+    "Area of Operation": "VII. Slow Flight and Stalls",
+    "Task": "B. Power-Off Stalls",
+    "Type": "Knowledge",
+    "ACS Code": "PA.VII.B.K1",
+    "Description": "Aerodynamics of power-off stalls (e.g., critical angle of attack, stall progression)."
+  },
+  {
+    "Area of Operation": "VII. Slow Flight and Stalls",
+    "Task": "B. Power-Off Stalls",
+    "Type": "Knowledge",
+    "ACS Code": "PA.VII.B.K2",
+    "Description": "Indications of an impending stall (e.g., buffet, stall warning)."
+  },
+  {
+    "Area of Operation": "VII. Slow Flight and Stalls",
+    "Task": "B. Power-Off Stalls",
+    "Type": "Risk Management",
+    "ACS Code": "PA.VII.B.R1",
+    "Description": "Inadvertent spin during a stall maneuver."
+  },
+  {
+    "Area of Operation": "VII. Slow Flight and Stalls",
+    "Task": "B. Power-Off Stalls",
+    "Type": "Risk Management",
+    "ACS Code": "PA.VII.B.R2",
+    "Description": "Collision hazards during low-altitude stall practice."
+  },
+  {
+    "Area of Operation": "VII. Slow Flight and Stalls",
+    "Task": "B. Power-Off Stalls",
+    "Type": "Skills",
+    "ACS Code": "PA.VII.B.S1",
+    "Description": "Select an entry altitude that allows recovery above 1,500 feet AGL or the manufacturer’s recommended altitude, whichever is higher."
+  },
+  {
+    "Area of Operation": "VII. Slow Flight and Stalls",
+    "Task": "B. Power-Off Stalls",
+    "Type": "Skills",
+    "ACS Code": "PA.VII.B.S2",
+    "Description": "Establish a power-off descent and induce a stall in a straight-ahead or turning configuration (up to 20° bank)."
+  },
+  {
+    "Area of Operation": "VII. Slow Flight and Stalls",
+    "Task": "B. Power-Off Stalls",
+    "Type": "Skills",
+    "ACS Code": "PA.VII.B.S3",
+    "Description": "Recognize the first indication of a stall and promptly recover by reducing angle of attack, applying maximum power, and leveling the wings, maintaining altitude ±100 feet after recovery."
+  },
+  {
+    "Area of Operation": "VII. Slow Flight and Stalls",
+    "Task": "B. Power-Off Stalls",
+    "Type": "Skills",
+    "ACS Code": "PA.VII.B.S4",
+    "Description": "Maintain coordination throughout the maneuver (e.g., ball centered)."
+  },
+  {
+    "Area of Operation": "VII. Slow Flight and Stalls",
+    "Task": "C. Power-On Stalls",
+    "Type": "Objective",
+    "ACS Code": "PA.VII.C",
+    "Description": "To determine that the applicant exhibits satisfactory knowledge, risk management, and skills associated with power-on stalls."
+  },
+  {
+    "Area of Operation": "VII. Slow Flight and Stalls",
+    "Task": "C. Power-On Stalls",
+    "Type": "Knowledge",
+    "ACS Code": "PA.VII.C.K1",
+    "Description": "Aerodynamics of power-on stalls (e.g., torque, spiraling slipstream)."
+  },
+  {
+    "Area of Operation": "VII. Slow Flight and Stalls",
+    "Task": "C. Power-On Stalls",
+    "Type": "Knowledge",
+    "ACS Code": "PA.VII.C.K2",
+    "Description": "Indications of an impending stall during power-on conditions."
+  },
+  {
+    "Area of Operation": "VII. Slow Flight and Stalls",
+    "Task": "C. Power-On Stalls",
+    "Type": "Risk Management",
+    "ACS Code": "PA.VII.C.R1",
+    "Description": "Inadvertent spin during a power-on stall maneuver."
+  },
+  {
+    "Area of Operation": "VII. Slow Flight and Stalls",
+    "Task": "C. Power-On Stalls",
+    "Type": "Risk Management",
+    "ACS Code": "PA.VII.C.R2",
+    "Description": "Collision hazards during low-altitude stall practice."
+  },
+  {
+    "Area of Operation": "VII. Slow Flight and Stalls",
+    "Task": "C. Power-On Stalls",
+    "Type": "Skills",
+    "ACS Code": "PA.VII.C.S1",
+    "Description": "Select an entry altitude that allows recovery above 1,500 feet AGL or the manufacturer’s recommended altitude, whichever is higher."
+  },
+  {
+    "Area of Operation": "VII. Slow Flight and Stalls",
+    "Task": "C. Power-On Stalls",
+    "Type": "Skills",
+    "ACS Code": "PA.VII.C.S2",
+    "Description": "Establish takeoff or departure configuration with power set to no less than 65% available power and induce a stall in a straight-ahead or turning configuration (up to 20° bank)."
+  },
+  {
+    "Area of Operation": "VII. Slow Flight and Stalls",
+    "Task": "C. Power-On Stalls",
+    "Type": "Skills",
+    "ACS Code": "PA.VII.C.S3",
+    "Description": "Recognize the first indication of a stall and promptly recover by reducing angle of attack, applying maximum power, and leveling the wings, maintaining altitude ±100 feet after recovery."
+  },
+  {
+    "Area of Operation": "VII. Slow Flight and Stalls",
+    "Task": "C. Power-On Stalls",
+    "Type": "Skills",
+    "ACS Code": "PA.VII.C.S4",
+    "Description": "Maintain coordination throughout the maneuver (e.g., ball centered)."
+  },
+  {
+    "Area of Operation": "VII. Slow Flight and Stalls",
+    "Task": "D. Spin Awareness",
+    "Type": "Objective",
+    "ACS Code": "PA.VII.D",
+    "Description": "To determine that the applicant exhibits satisfactory knowledge and risk management associated with spins (spin demonstration is not required)."
+  },
+  {
+    "Area of Operation": "VII. Slow Flight and Stalls",
+    "Task": "D. Spin Awareness",
+    "Type": "Knowledge",
+    "ACS Code": "PA.VII.D.K1",
+    "Description": "Aerodynamics of spins (e.g., stalled condition, autorotation)."
+  },
+  {
+    "Area of Operation": "VII. Slow Flight and Stalls",
+    "Task": "D. Spin Awareness",
+    "Type": "Knowledge",
+    "ACS Code": "PA.VII.D.K2",
+    "Description": "Situations that could lead to an inadvertent spin (e.g., uncoordinated flight, stall during a turn)."
+  },
+  {
+    "Area of Operation": "VII. Slow Flight and Stalls",
+    "Task": "D. Spin Awareness",
+    "Type": "Knowledge",
+    "ACS Code": "PA.VII.D.K3",
+    "Description": "Spin recovery procedures per the POH/AFM."
+  },
+  {
+    "Area of Operation": "VII. Slow Flight and Stalls",
+    "Task": "D. Spin Awareness",
+    "Type": "Risk Management",
+    "ACS Code": "PA.VII.D.R1",
+    "Description": "Situations that could lead to an inadvertent spin and failure to recognize or recover promptly."
+  },
+  {
+    "Area of Operation": "VII. Slow Flight and Stalls",
+    "Task": "D. Spin Awareness",
+    "Type": "Skills",
+    "ACS Code": "PA.VII.D.S1",
+    "Description": "Explain spin aerodynamics, recognition, and recovery procedures based on a scenario provided by the evaluator."
+  },
+  {
+    "Area of Operation": "VIII. Basic Instrument Maneuvers",
+    "Task": "A. Straight-and-Level Flight",
+    "Type": "Objective",
+    "ACS Code": "PA.VIII.A",
+    "Description": "To determine that the applicant exhibits satisfactory knowledge, risk management, and skills associated with maintaining straight-and-level flight solely by reference to instruments."
+  },
+  {
+    "Area of Operation": "VIII. Basic Instrument Maneuvers",
+    "Task": "A. Straight-and-Level Flight",
+    "Type": "Knowledge",
+    "ACS Code": "PA.VIII.A.K1",
+    "Description": "Instrument indications for straight-and-level flight (e.g., attitude indicator, altimeter, heading indicator)."
+  },
+  {
+    "Area of Operation": "VIII. Basic Instrument Maneuvers",
+    "Task": "A. Straight-and-Level Flight",
+    "Type": "Knowledge",
+    "ACS Code": "PA.VIII.A.K2",
+    "Description": "Instrument scan and interpretation techniques."
+  },
+  {
+    "Area of Operation": "VIII. Basic Instrument Maneuvers",
+    "Task": "A. Straight-and-Level Flight",
+    "Type": "Risk Management",
+    "ACS Code": "PA.VIII.A.R1",
+    "Description": "Spatial disorientation and improper instrument cross-check."
+  },
+  {
+    "Area of Operation": "VIII. Basic Instrument Maneuvers",
+    "Task": "A. Straight-and-Level Flight",
+    "Type": "Skills",
+    "ACS Code": "PA.VIII.A.S1",
+    "Description": "Maintain straight-and-level flight using proper instrument cross-check and interpretation, ±200 feet altitude and ±20° heading."
+  },
+  {
+    "Area of Operation": "VIII. Basic Instrument Maneuvers",
+    "Task": "B. Constant Airspeed Climbs",
+    "Type": "Objective",
+    "ACS Code": "PA.VIII.B",
+    "Description": "To determine that the applicant exhibits satisfactory knowledge, risk management, and skills associated with constant airspeed climbs solely by reference to instruments."
+  },
+  {
+    "Area of Operation": "VIII. Basic Instrument Maneuvers",
+    "Task": "B. Constant Airspeed Climbs",
+    "Type": "Knowledge",
+    "ACS Code": "PA.VIII.B.K1",
+    "Description": "Instrument indications for constant airspeed climbs (e.g., airspeed indicator, attitude indicator, vertical speed indicator)."
+  },
+  {
+    "Area of Operation": "VIII. Basic Instrument Maneuvers",
+    "Task": "B. Constant Airspeed Climbs",
+    "Type": "Risk Management",
+    "ACS Code": "PA.VIII.B.R1",
+    "Description": "Spatial disorientation and improper instrument cross-check during climbs."
+  },
+  {
+    "Area of Operation": "VIII. Basic Instrument Maneuvers",
+    "Task": "B. Constant Airspeed Climbs",
+    "Type": "Skills",
+    "ACS Code": "PA.VIII.B.S1",
+    "Description": "Transition to a constant airspeed climb from straight-and-level flight, maintaining airspeed ±10 knots, heading ±20°, and altitude ±200 feet at termination."
+  },
+  {
+    "Area of Operation": "VIII. Basic Instrument Maneuvers",
+    "Task": "C. Constant Airspeed Descents",
+    "Type": "Objective",
+    "ACS Code": "PA.VIII.C",
+    "Description": "To determine that the applicant exhibits satisfactory knowledge, risk management, and skills associated with constant airspeed descents solely by reference to instruments."
+  },
+  {
+    "Area of Operation": "VIII. Basic Instrument Maneuvers",
+    "Task": "C. Constant Airspeed Descents",
+    "Type": "Knowledge",
+    "ACS Code": "PA.VIII.C.K1",
+    "Description": "Instrument indications for constant airspeed descents (e.g., airspeed indicator, attitude indicator, vertical speed indicator)."
+  },
+  {
+    "Area of Operation": "VIII. Basic Instrument Maneuvers",
+    "Task": "C. Constant Airspeed Descents",
+    "Type": "Risk Management",
+    "ACS Code": "PA.VIII.C.R1",
+    "Description": "Spatial disorientation and improper instrument cross-check during descents."
+  },
+  {
+    "Area of Operation": "VIII. Basic Instrument Maneuvers",
+    "Task": "C. Constant Airspeed Descents",
+    "Type": "Skills",
+    "ACS Code": "PA.VIII.C.S1",
+    "Description": "Transition to a constant airspeed descent from straight-and-level flight, maintaining airspeed ±10 knots, heading ±20°, and altitude ±200 feet at termination."
+  },
+  {
+    "Area of Operation": "VIII. Basic Instrument Maneuvers",
+    "Task": "D. Turns to Headings",
+    "Type": "Objective",
+    "ACS Code": "PA.VIII.D",
+    "Description": "To determine that the applicant exhibits satisfactory knowledge, risk management, and skills associated with turns to headings solely by reference to instruments."
+  },
+  {
+    "Area of Operation": "VIII. Basic Instrument Maneuvers",
+    "Task": "D. Turns to Headings",
+    "Type": "Knowledge",
+    "ACS Code": "PA.VIII.D.K1",
+    "Description": "Instrument indications for turns to headings (e.g., attitude indicator, heading indicator, turn coordinator)."
+  },
+  {
+    "Area of Operation": "VIII. Basic Instrument Maneuvers",
+    "Task": "D. Turns to Headings",
+    "Type": "Knowledge",
+    "ACS Code": "PA.VIII.D.K2",
+    "Description": "Standard-rate turns and their relationship to heading changes."
+  },
+  {
+    "Area of Operation": "VIII. Basic Instrument Maneuvers",
+    "Task": "D. Turns to Headings",
+    "Type": "Risk Management",
+    "ACS Code": "PA.VIII.D.R1",
+    "Description": "Spatial disorientation and improper instrument cross-check during turns."
+  },
+  {
+    "Area of Operation": "VIII. Basic Instrument Maneuvers",
+    "Task": "D. Turns to Headings",
+    "Type": "Skills",
+    "ACS Code": "PA.VIII.D.S1",
+    "Description": "Perform a standard-rate turn to a specified heading, maintaining altitude ±200 feet, airspeed ±10 knots, and roll out on heading ±10°."
+  },
+  {
+    "Area of Operation": "VIII. Basic Instrument Maneuvers",
+    "Task": "E. Recovery from Unusual Flight Attitudes",
+    "Type": "Objective",
+    "ACS Code": "PA.VIII.E",
+    "Description": "To determine that the applicant exhibits satisfactory knowledge, risk management, and skills associated with recovering from unusual flight attitudes solely by reference to instruments."
+  },
+  {
+    "Area of Operation": "VIII. Basic Instrument Maneuvers",
+    "Task": "E. Recovery from Unusual Flight Attitudes",
+    "Type": "Knowledge",
+    "ACS Code": "PA.VIII.E.K1",
+    "Description": "Instrument indications of unusual flight attitudes (e.g., nose-high, nose-low, excessive bank)."
+  },
+  {
+    "Area of Operation": "VIII. Basic Instrument Maneuvers",
+    "Task": "E. Recovery from Unusual Flight Attitudes",
+    "Type": "Knowledge",
+    "ACS Code": "PA.VIII.E.K2",
+    "Description": "Recovery procedures for unusual flight attitudes per the POH/AFM."
+  },
+  {
+    "Area of Operation": "VIII. Basic Instrument Maneuvers",
+    "Task": "E. Recovery from Unusual Flight Attitudes",
+    "Type": "Risk Management",
+    "ACS Code": "PA.VIII.E.R1",
+    "Description": "Spatial disorientation and delayed recovery from unusual attitudes."
+  },
+  {
+    "Area of Operation": "VIII. Basic Instrument Maneuvers",
+    "Task": "E. Recovery from Unusual Flight Attitudes",
+    "Type": "Risk Management",
+    "ACS Code": "PA.VIII.E.R2",
+    "Description": "Exceeding airplane limitations during recovery attempts."
+  },
+  {
+    "Area of Operation": "VIII. Basic Instrument Maneuvers",
+    "Task": "E. Recovery from Unusual Flight Attitudes",
+    "Type": "Skills",
+    "ACS Code": "PA.VIII.E.S1",
+    "Description": "Recognize an unusual flight attitude and apply appropriate recovery techniques using proper instrument cross-check, returning to straight-and-level flight."
+  },
+  {
+    "Area of Operation": "VIII. Basic Instrument Maneuvers",
+    "Task": "F. Radio Communications, Navigation Systems/Facilities, and Radar Services",
+    "Type": "Objective",
+    "ACS Code": "PA.VIII.F",
+    "Description": "To determine that the applicant exhibits satisfactory knowledge, risk management, and skills associated with radio communications, navigation systems/facilities, and radar services under simulated or actual instrument conditions."
+  },
+  {
+    "Area of Operation": "VIII. Basic Instrument Maneuvers",
+    "Task": "F. Radio Communications, Navigation Systems/Facilities, and Radar Services",
+    "Type": "Knowledge",
+    "ACS Code": "PA.VIII.F.K1",
+    "Description": "Radio communication procedures under instrument conditions (e.g., ATC clearance, emergency communications)."
+  },
+  {
+    "Area of Operation": "VIII. Basic Instrument Maneuvers",
+    "Task": "F. Radio Communications, Navigation Systems/Facilities, and Radar Services",
+    "Type": "Knowledge",
+    "ACS Code": "PA.VIII.F.K2",
+    "Description": "Use of navigation systems/facilities (e.g., VOR, GPS) for instrument flight."
+  },
+  {
+    "Area of Operation": "VIII. Basic Instrument Maneuvers",
+    "Task": "F. Radio Communications, Navigation Systems/Facilities, and Radar Services",
+    "Type": "Knowledge",
+    "ACS Code": "PA.VIII.F.K3",
+    "Description": "Radar services available under instrument conditions (e.g., vectors, weather avoidance)."
+  },
+  {
+    "Area of Operation": "VIII. Basic Instrument Maneuvers",
+    "Task": "F. Radio Communications, Navigation Systems/Facilities, and Radar Services",
+    "Type": "Risk Management",
+    "ACS Code": "PA.VIII.F.R1",
+    "Description": "Miscommunication with ATC or failure to comply with instructions."
+  },
+  {
+    "Area of Operation": "VIII. Basic Instrument Maneuvers",
+    "Task": "F. Radio Communications, Navigation Systems/Facilities, and Radar Services",
+    "Type": "Risk Management",
+    "ACS Code": "PA.VIII.F.R2",
+    "Description": "Overreliance on navigation systems without cross-checking."
+  },
+  {
+    "Area of Operation": "VIII. Basic Instrument Maneuvers",
+    "Task": "F. Radio Communications, Navigation Systems/Facilities, and Radar Services",
+    "Type": "Skills",
+    "ACS Code": "PA.VIII.F.S1",
+    "Description": "Use proper radio communication procedures to obtain information or assistance from ATC or other facilities under simulated or actual instrument conditions."
+  },
+  {
+    "Area of Operation": "VIII. Basic Instrument Maneuvers",
+    "Task": "F. Radio Communications, Navigation Systems/Facilities, and Radar Services",
+    "Type": "Skills",
+    "ACS Code": "PA.VIII.F.S2",
+    "Description": "Use an installed navigation system/facility to intercept and track a specified course or radial."
+  },
+  {
+    "Area of Operation": "IX. Emergency Operations",
+    "Task": "A. Emergency Descent",
+    "Type": "Objective",
+    "ACS Code": "PA.IX.A",
+    "Description": "To determine that the applicant exhibits satisfactory knowledge, risk management, and skills associated with performing an emergency descent."
+  },
+  {
+    "Area of Operation": "IX. Emergency Operations",
+    "Task": "A. Emergency Descent",
+    "Type": "Knowledge",
+    "ACS Code": "PA.IX.A.K1",
+    "Description": "Situations requiring an emergency descent (e.g., cabin fire, depressurization)."
+  },
+  {
+    "Area of Operation": "IX. Emergency Operations",
+    "Task": "A. Emergency Descent",
+    "Type": "Knowledge",
+    "ACS Code": "PA.IX.A.K2",
+    "Description": "Emergency descent procedures per the POH/AFM."
+  },
+  {
+    "Area of Operation": "IX. Emergency Operations",
+    "Task": "A. Emergency Descent",
+    "Type": "Risk Management",
+    "ACS Code": "PA.IX.A.R1",
+    "Description": "Delayed initiation of an emergency descent."
+  },
+  {
+    "Area of Operation": "IX. Emergency Operations",
+    "Task": "A. Emergency Descent",
+    "Type": "Risk Management",
+    "ACS Code": "PA.IX.A.R2",
+    "Description": "Exceeding airplane limitations during an emergency descent."
+  },
+  {
+    "Area of Operation": "IX. Emergency Operations",
+    "Task": "A. Emergency Descent",
+    "Type": "Skills",
+    "ACS Code": "PA.IX.A.S1",
+    "Description": "Recognize the need for an emergency descent and initiate the procedure promptly per the POH/AFM."
+  },
+  {
+    "Area of Operation": "IX. Emergency Operations",
+    "Task": "A. Emergency Descent",
+    "Type": "Skills",
+    "ACS Code": "PA.IX.A.S2",
+    "Description": "Maintain positive load factors and airspeed within limitations during the descent, ±10 knots of recommended speed."
+  },
+  {
+    "Area of Operation": "IX. Emergency Operations",
+    "Task": "A. Emergency Descent",
+    "Type": "Skills",
+    "ACS Code": "PA.IX.A.S3",
+    "Description": "Level off at a specified altitude, ±200 feet."
+  },
+  {
+    "Area of Operation": "IX. Emergency Operations",
+    "Task": "B. Emergency Approach and Landing (Simulated)",
+    "Type": "Objective",
+    "ACS Code": "PA.IX.B",
+    "Description": "To determine that the applicant exhibits satisfactory knowledge, risk management, and skills associated with an emergency approach and landing."
+  },
+  {
+    "Area of Operation": "IX. Emergency Operations",
+    "Task": "B. Emergency Approach and Landing (Simulated)",
+    "Type": "Knowledge",
+    "ACS Code": "PA.IX.B.K1",
+    "Description": "Situations requiring an emergency approach and landing (e.g., engine failure)."
+  },
+  {
+    "Area of Operation": "IX. Emergency Operations",
+    "Task": "B. Emergency Approach and Landing (Simulated)",
+    "Type": "Knowledge",
+    "ACS Code": "PA.IX.B.K2",
+    "Description": "Emergency approach and landing procedures per the POH/AFM."
+  },
+  {
+    "Area of Operation": "IX. Emergency Operations",
+    "Task": "B. Emergency Approach and Landing (Simulated)",
+    "Type": "Risk Management",
+    "ACS Code": "PA.IX.B.R1",
+    "Description": "Delayed decision to execute an emergency landing."
+  },
+  {
+    "Area of Operation": "IX. Emergency Operations",
+    "Task": "B. Emergency Approach and Landing (Simulated)",
+    "Type": "Risk Management",
+    "ACS Code": "PA.IX.B.R2",
+    "Description": "Collision hazards with obstacles or terrain during an emergency approach and landing."
+  },
+  {
+    "Area of Operation": "IX. Emergency Operations",
+    "Task": "B. Emergency Approach and Landing (Simulated)",
+    "Type": "Skills",
+    "ACS Code": "PA.IX.B.S1",
+    "Description": "Analyze the situation and select an appropriate landing area within gliding distance."
+  },
+  {
+    "Area of Operation": "IX. Emergency Operations",
+    "Task": "B. Emergency Approach and Landing (Simulated)",
+    "Type": "Skills",
+    "ACS Code": "PA.IX.B.S2",
+    "Description": "Establish and maintain the recommended best glide airspeed, ±10 knots, and configuration for the emergency approach."
+  },
+  {
+    "Area of Operation": "IX. Emergency Operations",
+    "Task": "B. Emergency Approach and Landing (Simulated)",
+    "Type": "Skills",
+    "ACS Code": "PA.IX.B.S3",
+    "Description": "Maneuver to land in the selected area, considering wind, terrain, and obstacles, and complete the appropriate checklist."
+  },
+  {
+    "Area of Operation": "IX. Emergency Operations",
+    "Task": "C. Systems and Equipment Malfunctions",
+    "Type": "Objective",
+    "ACS Code": "PA.IX.C",
+    "Description": "To determine that the applicant exhibits satisfactory knowledge, risk management, and skills associated with systems and equipment malfunctions."
+  },
+  {
+    "Area of Operation": "IX. Emergency Operations",
+    "Task": "C. Systems and Equipment Malfunctions",
+    "Type": "Knowledge",
+    "ACS Code": "PA.IX.C.K1",
+    "Description": "Common systems and equipment malfunctions (e.g., electrical failure, vacuum failure, landing gear issues)."
+  },
+  {
+    "Area of Operation": "IX. Emergency Operations",
+    "Task": "C. Systems and Equipment Malfunctions",
+    "Type": "Knowledge",
+    "ACS Code": "PA.IX.C.K2",
+    "Description": "Emergency procedures for systems and equipment malfunctions per the POH/AFM."
+  },
+  {
+    "Area of Operation": "IX. Emergency Operations",
+    "Task": "C. Systems and Equipment Malfunctions",
+    "Type": "Risk Management",
+    "ACS Code": "PA.IX.C.R1",
+    "Description": "Failure to recognize and respond to systems or equipment malfunctions."
+  },
+  {
+    "Area of Operation": "IX. Emergency Operations",
+    "Task": "C. Systems and Equipment Malfunctions",
+    "Type": "Risk Management",
+    "ACS Code": "PA.IX.C.R2",
+    "Description": "Improper management of malfunctions leading to loss of control or unsafe flight conditions."
+  },
+  {
+    "Area of Operation": "IX. Emergency Operations",
+    "Task": "C. Systems and Equipment Malfunctions",
+    "Type": "Skills",
+    "ACS Code": "PA.IX.C.S1",
+    "Description": "Recognize a system or equipment malfunction and apply appropriate emergency procedures per the POH/AFM based on a scenario provided by the evaluator."
+  },
+  {
+    "Area of Operation": "IX. Emergency Operations",
+    "Task": "C. Systems and Equipment Malfunctions",
+    "Type": "Skills",
+    "ACS Code": "PA.IX.C.S2",
+    "Description": "Maintain control of the airplane while managing the malfunction."
+  },
+  {
+    "Area of Operation": "IX. Emergency Operations",
+    "Task": "D. Emergency Equipment and Survival Gear",
+    "Type": "Objective",
+    "ACS Code": "PA.IX.D",
+    "Description": "To determine that the applicant exhibits satisfactory knowledge and risk management associated with emergency equipment and survival gear."
+  },
+  {
+    "Area of Operation": "IX. Emergency Operations",
+    "Task": "D. Emergency Equipment and Survival Gear",
+    "Type": "Knowledge",
+    "ACS Code": "PA.IX.D.K1",
+    "Description": "Emergency equipment and survival gear typically carried on board (e.g., fire extinguisher, first aid kit, life vests)."
+  },
+  {
+    "Area of Operation": "IX. Emergency Operations",
+    "Task": "D. Emergency Equipment and Survival Gear",
+    "Type": "Knowledge",
+    "ACS Code": "PA.IX.D.K2",
+    "Description": "Use and limitations of emergency equipment and survival gear."
+  },
+  {
+    "Area of Operation": "IX. Emergency Operations",
+    "Task": "D. Emergency Equipment and Survival Gear",
+    "Type": "Risk Management",
+    "ACS Code": "PA.IX.D.R1",
+    "Description": "Failure to ensure availability or proper use of emergency equipment and survival gear."
+  },
+  {
+    "Area of Operation": "IX. Emergency Operations",
+    "Task": "D. Emergency Equipment and Survival Gear",
+    "Type": "Skills",
+    "ACS Code": "PA.IX.D.S1",
+    "Description": "Identify and explain the use of emergency equipment and survival gear on board the airplane based on a scenario provided by the evaluator."
+  },
+  {
+    "Area of Operation": "X. Multiengine Operations",
+    "Task": "A. Maneuvering with One Engine Inoperative",
+    "Type": "Objective",
+    "ACS Code": "PA.X.A",
+    "Description": "To determine that the applicant exhibits satisfactory knowledge, risk management, and skills associated with maneuvering with one engine inoperative (simulated)."
+  },
+  {
+    "Area of Operation": "X. Multiengine Operations",
+    "Task": "A. Maneuvering with One Engine Inoperative",
+    "Type": "Knowledge",
+    "ACS Code": "PA.X.A.K1",
+    "Description": "Aerodynamics of multiengine flight with one engine inoperative (e.g., Vmc, asymmetrical thrust)."
+  },
+  {
+    "Area of Operation": "X. Multiengine Operations",
+    "Task": "A. Maneuvering with One Engine Inoperative",
+    "Type": "Knowledge",
+    "ACS Code": "PA.X.A.K2",
+    "Description": "Performance and limitations with one engine inoperative per the POH/AFM."
+  },
+  {
+    "Area of Operation": "X. Multiengine Operations",
+    "Task": "A. Maneuvering with One Engine Inoperative",
+    "Type": "Risk Management",
+    "ACS Code": "PA.X.A.R1",
+    "Description": "Loss of control due to exceeding Vmc or improper technique with one engine inoperative."
+  },
+  {
+    "Area of Operation": "X. Multiengine Operations",
+    "Task": "A. Maneuvering with One Engine Inoperative",
+    "Type": "Risk Management",
+    "ACS Code": "PA.X.A.R2",
+    "Description": "Collision hazards during low-altitude maneuvering with one engine inoperative."
+  },
+  {
+    "Area of Operation": "X. Multiengine Operations",
+    "Task": "A. Maneuvering with One Engine Inoperative",
+    "Type": "Skills",
+    "ACS Code": "PA.X.A.S1",
+    "Description": "Recognize simulated engine failure and maintain control of the airplane above Vmc or Vsse, whichever is greater, ±5 knots."
+  },
+  {
+    "Area of Operation": "X. Multiengine Operations",
+    "Task": "A. Maneuvering with One Engine Inoperative",
+    "Type": "Skills",
+    "ACS Code": "PA.X.A.S2",
+    "Description": "Perform maneuvers (e.g., turns, climbs) with one engine inoperative, maintaining altitude ±100 feet and heading ±10°."
+  },
+  {
+    "Area of Operation": "X. Multiengine Operations",
+    "Task": "A. Maneuvering with One Engine Inoperative",
+    "Type": "Skills",
+    "ACS Code": "PA.X.A.S3",
+    "Description": "Complete the appropriate checklist for engine failure."
+  },
+  {
+    "Area of Operation": "X. Multiengine Operations",
+    "Task": "B. Vmc Demonstration (if applicable)",
+    "Type": "Objective",
+    "ACS Code": "PA.X.B",
+    "Description": "To determine that the applicant exhibits satisfactory knowledge, risk management, and skills associated with demonstrating the minimum control speed with one engine inoperative (simulated)."
+  },
+  {
+    "Area of Operation": "X. Multiengine Operations",
+    "Task": "B. Vmc Demonstration (if applicable)",
+    "Type": "Knowledge",
+    "ACS Code": "PA.X.B.K1",
+    "Description": "Factors affecting Vmc (e.g., critical engine, weight, configuration)."
+  },
+  {
+    "Area of Operation": "X. Multiengine Operations",
+    "Task": "B. Vmc Demonstration (if applicable)",
+    "Type": "Knowledge",
+    "ACS Code": "PA.X.B.K2",
+    "Description": "Procedures for demonstrating Vmc per the POH/AFM."
+  },
+  {
+    "Area of Operation": "X. Multiengine Operations",
+    "Task": "B. Vmc Demonstration (if applicable)",
+    "Type": "Risk Management",
+    "ACS Code": "PA.X.B.R1",
+    "Description": "Loss of control during a Vmc demonstration."
+  },
+  {
+    "Area of Operation": "X. Multiengine Operations",
+    "Task": "B. Vmc Demonstration (if applicable)",
+    "Type": "Skills",
+    "ACS Code": "PA.X.B.S1",
+    "Description": "Establish the airplane in a configuration specified by the evaluator and reduce power on the critical engine until directional control can no longer be maintained with rudder alone."
+  },
+  {
+    "Area of Operation": "X. Multiengine Operations",
+    "Task": "B. Vmc Demonstration (if applicable)",
+    "Type": "Skills",
+    "ACS Code": "PA.X.B.S2",
+    "Description": "Recover promptly by reducing power on the operating engine and increasing power as appropriate, maintaining altitude ±100 feet after recovery."
+  },
+  {
+    "Area of Operation": "X. Multiengine Operations",
+    "Task": "C. Engine Failure During Takeoff Before Vmc (Simulated)",
+    "Type": "Objective",
+    "ACS Code": "PA.X.C",
+    "Description": "To determine that the applicant exhibits satisfactory knowledge, risk management, and skills associated with an engine failure during takeoff before Vmc (simulated)."
+  },
+  {
+    "Area of Operation": "X. Multiengine Operations",
+    "Task": "C. Engine Failure During Takeoff Before Vmc (Simulated)",
+    "Type": "Knowledge",
+    "ACS Code": "PA.X.C.K1",
+    "Description": "Procedures for engine failure during takeoff before Vmc per the POH/AFM."
+  },
+  {
+    "Area of Operation": "X. Multiengine Operations",
+    "Task": "C. Engine Failure During Takeoff Before Vmc (Simulated)",
+    "Type": "Risk Management",
+    "ACS Code": "PA.X.C.R1",
+    "Description": "Delayed decision to abort takeoff after engine failure."
+  },
+  {
+    "Area of Operation": "X. Multiengine Operations",
+    "Task": "C. Engine Failure During Takeoff Before Vmc (Simulated)",
+    "Type": "Risk Management",
+    "ACS Code": "PA.X.C.R2",
+    "Description": "Collision hazards during an aborted takeoff with one engine inoperative."
+  },
+  {
+    "Area of Operation": "X. Multiengine Operations",
+    "Task": "C. Engine Failure During Takeoff Before Vmc (Simulated)",
+    "Type": "Skills",
+    "ACS Code": "PA.X.C.S1",
+    "Description": "Recognize simulated engine failure during takeoff roll and promptly abort the takeoff, maintaining directional control."
+  },
+  {
+    "Area of Operation": "X. Multiengine Operations",
+    "Task": "C. Engine Failure During Takeoff Before Vmc (Simulated)",
+    "Type": "Skills",
+    "ACS Code": "PA.X.C.S2",
+    "Description": "Apply brakes and reduce power to stop in the shortest distance consistent with safety."
+  },
+  {
+    "Area of Operation": "X. Multiengine Operations",
+    "Task": "D. Engine Failure After Lift-Off (Simulated)",
+    "Type": "Objective",
+    "ACS Code": "PA.X.D",
+    "Description": "To determine that the applicant exhibits satisfactory knowledge, risk management, and skills associated with an engine failure after lift-off (simulated)."
+  },
+  {
+    "Area of Operation": "X. Multiengine Operations",
+    "Task": "D. Engine Failure After Lift-Off (Simulated)",
+    "Type": "Knowledge",
+    "ACS Code": "PA.X.D.K1",
+    "Description": "Procedures for engine failure after lift-off per the POH/AFM."
+  },
+  {
+    "Area of Operation": "X. Multiengine Operations",
+    "Task": "D. Engine Failure After Lift-Off (Simulated)",
+    "Type": "Risk Management",
+    "ACS Code": "PA.X.D.R1",
+    "Description": "Loss of control due to exceeding Vmc or improper technique after lift-off with one engine inoperative."
+  },
+  {
+    "Area of Operation": "X. Multiengine Operations",
+    "Task": "D. Engine Failure After Lift-Off (Simulated)",
+    "Type": "Risk Management",
+    "ACS Code": "PA.X.D.R2",
+    "Description": "Collision hazards with obstacles or terrain during climb with one engine inoperative."
+  },
+  {
+    "Area of Operation": "X. Multiengine Operations",
+    "Task": "D. Engine Failure After Lift-Off (Simulated)",
+    "Type": "Skills",
+    "ACS Code": "PA.X.D.S1",
+    "Description": "Recognize simulated engine failure after lift-off and maintain control above Vmc or Vsse, whichever is greater, ±5 knots."
+  },
+  {
+    "Area of Operation": "X. Multiengine Operations",
+    "Task": "D. Engine Failure After Lift-Off (Simulated)",
+    "Type": "Skills",
+    "ACS Code": "PA.X.D.S2",
+    "Description": "Establish a climb at the recommended single-engine climb speed, maintaining heading ±10° and altitude ±100 feet after stabilization."
+  },
+  {
+    "Area of Operation": "X. Multiengine Operations",
+    "Task": "D. Engine Failure After Lift-Off (Simulated)",
+    "Type": "Skills",
+    "ACS Code": "PA.X.D.S3",
+    "Description": "Complete the appropriate checklist for engine failure after lift-off."
+  },
+  {
+    "Area of Operation": "X. Multiengine Operations",
+    "Task": "E. Approach and Landing with One Engine Inoperative (Simulated)",
+    "Type": "Objective",
+    "ACS Code": "PA.X.E",
+    "Description": "To determine that the applicant exhibits satisfactory knowledge, risk management, and skills associated with an approach and landing with one engine inoperative (simulated)."
+  },
+  {
+    "Area of Operation": "X. Multiengine Operations",
+    "Task": "E. Approach and Landing with One Engine Inoperative (Simulated)",
+    "Type": "Knowledge",
+    "ACS Code": "PA.X.E.K1",
+    "Description": "Procedures for approach and landing with one engine inoperative per the POH/AFM."
+  },
+  {
+    "Area of Operation": "X. Multiengine Operations",
+    "Task": "E. Approach and Landing with One Engine Inoperative (Simulated)",
+    "Type": "Risk Management",
+    "ACS Code": "PA.X.E.R1",
+    "Description": "Unstabilized approach or loss of control during landing with one engine inoperative."
+  },
+  {
+    "Area of Operation": "X. Multiengine Operations",
+    "Task": "E. Approach and Landing with One Engine Inoperative (Simulated)",
+    "Type": "Risk Management",
+    "ACS Code": "PA.X.E.R2",
+    "Description": "Collision hazards during approach and landing with one engine inoperative."
+  },
+  {
+    "Area of Operation": "X. Multiengine Operations",
+    "Task": "E. Approach and Landing with One Engine Inoperative (Simulated)",
+    "Type": "Skills",
+    "ACS Code": "PA.X.E.S1",
+    "Description": "Recognize simulated engine failure and maintain control above Vmc or Vsse, whichever is greater, ±5 knots."
+  },
+  {
+    "Area of Operation": "X. Multiengine Operations",
+    "Task": "E. Approach and Landing with One Engine Inoperative (Simulated)",
+    "Type": "Skills",
+    "ACS Code": "PA.X.E.S2",
+    "Description": "Establish a stabilized approach and land with one engine inoperative, touching down within 400 feet beyond a specified point, maintaining directional control."
+  },
+  {
+    "Area of Operation": "X. Multiengine Operations",
+    "Task": "E. Approach and Landing with One Engine Inoperative (Simulated)",
+    "Type": "Skills",
+    "ACS Code": "PA.X.E.S3",
+    "Description": "Complete the appropriate checklist for engine failure during approach and landing."
+  },
+  {
+    "Area of Operation": "XI. Postflight Procedures",
+    "Task": "A. After Landing, Parking, and Securing",
+    "Type": "Objective",
+    "ACS Code": "PA.XI.A",
+    "Description": "To determine that the applicant exhibits satisfactory knowledge, risk management, and skills associated with after-landing, parking, and securing procedures."
+  },
+  {
+    "Area of Operation": "XI. Postflight Procedures",
+    "Task": "A. After Landing, Parking, and Securing",
+    "Type": "Knowledge",
+    "ACS Code": "PA.XI.A.K1",
+    "Description": "After-landing, parking, and securing procedures per the POH/AFM (e.g., shutdown, tie-down)."
+  },
+  {
+    "Area of Operation": "XI. Postflight Procedures",
+    "Task": "A. After Landing, Parking, and Securing",
+    "Type": "Knowledge",
+    "ACS Code": "PA.XI.A.K2",
+    "Description": "Airport ground operations (e.g., taxiway safety, parking areas)."
+  },
+  {
+    "Area of Operation": "XI. Postflight Procedures",
+    "Task": "A. After Landing, Parking, and Securing",
+    "Type": "Risk Management",
+    "ACS Code": "PA.XI.A.R1",
+    "Description": "Collision hazards with obstacles or other aircraft during ground operations after landing."
+  },
+  {
+    "Area of Operation": "XI. Postflight Procedures",
+    "Task": "A. After Landing, Parking, and Securing",
+    "Type": "Risk Management",
+    "ACS Code": "PA.XI.A.R2",
+    "Description": "Improper securing of the airplane leading to damage from weather or unauthorized use."
+  },
+  {
+    "Area of Operation": "XI. Postflight Procedures",
+    "Task": "A. After Landing, Parking, and Securing",
+    "Type": "Skills",
+    "ACS Code": "PA.XI.A.S1",
+    "Description": "Perform after-landing checklist and taxi to parking or ramp area, adhering to ATC or local procedures."
+  },
+  {
+    "Area of Operation": "XI. Postflight Procedures",
+    "Task": "A. After Landing, Parking, and Securing",
+    "Type": "Skills",
+    "ACS Code": "PA.XI.A.S2",
+    "Description": "Park and secure the airplane using appropriate tie-downs or chocks, completing the shutdown checklist."
+  }
+]
