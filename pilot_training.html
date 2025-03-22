@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pilot Training ACS - Interactive</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #eef2f7;
+            margin: 0;
+            padding: 20px;
+            color: #2c3e50;
+        }
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 30px;
+            font-size: 2.2em;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        details {
+            margin: 15px 0;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+        details[open] {
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+        }
+        summary {
+            cursor: pointer;
+            padding: 15px;
+            font-weight: 600;
+            color: white;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
+        }
+        summary:hover {
+            filter: brightness(85%);
+        }
+        .area > summary {
+            background-color: #2c3e50;
+            font-size: 1.3em;
+        }
+        .task {
+            margin-left: 20px;
+        }
+        .task > summary {
+            background-color: #3498db;
+            font-size: 1.1em;
+        }
+        .type {
+            margin-left: 40px;
+        }
+        .type > summary {
+            background-color: #7f8c8d;
+            font-size: 1em;
+        }
+        .subitem {
+            margin: 10px 60px;
+            padding: 10px;
+            background-color: #ffffff;
+            border-left: 4px solid #3498db;
+            border-radius: 4px;
+            line-height: 1.5;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+            display: flex;
+            align-items: flex-start;
+        }
+        .subitem:hover {
+            background-color: #f9fafb;
+        }
+        .acs-code {
+            font-weight: bold;
+            color: #2c3e50;
+            min-width: 100px;
+            margin-right: 10px;
+        }
+        .description {
+            flex: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Private Pilot Airman Certification Standards (ACS)</h1>
+
+        <!-- I. Preflight Preparation -->
+        <details class="area">
+            <summary>I. Preflight Preparation</summary>
+            <details class="task">
+                <summary>A. Pilot Qualifications</summary>
+                <details class="type">
+                    <summary>Objective</summary>
+                    <div class="subitem"><span class="acs-code">PA.I.A</span><span class="description">To determine that the applicant exhibits satisfactory knowledge, risk management, and skills associated with pilot certification, recent experience requirements, and privileges and limitations associated with the private pilot certificate.</span></div>
+                </details>
+                <details class="type">
+                    <summary>Knowledge</summary>
+                    <div class="subitem"><span class="acs-code">PA.I.A.K1</span><span class="description">Regulatory requirements for private pilot certification, ratings, privileges, and limitations.</span></div>
+                    <div class="subitem"><span class="acs-code">PA.I.A.K2</span><span class="description">Medical certificates: class, expiration dates, privileges, temporary disqualifications, and limitations.</span></div>
+                    <div class="subitem"><span class="acs-code">PA.I.A.K3</span><span class="description">Recency of experience requirements and effects of not meeting those requirements.</span></div>
+                    <div class="subitem"><span class="acs-code">PA.I.A.K4</span><span class="description">Privileges and limitations of the private pilot certificate.</span></div>
+                </details>
+                <details class="type">
+                    <summary>Risk Management</summary>
+                    <div class="subitem"><span class="acs-code">PA.I.A.R1a</span><span class="description">Maintaining medical fitness and compliance with applicable regulations.</span></div>
+                    <div class="subitem"><span class="acs-code">PA.I.A.R1b</span><span class="description">Temporary medical conditions and their effect on the ability to operate an airplane legally and safely.</span></div>
+                </details>
+                <details class="type">
+                    <summary>Skills</summary>
+                    <div class="subitem"><span class="acs-code">PA.I.A.S1</span><span class="description">Locate and describe private pilot eligibility, aeronautical knowledge, proficiency, privileges, limitations, and recency of experience requirements.</span></div>
+                </details>
+            </details>
+            <details class="task">
+                <summary>B. Airworthiness Requirements</summary>
+                <details class="type">
+                    <summary>Objective</summary>
+                    <div class="subitem"><span class="acs-code">PA.I.B</span><span class="description">To determine that the applicant exhibits satisfactory knowledge, risk management, and skills associated with airworthiness requirements, including airplane certificates, required inspections, and documentation.</span></div>
+                </details>
+                <details class="type">
+                    <summary>Knowledge</summary>
+                    <div class="subitem"><span class="acs-code">PA.I.B.K1</span><span class="description">Required airplane certificates and documents (e.g., airworthiness certificate, registration certificate, operating limitations, weight and balance data).</span></div>
+                    <div class="subitem"><span class="acs-code">PA.I.B.K2</span><span class="description">Airplane maintenance and inspection requirements (e.g., annual, 100-hour, Airworthiness Directives (ADs), preventive maintenance).</span></div>
+                    <div class="subitem"><span class="acs-code">PA.I.B.K3</span><span class="description">Pilot-performed preventive maintenance.</span></div>
+                    <div class="subitem"><span class="acs-code">PA.I.B.K4</span><span class="description">Equipment requirements for day and night VFR flight.</span></div>
+                </details>
+                <details class="type">
+                    <summary>Risk Management</summary>
+                    <div class="subitem"><span class="acs-code">PA.I.B.R1a</span><span class="description">Inoperative instruments or equipment and determining if they constitute a hazard to safe flight.</span></div>
+                    <div class="subitem"><span class="acs-code">PA.I.B.R1b</span><span class="description">Minimum equipment list (MEL) and operations with inoperative equipment.</span></div>
+                </details>
+                <details class="type">
+                    <summary>Skills</summary>
+                    <div class="subitem"><span class="acs-code">PA.I.B.S1</span><span class="description">Determine the airplane is airworthy by locating and explaining the required airplane certificates, documents, and inspection requirements.</span></div>
+                </details>
+            </details>
+            <details class="task">
+                <summary>C. Weather Information</summary>
+                <details class="type">
+                    <summary>Objective</summary>
+                    <div class="subitem"><span class="acs-code">PA.I.C</span><span class="description">To determine that the applicant exhibits satisfactory knowledge, risk management, and skills associated with obtaining, understanding, and applying weather information for a flight under VFR.</span></div>
+                </details>
+                <details class="type">
+                    <summary>Knowledge</summary>
+                    <div class="subitem"><span class="acs-code">PA.I.C.K1</span><span class="description">Sources of weather data (e.g., National Weather Service, Flight Service) for flight planning purposes.</span></div>
+                    <div class="subitem"><span class="acs-code">PA.I.C.K2</span><span class="description">Weather products and their uses (e.g., METAR, TAF, FA, winds aloft, weather charts, radar reports, PIREPs, SIGMETs, AIRMETs).</span></div>
+                    <div class="subitem"><span class="acs-code">PA.I.C.K3</span><span class="description">Meteorology to include:</span></div>
+                    <div class="subitem"><span class="acs-code">PA.I.C.K3a</span><span class="description">Characteristics of air masses and fronts.</span></div>
+                    <div class="subitem"><span class="acs-code">PA.I.C.K3b</span><span class="description">Sources and effects of weather hazards on aviation (e.g., thunderstorms, turbulence, icing, fog).</span></div>
+                    <div class="subitem"><span class="acs-code">PA.I.C.K3c</span><span class="description">Relationship between weather and airplane performance.</span></div>
+                </details>
+                <details class="type">
+                    <summary>Risk Management</summary>
+                    <div class="subitem"><span class="acs-code">PA.I.C.R1</span><span class="description">Making a competent go/no-go decision based on available weather information.</span></div>
+                    <div class="subitem"><span class="acs-code">PA.I.C.R2</span><span class="description">Recognizing weather hazards during flight planning and making a competent decision to alter the planned route or cancel the flight.</span></div>
+                </details>
+                <details class="type">
+                    <summary>Skills</summary>
+                    <div class="subitem"><span class="acs-code">PA.I.C.S1</span><span class="description">Use available aviation weather resources to obtain an adequate weather briefing for the route of flight.</span></div>
+                    <div class="subitem"><span class="acs-code">PA.I.C.S2</span><span class="description">Correlate weather information to make a competent go/no-go decision.</span></div>
+                </details>
+            </details>
+            <details class="task">
+                <summary>D. Cross-Country Flight Planning</summary>
+                <details class="type">
+                    <summary>Objective</summary>
+                    <div class="subitem"><span class="acs-code">PA.I.D</span><span class="description">To determine that the applicant exhibits satisfactory knowledge, risk management, and skills associated with planning a VFR cross-country flight.</span></div>
+                </details>
+                <details class="type">
+                    <summary>Knowledge</summary>
+                    <div class="subitem"><span class="acs-code">PA.I.D.K1</span><span class="description">Route planning, including consideration of alternate airports and suitable checkpoints.</span></div>
+                    <div class="subitem"><span class="acs-code">PA.I.D.K2</span><span class="description">Altitude selection accounting for terrain, obstacles, glide distance, and emergency considerations.</span></div>
+                    <div class="subitem"><span class="acs-code">PA.I.D.K3</span><span class="description">Obtaining and interpreting applicable NOTAM information.</span></div>
+                    <div class="subitem"><span class="acs-code">PA.I.D.K4</span><span class="description">Plotting a course with wind correction and computing time, speed, distance, and fuel requirements.</span></div>
+                    <div class="subitem"><span class="acs-code">PA.I.D.K5</span><span class="description">Completing a navigation log and filing a VFR flight plan.</span></div>
+                </details>
+                <details class="type">
+                    <summary>Risk Management</summary>
+                    <div class="subitem"><span class="acs-code">PA.I.D.R1</span><span class="description">Fuel planning for normal and emergency situations.</span></div>
+                    <div class="subitem"><span class="acs-code">PA.I.D.R2</span><span class="description">Weather unsuitable for VFR flight.</span></div>
+                    <div class="subitem"><span class="acs-code">PA.I.D.R3</span><span class="description">Terrain and obstacle hazards during the planned route of flight.</span></div>
+                </details>
+                <details class="type">
+                    <summary>Skills</summary>
+                    <div class="subitem"><span class="acs-code">PA.I.D.S1</span><span class="description">Prepare, present, and explain a cross-country flight plan based on a scenario provided by the evaluator, including a completed navigation log and VFR flight plan.</span></div>
+                    <div class="subitem"><span class="acs-code">PA.I.D.S2</span><span class="description">Recalculate fuel reserves based on a scenario provided by the evaluator.</span></div>
+                </details>
+            </details>
+            <details class="task">
+                <summary>E. National Airspace System</summary>
+                <details class="type">
+                    <summary>Objective</summary>
+                    <div class="subitem"><span class="acs-code">PA.I.E</span><span class="description">To determine that the applicant exhibits satisfactory knowledge, risk management, and skills associated with the National Airspace System operating under VFR as a private pilot.</span></div>
+                </details>
+                <details class="type">
+                    <summary>Knowledge</summary>
+                    <div class="subitem"><span class="acs-code">PA.I.E.K1</span><span class="description">Types of airspace and associated requirements (e.g., Class A, B, C, D, E, G, special use airspace).</span></div>
+                    <div class="subitem"><span class="acs-code">PA.I.E.K2</span><span class="description">Basic VFR weather minimums and operating requirements for each class of airspace.</span></div>
+                    <div class="subitem"><span class="acs-code">PA.I.E.K3</span><span class="description">Special use airspace (e.g., MOA, restricted areas) and operating limitations.</span></div>
+                </details>
+                <details class="type">
+                    <summary>Risk Management</summary>
+                    <div class="subitem"><span class="acs-code">PA.I.E.R1</span><span class="description">Inadvertent entry into controlled airspace or special use airspace without proper clearance or authorization.</span></div>
+                </details>
+                <details class="type">
+                    <summary>Skills</summary>
+                    <div class="subitem"><span class="acs-code">PA.I.E.S1</span><span class="description">Locate and identify airspace classes and special use airspace on a sectional chart and explain the operational requirements.</span></div>
+                </details>
+            </details>
+            <details class="task">
+                <summary>F. Performance and Limitations</summary>
+                <details class="type">
+                    <summary>Objective</summary>
+                    <div class="subitem"><span class="acs-code">PA.I.F</span><span class="description">To determine that the applicant exhibits satisfactory knowledge, risk management, and skills associated with operating an airplane safely within the parameters of its performance capabilities and limitations.</span></div>
+                </details>
+                <details class="type">
+                    <summary>Knowledge</summary>
+                    <div class="subitem"><span class="acs-code">PA.I.F.K1</span><span class="description">Elements and use of performance charts, tables, and data from the POH/AFM.</span></div>
+                    <div class="subitem"><span class="acs-code">PA.I.F.K2</span><span class="description">Effects of exceeding airplane limitations (e.g., weight, balance, airspeed).</span></div>
+                    <div class="subitem"><span class="acs-code">PA.I.F.K3</span><span class="description">Effects of atmospheric conditions (e.g., density altitude, wind, temperature) on performance.</span></div>
+                    <div class="subitem"><span class="acs-code">PA.I.F.K4</span><span class="description">Weight and balance computations and associated impacts on performance.</span></div>
+                </details>
+                <details class="type">
+                    <summary>Risk Management</summary>
+                    <div class="subitem"><span class="acs-code">PA.I.F.R1</span><span class="description">Exceeding airplane performance limitations during flight.</span></div>
+                    <div class="subitem"><span class="acs-code">PA.I.F.R2</span><span class="description">Improper weight and balance planning and its effect on controllability.</span></div>
+                </details>
+                <details class="type">
+                    <summary>Skills</summary>
+                    <div class="subitem"><span class="acs-code">PA.I.F.S1</span><span class="description">Compute airplane performance and weight and balance for a given scenario using available charts and data.</span></div>
+                </details>
+            </details>
+            <details class="task">
+                <summary>G. Operation of Systems</summary>
+                <details class="type">
+                    <summary>Objective</summary>
+                    <div class="subitem"><span class="acs-code">PA.I.G</span><span class="description">To determine that the applicant exhibits satisfactory knowledge, risk management, and skills associated with the safe operation of systems on the airplane provided for the practical test.</span></div>
+                </details>
+                <details class="type">
+                    <summary>Knowledge</summary>
+                    <div class="subitem"><span class="acs-code">PA.I.G.K1</span><span class="description">Airplane systems (e.g., powerplant, fuel, oil, electrical, hydraulic, avionics, environmental, landing gear, flight controls, anti-ice/deice).</span></div>
+                    <div class="subitem"><span class="acs-code">PA.I.G.K2</span><span class="description">Indications of system malfunctions and appropriate pilot responses.</span></div>
+                </details>
+                <details class="type">
+                    <summary>Risk Management</summary>
+                    <div class="subitem"><span class="acs-code">PA.I.G.R1</span><span class="description">Failure to detect system malfunctions or failures prior to or during flight.</span></div>
+                    <div class="subitem"><span class="acs-code">PA.I.G.R2</span><span class="description">Improper management of system failures during flight.</span></div>
+                </details>
+                <details class="type">
+                    <summary>Skills</summary>
+                    <div class="subitem"><span class="acs-code">PA.I.G.S1</span><span class="description">Explain the operation and function of the airplane’s systems and associated instrumentation.</span></div>
+                </details>
+            </details>
+            <details class="task">
+                <summary>H. Human Factors</summary>
+                <details class="type">
+                    <summary>Objective</summary>
+                    <div class="subitem"><span class="acs-code">PA.I.H</span><span class="description">To determine that the applicant exhibits satisfactory knowledge, risk management, and skills associated with personal health, flight physiology, aeromedical factors, and aeronautical decision-making as it relates to safety of flight.</span></div>
+                </details>
+                <details class="type">
+                    <summary>Knowledge</summary>
+                    <div class="subitem"><span class="acs-code">PA.I.H.K1</span><span class="description">Aeromedical factors and their effects on pilot performance (e.g., hypoxia, carbon monoxide poisoning, fatigue, dehydration, spatial disorientation).</span></div>
+                    <div class="subitem"><span class="acs-code">PA.I.H.K2</span><span class="description">Use of alcohol, over-the-counter medications, prescription medications, and illegal drugs and their effects on pilot performance.</span></div>
+                    <div class="subitem"><span class="acs-code">PA.I.H.K3</span><span class="description">Aeronautical Decision-Making (ADM) and its application to flight planning and operations.</span></div>
+                </details>
+                <details class="type">
+                    <summary>Risk Management</summary>
+                    <div class="subitem"><span class="acs-code">PA.I.H.R1</span><span class="description">Flying while impaired by illness, medication, alcohol, fatigue, or emotional distress.</span></div>
+                    <div class="subitem"><span class="acs-code">PA.I.H.R2</span><span class="description">Failure to recognize personal limitations and make a timely decision to delay or discontinue a flight.</span></div>
+                </details>
+                <details class="type">
+                    <summary>Skills</summary>
+                    <div class="subitem"><span class="acs-code">PA.I.H.S1</span><span class="description">Apply principles of ADM to a given scenario and associate personal health and aeromedical factors with safety of flight.</span></div>
+                </details>
+            </details>
+
+            <!-- II. Preflight Procedures -->
+            <details class="area">
+                <summary>II. Preflight Procedures</summary>
+                <details class="task">
+                    <summary>A. Preflight Assessment</summary>
+                    <details class="type"><summary>Objective</summary><div class="subitem"><span class="acs-code">PA.II.A</span><span class="description">To determine that the applicant exhibits satisfactory knowledge, risk management, and skills associated with preparing for safe flight.</span></div></details>
+                    <details class="type"><summary>Knowledge</summary><!-- Add PA.II.A.K1 to K2 here --></details>
+                    <details class="type"><summary>Risk Management</summary><!-- Add PA.II.A.R1 to R3 here --></details>
+                    <details class="type"><summary>Skills</summary><!-- Add PA.II.A.S1 to S2 here --></details>
+                </details>
+                <details class="task">
+                    <summary>B. Cockpit Management</summary>
+                    <details class="type"><summary>Objective</summary><div class="subitem"><span class="acs-code">PA.II.B</span><span class="description">To determine that the applicant exhibits satisfactory knowledge, risk management, and skills associated with cockpit management.</span></div></details>
+                    <details class="type"><summary>Knowledge</summary><!-- Add PA.II.B.K1 to K2 here --></details>
+                    <details class="type"><summary>Risk Management</summary><!-- Add PA.II.B.R1 here --></details>
+                    <details class="type"><summary>Skills</summary><!-- Add PA.II.B.S1 to S2 here --></details>
+                </details>
+                <details class="task">
+                    <summary>C. Engine Starting</summary>
+                    <details class="type"><summary>Objective</summary><div class="subitem"><span class="acs-code">PA.II.C</span><span class="description">To determine that the applicant exhibits satisfactory knowledge, risk management, and skills associated with a safe engine start.</span></div></details>
+                    <details class="type"><summary>Knowledge</summary><!-- Add PA.II.C.K1 to K2 here --></details>
+                    <details class="type"><summary>Risk Management</summary><!-- Add PA.II.C.R1 to R2 here --></details>
+                    <details class="type"><summary>Skills</summary><!-- Add PA.II.C.S1 to S2 here --></details>
+                </details>
+                <details class="task">
+                    <summary>D. Taxiing</summary>
+                    <details class="type"><summary>Objective</summary><div class="subitem"><span class="acs-code">PA.II.D</span><span class="description">To determine that the applicant exhibits satisfactory knowledge, risk management, and skills associated with safe taxi operations.</span></div></details>
+                    <details class="type"><summary>Knowledge</summary><!-- Add PA.II.D.K1 to K2 here --></details>
+                    <details class="type"><summary>Risk Management</summary><!-- Add PA.II.D.R1 to R2 here --></details>
+                    <details class="type"><summary>Skills</summary><!-- Add PA.II.D.S1 to S2 here --></details>
+                </details>
+                <details class="task">
+                    <summary>E. Before Takeoff Check</summary>
+                    <details class="type"><summary>Objective</summary><div class="subitem"><span class="acs-code">PA.II.E</span><span class="description">To determine that the applicant exhibits satisfactory knowledge, risk management, and skills associated with the before takeoff check.</span></div></details>
+                    <details class="type"><summary>Knowledge</summary><!-- Add PA.II.E.K1 to K2 here --></details>
+                    <details class="type"><summary>Risk Management</summary><!-- Add PA.II.E.R1 to R2 here --></details>
+                    <details class="type"><summary>Skills</summary><!-- Add PA.II.E.S1 to S2 here --></details>
+                </details>
+            </details>
+
+            <!-- III. Airport and Seaplane Base Operations -->
+            <details class="area">
+                <summary>III. Airport and Seaplane Base Operations</summary>
+                <details class="task">
+                    <summary>A. Communications, Light Signals, and Runway Lighting Systems</summary>
+                    <details class="type"><summary>Objective</summary><div class="subitem"><span class="acs-code">PA.III.A</span><span class="description">To determine that the applicant exhibits satisfactory knowledge, risk management, and skills associated with radio communications, light signals, and runway lighting systems.</span></div></details>
+                    <details class="type"><summary>Knowledge</summary><!-- Add PA.III.A.K1 to K3 here --></details>
+                    <details class="type"><summary>Risk Management</summary><!-- Add PA.III.A.R1 to R2 here --></details>
+                    <details class="type"><summary>Skills</summary><!-- Add PA.III.A.S1 to S2 here --></details>
+                </details>
+                <details class="task">
+                    <summary>B. Traffic Patterns</summary>
+                    <details class="type"><summary>Objective</summary><div class="subitem"><span class="acs-code">PA.III.B</span><span class="description">To determine that the applicant exhibits satisfactory knowledge, risk management, and skills associated with traffic patterns.</span></div></details>
+                    <details class="type"><summary>Knowledge</summary><!-- Add PA.III.B.K1 to K2 here --></details>
+                    <details class="type"><summary>Risk Management</summary><!-- Add PA.III.B.R1 to R2 here --></details>
+                    <details class="type"><summary>Skills</summary><!-- Add PA.III.B.S1 to S2 here --></details>
+                </details>
+            </details>
+
+            <!-- IV. Takeoffs, Landings, and Go-Arounds -->
+            <details class="area">
+                <summary>IV. Takeoffs, Landings, and Go-Arounds</summary>
+                <details class="task">
+                    <summary>A. Normal Takeoff and Climb</summary>
+                    <details class="type"><summary>Objective</summary><div class="subitem"><span class="acs-code">PA.IV.A</span><span class="description">To determine that the applicant exhibits satisfactory knowledge, risk management, and skills associated with a normal takeoff, climb operations, and collision avoidance.</span></div></details>
+                    <details class="type"><summary>Knowledge</summary><!-- Add PA.IV.A.K1 to K2 here --></details>
+                    <details class="type"><summary>Risk Management</summary><!-- Add PA.IV.A.R1 to R4 here --></details>
+                    <details class="type"><summary>Skills</summary><!-- Add PA.IV.A.S1 to S7 here --></details>
+                </details>
+                <details class="task">
+                    <summary>B. Normal Approach and Landing</summary>
+                    <details class="type"><summary>Objective</summary><div class="subitem"><span class="acs-code">PA.IV.B</span><span class="description">To determine that the applicant exhibits satisfactory knowledge, risk management, and skills associated with a normal approach and landing.</span></div></details>
+                    <details class="type"><summary>Knowledge</summary><!-- Add PA.IV.B.K1 to K2 here --></details>
+                    <details class="type"><summary>Risk Management</summary><!-- Add PA.IV.B.R1 to R4 here --></details>
+                    <details class="type"><summary>Skills</summary><!-- Add PA.IV.B.S1 to S6 here --></details>
+                </details>
+                <details class="task">
+                    <summary>C. Soft-Field Takeoff and Climb</summary>
+                    <details class="type"><summary>Objective</summary><div class="subitem"><span class="acs-code">PA.IV.C</span><span class="description">To determine that the applicant exhibits satisfactory knowledge, risk management, and skills associated with a soft-field takeoff and climb.</span></div></details>
+                    <details class="type"><summary>Knowledge</summary><!-- Add PA.IV.C.K1 to K2 here --></details>
+                    <details class="type"><summary>Risk Management</summary><!-- Add PA.IV.C.R1 to R3 here --></details>
+                    <details class="type"><summary>Skills</summary><!-- Add PA.IV.C.S1 to S7 here --></details>
+                </details>
+                <details class="task">
+                    <summary>D. Soft-Field Approach and Landing</summary>
+                    <details class="type"><summary>Objective</summary><div class="subitem"><span class="acs-code">PA.IV.D</span><span class="description">To determine that the applicant exhibits satisfactory knowledge, risk management, and skills associated with a soft-field approach and landing.</span></div></details>
+                    <details class="type"><summary>Knowledge</summary><!-- Add PA.IV.D.K1 to K2 here --></details>
+                    <details class="type"><summary>Risk Management</summary><!-- Add PA.IV.D.R1 to R3 here --></details>
+                    <details class="type"><summary>Skills</summary><!-- Add PA.IV.D.S1 to S6 here --></details>
+                </details>
+                <details class="task">
+                    <summary>E. Short-Field Takeoff and Maximum Performance Climb</summary>
+                    <details class="type"><summary>Objective</summary><div class="subitem"><span class="acs-code">PA.IV.E</span><span class="description">To determine that the applicant exhibits satisfactory knowledge, risk management, and skills associated with a short-field takeoff and maximum performance climb.</span></div></details>
+                    <details class="type"><summary>Knowledge</summary><!-- Add PA.IV.E.K1 to K2 here --></details>
+                    <details class="type"><summary>Risk Management</summary><!-- Add PA.IV.E.R1 to R3 here --></details>
+                    <details class="type"><summary>Skills</summary><!-- Add PA.IV.E.S1 to S6 here --></details>
+                </details>
+                <details class="task">
+                    <summary>F. Short-Field Approach and Landing</summary>
+                    <details class="type"><summary>Objective</summary><div class="subitem"><span class="acs-code">PA.IV.F</span><span class="description">To determine that the applicant exhibits satisfactory knowledge, risk management, and skills associated with a short-field approach and landing.</span></div></details>
+                    <details class="type"><summary>Knowledge</summary><!-- Add PA.IV.F.K1 to K2 here --></details>
+                    <details class="type"><summary>Risk Management</summary><!-- Add PA.IV.F.R1 to R3 here --></details>
+                    <details class="type"><summary>Skills</summary><!-- Add PA.IV.F.S1 to S7 here --></details>
+                </details>
+                <details class="task">
+                    <summary>G. Go-Around/Rejected Landing</summary>
+                    <details class="type"><summary>Objective</summary><div class="subitem"><span class="acs-code">PA.IV.G</span><span class="description">To determine that the applicant exhibits satisfactory knowledge, risk management, and skills associated with a go-around/rejected landing.</span></div></details>
+                    <details class="type"><summary>Knowledge</summary><!-- Add PA.IV.G.K1 to K2 here --></details>
+                    <details class="type"><summary>Risk Management</summary><!-- Add PA.IV.G.R1 to R3 here --></details>
+                    <details class="type"><summary>Skills</summary><!-- Add PA.IV.G.S1 to S5 here --></details>
+                </details>
+            </details>
+
+            <!-- V. Performance and Ground Reference Maneuvers -->
+            <details class="area">
+                <summary>V. Performance and Ground Reference Maneuvers</summary>
+                <details class="task">
+                    <summary>A. Steep Turns</summary>
+                    <details class="type"><summary>Objective</summary><div class="subitem"><span class="acs-code">PA.V.A</span><span class="description">To determine that the applicant exhibits satisfactory knowledge, risk management, and skills associated with steep turns.</span></div></details>
+                    <details class="type"><summary>Knowledge</summary><!-- Add PA.V.A.K1 to K2 here --></details>
+                    <details class="type"><summary>Risk Management</summary><!-- Add PA.V.A.R1 to R3 here --></details>
+                    <details class="type"><summary>Skills</summary><!-- Add PA.V.A.S1 to S4 here --></details>
+                </details>
+                <details class="task">
+                    <summary>B. Ground Reference Maneuvers</summary>
+                    <details class="type"><summary>Objective</summary><div class="subitem"><span class="acs-code">PA.V.B</span><span class="description">To determine that the applicant exhibits satisfactory knowledge, risk management, and skills associated with ground reference maneuvers.</span></div></details>
+                    <details class="type"><summary>Knowledge</summary><!-- Add PA.V.B.K1 to K2 here --></details>
+                    <details class="type"><summary>Risk Management</summary><!-- Add PA.V.B.R1 to R3 here --></details>
+                    <details class="type"><summary>Skills</summary><!-- Add PA.V.B.S1 to S4 here --></details>
+                </details>
+            </details>
+
+            <!-- VI. Navigation -->
+            <details class="area">
+                <summary>VI. Navigation</summary>
+                <details class="task">
+                    <summary>A. Pilotage and Dead Reckoning</summary>
+                    <details class="type"><summary>Objective</summary><div class="subitem"><span class="acs-code">PA.VI.A</span><span class="description">To determine that the applicant exhibits satisfactory knowledge, risk management, and skills associated with pilotage and dead reckoning.</span></div></details>
+                    <details class="type"><summary>Knowledge</summary><!-- Add PA.VI.A.K1 to K2 here --></details>
+                    <details class="type"><summary>Risk Management</summary><!-- Add PA.VI.A.R1 to R3 here --></details>
+                    <details class="type"><summary>Skills</summary><!-- Add PA.VI.A.S1 to S3 here --></details>
+                </details>
+                <details class="task">
+                    <summary>B. Navigation Systems and Radar Services</summary>
+                    <details class="type"><summary>Objective</summary><div class="subitem"><span class="acs-code">PA.VI.B</span><span class="description">To determine that the applicant exhibits satisfactory knowledge, risk management, and skills associated with navigation systems and radar services.</span></div></details>
+                    <details class="type"><summary>Knowledge</summary><!-- Add PA.VI.B.K1 to K2 here --></details>
+                    <details class="type"><summary>Risk Management</summary><!-- Add PA.VI.B.R1 to R2 here --></details>
+                    <details class="type"><summary>Skills</summary><!-- Add PA.VI.B.S1 to S2 here --></details>
+                </details>
+                <details class="task">
+                    <summary>C. Diversion</summary>
+                    <details class="type"><summary>Objective</summary><div class="subitem"><span class="acs-code">PA.VI.C</span><span class="description">To determine that the applicant exhibits satisfactory knowledge, risk management, and skills associated with diverting to an alternate airport.</span></div></details>
+                    <details class="type"><summary>Knowledge</summary><!-- Add PA.VI.C.K1 here --></details>
+                    <details class="type"><summary>Risk Management</summary><!-- Add PA.VI.C.R1 to R2 here --></details>
+                    <details class="type"><summary>Skills</summary><!-- Add PA.VI.C.S1 to S3 here --></details>
+                </details>
+                <details class="task">
+                    <summary>D. Lost Procedures</summary>
+                    <details class="type"><summary>Objective</summary><div class="subitem"><span class="acs-code">PA.VI.D</span><span class="description">To determine that the applicant exhibits satisfactory knowledge, risk management, and skills associated with lost procedures.</span></div></details>
+                    <details class="type"><summary>Knowledge</summary><!-- Add PA.VI.D.K1 here --></details>
+                    <details class="type"><summary>Risk Management</summary><!-- Add PA.VI.D.R1 to R2 here --></details>
+                    <details class="type"><summary>Skills</summary><!-- Add PA.VI.D.S1 to S2 here --></details>
+                </details>
+            </details>
+
+            <!-- VII. Slow Flight and Stalls -->
+            <details class="area">
+                <summary>VII. Slow Flight and Stalls</summary>
+                <details class="task">
+                    <summary>A. Maneuvering During Slow Flight</summary>
+                    <details class="type"><summary>Objective</summary><div class="subitem"><span class="acs-code">PA.VII.A</span><span class="description">To determine that the applicant exhibits satisfactory knowledge, risk management, and skills associated with maneuvering during slow flight in various configurations.</span></div></details>
+                    <details class="type"><summary>Knowledge</summary><!-- Add PA.VII.A.K1 to K2 here --></details>
+                    <details class="type"><summary>Risk Management</summary><!-- Add PA.VII.A.R1 to R2 here --></details>
+                    <details class="type"><summary>Skills</summary><!-- Add PA.VII.A.S1 to S3 here --></details>
+                </details>
+                <details class="task">
+                    <summary>B. Power-Off Stalls</summary>
+                    <details class="type"><summary>Objective</summary><div class="subitem"><span class="acs-code">PA.VII.B</span><span class="description">To determine that the applicant exhibits satisfactory knowledge, risk management, and skills associated with power-off stalls.</span></div></details>
+                    <details class="type"><summary>Knowledge</summary><!-- Add PA.VII.B.K1 to K2 here --></details>
+                    <details class="type"><summary>Risk Management</summary><!-- Add PA.VII.B.R1 to R2 here --></details>
+                    <details class="type"><summary>Skills</summary><!-- Add PA.VII.B.S1 to S4 here --></details>
+                </details>
+                <details class="task">
+                    <summary>C. Power-On Stalls</summary>
+                    <details class="type"><summary>Objective</summary><div class="subitem"><span class="acs-code">PA.VII.C</span><span class="description">To determine that the applicant exhibits satisfactory knowledge, risk management, and skills associated with power-on stalls.</span></div></details>
+                    <details class="type"><summary>Knowledge</summary><!-- Add PA.VII.C.K1 to K2 here --></details>
+                    <details class="type"><summary>Risk Management</summary><!-- Add PA.VII.C.R1 to R2 here --></details>
+                    <details class="type"><summary>Skills</summary><!-- Add PA.VII.C.S1 to S4 here --></details>
+                </details>
+                <details class="task">
+                    <summary>D. Spin Awareness</summary>
+                    <details class="type"><summary>Objective</summary><div class="subitem"><span class="acs-code">PA.VII.D</span><span class="description">To determine that the applicant exhibits satisfactory knowledge and risk management associated with spins (spin demonstration is not required).</span></div></details>
+                    <details class="type"><summary>Knowledge</summary><!-- Add PA.VII.D.K1 to K3 here --></details>
+                    <details class="type"><summary>Risk Management</summary><!-- Add PA.VII.D.R1 here --></details>
+                    <details class="type"><summary>Skills</summary><!-- Add PA.VII.D.S1 here --></details>
+                </details>
+            </details>
+
+            <!-- VIII. Basic Instrument Maneuvers -->
+            <details class="area">
+                <summary>VIII. Basic Instrument Maneuvers</summary>
+                <details class="task">
+                    <summary>A. Straight-and-Level Flight</summary>
+                    <details class="type"><summary>Objective</summary><div class="subitem"><span class="acs-code">PA.VIII.A</span><span class="description">To determine that the applicant exhibits satisfactory knowledge, risk management, and skills associated with maintaining straight-and-level flight solely by reference to instruments.</span></div></details>
+                    <details class="type"><summary>Knowledge</summary><!-- Add PA.VIII.A.K1 to K2 here --></details>
+                    <details class="type"><summary>Risk Management</summary><!-- Add PA.VIII.A.R1 here --></details>
+                    <details class="type"><summary>Skills</summary><!-- Add PA.VIII.A.S1 here --></details>
+                </details>
+                <details class="task">
+                    <summary>B. Constant Airspeed Climbs</summary>
+                    <details class="type"><summary>Objective</summary><div class="subitem"><span class="acs-code">PA.VIII.B</span><span class="description">To determine that the applicant exhibits satisfactory knowledge, risk management, and skills associated with constant airspeed climbs solely by reference to instruments.</span></div></details>
+                    <details class="type"><summary>Knowledge</summary><!-- Add PA.VIII.B.K1 here --></details>
+                    <details class="type"><summary>Risk Management</summary><!-- Add PA.VIII.B.R1 here --></details>
+                    <details class="type"><summary>Skills</summary><!-- Add PA.VIII.B.S1 here --></details>
+                </details>
+                <details class="task">
+                    <summary>C. Constant Airspeed Descents</summary>
+                    <details class="type"><summary>Objective</summary><div class="subitem"><span class="acs-code">PA.VIII.C</span><span class="description">To determine that the applicant exhibits satisfactory knowledge, risk management, and skills associated with constant airspeed descents solely by reference to instruments.</span></div></details>
+                    <details class="type"><summary>Knowledge</summary><!-- Add PA.VIII.C.K1 here --></details>
+                    <details class="type"><summary>Risk Management</summary><!-- Add PA.VIII.C.R1 here --></details>
+                    <details class="type"><summary>Skills</summary><!-- Add PA.VIII.C.S1 here --></details>
+                </details>
+                <details class="task">
+                    <summary>D. Turns to Headings</summary>
+                    <details class="type"><summary>Objective</summary><div class="subitem"><span class="acs-code">PA.VIII.D</span><span class="description">To determine that the applicant exhibits satisfactory knowledge, risk management, and skills associated with turns to headings solely by reference to instruments.</span></div></details>
+                    <details class="type"><summary>Knowledge</summary><!-- Add PA.VIII.D.K1 to K2 here --></details>
+                    <details class="type"><summary>Risk Management</summary><!-- Add PA.VIII.D.R1 here --></details>
+                    <details class="type"><summary>Skills</summary><!-- Add PA.VIII.D.S1 here --></details>
+                </details>
+                <details class="task">
+                    <summary>E. Recovery from Unusual Flight Attitudes</summary>
+                    <details class="type"><summary>Objective</summary><div class="subitem"><span class="acs-code">PA.VIII.E</span><span class="description">To determine that the applicant exhibits satisfactory knowledge, risk management, and skills associated with recovering from unusual flight attitudes solely by reference to instruments.</span></div></details>
+                    <details class="type"><summary>Knowledge</summary><!-- Add PA.VIII.E.K1 to K2 here --></details>
+                    <details class="type"><summary>Risk Management</summary><!-- Add PA.VIII.E.R1 to R2 here --></details>
+                    <details class="type"><summary>Skills</summary><!-- Add PA.VIII.E.S1 here --></details>
+                </details>
+                <details class="task">
+                    <summary>F. Radio Communications, Navigation Systems/Facilities, and Radar Services</summary>
+                    <details class="type"><summary>Objective</summary><div class="subitem"><span class="acs-code">PA.VIII.F</span><span class="description">To determine that the applicant exhibits satisfactory knowledge, risk management, and skills associated with radio communications, navigation systems/facilities, and radar services under simulated or actual instrument conditions.</span></div></details>
+                    <details class="type"><summary>Knowledge</summary><!-- Add PA.VIII.F.K1 to K3 here --></details>
+                    <details class="type"><summary>Risk Management</summary><!-- Add PA.VIII.F.R1 to R2 here --></details>
+                    <details class="type"><summary>Skills</summary><!-- Add PA.VIII.F.S1 to S2 here --></details>
+                </details>
+            </details>
+
+            <!-- IX. Emergency Operations -->
+            <details class="area">
+                <summary>IX. Emergency Operations</summary>
+                <details class="task">
+                    <summary>A. Emergency Descent</summary>
+                    <details class="type"><summary>Objective</summary><div class="subitem"><span class="acs-code">PA.IX.A</span><span class="description">To determine that the applicant exhibits satisfactory knowledge, risk management, and skills associated with performing an emergency descent.</span></div></details>
+                    <details class="type"><summary>Knowledge</summary><!-- Add PA.IX.A.K1 to K2 here --></details>
+                    <details class="type"><summary>Risk Management</summary><!-- Add PA.IX.A.R1 to R2 here --></details>
+                    <details class="type"><summary>Skills</summary><!-- Add PA.IX.A.S1 to S3 here --></details>
+                </details>
+                <details class="task">
+                    <summary>B. Emergency Approach and Landing (Simulated)</summary>
+                    <details class="type"><summary>Objective</summary><div class="subitem"><span class="acs-code">PA.IX.B</span><span class="description">To determine that the applicant exhibits satisfactory knowledge, risk management, and skills associated with an emergency approach and landing.</span></div></details>
+                    <details class="type"><summary>Knowledge</summary><!-- Add PA.IX.B.K1 to K2 here --></details>
+                    <details class="type"><summary>Risk Management</summary><!-- Add PA.IX.B.R1 to R2 here --></details>
+                    <details class="type"><summary>Skills</summary><!-- Add PA.IX.B.S1 to S3 here --></details>
+                </details>
+                <details class="task">
+                    <summary>C. Systems and Equipment Malfunctions</summary>
+                    <details class="type"><summary>Objective</summary><div class="subitem"><span class="acs-code">PA.IX.C</span><span class="description">To determine that the applicant exhibits satisfactory knowledge, risk management, and skills associated with systems and equipment malfunctions.</span></div></details>
+                    <details class="type"><summary>Knowledge</summary><!-- Add PA.IX.C.K1 to K2 here --></details>
+                    <details class="type"><summary>Risk Management</summary><!-- Add PA.IX.C.R1 to R2 here --></details>
+                    <details class="type"><summary>Skills</summary><!-- Add PA.IX.C.S1 to S2 here --></details>
+                </details>
+                <details class="task">
+                    <summary>D. Emergency Equipment and Survival Gear</summary>
+                    <details class="type"><summary>Objective</summary><div class="subitem"><span class="acs-code">PA.IX.D</span><span class="description">To determine that the applicant exhibits satisfactory knowledge and risk management associated with emergency equipment and survival gear.</span></div></details>
+                    <details class="type"><summary>Knowledge</summary><!-- Add PA.IX.D.K1 to K2 here --></details>
+                    <details class="type"><summary>Risk Management</summary><!-- Add PA.IX.D.R1 here --></details>
+                    <details class="type"><summary>Skills</summary><!-- Add PA.IX.D.S1 here --></details>
+                </details>
+            </details>
+
+            <!-- XI. Postflight Procedures -->
+            <details class="area">
+                <summary>XI. Postflight Procedures</summary>
+                <details class="task">
+                    <summary>A. After Landing, Parking, and Securing</summary>
+                    <details class="type"><summary>Objective</summary><div class="subitem"><span class="acs-code">PA.XI.A</span><span class="description">To determine that the applicant exhibits satisfactory knowledge, risk management, and skills associated with after-landing, parking, and securing procedures.</span></div></details>
+                    <details class="type"><summary>Knowledge</summary><!-- Add PA.XI.A.K1 to K2 here --></details>
+                    <details class="type"><summary>Risk Management</summary><!-- Add PA.XI.A.R1 to R2 here --></details>
+                    <details class="type"><summary>Skills</summary><!-- Add PA.XI.A.S1 to S2 here --></details>
+                </details>
+            </details>
+</div>
+</body>
+</html>
