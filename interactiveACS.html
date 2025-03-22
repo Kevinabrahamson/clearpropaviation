@@ -6,58 +6,104 @@
   <title>Private Pilot - Airplane ACS</title>
   <style>
     body {
-      background-color: #f0f0f0;
-      font-family: Arial, sans-serif;
-      color: #333333;
+      background-color: #eef2f7;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #2c3e50;
       margin: 0;
       padding: 20px;
     }
     h1 {
       text-align: center;
-      color: #003366;
+      color: #2c3e50;
+      margin-bottom: 30px;
+      font-size: 2.2em;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
     }
     #content {
-      max-width: 800px;
+      max-width: 1200px;
       margin: 0 auto;
     }
     details.area > summary {
-      background-color: #003366;
+      background-color: #2c3e50;
       color: white;
-      padding: 10px;
+      padding: 15px;
       cursor: pointer;
-      font-size: 18px;
+      font-size: 1.3em;
+      border-radius: 8px;
       margin-bottom: 5px;
+      transition: background-color 0.3s ease;
     }
     details.task > summary {
-      background-color: #336699;
+      background-color: #3498db;
       color: white;
-      padding: 8px;
+      padding: 15px;
       cursor: pointer;
-      font-size: 16px;
+      font-size: 1.1em;
       margin-left: 20px;
+      border-radius: 8px;
       margin-bottom: 5px;
+      transition: background-color 0.3s ease;
     }
     .type {
       margin-left: 40px;
       padding: 10px;
-      background-color: white;
-      border: 1px solid #cccccc;
+      background-color: #ffffff;
+      border-radius: 4px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
       margin-bottom: 10px;
     }
     .type h4 {
-      color: #003366;
+      color: #2c3e50;
       margin-top: 0;
+      font-size: 1em;
     }
     ul {
       list-style-type: none;
       padding: 0;
     }
     li {
-      margin-bottom: 5px;
+      margin-bottom: 10px;
+    }
+    .subitem {
+      display: flex;
+      align-items: flex-start;
+      padding: 10px;
+      background-color: #ffffff;
+      border-left: 4px solid #3498db;
+      border-radius: 4px;
+      line-height: 1.5;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    }
+    .subitem:hover {
+      background-color: #f9fafb;
     }
     .acs-code {
       font-weight: bold;
-      color: #003366;
+      color: #2c3e50;
+      min-width: 100px;
+      margin-right: 10px;
+    }
+    .description {
+      flex: 1;
+    }
+    .objective {
+      display: flex;
+      align-items: flex-start;
+      padding: 10px;
+      background-color: #ffffff;
+      border-left: 4px solid #3498db;
+      border-radius: 4px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+      margin-bottom: 10px;
+    }
+    .objective .acs-code {
+      font-weight: bold;
+      color: #2c3e50;
+      min-width: 100px;
+      margin-right: 10px;
+    }
+    .objective .description {
+      flex: 1;
     }
   </style>
 </head>
@@ -65,7 +111,7 @@
   <h1>Private Pilot - Airplane Airman Certification Standards</h1>
   <div id="content"></div>
   <script>
-    fetch('acs_data.json')
+    fetch('acs.json')
       .then(response => response.json())
       .then(data => {
         // Group data by Area of Operation, Task, and Type
@@ -74,15 +120,9 @@
           const area = item["Area of Operation"];
           const task = item["Task"];
           const type = item["Type"];
-          if (!groupedData[area]) {
-            groupedData[area] = {};
-          }
-          if (!groupedData[area][task]) {
-            groupedData[area][task] = {};
-          }
-          if (!groupedData[area][task][type]) {
-            groupedData[area][task][type] = [];
-          }
+          if (!groupedData[area]) groupedData[area] = {};
+          if (!groupedData[area][task]) groupedData[area][task] = {};
+          if (!groupedData[area][task][type]) groupedData[area][task][type] = [];
           groupedData[area][task][type].push({
             "ACS Code": item["ACS Code"],
             "Description": item["Description"]
@@ -92,7 +132,6 @@
         // Populate the content div
         const contentDiv = document.getElementById('content');
         for (const area in groupedData) {
-          // Create Area of Operation section
           const areaDetails = document.createElement('details');
           areaDetails.classList.add('area');
           const areaSummary = document.createElement('summary');
@@ -103,7 +142,6 @@
           tasksDiv.classList.add('tasks');
 
           for (const task in groupedData[area]) {
-            // Create Task section
             const taskDetails = document.createElement('details');
             taskDetails.classList.add('task');
             const taskSummary = document.createElement('summary');
@@ -114,7 +152,6 @@
             typesDiv.classList.add('types');
 
             for (const type in groupedData[area][task]) {
-              // Create Type section (Objective, Knowledge, etc.)
               const typeDiv = document.createElement('div');
               typeDiv.classList.add('type', type.toLowerCase().replace(' ', '-'));
               const typeHeader = document.createElement('h4');
@@ -122,22 +159,35 @@
               typeDiv.appendChild(typeHeader);
 
               if (type === 'Objective') {
-                // Display Objective as a paragraph
-                const p = document.createElement('p');
-                p.textContent = groupedData[area][task][type][0]["Description"];
-                typeDiv.appendChild(p);
+                // Objective with ACS code and description side-by-side
+                const objectiveDiv = document.createElement('div');
+                objectiveDiv.classList.add('objective');
+                const codeSpan = document.createElement('span');
+                codeSpan.classList.add('acs-code');
+                codeSpan.textContent = groupedData[area][task][type][0]["ACS Code"];
+                objectiveDiv.appendChild(codeSpan);
+                const descSpan = document.createElement('span');
+                descSpan.classList.add('description');
+                descSpan.textContent = groupedData[area][task][type][0]["Description"];
+                objectiveDiv.appendChild(descSpan);
+                typeDiv.appendChild(objectiveDiv);
               } else {
-                // Display Knowledge, Risk Management, Skills as lists
+                // List items with ACS code and description side-by-side
                 const ul = document.createElement('ul');
-                // Sort items by ACS Code
                 groupedData[area][task][type].sort((a, b) => a["ACS Code"].localeCompare(b["ACS Code"]));
                 groupedData[area][task][type].forEach(item => {
                   const li = document.createElement('li');
+                  const subitemDiv = document.createElement('div');
+                  subitemDiv.classList.add('subitem');
                   const codeSpan = document.createElement('span');
                   codeSpan.classList.add('acs-code');
-                  codeSpan.textContent = item["ACS Code"] + ': ';
-                  li.appendChild(codeSpan);
-                  li.appendChild(document.createTextNode(item["Description"]));
+                  codeSpan.textContent = item["ACS Code"];
+                  subitemDiv.appendChild(codeSpan);
+                  const descSpan = document.createElement('span');
+                  descSpan.classList.add('description');
+                  descSpan.textContent = item["Description"];
+                  subitemDiv.appendChild(descSpan);
+                  li.appendChild(subitemDiv);
                   ul.appendChild(li);
                 });
                 typeDiv.appendChild(ul);
