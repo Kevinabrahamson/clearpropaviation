@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Private Pilot - Airplane ACS</title>
+  <style>
+    body {
+      background-color: #f0f0f0;
+      font-family: Arial, sans-serif;
+      color: #333333;
+      margin: 0;
+      padding: 20px;
+    }
+    h1 {
+      text-align: center;
+      color: #003366;
+    }
+    #content {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    details.area > summary {
+      background-color: #003366;
+      color: white;
+      padding: 10px;
+      cursor: pointer;
+      font-size: 18px;
+      margin-bottom: 5px;
+    }
+    details.task > summary {
+      background-color: #336699;
+      color: white;
+      padding: 8px;
+      cursor: pointer;
+      font-size: 16px;
+      margin-left: 20px;
+      margin-bottom: 5px;
+    }
+    .type {
+      margin-left: 40px;
+      padding: 10px;
+      background-color: white;
+      border: 1px solid #cccccc;
+      margin-bottom: 10px;
+    }
+    .type h4 {
+      color: #003366;
+      margin-top: 0;
+    }
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    li {
+      margin-bottom: 5px;
+    }
+    .acs-code {
+      font-weight: bold;
+      color: #003366;
+    }
+  </style>
+</head>
+<body>
+  <h1>Private Pilot - Airplane Airman Certification Standards</h1>
+  <div id="content"></div>
+  <script>
+    fetch('acs.json')
+      .then(response => response.json())
+      .then(data => {
+        // Group data by Area of Operation, Task, and Type
+        const groupedData = {};
+        data.forEach(item => {
+          const area = item["Area of Operation"];
+          const task = item["Task"];
+          const type = item["Type"];
+          if (!groupedData[area]) {
+            groupedData[area] = {};
+          }
+          if (!groupedData[area][task]) {
+            groupedData[area][task] = {};
+          }
+          if (!groupedData[area][task][type]) {
+            groupedData[area][task][type] = [];
+          }
+          groupedData[area][task][type].push({
+            "ACS Code": item["ACS Code"],
+            "Description": item["Description"]
+          });
+        });
+
+        // Populate the content div
+        const contentDiv = document.getElementById('content');
+        for (const area in groupedData) {
+          // Create Area of Operation section
+          const areaDetails = document.createElement('details');
+          areaDetails.classList.add('area');
+          const areaSummary = document.createElement('summary');
+          areaSummary.textContent = area;
+          areaDetails.appendChild(areaSummary);
+
+          const tasksDiv = document.createElement('div');
+          tasksDiv.classList.add('tasks');
+
+          for (const task in groupedData[area]) {
+            // Create Task section
+            const taskDetails = document.createElement('details');
+            taskDetails.classList.add('task');
+            const taskSummary = document.createElement('summary');
+            taskSummary.textContent = task;
+            taskDetails.appendChild(taskSummary);
+
+            const typesDiv = document.createElement('div');
+            typesDiv.classList.add('types');
+
+            for (const type in groupedData[area][task]) {
+              // Create Type section (Objective, Knowledge, etc.)
+              const typeDiv = document.createElement('div');
+              typeDiv.classList.add('type', type.toLowerCase().replace(' ', '-'));
+              const typeHeader = document.createElement('h4');
+              typeHeader.textContent = type;
+              typeDiv.appendChild(typeHeader);
+
+              if (type === 'Objective') {
+                // Display Objective as a paragraph
+                const p = document.createElement('p');
+                p.textContent = groupedData[area][task][type][0]["Description"];
+                typeDiv.appendChild(p);
+              } else {
+                // Display Knowledge, Risk Management, Skills as lists
+                const ul = document.createElement('ul');
+                // Sort items by ACS Code
+                groupedData[area][task][type].sort((a, b) => a["ACS Code"].localeCompare(b["ACS Code"]));
+                groupedData[area][task][type].forEach(item => {
+                  const li = document.createElement('li');
+                  const codeSpan = document.createElement('span');
+                  codeSpan.classList.add('acs-code');
+                  codeSpan.textContent = item["ACS Code"] + ': ';
+                  li.appendChild(codeSpan);
+                  li.appendChild(document.createTextNode(item["Description"]));
+                  ul.appendChild(li);
+                });
+                typeDiv.appendChild(ul);
+              }
+              typesDiv.appendChild(typeDiv);
+            }
+            taskDetails.appendChild(typesDiv);
+            tasksDiv.appendChild(taskDetails);
+          }
+          areaDetails.appendChild(tasksDiv);
+          contentDiv.appendChild(areaDetails);
+        }
+      })
+      .catch(error => console.error('Error fetching JSON:', error));
+  </script>
+</body>
+</html>
