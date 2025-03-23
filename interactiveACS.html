@@ -30,9 +30,9 @@
             margin-bottom: 20px;
         }
 
-        /* Styling for expandable sections */
+        /* Styling for expandable sections with increased spacing */
         details {
-            margin-bottom: 15px;
+            margin-bottom: 25px;  /* Increased spacing between collapsed sections */
         }
 
         summary {
@@ -52,7 +52,7 @@
         details[open] {
             background-color: var(--light-blue);
             border-radius: 5px;
-            padding: 10px;
+            padding: 15px;  /* Padding for content when expanded */
         }
 
         /* Indent nested details for hierarchy */
@@ -87,7 +87,7 @@
         .code {
             width: 120px;              /* Fixed width for codes */
             font-weight: bold;
-            color: var(--accent-color); /* Lighter grey for differentiation */
+            color: var(--accent-color);
         }
 
         .description {
@@ -95,10 +95,26 @@
             color: var(--text-color);
         }
 
-        /* Nested lists for sub-elements */
-        ul ul {
-            list-style-type: disc;     /* Bullet points for sub-items */
-            margin-left: 20px;
+        /* New styling for sub-elements container */
+        .sub-elements {
+            margin-top: 5px;
+            padding-left: 20px;        /* Indent sub-elements */
+            font-size: 0.9em;          /* Smaller font size */
+            color: #555;               /* Lighter color for distinction */
+        }
+
+        .sub-element {
+            display: flex;
+            margin-bottom: 2px;
+        }
+
+        .sub-element .code {
+            width: 100px;              /* Slightly smaller width for sub-codes */
+            color: #666;               /* Slightly different shade */
+        }
+
+        .sub-element .description {
+            flex: 1;
         }
 
         /* Separator lines */
@@ -121,14 +137,12 @@
                 const container = document.getElementById('menu-container');
 
                 data.forEach(area => {
-                    // Area of Operation section
                     const areaDetails = document.createElement('details');
                     const areaSummary = document.createElement('summary');
                     areaSummary.textContent = area.area_of_operation;
                     areaDetails.appendChild(areaSummary);
 
                     area.tasks.forEach(task => {
-                        // Task section
                         const taskDetails = document.createElement('details');
                         const taskSummary = document.createElement('summary');
                         taskSummary.textContent = task.task;
@@ -188,20 +202,22 @@
                                 li.appendChild(codeSpan);
                                 li.appendChild(descSpan);
                                 if (item.sub_elements && item.sub_elements.length > 0) {
-                                    const subList = document.createElement('ul');
+                                    const subContainer = document.createElement('div');
+                                    subContainer.className = 'sub-elements';
                                     item.sub_elements.forEach(sub => {
-                                        const subLi = document.createElement('li');
+                                        const subDiv = document.createElement('div');
+                                        subDiv.className = 'sub-element';
                                         const subCodeSpan = document.createElement('span');
                                         subCodeSpan.className = 'code';
                                         subCodeSpan.textContent = sub.code + ':';
                                         const subDescSpan = document.createElement('span');
                                         subDescSpan.className = 'description';
                                         subDescSpan.textContent = sub.description;
-                                        subLi.appendChild(subCodeSpan);
-                                        subLi.appendChild(subDescSpan);
-                                        subList.appendChild(subLi);
+                                        subDiv.appendChild(subCodeSpan);
+                                        subDiv.appendChild(subDescSpan);
+                                        subContainer.appendChild(subDiv);
                                     });
-                                    li.appendChild(subList);
+                                    li.appendChild(subContainer);
                                 }
                                 list.appendChild(li);
                             });
@@ -226,20 +242,22 @@
                                 li.appendChild(codeSpan);
                                 li.appendChild(descSpan);
                                 if (item.sub_elements && item.sub_elements.length > 0) {
-                                    const subList = document.createElement('ul');
+                                    const subContainer = document.createElement('div');
+                                    subContainer.className = 'sub-elements';
                                     item.sub_elements.forEach(sub => {
-                                        const subLi = document.createElement('li');
+                                        const subDiv = document.createElement('div');
+                                        subDiv.className = 'sub-element';
                                         const subCodeSpan = document.createElement('span');
                                         subCodeSpan.className = 'code';
                                         subCodeSpan.textContent = sub.code + ':';
                                         const subDescSpan = document.createElement('span');
                                         subDescSpan.className = 'description';
                                         subDescSpan.textContent = sub.description;
-                                        subLi.appendChild(subCodeSpan);
-                                        subLi.appendChild(subDescSpan);
-                                        subList.appendChild(subLi);
+                                        subDiv.appendChild(subCodeSpan);
+                                        subDiv.appendChild(subDescSpan);
+                                        subContainer.appendChild(subDiv);
                                     });
-                                    li.appendChild(subList);
+                                    li.appendChild(subContainer);
                                 }
                                 list.appendChild(li);
                             });
@@ -264,20 +282,22 @@
                                 li.appendChild(codeSpan);
                                 li.appendChild(descSpan);
                                 if (item.sub_elements && item.sub_elements.length > 0) {
-                                    const subList = document.createElement('ul');
+                                    const subContainer = document.createElement('div');
+                                    subContainer.className = 'sub-elements';
                                     item.sub_elements.forEach(sub => {
-                                        const subLi = document.createElement('li');
+                                        const subDiv = document.createElement('div');
+                                        subDiv.className = 'sub-element';
                                         const subCodeSpan = document.createElement('span');
                                         subCodeSpan.className = 'code';
                                         subCodeSpan.textContent = sub.code + ':';
                                         const subDescSpan = document.createElement('span');
                                         subDescSpan.className = 'description';
                                         subDescSpan.textContent = sub.description;
-                                        subLi.appendChild(subCodeSpan);
-                                        subLi.appendChild(subDescSpan);
-                                        subList.appendChild(subLi);
+                                        subDiv.appendChild(subCodeSpan);
+                                        subDiv.appendChild(subDescSpan);
+                                        subContainer.appendChild(subDiv);
                                     });
-                                    li.appendChild(subList);
+                                    li.appendChild(subContainer);
                                 }
                                 list.appendChild(li);
                             });
