@@ -12,7 +12,7 @@
             --hover-color: #777777;
             --content-bg: #eeeeee;
             --code-bg: #e8e8e8;
-            --code-text: #999999; /* Lighter code text */
+            --code-text: #999999;
             --blue-accent: #1e90ff;
             --blue-hover: #4169e1;
         }
@@ -94,7 +94,7 @@
 
         .code-text {
             display: inline;
-            font-size: 0.85em; /* Smaller text */
+            font-size: 0.85em;
             color: var(--code-text);
             margin-left: 5px;
         }
@@ -204,6 +204,8 @@
                                 codeSpan.textContent = `(${item.code})`;
                                 descDiv.appendChild(codeSpan);
 
+                                li.appendChild(descDiv);
+
                                 if (item.sub_elements && item.sub_elements.length > 0) {
                                     item.sub_elements.forEach(sub => {
                                         const subDiv = document.createElement('div');
@@ -223,7 +225,6 @@
                                     });
                                 }
 
-                                li.appendChild(descDiv);
                                 list.appendChild(li);
                             });
                             taskContent.appendChild(list);
@@ -253,6 +254,8 @@
                                 codeSpan.textContent = `(${item.code})`;
                                 descDiv.appendChild(codeSpan);
 
+                                li.appendChild(descDiv);
+
                                 if (item.sub_elements && item.sub_elements.length > 0) {
                                     item.sub_elements.forEach(sub => {
                                         const subDiv = document.createElement('div');
@@ -272,7 +275,6 @@
                                     });
                                 }
 
-                                li.appendChild(descDiv);
                                 list.appendChild(li);
                             });
                             taskContent.appendChild(list);
@@ -302,6 +304,8 @@
                                 codeSpan.textContent = `(${item.code})`;
                                 descDiv.appendChild(codeSpan);
 
+                                li.appendChild(descDiv);
+
                                 if (item.sub_elements && item.sub_elements.length > 0) {
                                     item.sub_elements.forEach(sub => {
                                         const subDiv = document.createElement('div');
@@ -321,7 +325,6 @@
                                     });
                                 }
 
-                                li.appendChild(descDiv);
                                 list.appendChild(li);
                             });
                             taskContent.appendChild(list);
