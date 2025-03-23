@@ -81,11 +81,15 @@
             margin-bottom: 10px;
         }
 
-        .desc-with-code {
+        .element-container {
             margin-bottom: 8px;
             background-color: #ffffff;
             padding: 5px;
             border-radius: 3px;
+        }
+
+        .main-desc {
+            margin-bottom: 5px;
         }
 
         .description-text {
@@ -99,9 +103,9 @@
             margin-left: 5px;
         }
 
-        .sub-elements {
+        .sub-desc {
             margin-left: 20px;
-            margin-top: 5px;
+            margin-bottom: 5px;
         }
 
         hr {
@@ -191,28 +195,28 @@
                                 const li = document.createElement('li');
                                 li.className = 'item';
 
-                                const descDiv = document.createElement('div');
-                                descDiv.className = 'desc-with-code';
+                                const containerDiv = document.createElement('div');
+                                containerDiv.className = 'element-container';
+
+                                const mainDiv = document.createElement('div');
+                                mainDiv.className = 'main-desc';
                                 
                                 const descSpan = document.createElement('span');
                                 descSpan.className = 'description-text';
                                 descSpan.textContent = item.description;
-                                descDiv.appendChild(descSpan);
+                                mainDiv.appendChild(descSpan);
 
                                 const codeSpan = document.createElement('span');
                                 codeSpan.className = 'code-text';
                                 codeSpan.textContent = `(${item.code})`;
-                                descDiv.appendChild(codeSpan);
+                                mainDiv.appendChild(codeSpan);
 
-                                li.appendChild(descDiv);
+                                containerDiv.appendChild(mainDiv);
 
                                 if (item.sub_elements && item.sub_elements.length > 0) {
-                                    const subList = document.createElement('ul');
-                                    subList.className = 'sub-elements';
                                     item.sub_elements.forEach(sub => {
-                                        const subLi = document.createElement('li');
                                         const subDiv = document.createElement('div');
-                                        subDiv.className = 'desc-with-code';
+                                        subDiv.className = 'sub-desc';
                                         
                                         const subDescSpan = document.createElement('span');
                                         subDescSpan.className = 'description-text';
@@ -224,12 +228,11 @@
                                         subCodeSpan.textContent = `(${sub.code})`;
                                         subDiv.appendChild(subCodeSpan);
                                         
-                                        subLi.appendChild(subDiv);
-                                        subList.appendChild(subLi);
+                                        containerDiv.appendChild(subDiv);
                                     });
-                                    li.appendChild(subList);
                                 }
 
+                                li.appendChild(containerDiv);
                                 list.appendChild(li);
                             });
                             taskContent.appendChild(list);
@@ -246,28 +249,28 @@
                                 const li = document.createElement('li');
                                 li.className = 'item';
 
-                                const descDiv = document.createElement('div');
-                                descDiv.className = 'desc-with-code';
+                                const containerDiv = document.createElement('div');
+                                containerDiv.className = 'element-container';
+
+                                const mainDiv = document.createElement('div');
+                                mainDiv.className = 'main-desc';
                                 
                                 const descSpan = document.createElement('span');
                                 descSpan.className = 'description-text';
                                 descSpan.textContent = item.description;
-                                descDiv.appendChild(descSpan);
+                                mainDiv.appendChild(descSpan);
 
                                 const codeSpan = document.createElement('span');
                                 codeSpan.className = 'code-text';
                                 codeSpan.textContent = `(${item.code})`;
-                                descDiv.appendChild(codeSpan);
+                                mainDiv.appendChild(codeSpan);
 
-                                li.appendChild(descDiv);
+                                containerDiv.appendChild(mainDiv);
 
                                 if (item.sub_elements && item.sub_elements.length > 0) {
-                                const subList = document.createElement('ul');
-                                    subList.className = 'sub-elements';
                                     item.sub_elements.forEach(sub => {
-                                        const subLi = document.createElement('li');
                                         const subDiv = document.createElement('div');
-                                        subDiv.className = 'desc-with-code';
+                                        subDiv.className = 'sub-desc';
                                         
                                         const subDescSpan = document.createElement('span');
                                         subDescSpan.className = 'description-text';
@@ -279,12 +282,11 @@
                                         subCodeSpan.textContent = `(${sub.code})`;
                                         subDiv.appendChild(subCodeSpan);
                                         
-                                        subLi.appendChild(subDiv);
-                                        subList.appendChild(subLi);
+                                        containerDiv.appendChild(subDiv);
                                     });
-                                    li.appendChild(subList);
                                 }
 
+                                li.appendChild(containerDiv);
                                 list.appendChild(li);
                             });
                             taskContent.appendChild(list);
@@ -301,28 +303,28 @@
                                 const li = document.createElement('li');
                                 li.className = 'item';
 
-                                const descDiv = document.createElement('div');
-                                descDiv.className = 'desc-with-code';
+                                const containerDiv = document.createElement('div');
+                                containerDiv.className = 'element-container';
+
+                                const mainDiv = document.createElement('div');
+                                mainDiv.className = 'main-desc';
                                 
                                 const descSpan = document.createElement('span');
                                 descSpan.className = 'description-text';
                                 descSpan.textContent = item.description;
-                                descDiv.appendChild(descSpan);
+                                mainDiv.appendChild(descSpan);
 
                                 const codeSpan = document.createElement('span');
                                 codeSpan.className = 'code-text';
                                 codeSpan.textContent = `(${item.code})`;
-                                descDiv.appendChild(codeSpan);
+                                mainDiv.appendChild(codeSpan);
 
-                                li.appendChild(descDiv);
+                                containerDiv.appendChild(mainDiv);
 
                                 if (item.sub_elements && item.sub_elements.length > 0) {
-                                    const subList = document.createElement('ul');
-                                    subList.className = 'sub-elements';
                                     item.sub_elements.forEach(sub => {
-                                        const subLi = document.createElement('li');
                                         const subDiv = document.createElement('div');
-                                        subDiv.className = 'desc-with-code';
+                                        subDiv.className = 'sub-desc';
                                         
                                         const subDescSpan = document.createElement('span');
                                         subDescSpan.className = 'description-text';
@@ -334,12 +336,11 @@
                                         subCodeSpan.textContent = `(${sub.code})`;
                                         subDiv.appendChild(subCodeSpan);
                                         
-                                        subLi.appendChild(subDiv);
-                                        subList.appendChild(subLi);
+                                        containerDiv.appendChild(subDiv);
                                     });
-                                    li.appendChild(subList);
                                 }
 
+                                li.appendChild(containerDiv);
                                 list.appendChild(li);
                             });
                             taskContent.appendChild(list);
