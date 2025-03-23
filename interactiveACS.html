@@ -1,207 +1,208 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Private Pilot Airplane ACS</title>
-  <style>
-    body {
-      background-color: #eef2f7;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      color: #2c3e50;
-      margin: 0;
-      padding: 20px;
-    }
-    h1 {
-      text-align: center;
-      color: #2c3e50;
-      margin-bottom: 30px;
-      font-size: 2.2em;
-      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
-    }
-    #content {
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-    details.area > summary {
-      background-color: #2c3e50;
-      color: white;
-      padding: 15px;
-      cursor: pointer;
-      font-size: 1.3em;
-      border-radius: 8px;
-      margin-bottom: 5px;
-      transition: background-color 0.3s ease;
-    }
-    details.task > summary {
-      background-color: #3498db;
-      color: white;
-      padding: 15px;
-      cursor: pointer;
-      font-size: 1.1em;
-      margin-left: 20px;
-      border-radius: 8px;
-      margin-bottom: 5px;
-      transition: background-color 0.3s ease;
-    }
-    .type {
-      margin-left: 40px;
-      padding: 10px;
-      background-color: #ffffff;
-      border-radius: 4px;
-      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
-      margin-bottom: 10px;
-    }
-    .type h4 {
-      color: #2c3e50;
-      margin-top: 0;
-      font-size: 1em;
-    }
-    ul {
-      list-style-type: none;
-      padding: 0;
-    }
-    li {
-      margin-bottom: 10px;
-    }
-    .subitem {
-      display: flex;
-      align-items: flex-start;
-      padding: 10px;
-      background-color: #ffffff;
-      border-left: 4px solid #3498db;
-      border-radius: 4px;
-      line-height: 1.5;
-      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
-    }
-    .subitem:hover {
-      background-color: #f9fafb;
-    }
-    .acs-code {
-      font-weight: bold;
-      color: #2c3e50;
-      min-width: 100px;
-      margin-right: 10px;
-    }
-    .description {
-      flex: 1;
-    }
-    .objective {
-      display: flex;
-      align-items: flex-start;
-      padding: 10px;
-      background-color: #ffffff;
-      border-left: 4px solid #3498db;
-      border-radius: 4px;
-      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
-      margin-bottom: 10px;
-    }
-    .objective .acs-code {
-      font-weight: bold;
-      color: #2c3e50;
-      min-width: 100px;
-      margin-right: 10px;
-    }
-    .objective .description {
-      flex: 1;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Private Pilot Airplane ACS</title>
+    <style>
+        :root {
+            --background-color: #f0f0f0;
+            --text-color: #333;
+            --header-color: #007bff;
+            --accent-color: #6c757d;
+        }
+
+        body {
+            background-color: var(--background-color);
+            color: var(--text-color);
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        h1 {
+            color: var(--header-color);
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        details {
+            margin-bottom: 10px;
+            padding: 5px;
+        }
+
+        summary {
+            cursor: pointer;
+            font-weight: bold;
+            color: var(--header-color);
+            padding: 5px;
+            background-color: #fff;
+            border-radius: 3px;
+        }
+
+        summary:hover {
+            background-color: #e9ecef;
+        }
+
+        details[open] {
+            background-color: #e9ecef;
+            border-radius: 5px;
+            padding: 10px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 5px;
+        }
+
+        p {
+            margin: 5px 0;
+        }
+
+        h4 {
+            color: var(--accent-color);
+            margin-top: 10px;
+            margin-bottom: 5px;
+        }
+
+        ul ul {
+            list-style-type: disc;
+        }
+    </style>
 </head>
 <body>
-  <h1>Private Pilot - Airplane Airman Certification Standards</h1>
-  <div id="content"></div>
-  <script>
-    fetch('acs_data.json')
-      .then(response => response.json())
-      .then(data => {
-        // Group data by Area of Operation, Task, and Type
-        const groupedData = {};
-        data.forEach(item => {
-          const area = item["Area of Operation"];
-          const task = item["Task"];
-          const type = item["Type"];
-          if (!groupedData[area]) groupedData[area] = {};
-          if (!groupedData[area][task]) groupedData[area][task] = {};
-          if (!groupedData[area][task][type]) groupedData[area][task][type] = [];
-          groupedData[area][task][type].push({
-            "ACS Code": item["ACS Code"],
-            "Description": item["Description"]
-          });
-        });
+    <h1>Private Pilot Airplane ACS</h1>
+    <div id="menu-container"></div>
 
-        // Populate the content div
-        const contentDiv = document.getElementById('content');
-        for (const area in groupedData) {
-          const areaDetails = document.createElement('details');
-          areaDetails.classList.add('area');
-          const areaSummary = document.createElement('summary');
-          areaSummary.textContent = area;
-          areaDetails.appendChild(areaSummary);
+    <script>
+        // Fetch and process the JSON data
+        fetch('data.json')
+            .then(response => response.json())
+            .then(data => {
+                const container = document.getElementById('menu-container');
 
-          const tasksDiv = document.createElement('div');
-          tasksDiv.classList.add('tasks');
+                data.forEach(area => {
+                    // Create area of operation details element
+                    const areaDetails = document.createElement('details');
+                    const areaSummary = document.createElement('summary');
+                    areaSummary.textContent = area.area_of_operation;
+                    areaDetails.appendChild(areaSummary);
 
-          for (const task in groupedData[area]) {
-            const taskDetails = document.createElement('details');
-            taskDetails.classList.add('task');
-            const taskSummary = document.createElement('summary');
-            taskSummary.textContent = task;
-            taskDetails.appendChild(taskSummary);
+                    area.tasks.forEach(task => {
+                        // Create task details element
+                        const taskDetails = document.createElement('details');
+                        const taskSummary = document.createElement('summary');
+                        taskSummary.textContent = task.task;
+                        taskDetails.appendChild(taskSummary);
 
-            const typesDiv = document.createElement('div');
-            typesDiv.classList.add('types');
+                        // References
+                        if (task.references && task.references.length > 0) {
+                            const referencesPara = document.createElement('p');
+                            referencesPara.textContent = 'References: ' + task.references.join(', ');
+                            taskDetails.appendChild(referencesPara);
+                        }
 
-            for (const type in groupedData[area][task]) {
-              const typeDiv = document.createElement('div');
-              typeDiv.classList.add('type', type.toLowerCase().replace(' ', '-'));
-              const typeHeader = document.createElement('h4');
-              typeHeader.textContent = type;
-              typeDiv.appendChild(typeHeader);
+                        // Objective
+                        if (task.objective) {
+                            const objectivePara = document.createElement('p');
+                            objectivePara.textContent = 'Objective: ' + task.objective;
+                            taskDetails.appendChild(objectivePara);
+                        }
 
-              if (type === 'Objective') {
-                // Objective with ACS code and description side-by-side
-                const objectiveDiv = document.createElement('div');
-                objectiveDiv.classList.add('objective');
-                const codeSpan = document.createElement('span');
-                codeSpan.classList.add('acs-code');
-                codeSpan.textContent = groupedData[area][task][type][0]["ACS Code"];
-                objectiveDiv.appendChild(codeSpan);
-                const descSpan = document.createElement('span');
-                descSpan.classList.add('description');
-                descSpan.textContent = groupedData[area][task][type][0]["Description"];
-                objectiveDiv.appendChild(descSpan);
-                typeDiv.appendChild(objectiveDiv);
-              } else {
-                // List items with ACS code and description side-by-side
-                const ul = document.createElement('ul');
-                groupedData[area][task][type].sort((a, b) => a["ACS Code"].localeCompare(b["ACS Code"]));
-                groupedData[area][task][type].forEach(item => {
-                  const li = document.createElement('li');
-                  const subitemDiv = document.createElement('div');
-                  subitemDiv.classList.add('subitem');
-                  const codeSpan = document.createElement('span');
-                  codeSpan.classList.add('acs-code');
-                  codeSpan.textContent = item["ACS Code"];
-                  subitemDiv.appendChild(codeSpan);
-                  const descSpan = document.createElement('span');
-                  descSpan.classList.add('description');
-                  descSpan.textContent = item["Description"];
-                  subitemDiv.appendChild(descSpan);
-                  li.appendChild(subitemDiv);
-                  ul.appendChild(li);
+                        // Notes
+                        if (task.notes && task.notes.length > 0) {
+                            const notesHeader = document.createElement('h4');
+                            notesHeader.textContent = 'Notes';
+                            taskDetails.appendChild(notesHeader);
+                            const notesList = document.createElement('ul');
+                            task.notes.forEach(note => {
+                                const noteItem = document.createElement('li');
+                                noteItem.textContent = note;
+                                notesList.appendChild(noteItem);
+                            });
+                            taskDetails.appendChild(notesList);
+                        }
+
+                        // Knowledge
+                        if (task.knowledge && task.knowledge.length > 0) {
+                            const knowledgeHeader = document.createElement('h4');
+                            knowledgeHeader.textContent = 'Knowledge';
+                            taskDetails.appendChild(knowledgeHeader);
+                            const knowledgeList = document.createElement('ul');
+                            task.knowledge.forEach(item => {
+                                const knowledgeItem = document.createElement('li');
+                                knowledgeItem.textContent = item.code + ': ' + item.description;
+                                if (item.sub_elements && item.sub_elements.length > 0) {
+                                    const subList = document.createElement('ul');
+                                    item.sub_elements.forEach(sub => {
+                                        const subItem = document.createElement('li');
+                                        subItem.textContent = sub.code + ': ' + sub.description;
+                                        subList.appendChild(subItem);
+                                    });
+                                    knowledgeItem.appendChild(subList);
+                                }
+                                knowledgeList.appendChild(knowledgeItem);
+                            });
+                            taskDetails.appendChild(knowledgeList);
+                        }
+
+                        // Risk Management
+                        if (task.risk_management && task.risk_management.length > 0) {
+                            const riskHeader = document.createElement('h4');
+                            riskHeader.textContent = 'Risk Management';
+                            taskDetails.appendChild(riskHeader);
+                            const riskList = document.createElement('ul');
+                            task.risk_management.forEach(item => {
+                                const riskItem = document.createElement('li');
+                                riskItem.textContent = item.code + ': ' + item.description;
+                                if (item.sub_elements && item.sub_elements.length > 0) {
+                                    const subList = document.createElement('ul');
+                                    item.sub_elements.forEach(sub => {
+                                        const subItem = document.createElement('li');
+                                        subItem.textContent = sub.code + ': ' + sub.description;
+                                        subList.appendChild(subItem);
+                                    });
+                                    riskItem.appendChild(subList);
+                                }
+                                riskList.appendChild(riskItem);
+                            });
+                            taskDetails.appendChild(riskList);
+                        }
+
+                        // Skills
+                        if (task.skills && task.skills.length > 0) {
+                            const skillsHeader = document.createElement('h4');
+                            skillsHeader.textContent = 'Skills';
+                            taskDetails.appendChild(skillsHeader);
+                            const skillsList = document.createElement('ul');
+                            task.skills.forEach(item => {
+                                const skillItem = document.createElement('li');
+                                skillItem.textContent = item.code + ': ' + item.description;
+                                if (item.sub_elements && item.sub_elements.length > 0) {
+                                    const subList = document.createElement('ul');
+                                    item.sub_elements.forEach(sub => {
+                                        const subItem = document.createElement('li');
+                                        subItem.textContent = sub.code + ': ' + sub.description;
+                                        subList.appendChild(subItem);
+                                    });
+                                    skillItem.appendChild(subList);
+                                }
+                                skillsList.appendChild(skillItem);
+                            });
+                            taskDetails.appendChild(skillsList);
+                        }
+
+                        areaDetails.appendChild(taskDetails);
+                    });
+
+                    container.appendChild(areaDetails);
                 });
-                typeDiv.appendChild(ul);
-              }
-              typesDiv.appendChild(typeDiv);
-            }
-            taskDetails.appendChild(typesDiv);
-            tasksDiv.appendChild(taskDetails);
-          }
-          areaDetails.appendChild(tasksDiv);
-          contentDiv.appendChild(areaDetails);
-        }
-      })
-      .catch(error => console.error('Error fetching JSON:', error));
-  </script>
+            })
+            .catch(error => console.error('Error fetching JSON:', error));
+    </script>
 </body>
 </html>
