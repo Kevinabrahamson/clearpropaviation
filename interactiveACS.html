@@ -78,42 +78,39 @@
         }
 
         .item {
-            display: grid;
-            grid-template-columns: minmax(100px, 1fr) 3fr; /* Responsive code column */
-            gap: 15px;
             margin-bottom: 10px;
-            align-items: start;
+        }
+
+        .code-desc-pair {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 8px;
         }
 
         .code-container {
+            min-width: 100px;
+            max-width: 150px;
             background-color: var(--code-bg);
             padding: 5px;
             border-radius: 3px;
             color: var(--code-text);
-        }
-
-        .code-item {
-            margin-bottom: 8px;
+            flex-shrink: 0;
         }
 
         .sub-code {
             margin-left: 20px;
-            margin-bottom: 8px;
         }
 
         .desc-container {
+            flex: 1;
+            margin-left: 15px;
             padding: 5px;
             background-color: #ffffff;
             border-radius: 3px;
         }
 
-        .desc-item {
-            margin-bottom: 8px;
-        }
-
         .sub-desc {
             margin-left: 20px;
-            margin-bottom: 8px;
         }
 
         hr {
@@ -122,12 +119,13 @@
             margin: 10px 0;
         }
 
-        @media (max-width: 600px) {
-            .item {
-                grid-template-columns: 1fr; /* Stack on very narrow screens */
-                gap: 5px;
+        @media (max-width: 744px) {
+            .code-desc-pair {
+                flex-direction: column;
+                margin-bottom: 12px;
             }
             .code-container {
+                max-width: 100%;
                 margin-bottom: 5px;
             }
             .desc-container {
@@ -215,38 +213,43 @@
                             task.knowledge.forEach(item => {
                                 const li = document.createElement('li');
                                 li.className = 'item';
-                                
-                                const codeDiv = document.createElement('div');
-                                codeDiv.className = 'code-container';
-                                
-                                const mainCode = document.createElement('div');
-                                mainCode.className = 'code-item';
-                                mainCode.textContent = item.code;
-                                codeDiv.appendChild(mainCode);
 
-                                const descDiv = document.createElement('div');
-                                descDiv.className = 'desc-container';
-                                const mainDesc = document.createElement('div');
-                                mainDesc.className = 'desc-item';
-                                mainDesc.textContent = item.description;
-                                descDiv.appendChild(mainDesc);
+                                // Main code-description pair
+                                const mainPair = document.createElement('div');
+                                mainPair.className = 'code-desc-pair';
+                                
+                                const mainCodeDiv = document.createElement('div');
+                                mainCodeDiv.className = 'code-container';
+                                mainCodeDiv.textContent = item.code;
+                                
+                                const mainDescDiv = document.createElement('div');
+                                mainDescDiv.className = 'desc-container';
+                                mainDescDiv.textContent = item.description;
+                                
+                                mainPair.appendChild(mainCodeDiv);
+                                mainPair.appendChild(mainDescDiv);
+                                li.appendChild(mainPair);
 
+                                // Sub-elements
                                 if (item.sub_elements && item.sub_elements.length > 0) {
                                     item.sub_elements.forEach(sub => {
-                                        const subCode = document.createElement('div');
-                                        subCode.className = 'sub-code';
-                                        subCode.textContent = sub.code;
-                                        codeDiv.appendChild(subCode);
-
-                                        const subDesc = document.createElement('div');
-                                        subDesc.className = 'sub-desc';
-                                        subDesc.textContent = sub.description;
-                                        descDiv.appendChild(subDesc);
+                                        const subPair = document.createElement('div');
+                                        subPair.className = 'code-desc-pair';
+                                        
+                                        const subCodeDiv = document.createElement('div');
+                                        subCodeDiv.className = 'code-container sub-code';
+                                        subCodeDiv.textContent = sub.code;
+                                        
+                                        const subDescDiv = document.createElement('div');
+                                        subDescDiv.className = 'desc-container sub-desc';
+                                        subDescDiv.textContent = sub.description;
+                                        
+                                        subPair.appendChild(subCodeDiv);
+                                        subPair.appendChild(subDescDiv);
+                                        li.appendChild(subPair);
                                     });
                                 }
 
-                                li.appendChild(codeDiv);
-                                li.appendChild(descDiv);
                                 list.appendChild(li);
                             });
                             taskContent.appendChild(list);
@@ -262,38 +265,41 @@
                             task.risk_management.forEach(item => {
                                 const li = document.createElement('li');
                                 li.className = 'item';
-                                
-                                const codeDiv = document.createElement('div');
-                                codeDiv.className = 'code-container';
-                                
-                                const mainCode = document.createElement('div');
-                                mainCode.className = 'code-item';
-                                mainCode.textContent = item.code;
-                                codeDiv.appendChild(mainCode);
 
-                                const descDiv = document.createElement('div');
-                                descDiv.className = 'desc-container';
-                                const mainDesc = document.createElement('div');
-                                mainDesc.className = 'desc-item';
-                                mainDesc.textContent = item.description;
-                                descDiv.appendChild(mainDesc);
+                                const mainPair = document.createElement('div');
+                                mainPair.className = 'code-desc-pair';
+                                
+                                const mainCodeDiv = document.createElement('div');
+                                mainCodeDiv.className = 'code-container';
+                                mainCodeDiv.textContent = item.code;
+                                
+                                const mainDescDiv = document.createElement('div');
+                                mainDescDiv.className = 'desc-container';
+                                mainDescDiv.textContent = item.description;
+                                
+                                mainPair.appendChild(mainCodeDiv);
+                                mainPair.appendChild(mainDescDiv);
+                                li.appendChild(mainPair);
 
                                 if (item.sub_elements && item.sub_elements.length > 0) {
                                     item.sub_elements.forEach(sub => {
-                                        const subCode = document.createElement('div');
-                                        subCode.className = 'sub-code';
-                                        subCode.textContent = sub.code;
-                                        codeDiv.appendChild(subCode);
-
-                                        const subDesc = document.createElement('div');
-                                        subDesc.className = 'sub-desc';
-                                        subDesc.textContent = sub.description;
-                                        descDiv.appendChild(subDesc);
+                                        const subPair = document.createElement('div');
+                                        subPair.className = 'code-desc-pair';
+                                        
+                                        const subCodeDiv = document.createElement('div');
+                                        subCodeDiv.className = 'code-container sub-code';
+                                        subCodeDiv.textContent = sub.code;
+                                        
+                                        const subDescDiv = document.createElement('div');
+                                        subDescDiv.className = 'desc-container sub-desc';
+                                        subDescDiv.textContent = sub.description;
+                                        
+                                        subPair.appendChild(subCodeDiv);
+                                        subPair.appendChild(subDescDiv);
+                                        li.appendChild(subPair);
                                     });
                                 }
 
-                                li.appendChild(codeDiv);
-                                li.appendChild(descDiv);
                                 list.appendChild(li);
                             });
                             taskContent.appendChild(list);
@@ -309,38 +315,41 @@
                             task.skills.forEach(item => {
                                 const li = document.createElement('li');
                                 li.className = 'item';
-                                
-                                const codeDiv = document.createElement('div');
-                                codeDiv.className = 'code-container';
-                                
-                                const mainCode = document.createElement('div');
-                                mainCode.className = 'code-item';
-                                mainCode.textContent = item.code;
-                                codeDiv.appendChild(mainCode);
 
-                                const descDiv = document.createElement('div');
-                                descDiv.className = 'desc-container';
-                                const mainDesc = document.createElement('div');
-                                mainDesc.className = 'desc-item';
-                                mainDesc.textContent = item.description;
-                                descDiv.appendChild(mainDesc);
+                                const mainPair = document.createElement('div');
+                                mainPair.className = 'code-desc-pair';
+                                
+                                const mainCodeDiv = document.createElement('div');
+                                mainCodeDiv.className = 'code-container';
+                                mainCodeDiv.textContent = item.code;
+                                
+                                const mainDescDiv = document.createElement('div');
+                                mainDescDiv.className = 'desc-container';
+                                mainDescDiv.textContent = item.description;
+                                
+                                mainPair.appendChild(mainCodeDiv);
+                                mainPair.appendChild(mainDescDiv);
+                                li.appendChild(mainPair);
 
                                 if (item.sub_elements && item.sub_elements.length > 0) {
                                     item.sub_elements.forEach(sub => {
-                                        const subCode = document.createElement('div');
-                                        subCode.className = 'sub-code';
-                                        subCode.textContent = sub.code;
-                                        codeDiv.appendChild(subCode);
-
-                                        const subDesc = document.createElement('div');
-                                        subDesc.className = 'sub-desc';
-                                        subDesc.textContent = sub.description;
-                                        descDiv.appendChild(subDesc);
+                                        const subPair = document.createElement('div');
+                                        subPair.className = 'code-desc-pair';
+                                        
+                                        const subCodeDiv = document.createElement('div');
+                                        subCodeDiv.className = 'code-container sub-code';
+                                        subCodeDiv.textContent = sub.code;
+                                        
+                                        const subDescDiv = document.createElement('div');
+                                        subDescDiv.className = 'desc-container sub-desc';
+                                        subDescDiv.textContent = sub.description;
+                                        
+                                        subPair.appendChild(subCodeDiv);
+                                        subPair.appendChild(subDescDiv);
+                                        li.appendChild(subPair);
                                     });
                                 }
 
-                                li.appendChild(codeDiv);
-                                li.appendChild(descDiv);
                                 list.appendChild(li);
                             });
                             taskContent.appendChild(list);
