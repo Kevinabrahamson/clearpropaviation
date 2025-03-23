@@ -5,15 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Private Pilot Airplane ACS</title>
     <style>
-        /* Color variables inspired by RuneScape Wiki */
+        /* Color variables using provided palette */
         :root {
-            --background-color: #2a221a;  /* Dark brown background */
-            --text-color: #e0d8b0;       /* Light beige text */
-            --header-color: #3a6ea5;     /* Muted blue for headers */
-            --hover-color: #4a8ac5;      /* Lighter blue for hover */
-            --content-bg: #3c3226;       /* Dark tan for content areas */
-            --code-bg: #5a4a3a;          /* Medium brown for code background */
-            --code-text: #d8c090;        /* Light tan for code text */
+            --background-color: #f9f9f9;  /* Lightest grey for background */
+            --text-color: #333333;       /* Darkest grey for text */
+            --header-color: #4c4c4c;     /* Medium dark grey for headers */
+            --hover-color: #777777;      /* Medium grey for hover */
+            --content-bg: #eeeeee;       /* Light grey for content areas */
+            --code-bg: #cccccc;          /* Mid-light grey for code background */
+            --code-text: #333333;        /* Dark grey for code text */
         }
 
         /* Body styling */
@@ -39,7 +39,7 @@
         .menu-header {
             cursor: pointer;
             font-weight: bold;
-            color: var(--text-color);
+            color: #ffffff;              /* White text for contrast */
             background-color: var(--header-color);
             padding: 10px;
             border-radius: 5px;
@@ -48,7 +48,7 @@
 
         .menu-header:hover {
             background-color: var(--hover-color);
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
         }
 
         /* Content container */
@@ -100,7 +100,7 @@
             flex: 1;
             margin-left: 10px;
             padding: 5px;
-            background-color: #4a3e2e; /* Tan for descriptions */
+            background-color: #ffffff; /* White for descriptions */
             border-radius: 3px;
         }
 
@@ -133,7 +133,7 @@
 
         hr {
             border: 0;
-            border-top: 1px solid #5a4a3a;
+            border-top: 1px solid #cccccc;
             margin: 10px 0;
         }
     </style>
