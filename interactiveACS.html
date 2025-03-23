@@ -99,9 +99,9 @@
             margin-left: 5px;
         }
 
-        .sub-desc {
+        .sub-elements {
             margin-left: 20px;
-            margin-bottom: 5px;
+            margin-top: 5px;
         }
 
         hr {
@@ -207,9 +207,12 @@
                                 li.appendChild(descDiv);
 
                                 if (item.sub_elements && item.sub_elements.length > 0) {
+                                    const subList = document.createElement('ul');
+                                    subList.className = 'sub-elements';
                                     item.sub_elements.forEach(sub => {
+                                        const subLi = document.createElement('li');
                                         const subDiv = document.createElement('div');
-                                        subDiv.className = 'sub-desc desc-with-code';
+                                        subDiv.className = 'desc-with-code';
                                         
                                         const subDescSpan = document.createElement('span');
                                         subDescSpan.className = 'description-text';
@@ -221,8 +224,10 @@
                                         subCodeSpan.textContent = `(${sub.code})`;
                                         subDiv.appendChild(subCodeSpan);
                                         
-                                        li.appendChild(subDiv);
+                                        subLi.appendChild(subDiv);
+                                        subList.appendChild(subLi);
                                     });
+                                    li.appendChild(subList);
                                 }
 
                                 list.appendChild(li);
@@ -257,9 +262,12 @@
                                 li.appendChild(descDiv);
 
                                 if (item.sub_elements && item.sub_elements.length > 0) {
+                                const subList = document.createElement('ul');
+                                    subList.className = 'sub-elements';
                                     item.sub_elements.forEach(sub => {
+                                        const subLi = document.createElement('li');
                                         const subDiv = document.createElement('div');
-                                        subDiv.className = 'sub-desc desc-with-code';
+                                        subDiv.className = 'desc-with-code';
                                         
                                         const subDescSpan = document.createElement('span');
                                         subDescSpan.className = 'description-text';
@@ -271,8 +279,10 @@
                                         subCodeSpan.textContent = `(${sub.code})`;
                                         subDiv.appendChild(subCodeSpan);
                                         
-                                        li.appendChild(subDiv);
+                                        subLi.appendChild(subDiv);
+                                        subList.appendChild(subLi);
                                     });
+                                    li.appendChild(subList);
                                 }
 
                                 list.appendChild(li);
@@ -307,9 +317,12 @@
                                 li.appendChild(descDiv);
 
                                 if (item.sub_elements && item.sub_elements.length > 0) {
+                                    const subList = document.createElement('ul');
+                                    subList.className = 'sub-elements';
                                     item.sub_elements.forEach(sub => {
+                                        const subLi = document.createElement('li');
                                         const subDiv = document.createElement('div');
-                                        subDiv.className = 'sub-desc desc-with-code';
+                                        subDiv.className = 'desc-with-code';
                                         
                                         const subDescSpan = document.createElement('span');
                                         subDescSpan.className = 'description-text';
@@ -321,8 +334,10 @@
                                         subCodeSpan.textContent = `(${sub.code})`;
                                         subDiv.appendChild(subCodeSpan);
                                         
-                                        li.appendChild(subDiv);
+                                        subLi.appendChild(subDiv);
+                                        subList.appendChild(subLi);
                                     });
+                                    li.appendChild(subList);
                                 }
 
                                 list.appendChild(li);
