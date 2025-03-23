@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Private Pilot Airplane ACS</title>
     <style>
-        /* Color variables with blue accents */
         :root {
             --background-color: #f9f9f9;
             --text-color: #333333;
@@ -139,6 +138,32 @@
     <div id="menu-container"></div>
 
     <script>
+        // Function to group sub-elements based on code pattern
+        function groupSubElements(items) {
+            const grouped = [];
+            const map = new Map();
+
+            items.forEach(item => {
+                const codeParts = item.code.split('.');
+                const baseCode = codeParts.slice(0, -1).join('.'); // e.g., "PA.VII.A.K1"
+                const lastPart = codeParts[codeParts.length - 1]; // e.g., "K1", "K1a"
+
+                if (/^[A-Za-z0-9]+$/.test(lastPart)) { // Main item (e.g., "K1")
+                    map.set(item.code, { ...item, sub_elements: [] });
+                    grouped.push(map.get(item.code));
+                } else if (/^[A-Za-z0-9]+[a-z]$/.test(lastPart)) { // Sub-item (e.g., "K1a")
+                    const parentCode = baseCode + '.' + lastPart.slice(0, -1); // e.g., "PA.VII.A.K1"
+                    if (map.has(parentCode)) {
+                        map.get(parentCode).sub_elements.push(item);
+                    } else {
+                        console.warn(`Orphan sub-element ${item.code} found without parent ${parentCode}`);
+                    }
+                }
+            });
+
+            return grouped.filter(item => item.sub_elements.length > 0 || !item.code.match(/[a-z]$/));
+        }
+
         // Fetch data from acs_data.json and build the menu
         fetch('acs_data.json')
             .then(response => response.json())
@@ -211,7 +236,8 @@
                             header.textContent = 'Knowledge';
                             taskContent.appendChild(header);
                             const list = document.createElement('ul');
-                            task.knowledge.forEach(item => {
+                            const groupedKnowledge = groupSubElements(task.knowledge);
+                            groupedKnowledge.forEach(item => {
                                 const li = document.createElement('li');
                                 li.className = 'item';
                                 const codeDiv = document.createElement('div');
@@ -240,8 +266,6 @@
                                         subContainer.appendChild(subDiv);
                                     });
                                     descDiv.appendChild(subContainer);
-                                } else {
-                                    console.log(`No sub_elements for Knowledge item: ${item.code} in task: ${task.task}`);
                                 }
                                 li.appendChild(codeDiv);
                                 li.appendChild(descDiv);
@@ -257,7 +281,8 @@
                             header.textContent = 'Risk Management';
                             taskContent.appendChild(header);
                             const list = document.createElement('ul');
-                            task.risk_management.forEach(item => {
+                            const groupedRisk = groupSubElements(task.risk_management);
+                            groupedRisk.forEach(item => {
                                 const li = document.createElement('li');
                                 li.className = 'item';
                                 const codeDiv = document.createElement('div');
@@ -286,8 +311,6 @@
                                         subContainer.appendChild(subDiv);
                                     });
                                     descDiv.appendChild(subContainer);
-                                } else {
-                                    console.log(`No sub_elements for Risk Management item: ${item.code} in task: ${task.task}`);
                                 }
                                 li.appendChild(codeDiv);
                                 li.appendChild(descDiv);
@@ -303,7 +326,8 @@
                             header.textContent = 'Skills';
                             taskContent.appendChild(header);
                             const list = document.createElement('ul');
-                            task.skills.forEach(item => {
+                            const groupedSkills = groupSubElements(task.skills);
+                            groupedSkills.forEach(item => {
                                 const li = document.createElement('li');
                                 li.className = 'item';
                                 const codeDiv = document.createElement('div');
@@ -322,8 +346,7 @@
                                         const subDiv = document.createElement('div');
                                         subDiv.className = 'sub-item';
                                         const subCode = document.createElement('div');
-                                        subCode.className = 'sub-code';
-                                        subCode.textContent = sub.code || 'N/A';
+                                        subCode.className = 'sub-code Foto de perfilsubCode.textContent = sub.code || 'N/A';
                                         const subDesc = document.createElement('div');
                                         subDesc.className = 'sub-desc';
                                         subDesc.textContent = sub.description || 'No description';
@@ -332,8 +355,6 @@
                                         subContainer.appendChild(subDiv);
                                     });
                                     descDiv.appendChild(subContainer);
-                                } else {
-                                    console.log(`No sub_elements for Skills item: ${item.code} in task: ${task.task}`);
                                 }
                                 li.appendChild(codeDiv);
                                 li.appendChild(descDiv);
