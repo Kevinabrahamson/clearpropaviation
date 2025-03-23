@@ -5,18 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Private Pilot Airplane ACS</title>
     <style>
+        /* Color variables with added blue accents */
         :root {
-            --background-color: #f9f9f9;
-            --text-color: #333333;
-            --header-color: #4c4c4c;
-            --hover-color: #777777;
-            --content-bg: #eeeeee;
-            --code-bg: #cccccc;
-            --code-text: #333333;
-            --blue-accent: #1e90ff;
-            --blue-hover: #4169e1;
+            --background-color: #f9f9f9;  /* Lightest grey for background */
+            --text-color: #333333;       /* Darkest grey for text */
+            --header-color: #4c4c4c;     /* Medium dark grey for menu headers */
+            --hover-color: #777777;      /* Medium grey for hover */
+            --content-bg: #eeeeee;       /* Light grey for content areas */
+            --code-bg: #cccccc;          /* Mid-light grey for code background */
+            --code-text: #333333;        /* Dark grey for code text */
+            --blue-accent: #1e90ff;      /* Dodger blue for headings */
+            --blue-hover: #4169e1;       /* Royal blue for hover effects */
         }
 
+        /* Body styling */
         body {
             background-color: var(--background-color);
             color: var(--text-color);
@@ -26,11 +28,12 @@
         }
 
         h1 {
-            color: var(--blue-accent);
+            color: var(--blue-accent);   /* Blue for main title */
             text-align: center;
             margin-bottom: 20px;
         }
 
+        /* Menu section styling */
         .menu-section {
             margin-bottom: 15px;
         }
@@ -38,7 +41,7 @@
         .menu-header {
             cursor: pointer;
             font-weight: bold;
-            color: #ffffff;
+            color: #ffffff;              /* White text for contrast */
             background-color: var(--header-color);
             padding: 10px;
             border-radius: 5px;
@@ -50,6 +53,7 @@
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
         }
 
+        /* Content container */
         .content {
             background-color: var(--content-bg);
             border-radius: 5px;
@@ -59,12 +63,13 @@
             transition: height 0.3s ease;
         }
 
+        /* Nested sections */
         .menu-section .menu-section {
             margin-left: 20px;
         }
 
         h3 {
-            color: var(--blue-accent);
+            color: var(--blue-accent);   /* Blue for section headings */
             margin: 15px 0 5px;
         }
 
@@ -77,6 +82,7 @@
             padding-left: 0;
         }
 
+        /* Item layout */
         .item {
             display: flex;
             margin-bottom: 10px;
@@ -96,10 +102,11 @@
             flex: 1;
             margin-left: 10px;
             padding: 5px;
-            background-color: #ffffff;
+            background-color: #ffffff; /* White for descriptions */
             border-radius: 3px;
         }
 
+        /* Sub-elements inside description container */
         .sub-elements {
             margin-top: 5px;
             font-size: 0.9em;
@@ -138,32 +145,6 @@
     <div id="menu-container"></div>
 
     <script>
-        // Function to group sub-elements based on code pattern
-        function groupSubElements(items) {
-            const grouped = [];
-            const map = new Map();
-
-            items.forEach(item => {
-                const codeParts = item.code.split('.');
-                const baseCode = codeParts.slice(0, -1).join('.'); // e.g., "PA.VII.A.K1"
-                const lastPart = codeParts[codeParts.length - 1]; // e.g., "K1", "K1a"
-
-                if (/^[A-Za-z0-9]+$/.test(lastPart)) { // Main item (e.g., "K1")
-                    map.set(item.code, { ...item, sub_elements: [] });
-                    grouped.push(map.get(item.code));
-                } else if (/^[A-Za-z0-9]+[a-z]$/.test(lastPart)) { // Sub-item (e.g., "K1a")
-                    const parentCode = baseCode + '.' + lastPart.slice(0, -1); // e.g., "PA.VII.A.K1"
-                    if (map.has(parentCode)) {
-                        map.get(parentCode).sub_elements.push(item);
-                    } else {
-                        console.warn(`Orphan sub-element ${item.code} found without parent ${parentCode}`);
-                    }
-                }
-            });
-
-            return grouped.filter(item => item.sub_elements.length > 0 || !item.code.match(/[a-z]$/));
-        }
-
         // Fetch data from acs_data.json and build the menu
         fetch('acs_data.json')
             .then(response => response.json())
@@ -236,8 +217,7 @@
                             header.textContent = 'Knowledge';
                             taskContent.appendChild(header);
                             const list = document.createElement('ul');
-                            const groupedKnowledge = groupSubElements(task.knowledge);
-                            groupedKnowledge.forEach(item => {
+                            task.knowledge.forEach(item => {
                                 const li = document.createElement('li');
                                 li.className = 'item';
                                 const codeDiv = document.createElement('div');
@@ -257,10 +237,10 @@
                                         subDiv.className = 'sub-item';
                                         const subCode = document.createElement('div');
                                         subCode.className = 'sub-code';
-                                        subCode.textContent = sub.code || 'N/A';
+                                        subCode.textContent = sub.code;
                                         const subDesc = document.createElement('div');
                                         subDesc.className = 'sub-desc';
-                                        subDesc.textContent = sub.description || 'No description';
+                                        subDesc.textContent = sub.description;
                                         subDiv.appendChild(subCode);
                                         subDiv.appendChild(subDesc);
                                         subContainer.appendChild(subDiv);
@@ -275,14 +255,13 @@
                             taskContent.appendChild(document.createElement('hr'));
                         }
 
-                        // Risk Management
+                        // Risk Management (Fixed sub-elements)
                         if (task.risk_management && task.risk_management.length > 0) {
                             const header = document.createElement('h3');
                             header.textContent = 'Risk Management';
                             taskContent.appendChild(header);
                             const list = document.createElement('ul');
-                            const groupedRisk = groupSubElements(task.risk_management);
-                            groupedRisk.forEach(item => {
+                            task.risk_management.forEach(item => {
                                 const li = document.createElement('li');
                                 li.className = 'item';
                                 const codeDiv = document.createElement('div');
@@ -302,10 +281,10 @@
                                         subDiv.className = 'sub-item';
                                         const subCode = document.createElement('div');
                                         subCode.className = 'sub-code';
-                                        subCode.textContent = sub.code || 'N/A';
+                                        subCode.textContent = sub.code;
                                         const subDesc = document.createElement('div');
                                         subDesc.className = 'sub-desc';
-                                        subDesc.textContent = sub.description || 'No description';
+                                        subDesc.textContent = sub.description;
                                         subDiv.appendChild(subCode);
                                         subDiv.appendChild(subDesc);
                                         subContainer.appendChild(subDiv);
@@ -320,14 +299,13 @@
                             taskContent.appendChild(document.createElement('hr'));
                         }
 
-                        // Skills
+                        // Skills (Fixed sub-elements)
                         if (task.skills && task.skills.length > 0) {
                             const header = document.createElement('h3');
                             header.textContent = 'Skills';
                             taskContent.appendChild(header);
                             const list = document.createElement('ul');
-                            const groupedSkills = groupSubElements(task.skills);
-                            groupedSkills.forEach(item => {
+                            task.skills.forEach(item => {
                                 const li = document.createElement('li');
                                 li.className = 'item';
                                 const codeDiv = document.createElement('div');
@@ -346,10 +324,11 @@
                                         const subDiv = document.createElement('div');
                                         subDiv.className = 'sub-item';
                                         const subCode = document.createElement('div');
-                                        subCode.className = 'sub-code Foto de perfilsubCode.textContent = sub.code || 'N/A';
+                                        subCode.className = 'sub-code';
+                                        subCode.textContent = sub.code;
                                         const subDesc = document.createElement('div');
                                         subDesc.className = 'sub-desc';
-                                        subDesc.textContent = sub.description || 'No description';
+                                        subDesc.textContent = sub.description;
                                         subDiv.appendChild(subCode);
                                         subDiv.appendChild(subDesc);
                                         subContainer.appendChild(subDiv);
@@ -378,8 +357,10 @@
                         const content = header.nextElementSibling;
                         const isExpanding = content.style.display !== 'block';
 
+                        // Toggle the clicked menu
                         content.style.display = isExpanding ? 'block' : 'none';
 
+                        // If collapsing, collapse all nested menus
                         if (!isExpanding) {
                             const nestedContents = content.querySelectorAll('.content');
                             nestedContents.forEach(nested => {
