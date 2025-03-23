@@ -5,20 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Private Pilot Airplane ACS</title>
     <style>
-        /* Color variables with added blue accents */
         :root {
-            --background-color: #f9f9f9;  /* Lightest grey for background */
-            --text-color: #333333;       /* Darkest grey for text */
-            --header-color: #4c4c4c;     /* Medium dark grey for menu headers */
-            --hover-color: #777777;      /* Medium grey for hover */
-            --content-bg: #eeeeee;       /* Light grey for content areas */
-            --code-bg: #cccccc;          /* Mid-light grey for code background */
-            --code-text: #333333;        /* Dark grey for code text */
-            --blue-accent: #1e90ff;      /* Dodger blue for headings */
-            --blue-hover: #4169e1;       /* Royal blue for hover effects */
+            --background-color: #f9f9f9;
+            --text-color: #333333;
+            --header-color: #4c4c4c;
+            --hover-color: #777777;
+            --content-bg: #eeeeee;
+            --code-bg: #cccccc;
+            --code-text: #333333;
+            --blue-accent: #1e90ff;
+            --blue-hover: #4169e1;
         }
 
-        /* Body styling */
         body {
             background-color: var(--background-color);
             color: var(--text-color);
@@ -28,12 +26,11 @@
         }
 
         h1 {
-            color: var(--blue-accent);   /* Blue for main title */
+            color: var(--blue-accent);
             text-align: center;
             margin-bottom: 20px;
         }
 
-        /* Menu section styling */
         .menu-section {
             margin-bottom: 15px;
         }
@@ -41,7 +38,7 @@
         .menu-header {
             cursor: pointer;
             font-weight: bold;
-            color: #ffffff;              /* White text for contrast */
+            color: #ffffff;
             background-color: var(--header-color);
             padding: 10px;
             border-radius: 5px;
@@ -53,7 +50,6 @@
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
         }
 
-        /* Content container */
         .content {
             background-color: var(--content-bg);
             border-radius: 5px;
@@ -63,13 +59,12 @@
             transition: height 0.3s ease;
         }
 
-        /* Nested sections */
         .menu-section .menu-section {
             margin-left: 20px;
         }
 
         h3 {
-            color: var(--blue-accent);   /* Blue for section headings */
+            color: var(--blue-accent);
             margin: 15px 0 5px;
         }
 
@@ -82,55 +77,43 @@
             padding-left: 0;
         }
 
-        /* Item layout */
         .item {
-            display: flex;
             margin-bottom: 10px;
         }
 
         .code-container {
-            width: 150px;
             background-color: var(--code-bg);
             padding: 5px;
             border-radius: 3px;
             font-weight: bold;
             color: var(--code-text);
-            text-align: center;
+            width: 150px;
         }
 
         .desc-container {
-            flex: 1;
-            margin-left: 10px;
+            background-color: #ffffff;
             padding: 5px;
-            background-color: #ffffff; /* White for descriptions */
             border-radius: 3px;
+            margin-left: 10px;
         }
 
-        /* Sub-elements inside description container */
-        .sub-elements {
-            margin-top: 5px;
-            font-size: 0.9em;
-        }
-
-        .sub-item {
-            display: flex;
-            align-items: center;
-            margin-bottom: 5px;
-        }
-
-        .sub-item .sub-code {
-            width: 120px;
+        .sub-code {
+            margin-left: 20px;
             background-color: var(--code-bg);
             padding: 3px;
             border-radius: 3px;
             font-weight: bold;
             color: var(--code-text);
-            text-align: center;
-            margin-right: 10px;
+            width: 130px;
         }
 
-        .sub-item .sub-desc {
-            flex: 1;
+        .sub-desc {
+            margin-left: 10px;
+            padding: 3px;
+        }
+
+        .sub-item {
+            margin-top: 5px;
         }
 
         hr {
@@ -145,7 +128,6 @@
     <div id="menu-container"></div>
 
     <script>
-        // Fetch data from acs_data.json and build the menu
         fetch('acs_data.json')
             .then(response => response.json())
             .then(data => {
@@ -174,7 +156,6 @@
                         const taskContent = document.createElement('div');
                         taskContent.className = 'content';
 
-                        // Objective
                         if (task.objective) {
                             const header = document.createElement('h3');
                             header.textContent = 'Objective';
@@ -185,7 +166,6 @@
                             taskContent.appendChild(document.createElement('hr'));
                         }
 
-                        // References
                         if (task.references && task.references.length > 0) {
                             const header = document.createElement('h3');
                             header.textContent = 'References';
@@ -196,7 +176,6 @@
                             taskContent.appendChild(document.createElement('hr'));
                         }
 
-                        // Notes
                         if (task.notes && task.notes.length > 0) {
                             const header = document.createElement('h3');
                             header.textContent = 'Notes';
@@ -220,33 +199,29 @@
                             task.knowledge.forEach(item => {
                                 const li = document.createElement('li');
                                 li.className = 'item';
+                                
                                 const codeDiv = document.createElement('div');
                                 codeDiv.className = 'code-container';
                                 codeDiv.textContent = item.code;
+
                                 const descDiv = document.createElement('div');
                                 descDiv.className = 'desc-container';
-                                const mainDesc = document.createElement('div');
-                                mainDesc.textContent = item.description;
-                                descDiv.appendChild(mainDesc);
+                                descDiv.textContent = item.description;
 
                                 if (item.sub_elements && item.sub_elements.length > 0) {
-                                    const subContainer = document.createElement('div');
-                                    subContainer.className = 'sub-elements';
                                     item.sub_elements.forEach(sub => {
-                                        const subDiv = document.createElement('div');
-                                        subDiv.className = 'sub-item';
                                         const subCode = document.createElement('div');
                                         subCode.className = 'sub-code';
                                         subCode.textContent = sub.code;
+                                        codeDiv.appendChild(subCode);
+
                                         const subDesc = document.createElement('div');
                                         subDesc.className = 'sub-desc';
                                         subDesc.textContent = sub.description;
-                                        subDiv.appendChild(subCode);
-                                        subDiv.appendChild(subDesc);
-                                        subContainer.appendChild(subDiv);
+                                        descDiv.appendChild(subDesc);
                                     });
-                                    descDiv.appendChild(subContainer);
                                 }
+
                                 li.appendChild(codeDiv);
                                 li.appendChild(descDiv);
                                 list.appendChild(li);
@@ -255,7 +230,7 @@
                             taskContent.appendChild(document.createElement('hr'));
                         }
 
-                        // Risk Management (Fixed sub-elements)
+                        // Risk Management
                         if (task.risk_management && task.risk_management.length > 0) {
                             const header = document.createElement('h3');
                             header.textContent = 'Risk Management';
@@ -264,33 +239,29 @@
                             task.risk_management.forEach(item => {
                                 const li = document.createElement('li');
                                 li.className = 'item';
+                                
                                 const codeDiv = document.createElement('div');
                                 codeDiv.className = 'code-container';
                                 codeDiv.textContent = item.code;
+
                                 const descDiv = document.createElement('div');
                                 descDiv.className = 'desc-container';
-                                const mainDesc = document.createElement('div');
-                                mainDesc.textContent = item.description;
-                                descDiv.appendChild(mainDesc);
+                                descDiv.textContent = item.description;
 
                                 if (item.sub_elements && item.sub_elements.length > 0) {
-                                    const subContainer = document.createElement('div');
-                                    subContainer.className = 'sub-elements';
                                     item.sub_elements.forEach(sub => {
-                                        const subDiv = document.createElement('div');
-                                        subDiv.className = 'sub-item';
                                         const subCode = document.createElement('div');
                                         subCode.className = 'sub-code';
                                         subCode.textContent = sub.code;
+                                        codeDiv.appendChild(subCode);
+
                                         const subDesc = document.createElement('div');
                                         subDesc.className = 'sub-desc';
                                         subDesc.textContent = sub.description;
-                                        subDiv.appendChild(subCode);
-                                        subDiv.appendChild(subDesc);
-                                        subContainer.appendChild(subDiv);
+                                        descDiv.appendChild(subDesc);
                                     });
-                                    descDiv.appendChild(subContainer);
                                 }
+
                                 li.appendChild(codeDiv);
                                 li.appendChild(descDiv);
                                 list.appendChild(li);
@@ -299,7 +270,7 @@
                             taskContent.appendChild(document.createElement('hr'));
                         }
 
-                        // Skills (Fixed sub-elements)
+                        // Skills
                         if (task.skills && task.skills.length > 0) {
                             const header = document.createElement('h3');
                             header.textContent = 'Skills';
@@ -308,33 +279,29 @@
                             task.skills.forEach(item => {
                                 const li = document.createElement('li');
                                 li.className = 'item';
+                                
                                 const codeDiv = document.createElement('div');
                                 codeDiv.className = 'code-container';
                                 codeDiv.textContent = item.code;
+
                                 const descDiv = document.createElement('div');
                                 descDiv.className = 'desc-container';
-                                const mainDesc = document.createElement('div');
-                                mainDesc.textContent = item.description;
-                                descDiv.appendChild(mainDesc);
+                                descDiv.textContent = item.description;
 
                                 if (item.sub_elements && item.sub_elements.length > 0) {
-                                    const subContainer = document.createElement('div');
-                                    subContainer.className = 'sub-elements';
                                     item.sub_elements.forEach(sub => {
-                                        const subDiv = document.createElement('div');
-                                        subDiv.className = 'sub-item';
                                         const subCode = document.createElement('div');
                                         subCode.className = 'sub-code';
                                         subCode.textContent = sub.code;
+                                        codeDiv.appendChild(subCode);
+
                                         const subDesc = document.createElement('div');
                                         subDesc.className = 'sub-desc';
                                         subDesc.textContent = sub.description;
-                                        subDiv.appendChild(subCode);
-                                        subDiv.appendChild(subDesc);
-                                        subContainer.appendChild(subDiv);
+                                        descDiv.appendChild(subDesc);
                                     });
-                                    descDiv.appendChild(subContainer);
                                 }
+
                                 li.appendChild(codeDiv);
                                 li.appendChild(descDiv);
                                 list.appendChild(li);
@@ -351,16 +318,11 @@
                     container.appendChild(areaSection);
                 });
 
-                // Add click event listeners for expand/collapse with nested collapse
                 document.querySelectorAll('.menu-header').forEach(header => {
                     header.addEventListener('click', () => {
                         const content = header.nextElementSibling;
                         const isExpanding = content.style.display !== 'block';
-
-                        // Toggle the clicked menu
                         content.style.display = isExpanding ? 'block' : 'none';
-
-                        // If collapsing, collapse all nested menus
                         if (!isExpanding) {
                             const nestedContents = content.querySelectorAll('.content');
                             nestedContents.forEach(nested => {
