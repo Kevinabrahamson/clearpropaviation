@@ -5,20 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Private Pilot Airplane ACS</title>
     <style>
-        /* Color variables with added blue accents */
+        /* Color variables with blue accents */
         :root {
-            --background-color: #f9f9f9;  /* Lightest grey for background */
-            --text-color: #333333;       /* Darkest grey for text */
-            --header-color: #4c4c4c;     /* Medium dark grey for menu headers */
-            --hover-color: #777777;      /* Medium grey for hover */
-            --content-bg: #eeeeee;       /* Light grey for content areas */
-            --code-bg: #cccccc;          /* Mid-light grey for code background */
-            --code-text: #333333;        /* Dark grey for code text */
-            --blue-accent: #1e90ff;      /* Dodger blue for headings */
-            --blue-hover: #4169e1;       /* Royal blue for hover effects */
+            --background-color: #f9f9f9;
+            --text-color: #333333;
+            --header-color: #4c4c4c;
+            --hover-color: #777777;
+            --content-bg: #eeeeee;
+            --code-bg: #cccccc;
+            --code-text: #333333;
+            --blue-accent: #1e90ff;
+            --blue-hover: #4169e1;
         }
 
-        /* Body styling */
         body {
             background-color: var(--background-color);
             color: var(--text-color);
@@ -28,12 +27,11 @@
         }
 
         h1 {
-            color: var(--blue-accent);   /* Blue for main title */
+            color: var(--blue-accent);
             text-align: center;
             margin-bottom: 20px;
         }
 
-        /* Menu section styling */
         .menu-section {
             margin-bottom: 15px;
         }
@@ -41,7 +39,7 @@
         .menu-header {
             cursor: pointer;
             font-weight: bold;
-            color: #ffffff;              /* White text for contrast */
+            color: #ffffff;
             background-color: var(--header-color);
             padding: 10px;
             border-radius: 5px;
@@ -53,7 +51,6 @@
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
         }
 
-        /* Content container */
         .content {
             background-color: var(--content-bg);
             border-radius: 5px;
@@ -63,13 +60,12 @@
             transition: height 0.3s ease;
         }
 
-        /* Nested sections */
         .menu-section .menu-section {
             margin-left: 20px;
         }
 
         h3 {
-            color: var(--blue-accent);   /* Blue for section headings */
+            color: var(--blue-accent);
             margin: 15px 0 5px;
         }
 
@@ -82,7 +78,6 @@
             padding-left: 0;
         }
 
-        /* Item layout */
         .item {
             display: flex;
             margin-bottom: 10px;
@@ -102,11 +97,10 @@
             flex: 1;
             margin-left: 10px;
             padding: 5px;
-            background-color: #ffffff; /* White for descriptions */
+            background-color: #ffffff;
             border-radius: 3px;
         }
 
-        /* Sub-elements inside description container */
         .sub-elements {
             margin-top: 5px;
             font-size: 0.9em;
@@ -237,15 +231,17 @@
                                         subDiv.className = 'sub-item';
                                         const subCode = document.createElement('div');
                                         subCode.className = 'sub-code';
-                                        subCode.textContent = sub.code;
+                                        subCode.textContent = sub.code || 'N/A';
                                         const subDesc = document.createElement('div');
                                         subDesc.className = 'sub-desc';
-                                        subDesc.textContent = sub.description;
+                                        subDesc.textContent = sub.description || 'No description';
                                         subDiv.appendChild(subCode);
                                         subDiv.appendChild(subDesc);
                                         subContainer.appendChild(subDiv);
                                     });
                                     descDiv.appendChild(subContainer);
+                                } else {
+                                    console.log(`No sub_elements for Knowledge item: ${item.code} in task: ${task.task}`);
                                 }
                                 li.appendChild(codeDiv);
                                 li.appendChild(descDiv);
@@ -255,7 +251,7 @@
                             taskContent.appendChild(document.createElement('hr'));
                         }
 
-                        // Risk Management (Fixed sub-elements)
+                        // Risk Management
                         if (task.risk_management && task.risk_management.length > 0) {
                             const header = document.createElement('h3');
                             header.textContent = 'Risk Management';
@@ -281,15 +277,17 @@
                                         subDiv.className = 'sub-item';
                                         const subCode = document.createElement('div');
                                         subCode.className = 'sub-code';
-                                        subCode.textContent = sub.code;
+                                        subCode.textContent = sub.code || 'N/A';
                                         const subDesc = document.createElement('div');
                                         subDesc.className = 'sub-desc';
-                                        subDesc.textContent = sub.description;
+                                        subDesc.textContent = sub.description || 'No description';
                                         subDiv.appendChild(subCode);
                                         subDiv.appendChild(subDesc);
                                         subContainer.appendChild(subDiv);
                                     });
                                     descDiv.appendChild(subContainer);
+                                } else {
+                                    console.log(`No sub_elements for Risk Management item: ${item.code} in task: ${task.task}`);
                                 }
                                 li.appendChild(codeDiv);
                                 li.appendChild(descDiv);
@@ -299,7 +297,7 @@
                             taskContent.appendChild(document.createElement('hr'));
                         }
 
-                        // Skills (Fixed sub-elements)
+                        // Skills
                         if (task.skills && task.skills.length > 0) {
                             const header = document.createElement('h3');
                             header.textContent = 'Skills';
@@ -325,15 +323,17 @@
                                         subDiv.className = 'sub-item';
                                         const subCode = document.createElement('div');
                                         subCode.className = 'sub-code';
-                                        subCode.textContent = sub.code;
+                                        subCode.textContent = sub.code || 'N/A';
                                         const subDesc = document.createElement('div');
                                         subDesc.className = 'sub-desc';
-                                        subDesc.textContent = sub.description;
+                                        subDesc.textContent = sub.description || 'No description';
                                         subDiv.appendChild(subCode);
                                         subDiv.appendChild(subDesc);
                                         subContainer.appendChild(subDiv);
                                     });
                                     descDiv.appendChild(subContainer);
+                                } else {
+                                    console.log(`No sub_elements for Skills item: ${item.code} in task: ${task.task}`);
                                 }
                                 li.appendChild(codeDiv);
                                 li.appendChild(descDiv);
@@ -357,10 +357,8 @@
                         const content = header.nextElementSibling;
                         const isExpanding = content.style.display !== 'block';
 
-                        // Toggle the clicked menu
                         content.style.display = isExpanding ? 'block' : 'none';
 
-                        // If collapsing, collapse all nested menus
                         if (!isExpanding) {
                             const nestedContents = content.querySelectorAll('.content');
                             nestedContents.forEach(nested => {
