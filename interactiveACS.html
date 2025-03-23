@@ -11,8 +11,8 @@
             --header-color: #4c4c4c;
             --hover-color: #777777;
             --content-bg: #eeeeee;
-            --code-bg: #cccccc;
-            --code-text: #333333;
+            --code-bg: #e8e8e8;          /* Lighter grey for less prominence */
+            --code-text: #666666;        /* Softer grey for code text */
             --blue-accent: #1e90ff;
             --blue-hover: #4169e1;
         }
@@ -83,12 +83,13 @@
         }
 
         .code-container {
-            width: 150px;
+            width: 120px;                /* Reduced width */
             background-color: var(--code-bg);
             padding: 5px;
             border-radius: 3px;
-            font-weight: bold;
             color: var(--code-text);
+            font-size: 0.9em;           /* Slightly smaller font */
+            font-weight: normal;        /* Remove bold */
         }
 
         .sub-code {
@@ -98,10 +99,11 @@
 
         .desc-container {
             flex: 1;
-            margin-left: 10px;
+            margin-left: 15px;          /* Increased margin for separation */
             padding: 5px;
             background-color: #ffffff;
             border-radius: 3px;
+            font-size: 1em;            /* Ensure normal size for emphasis */
         }
 
         .sub-desc {
