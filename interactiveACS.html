@@ -281,7 +281,7 @@
                             taskContent.appendChild(document.createElement('hr'));
                         }
 
-                        // Skills (Fixed typo here)
+                        // Skills
                         if (task.skills && task.skills.length > 0) {
                             const header = document.createElement('h3');
                             header.textContent = 'Skills';
@@ -297,7 +297,7 @@
                                 descDiv.className = 'desc-container';
                                 descDiv.textContent = item.description;
                                 li.appendChild(codeDiv);
-                                li.appendChild(descDiv); // Corrected from descDescDiv to descDiv
+                                li.appendChild(descDiv);
 
                                 if (item.sub_elements && item.sub_elements.length > 0) {
                                     const subContainer = document.createElement('div');
@@ -331,11 +331,22 @@
                     container.appendChild(areaSection);
                 });
 
-                // Add click event listeners for expand/collapse
+                // Add click event listeners for expand/collapse with nested collapse
                 document.querySelectorAll('.menu-header').forEach(header => {
                     header.addEventListener('click', () => {
                         const content = header.nextElementSibling;
-                        content.style.display = content.style.display === 'block' ? 'none' : 'block';
+                        const isExpanding = content.style.display !== 'block';
+
+                        // Toggle the clicked menu
+                        content.style.display = isExpanding ? 'block' : 'none';
+
+                        // If collapsing, collapse all nested menus
+                        if (!isExpanding) {
+                            const nestedContents = content.querySelectorAll('.content');
+                            nestedContents.forEach(nested => {
+                                nested.style.display = 'none';
+                            });
+                        }
                     });
                 });
             })
