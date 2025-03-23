@@ -1,0 +1,5500 @@
+[
+  {
+  "area_of_operation": "I. Preflight Preparation",
+  "tasks": [
+    {
+      "task": "A. Pilot Qualifications",
+      "references": [
+        "14 CFR parts 61, 68, 91",
+        "AC 68-1",
+        "FAA-H-8083-2",
+        "FAA-H-8083-3",
+        "FAA-H-8083-25"
+      ],
+      "objective": "To determine the applicant exhibits satisfactory knowledge, risk management, and skills associated with airman and medical certificates including privileges, limitations, currency, and operating as pilot-in-command as a private pilot.",
+      "notes": [],
+      "knowledge": [
+        {
+          "code": "PA.I.A.K1",
+          "description": "Certification requirements, recent flight experience, and recordkeeping."
+        },
+        {
+          "code": "PA.I.A.K2",
+          "description": "Privileges and limitations."
+        },
+        {
+          "code": "PA.I.A.K3",
+          "description": "Medical certificates: class, expiration, privileges, temporary disqualifications."
+        },
+        {
+          "code": "PA.I.A.K4",
+          "description": "Documents required to exercise private pilot privileges."
+        },
+        {
+          "code": "PA.I.A.K5",
+          "description": "Part 68 BasicMed privileges and limitations."
+        }
+      ],
+      "risk_management": [
+        {
+          "code": "PA.I.A.R1",
+          "description": "Proficiency versus currency."
+        },
+        {
+          "code": "PA.I.A.R2",
+          "description": "Flying unfamiliar aircraft or operating with unfamiliar flight display systems and avionics."
+        }
+      ],
+      "skills": [
+        {
+          "code": "PA.I.A.S1",
+          "description": "Apply requirements to act as pilot-in-command (PIC) under Visual Flight Rules (VFR) in a scenario given by the evaluator."
+        }
+      ]
+    },
+    {
+      "task": "B. Airworthiness Requirements",
+      "references": [
+        "14 CFR parts 39, 43, 91",
+        "FAA-H-8083-2",
+        "FAA-H-8083-3",
+        "FAA-H-8083-25"
+      ],
+      "objective": "To determine the applicant exhibits satisfactory knowledge, risk management, and skills associated with airworthiness requirements, including airplane certificates.",
+      "notes": [],
+      "knowledge": [
+        {
+          "code": "PA.I.B.K1",
+          "description": "General airworthiness requirements and compliance for airplanes, including:",
+          "sub_elements": [
+            {
+              "code": "PA.I.B.K1a",
+              "description": "a. Location and expiration dates of required aircraft certificates"
+            },
+            {
+              "code": "PA.I.B.K1b",
+              "description": "b. Required inspections and airplane logbook documentation"
+            },
+            {
+              "code": "PA.I.B.K1c",
+              "description": "c. Airworthiness Directives and Special Airworthiness Information Bulletins"
+            },
+            {
+              "code": "PA.I.B.K1d",
+              "description": "d. Purpose and procedure for obtaining a special flight permit"
+            },
+            {
+              "code": "PA.I.B.K1e",
+              "description": "e. Owner/Operator and pilot-in-command responsibilities"
+            }
+          ]
+        },
+        {
+          "code": "PA.I.B.K2",
+          "description": "Pilot-performed preventive maintenance."
+        },
+        {
+          "code": "PA.I.B.K3",
+          "description": "Equipment requirements for day and night VFR flight, including:",
+          "sub_elements": [
+            {
+              "code": "PA.I.B.K3a",
+              "description": "a. Flying with inoperative equipment"
+            },
+            {
+              "code": "PA.I.B.K3b",
+              "description": "b. Using an approved Minimum Equipment List (MEL)"
+            },
+            {
+              "code": "PA.I.B.K3c",
+              "description": "c. Kinds of Operation Equipment List (KOEL)"
+            },
+            {
+              "code": "PA.I.B.K3d",
+              "description": "d. Required discrepancy records or placards"
+            }
+          ]
+        },
+        {
+          "code": "PA.I.B.K4",
+          "description": "Standard and special airworthiness certificates and their associated operational limitations."
+        }
+      ],
+      "risk_management": [
+        {
+          "code": "PA.I.B.R1",
+          "description": "Inoperative equipment discovered prior to flight."
+        }
+      ],
+      "skills": [
+        {
+          "code": "PA.I.B.S1",
+          "description": "Locate and describe airplane airworthiness and registration information."
+        },
+        {
+          "code": "PA.I.B.S2",
+          "description": "Determine the airplane is airworthy in the scenario given by the evaluator."
+        },
+        {
+          "code": "PA.I.B.S3",
+          "description": "Apply appropriate procedures for operating with inoperative equipment in the scenario given by the evaluator."
+        }
+      ]
+    },
+    {
+      "task": "C. Weather Information",
+      "references": [
+        "14 CFR part 91",
+        "AC 91-92",
+        "AIM",
+        "FAA-H-8083-2",
+        "FAA-H-8083-3",
+        "FAA-H-8083-25",
+        "FAA-H-8083-28"
+      ],
+      "objective": "To determine the applicant exhibits satisfactory knowledge, risk management, and skills associated with weather information for a flight under VFR.",
+      "notes": [
+        "Note: If K2 is selected, the evaluator must assess the applicant's knowledge of at least three sub-elements.",
+        "Note: If K3 is selected, the evaluator must assess the applicant's knowledge of at least three sub-elements."
+      ],
+      "knowledge": [
+        {
+          "code": "PA.I.C.K1",
+          "description": "Sources of weather data (e.g., National Weather Service, Flight Service) for flight planning purposes."
+        },
+        {
+          "code": "PA.I.C.K2",
+          "description": "Acceptable weather products and resources required for preflight planning, current and forecast weather for departure, en route, and arrival phases of flight such as:",
+          "sub_elements": [
+            {
+              "code": "PA.I.C.K2a",
+              "description": "a. Airport Observations (METAR and SPECI) and Pilot Observations (PIREP)"
+            },
+            {
+              "code": "PA.I.C.K2b",
+              "description": "b. Surface Analysis Chart, Ceiling and Visibility Chart (CVA)"
+            },
+            {
+              "code": "PA.I.C.K2c",
+              "description": "c. Terminal Aerodrome Forecasts (TAF)"
+            },
+            {
+              "code": "PA.I.C.K2d",
+              "description": "d. Graphical Forecasts for Aviation (GFA)"
+            },
+            {
+              "code": "PA.I.C.K2e",
+              "description": "e. Wind and Temperature Aloft Forecast (FB)"
+            },
+            {
+              "code": "PA.I.C.K2f",
+              "description": "f. Convective Outlook (AC)"
+            },
+            {
+              "code": "PA.I.C.K2g",
+              "description": "g. Inflight Aviation Weather Advisories including Airmen's Meteorological Information (AIRMET), Significant Meteorological Information (SIGMET), and Convective SIGMET"
+            }
+          ]
+        },
+        {
+          "code": "PA.I.C.K3",
+          "description": "Meteorology applicable to the departure, en route, alternate, and destination under visual flight rules (VFR) in Visual Meteorological Conditions (VMC), including expected climate and hazardous conditions such as:",
+          "sub_elements": [
+            {
+              "code": "PA.I.C.K3a",
+              "description": "a. Atmospheric composition and stability"
+            },
+            {
+              "code": "PA.I.C.K3b",
+              "description": "b. Wind (e.g., windshear, mountain wave, factors affecting wind, etc.)"
+            },
+            {
+              "code": "PA.I.C.K3c",
+              "description": "c. Temperature and heat exchange"
+            },
+            {
+              "code": "PA.I.C.K3d",
+              "description": "d. Moisture/precipitation"
+            },
+            {
+              "code": "PA.I.C.K3e",
+              "description": "e. Weather system formation, including air masses and fronts"
+            },
+            {
+              "code": "PA.I.C.K3f",
+              "description": "f. Clouds"
+            },
+            {
+              "code": "PA.I.C.K3g",
+              "description": "g. Turbulence"
+            },
+            {
+              "code": "PA.I.C.K3h",
+              "description": "h. Thunderstorms and microbursts"
+            },
+            {
+              "code": "PA.I.C.K3i",
+              "description": "i. Icing and freezing level information"
+            },
+            {
+              "code": "PA.I.C.K3j",
+              "description": "j. Fog/mist"
+            },
+            {
+              "code": "PA.I.C.K3k",
+              "description": "k. Frost"
+            },
+            {
+              "code": "PA.I.C.K3I",
+              "description": "I. Obstructions to visibility (e.g., smoke, haze, volcanic ash, etc.)"
+            }
+          ]
+        },
+        {
+          "code": "PA.I.C.K4",
+          "description": "Flight deck instrument displays of digital weather and aeronautical information."
+        }
+      ],
+      "risk_management": [
+        {
+          "code": "PA.I.C.R1",
+          "description": "Making the go/no-go and continue/divert decisions, including:",
+          "sub_elements": [
+            {
+              "code": "PA.I.C.R1a",
+              "description": "a. Circumstances that would make diversion prudent"
+            },
+            {
+              "code": "PA.I.C.R1b",
+              "description": "b. Personal weather minimums"
+            },
+            {
+              "code": "PA.I.C.R1c",
+              "description": "c. Hazardous weather conditions, including known or forecast icing or turbulence aloft"
+            }
+          ]
+        },
+        {
+          "code": "PA.I.C.R2",
+          "description": "Use and limitations of:",
+          "sub_elements": [
+            {
+              "code": "PA.I.C.R2a",
+              "description": "a. Installed onboard weather equipment"
+            },
+            {
+              "code": "PA.I.C.R2b",
+              "description": "b. Aviation weather reports and forecasts"
+            },
+            {
+              "code": "PA.I.C.R2c",
+              "description": "c. Inflight weather resources"
+            }
+          ]
+        }
+      ],
+      "skills": [
+        {
+          "code": "PA.I.C.S1",
+          "description": "Use available aviation weather resources to obtain an adequate weather briefing."
+        },
+        {
+          "code": "PA.I.C.S2",
+          "description": "Analyze the implications of at least three of the conditions listed in K3a through K3I, using actual weather or weather conditions provided by the evaluator."
+        },
+        {
+          "code": "PA.I.C.S3",
+          "description": "Correlate weather information to make a go/no-go decision."
+        }
+      ]
+    },
+    {
+      "task": "D. Cross-Country Flight Planning",
+      "references": [
+        "14 CFR part 91",
+        "AIM",
+        "Chart Supplements",
+        "FAA-H-8083-2",
+        "FAA-H-8083-3",
+        "FAA-H-8083-25",
+        "NOTAMs",
+        "VFR Navigation Charts"
+      ],
+      "objective": "To determine the applicant exhibits satisfactory knowledge, risk management, and skills associated with cross-country flights and VFR flight planning.",
+      "notes": [
+        "Note: Preparation, presentation, and explanation of a computer-generated flight plan is an acceptable option."
+      ],
+      "knowledge": [
+        {
+          "code": "PA.I.D.K1",
+          "description": "Route planning, including consideration of different classes and special use airspace (SUA) and selection of appropriate and available navigation/communication systems and facilities.",
+          "sub_elements": [
+            {
+              "code": "PA.I.D.K1a",
+              "description": "a. Use of an electronic flight bag (EFB), if used"
+            }
+          ]
+        },
+        {
+          "code": "PA.I.D.K2",
+          "description": "Altitude selection accounting for terrain and obstacles, glide distance of airplane, VFR cruising altitudes, and effect of wind."
+        },
+        {
+          "code": "PA.I.D.K3",
+          "description": "Calculating:",
+          "sub_elements": [
+            {
+              "code": "PA.I.D.K3a",
+              "description": "a. Time, climb and descent rates, course, distance, heading, true airspeed, and groundspeed"
+            },
+            {
+              "code": "PA.I.D.K3b",
+              "description": "b. Estimated time of arrival, including conversion to universal coordinated time (UTC)"
+            },
+            {
+              "code": "PA.I.D.K3c",
+              "description": "c. Fuel requirements, including reserve"
+            }
+          ]
+        },
+        {
+          "code": "PA.I.D.K4",
+          "description": "Elements of a VFR flight plan."
+        },
+        {
+          "code": "PA.I.D.K5",
+          "description": "Procedures for filing, activating, and closing a VFR flight plan."
+        },
+        {
+          "code": "PA.I.D.K6",
+          "description": "Inflight intercept procedures."
+        }
+      ],
+      "risk_management": [
+        {
+          "code": "PA.I.D.R1",
+          "description": "Pilot."
+        },
+        {
+          "code": "PA.I.D.R2",
+          "description": "Aircraft."
+        },
+        {
+          "code": "PA.I.D.R3",
+          "description": "Environment (e.g., weather, airports, airspace, terrain, obstacles)."
+        },
+        {
+          "code": "PA.I.D.R4",
+          "description": "External pressures."
+        },
+        {
+          "code": "PA.I.D.R5",
+          "description": "Limitations of air traffic control (ATC) services."
+        },
+        {
+          "code": "PA.I.D.R6",
+          "description": "Fuel planning."
+        },
+        {
+          "code": "PA.I.D.R7",
+          "description": "Use of an electronic flight bag (EFB), if used."
+        }
+      ],
+      "skills": [
+        {
+          "code": "PA.I.D.S1",
+          "description": "Prepare, present, and explain a cross-country flight plan assigned by the evaluator, including a risk analysis based on real-time weather, to the first fuel stop."
+        },
+        {
+          "code": "PA.I.D.S2",
+          "description": "Apply pertinent information from appropriate and current aeronautical charts, Chart Supplements; Notices to Air Missions (NOTAMs) relative to airport, runway and taxiway closures; and other flight publications."
+        },
+        {
+          "code": "PA.I.D.S3",
+          "description": "Create a navigation plan and simulate filing a VFR flight plan."
+        },
+        {
+          "code": "PA.I.D.S4",
+          "description": "Recalculate fuel reserves based on a scenario provided by the evaluator."
+        },
+        {
+          "code": "PA.I.D.S5",
+          "description": "Use an electronic flight bag (EFB), if applicable."
+        }
+      ]
+    },
+    {
+      "task": "E. National Airspace System",
+      "references": [
+        "14 CFR parts 71, 91, 93",
+        "AIM",
+        "FAA-H-8083-2",
+        "FAA-H-8083-3",
+        "FAA-H-8083-25",
+        "VFR Navigation Charts"
+      ],
+      "objective": "To determine the applicant exhibits satisfactory knowledge, risk management, and skills associated with National Airspace System (NAS) operations under VFR as a private pilot.",
+      "notes": [],
+      "knowledge": [
+        {
+          "code": "PA.I.E.K1",
+          "description": "Airspace classes and associated requirements and limitations."
+        },
+        {
+          "code": "PA.I.E.K2",
+          "description": "Chart symbols."
+        },
+        {
+          "code": "PA.I.E.K3",
+          "description": "Special use airspace (SUA), special flight rules areas (SFRA), temporary flight restrictions (TFR), and other airspace areas."
+        },
+        {
+          "code": "PA.I.E.K4",
+          "description": "Special visual flight rules (VFR) requirements."
+        }
+      ],
+      "risk_management": [
+        {
+          "code": "PA.I.E.R1",
+          "description": "Various classes and types of airspace."
+        }
+      ],
+      "skills": [
+        {
+          "code": "PA.I.E.S1",
+          "description": "Identify and comply with the requirements for basic VFR weather minimums and flying in particular classes of airspace."
+        },
+        {
+          "code": "PA.I.E.S2",
+          "description": "Correctly identify airspace and operate in accordance with associated communication and equipment requirements."
+        },
+        {
+          "code": "PA.I.E.S3",
+          "description": "Identify the requirements for operating in SUA or within a TFR. Identify and comply with special air traffic rules (SATR) and SFRA operations, if applicable."
+        }
+      ]
+    },
+    {
+      "task": "F. Performance and Limitations",
+      "references": [
+        "FAA-H-8083-1",
+        "FAA-H-8083-2",
+        "FAA-H-8083-3",
+        "FAA-H-8083-25",
+        "POH/AFM"
+      ],
+      "objective": "To determine the applicant exhibits satisfactory knowledge, risk management, and skills associated with operating an airplane safely within the parameters of its performance capabilities and limitations.",
+      "notes": [],
+      "knowledge": [
+        {
+          "code": "PA.I.F.K1",
+          "description": "Elements related to performance and limitations by explaining the use of charts, tables, and data to determine performance."
+        },
+        {
+          "code": "PA.I.F.K2",
+          "description": "Factors affecting performance, including:",
+          "sub_elements": [
+            {
+              "code": "PA.I.F.K2a",
+              "description": "a. Atmospheric conditions"
+            },
+            {
+              "code": "PA.I.F.K2b",
+              "description": "b. Pilot technique"
+            },
+            {
+              "code": "PA.I.F.K2c",
+              "description": "c. Airplane configuration"
+            },
+            {
+              "code": "PA.I.F.K2d",
+              "description": "d. Airport environment"
+            },
+            {
+              "code": "PA.I.F.K2e",
+              "description": "e. Loading [e.g., center of gravity (CG)]"
+            },
+            {
+              "code": "PA.I.F.K2f",
+              "description": "f. Weight and balance"
+            }
+          ]
+        },
+        {
+          "code": "PA.I.F.K3",
+          "description": "Aerodynamics."
+        }
+      ],
+      "risk_management": [
+        {
+          "code": "PA.I.F.R1",
+          "description": "Use of performance charts, tables, and data."
+        },
+        {
+          "code": "PA.I.F.R2",
+          "description": "Airplane limitations."
+        },
+        {
+          "code": "PA.I.F.R3",
+          "description": "Possible differences between calculated performance and actual performance."
+        }
+      ],
+      "skills": [
+        {
+          "code": "PA.I.F.S1",
+          "description": "Compute the weight and balance, correct out-of-CG loading errors and determine if the weight and balance remains within limits during all phases of flight."
+        },
+        {
+          "code": "PA.I.F.S2",
+          "description": "Use the appropriate airplane performance charts, tables, and data."
+        }
+      ]
+    },
+    {
+      "task": "G. Operation of Systems",
+      "references": [
+        "FAA-H-8083-2",
+        "FAA-H-8083-3",
+        "FAA-H-8083-23",
+        "FAA-H-8083-25",
+        "POH/AFM"
+      ],
+      "objective": "To determine the applicant exhibits satisfactory knowledge, risk management, and skills associated with safe operation of systems on the airplane provided for the flight test.",
+      "notes": [
+        "Note: If K1 is selected, the evaluator must assess the applicant's knowledge of at least three sub-elements."
+      ],
+      "knowledge": [
+        {
+          "code": "PA.I.G.K1",
+          "description": "Airplane systems, including:",
+          "sub_elements": [
+            {
+              "code": "PA.I.G.K1a",
+              "description": "a. Primary flight controls"
+            },
+            {
+              "code": "PA.I.G.K1b",
+              "description": "b. Secondary flight controls"
+            },
+            {
+              "code": "PA.I.G.K1c",
+              "description": "c. Powerplant and propeller"
+            },
+            {
+              "code": "PA.I.G.K1d",
+              "description": "d. Landing gear"
+            },
+            {
+              "code": "PA.I.G.K1e",
+              "description": "e. Fuel, oil, and hydraulic"
+            },
+            {
+              "code": "PA.I.G.K1f",
+              "description": "f. Electrical"
+            },
+            {
+              "code": "PA.I.G.K1g",
+              "description": "g. Avionics"
+            },
+            {
+              "code": "PA.I.G.K1h",
+              "description": "h. Pitot-static, vacuum/pressure, and associated flight instruments"
+            },
+            {
+              "code": "PA.I.G.K1i",
+              "description": "i. Environmental"
+            },
+            {
+              "code": "PA.I.G.K1j",
+              "description": "j. Deicing and anti-icing"
+            },
+            {
+              "code": "PA.I.G.K1k",
+              "description": "k. Water rudders (ASES, AMES)"
+            },
+            {
+              "code": "PA.I.G.K1I",
+              "description": "I. Oxygen system"
+            }
+          ]
+        },
+        {
+          "code": "PA.I.G.K2",
+          "description": "Indications of and procedures for managing system abnormalities or failures."
+        }
+      ],
+      "risk_management": [
+        {
+          "code": "PA.I.G.R1",
+          "description": "Detection of system malfunctions or failures."
+        },
+        {
+          "code": "PA.I.G.R2",
+          "description": "Management of a system failure."
+        },
+        {
+          "code": "PA.I.G.R3",
+          "description": "Monitoring and management of automated systems."
+        }
+      ],
+      "skills": [
+        {
+          "code": "PA.I.G.S1",
+          "description": "Operate at least three of the systems listed in K1a through K1I appropriately."
+        },
+        {
+          "code": "PA.I.G.S2",
+          "description": "Complete the appropriate checklist(s)."
+        }
+      ]
+    },
+    {
+      "task": "H. Human Factors",
+      "references": [
+        "AIM",
+        "FAA-H-8083-2",
+        "FAA-H-8083-3",
+        "FAA-H-8083-25"
+      ],
+      "objective": "To determine the applicant exhibits satisfactory knowledge, risk management, and skills associated with personal health, flight physiology, and aeromedical and human factors related to safety of flight.",
+      "notes": [],
+      "knowledge": [
+        {
+          "code": "PA.I.H.K1",
+          "description": "Symptoms, recognition, causes, effects, and corrective actions associated with aeromedical and physiological issues, including:",
+          "sub_elements": [
+            {
+              "code": "PA.I.H.K1a",
+              "description": "a. Hypoxia"
+            },
+            {
+              "code": "PA.I.H.K1b",
+              "description": "b. Hyperventilation"
+            },
+            {
+              "code": "PA.I.H.K1c",
+              "description": "c. Middle ear and sinus problems"
+            },
+            {
+              "code": "PA.I.H.K1d",
+              "description": "d. Spatial disorientation"
+            },
+            {
+              "code": "PA.I.H.K1e",
+              "description": "e. Motion sickness"
+            },
+            {
+              "code": "PA.I.H.K1f",
+              "description": "f. Carbon monoxide poisoning"
+            },
+            {
+              "code": "PA.I.H.K1g",
+              "description": "g. Stress"
+            },
+            {
+              "code": "PA.I.H.K1h",
+              "description": "h. Fatigue"
+            },
+            {
+              "code": "PA.I.H.K1i",
+              "description": "i. Dehydration and nutrition"
+            },
+            {
+              "code": "PA.I.H.K1j",
+              "description": "j. Hypothermia"
+            },
+            {
+              "code": "PA.I.H.K1k",
+              "description": "k. Optical illusions"
+            },
+            {
+              "code": "PA.I.H.K1I",
+              "description": "I. Dissolved nitrogen in the bloodstream after scuba dives"
+            }
+          ]
+        },
+        {
+          "code": "PA.I.H.K2",
+          "description": "Regulations regarding use of alcohol and drugs."
+        },
+        {
+          "code": "PA.I.H.K3",
+          "description": "Effects of alcohol, drugs, and over-the-counter medications."
+        },
+        {
+          "code": "PA.I.H.K4",
+          "description": "Aeronautical Decision-Making (ADM) to include using Crew Resource Management (CRM) or Single-Pilot Resource Management (SRM), as appropriate."
+        }
+      ],
+      "risk_management": [
+        {
+          "code": "PA.I.H.R1",
+          "description": "Aeromedical and physiological issues."
+        },
+        {
+          "code": "PA.I.H.R2",
+          "description": "Hazardous attitudes."
+        },
+        {
+          "code": "PA.I.H.R3",
+          "description": "Distractions, task prioritization, loss of situational awareness, or disorientation."
+        },
+        {
+          "code": "PA.I.H.R4",
+          "description": "Confirmation and expectation bias."
+        }
+      ],
+      "skills": [
+        {
+          "code": "PA.I.H.S1",
+          "description": "Associate the symptoms and effects for at least three of the conditions listed in K1a through K1I with the cause(s) and corrective action(s)."
+        },
+        {
+          "code": "PA.I.H.S2",
+          "description": "Perform self-assessment, including fitness for flight and personal minimums, for actual flight or a scenario given by the evaluator."
+        }
+      ]
+    },
+    {
+      "task": "I. Water and Seaplane Characteristics, Seaplane Bases, Maritime Rules, and Aids to Marine Navigation (ASES, AMES)",
+      "references": [
+        "AIM",
+        "Chart Supplements",
+        "FAA-H-8083-2",
+        "FAA-H-8083-3",
+        "FAA-H-8083-23",
+        "FAA-H-8083-25",
+        "POH/AFM",
+        "USCG Navigation Rules"
+      ],
+      "objective": "To determine the applicant exhibits satisfactory knowledge, risk management, and skills associated with water and seaplane characteristics, seaplane bases, maritime rules, and aids to marine navigation.",
+      "notes": [],
+      "knowledge": [
+        {
+          "code": "PA.I.I.K1",
+          "description": "The characteristics of a water surface as affected by features, such as:",
+          "sub_elements": [
+            {
+              "code": "PA.I.I.K1a",
+              "description": "a. Size and location"
+            },
+            {
+              "code": "PA.I.I.K1b",
+              "description": "b. Protected and unprotected areas"
+            },
+            {
+              "code": "PA.I.I.K1c",
+              "description": "c. Surface wind"
+            },
+            {
+              "code": "PA.I.I.K1d",
+              "description": "d. Direction and strength of water current"
+            },
+            {
+              "code": "PA.I.I.K1e",
+              "description": "e. Floating and partially submerged debris"
+            },
+            {
+              "code": "PA.I.I.K1f",
+              "description": "f. Sandbars, islands, and shoals"
+            },
+            {
+              "code": "PA.I.I.K1g",
+              "description": "g. Vessel traffic and wakes"
+            },
+            {
+              "code": "PA.I.I.K1h",
+              "description": "h. Other characteristics specific to the area"
+            },
+            {
+              "code": "PA.I.I.K1i",
+              "description": "i. Direction and height of waves"
+            }
+          ]
+        },
+        {
+          "code": "PA.I.I.K2",
+          "description": "Float and hull construction, and its effect on seaplane performance."
+        },
+        {
+          "code": "PA.I.I.K3",
+          "description": "Causes of porpoising and skipping, and the pilot action needed to prevent or correct these occurrences."
+        },
+        {
+          "code": "PA.I.I.K4",
+          "description": "How to locate and identify seaplane bases on charts or in directories."
+        },
+        {
+          "code": "PA.I.I.K5",
+          "description": "Operating restrictions at various bases."
+        },
+        {
+          "code": "PA.I.I.K6",
+          "description": "Right-of-way, steering, and sailing rules pertinent to seaplane operation."
+        },
+        {
+          "code": "PA.I.I.K7",
+          "description": "Marine navigation aids, such as buoys, beacons, lights, sound signals, and range markers."
+        },
+        {
+          "code": "PA.I.I.K8",
+          "description": "Naval vessel protection zones."
+        },
+        {
+          "code": "PA.I.I.K9",
+          "description": "No wake zones."
+        }
+      ],
+      "risk_management": [
+        {
+          "code": "PA.I.I.R1",
+          "description": "Local conditions."
+        },
+        {
+          "code": "PA.I.I.R2",
+          "description": "Impact of marine traffic."
+        },
+        {
+          "code": "PA.I.I.R3",
+          "description": "Right-of-way and sailing rules pertinent to seaplane operations."
+        },
+        {
+          "code": "PA.I.I.R4",
+          "description": "Limited services and assistance available at seaplane bases."
+        }
+      ],
+      "skills": [
+        {
+          "code": "PA.I.I.S1",
+          "description": "Assess the water surface characteristics for the proposed flight."
+        },
+        {
+          "code": "PA.I.I.S2",
+          "description": "Identify restrictions at local seaplane bases."
+        },
+        {
+          "code": "PA.I.I.S3",
+          "description": "Identify marine navigation aids."
+        },
+        {
+          "code": "PA.I.I.S4",
+          "description": "Describe correct right-of-way, steering, and sailing operations."
+        },
+        {
+          "code": "PA.I.I.S5",
+          "description": "Explain how float and hull construction can affect seaplane performance."
+        },
+        {
+          "code": "PA.I.I.S6",
+          "description": "Describe how to correct for porpoising and skipping."
+        }
+      ]
+    }
+  ]
+  },
+  {
+  "area_of_operation": "II. Preflight Procedures",
+  "tasks": [
+    {
+      "task": "A. Preflight Assessment",
+      "references": [
+        "FAA-H-8083-2",
+        "FAA-H-8083-3",
+        "FAA-H-8083-23",
+        "FAA-H-8083-25",
+        "FAA-H-8083-28",
+        "POH/AFM"
+      ],
+      "objective": "To determine the applicant exhibits satisfactory knowledge, risk management, and skills associated with preparation for safe flight.",
+      "notes": [],
+      "knowledge": [
+        {
+          "code": "PA.II.A.K1",
+          "description": "Pilot self-assessment."
+        },
+        {
+          "code": "PA.II.A.K2",
+          "description": "Determining that the airplane to be used is appropriate and airworthy."
+        },
+        {
+          "code": "PA.II.A.K3",
+          "description": "Airplane preflight inspection, including:",
+          "sub_elements": [
+            {
+              "code": "PA.II.A.K3a",
+              "description": "a. Which items should be inspected"
+            },
+            {
+              "code": "PA.II.A.K3b",
+              "description": "b. The reasons for checking each item"
+            },
+            {
+              "code": "PA.II.A.K3c",
+              "description": "c. How to detect possible defects"
+            },
+            {
+              "code": "PA.II.A.K3d",
+              "description": "d. The associated regulations"
+            }
+          ]
+        },
+        {
+          "code": "PA.II.A.K4",
+          "description": "Environmental factors, including weather, terrain, route selection, and obstructions."
+        }
+      ],
+      "risk_management": [
+        {
+          "code": "PA.II.A.R1",
+          "description": "Pilot."
+        },
+        {
+          "code": "PA.II.A.R2",
+          "description": "Aircraft."
+        },
+        {
+          "code": "PA.II.A.R3",
+          "description": "Environment (e.g., weather, airports, airspace, terrain, obstacles)."
+        },
+        {
+          "code": "PA.II.A.R4",
+          "description": "External pressures."
+        },
+        {
+          "code": "PA.II.A.R5",
+          "description": "Aviation security concerns."
+        }
+      ],
+      "skills": [
+        {
+          "code": "PA.II.A.S1",
+          "description": "Inspect the airplane with reference to an appropriate checklist."
+        },
+        {
+          "code": "PA.II.A.S2",
+          "description": "Verify the airplane is in condition for safe flight and conforms to its type design."
+        },
+        {
+          "code": "PA.II.A.S3",
+          "description": "Perform self-assessment."
+        },
+        {
+          "code": "PA.II.A.S4",
+          "description": "Continue to assess the environment for safe flight."
+        }
+      ]
+    },
+    {
+      "task": "B. Flight Deck Management",
+      "references": [
+        "14 CFR part 91",
+        "AC 120-71",
+        "FAA-H-8083-2",
+        "FAA-H-8083-3",
+        "FAA-H-8083-25",
+        "POH/AFM"
+      ],
+      "objective": "To determine the applicant exhibits satisfactory knowledge, risk management, and skills associated with flight deck management practices.",
+      "notes": [
+        "Note: See Appendix 2: Safety of Flight."
+      ],
+      "knowledge": [
+        {
+          "code": "PA.II.B.K1",
+          "description": "Passenger briefing requirements, including operation and required use of safety restraint systems."
+        },
+        {
+          "code": "PA.II.B.K2",
+          "description": "Use of appropriate checklists."
+        },
+        {
+          "code": "PA.II.B.K3",
+          "description": "Requirements for current and appropriate navigation data."
+        },
+        {
+          "code": "PA.II.B.K4",
+          "description": "Securing items and cargo."
+        }
+      ],
+      "risk_management": [
+        {
+          "code": "PA.II.B.R1",
+          "description": "Use of systems or equipment, including automation and portable electronic devices."
+        },
+        {
+          "code": "PA.II.B.R2",
+          "description": "Inoperative equipment."
+        },
+        {
+          "code": "PA.II.B.R3",
+          "description": "Passenger distractions."
+        }
+      ],
+      "skills": [
+        {
+          "code": "PA.II.B.S1",
+          "description": "Secure all items in the aircraft."
+        },
+        {
+          "code": "PA.II.B.S2",
+          "description": "Conduct an appropriate passenger briefing, including identifying the pilot-in-command (PIC), use of safety belts, shoulder harnesses, doors, passenger conduct, sterile aircraft, propeller blade avoidance, and emergency procedures."
+        },
+        {
+          "code": "PA.II.B.S3",
+          "description": "Properly program and manage the aircraft's automation, as applicable."
+        },
+        {
+          "code": "PA.II.B.S4",
+          "description": "Appropriately manage risks by utilizing ADM, including SRM/CRM."
+        }
+      ]
+    },
+    {
+      "task": "C. Engine Starting",
+      "references": [
+        "FAA-H-8083-2",
+        "FAA-H-8083-3",
+        "FAA-H-8083-25",
+        "POH/AFM"
+      ],
+      "objective": "To determine the applicant exhibits satisfactory knowledge, risk management, and skills associated with recommended engine starting procedures.",
+      "notes": [],
+      "knowledge": [
+        {
+          "code": "PA.II.C.K1",
+          "description": "Starting under various conditions."
+        },
+        {
+          "code": "PA.II.C.K2",
+          "description": "Starting the engine(s) by use of external power."
+        },
+        {
+          "code": "PA.II.C.K3",
+          "description": "Limitations associated with starting."
+        },
+        {
+          "code": "PA.II.C.K4",
+          "description": "Conditions leading to and procedures for an aborted start."
+        }
+      ],
+      "risk_management": [
+        {
+          "code": "PA.II.C.R1",
+          "description": "Propeller safety."
+        }
+      ],
+      "skills": [
+        {
+          "code": "PA.II.C.S1",
+          "description": "Position the airplane properly considering structures, other aircraft, wind, and the safety of nearby persons and property."
+        },
+        {
+          "code": "PA.II.C.S2",
+          "description": "Complete the appropriate checklist(s)."
+        }
+      ]
+    },
+    {
+      "task": "D. Taxiing (ASEL, AMEL)",
+      "references": [
+        "AC 91-73",
+        "AIM",
+        "Chart Supplements",
+        "FAA-H-8083-2",
+        "FAA-H-8083-3",
+        "FAA-H-8083-25",
+        "POH/AFM"
+      ],
+      "objective": "To determine the applicant exhibits satisfactory knowledge, risk management, and skills associated with taxi operations, including runway incursion avoidance.",
+      "notes": [],
+      "knowledge": [
+        {
+          "code": "PA.II.D.K1",
+          "description": "Current airport aeronautical references and information resources such as the Chart Supplement, airport diagram, and Notices to Air Missions (NOTAMs)."
+        },
+        {
+          "code": "PA.II.D.K2",
+          "description": "Taxi instructions/clearances."
+        },
+        {
+          "code": "PA.II.D.K3",
+          "description": "Airport markings, signs, and lights."
+        },
+        {
+          "code": "PA.II.D.K4",
+          "description": "Visual indicators for wind."
+        },
+        {
+          "code": "PA.II.D.K5",
+          "description": "Aircraft lighting, as appropriate."
+        },
+        {
+          "code": "PA.II.D.K6",
+          "description": "Procedures for:",
+          "sub_elements": [
+            {
+              "code": "PA.II.D.K6a",
+              "description": "a. Appropriate flight deck activities prior to taxi, including route planning and identifying the location of Hot Spots"
+            },
+            {
+              "code": "PA.II.D.K6b",
+              "description": "b. Radio communications at towered and nontowered airports"
+            },
+            {
+              "code": "PA.II.D.K6c",
+              "description": "c. Entering or crossing runways"
+            },
+            {
+              "code": "PA.II.D.K6d",
+              "description": "d. Night taxi operations"
+            },
+            {
+              "code": "PA.II.D.K6e",
+              "description": "e. Low visibility taxi operations"
+            }
+          ]
+        }
+      ],
+      "risk_management": [
+        {
+          "code": "PA.II.D.R1",
+          "description": "Activities and distractions."
+        },
+        {
+          "code": "PA.II.D.R2",
+          "description": "Confirmation or expectation bias as related to taxi instructions."
+        },
+        {
+          "code": "PA.II.D.R3",
+          "description": "A taxi route or departure runway change."
+        },
+        {
+          "code": "PA.II.D.R4",
+          "description": "Runway incursion."
+        }
+      ],
+      "skills": [
+        {
+          "code": "PA.II.D.S1",
+          "description": "Receive and correctly read back clearances/instructions, if applicable."
+        },
+        {
+          "code": "PA.II.D.S2",
+          "description": "Use an airport diagram or taxi chart during taxi, if published, and maintain situational awareness."
+        },
+        {
+          "code": "PA.II.D.S3",
+          "description": "Position the flight controls for the existing wind, if applicable."
+        },
+        {
+          "code": "PA.II.D.S4",
+          "description": "Complete the appropriate checklist(s)."
+        },
+        {
+          "code": "PA.II.D.S5",
+          "description": "Perform a brake check immediately after the airplane begins moving."
+        },
+        {
+          "code": "PA.II.D.S6",
+          "description": "Maintain positive control of the airplane during ground operations by controlling direction and speed without excessive use of brakes."
+        },
+        {
+          "code": "PA.II.D.S7",
+          "description": "Comply with airport/taxiway markings, signals, and air traffic control (ATC) clearances and instructions."
+        },
+        {
+          "code": "PA.II.D.S8",
+          "description": "Position the airplane properly relative to hold lines."
+        }
+      ]
+    },
+    {
+      "task": "E. Taxiing and Sailing (ASES, AMES)",
+      "references": [
+        "AC 91-73",
+        "AIM",
+        "Chart Supplements",
+        "FAA-H-8083-2",
+        "FAA-H-8083-3",
+        "FAA-H-8083-23",
+        "FAA-H-8083-25",
+        "POH/AFM"
+      ],
+      "objective": "To determine the applicant exhibits satisfactory knowledge, risk management, and skills associated with taxiing and sailing operations, including runway incursion avoidance.",
+      "notes": [],
+      "knowledge": [
+        {
+          "code": "PA.II.E.K1",
+          "description": "Airport information resources, including Chart Supplements, airport diagram, and appropriate references."
+        },
+        {
+          "code": "PA.II.E.K2",
+          "description": "Taxi instructions/clearances."
+        },
+        {
+          "code": "PA.II.E.K3",
+          "description": "Airport/seaplane base markings, signs, and lights."
+        },
+        {
+          "code": "PA.II.E.K4",
+          "description": "Visual indicators for wind."
+        },
+        {
+          "code": "PA.II.E.K5",
+          "description": "Airplane lighting."
+        },
+        {
+          "code": "PA.II.E.K6",
+          "description": "Procedures for:",
+          "sub_elements": [
+            {
+              "code": "PA.II.E.K6a",
+              "description": "a. Appropriate flight deck activities during taxiing or sailing"
+            },
+            {
+              "code": "PA.II.E.K6b",
+              "description": "b. Radio communications at towered and nontowered seaplane bases"
+            }
+          ]
+        }
+      ],
+      "risk_management": [
+        {
+          "code": "PA.II.E.R1",
+          "description": "Activities and distractions."
+        },
+        {
+          "code": "PA.II.E.R2",
+          "description": "Porpoising and skipping."
+        },
+        {
+          "code": "PA.II.E.R3",
+          "description": "Low visibility taxi and sailing operations."
+        },
+        {
+          "code": "PA.II.E.R4",
+          "description": "Other aircraft, vessels, and hazards."
+        },
+        {
+          "code": "PA.II.E.R5",
+          "description": "Confirmation or expectation bias as related to taxi instructions."
+        }
+      ],
+      "skills": [
+        {
+          "code": "PA.II.E.S1",
+          "description": "Receive and correctly read back clearances/instructions, if applicable."
+        },
+        {
+          "code": "PA.II.E.S2",
+          "description": "Use an appropriate airport diagram or taxi chart, if published."
+        },
+        {
+          "code": "PA.II.E.S3",
+          "description": "Comply with seaplane base/airport/taxiway markings, signals, and signs."
+        },
+        {
+          "code": "PA.II.E.S4",
+          "description": "Depart the dock/mooring buoy or beach/ramp in a safe manner, considering wind, current, traffic, and hazards."
+        },
+        {
+          "code": "PA.II.E.S5",
+          "description": "Complete the appropriate checklist(s)."
+        },
+        {
+          "code": "PA.II.E.S6",
+          "description": "Position the flight controls, flaps, doors, water rudders, and power correctly for the existing conditions to follow the desired course while sailing and to prevent or correct for porpoising and skipping during step taxi."
+        },
+        {
+          "code": "PA.II.E.S7",
+          "description": "Exhibit procedures for steering and maneuvering while maintaining proper situational awareness and desired orientation, path, and position while taxiing using idle, plow, or step taxi technique, as appropriate."
+        },
+        {
+          "code": "PA.II.E.S8",
+          "description": "Plan and follow the most favorable taxi or sailing course for current conditions."
+        },
+        {
+          "code": "PA.II.E.S9",
+          "description": "Abide by right-of-way rules, maintain positive airplane control, proper speed, and separation between other aircraft, vessels, and persons."
+        },
+        {
+          "code": "PA.II.E.S10",
+          "description": "Comply with applicable taxi elements in Task D if the practical test is conducted in an amphibious airplane."
+        }
+      ]
+    },
+    {
+      "task": "F. Before Takeoff Check",
+      "references": [
+        "FAA-H-8083-2",
+        "FAA-H-8083-3",
+        "FAA-H-8083-23",
+        "FAA-H-8083-25",
+        "POH/AFM"
+      ],
+      "objective": "To determine the applicant exhibits satisfactory knowledge, risk management, and skills associated with before takeoff check.",
+      "notes": [],
+      "knowledge": [
+        {
+          "code": "PA.II.F.K1",
+          "description": "Purpose of before takeoff checklist items, including:",
+          "sub_elements": [
+            {
+              "code": "PA.II.F.K1a",
+              "description": "a. Reasons for checking each item"
+            },
+            {
+              "code": "PA.II.F.K1b",
+              "description": "b. Detecting malfunctions"
+            },
+            {
+              "code": "PA.II.F.K1c",
+              "description": "c. Ensuring the aircraft is in safe operating condition as recommended by the manufacturer"
+            }
+          ]
+        }
+      ],
+      "risk_management": [
+        {
+          "code": "PA.II.F.R1",
+          "description": "Division of attention while conducting before takeoff checks."
+        },
+        {
+          "code": "PA.II.F.R2",
+          "description": "Unexpected runway changes by air traffic control (ATC)."
+        },
+        {
+          "code": "PA.II.F.R3",
+          "description": "Wake turbulence."
+        },
+        {
+          "code": "PA.II.F.R4",
+          "description": "Potential powerplant failure during takeoff or other malfunction considering operational factors such as airplane characteristics, runway/takeoff path length, surface conditions, environmental conditions, and obstructions."
+        }
+      ],
+      "skills": [
+        {
+          "code": "PA.II.F.S1",
+          "description": "Review takeoff performance."
+        },
+        {
+          "code": "PA.II.F.S2",
+          "description": "Complete the appropriate checklist(s)."
+        },
+        {
+          "code": "PA.II.F.S3",
+          "description": "Position the airplane appropriately considering wind direction and the presence of any aircraft, vessels, or buildings as applicable."
+        },
+        {
+          "code": "PA.II.F.S4",
+          "description": "Divide attention inside and outside the flight deck."
+        },
+        {
+          "code": "PA.II.F.S5",
+          "description": "Verify that engine parameters and airplane configuration are suitable."
+        }
+      ]
+    }
+  ]
+  },
+  {
+  "area_of_operation": "III. Airport and Seaplane Base Operations",
+  "tasks": [
+    {
+      "task": "A. Communications, Light Signals, and Runway Lighting Systems",
+      "references": [
+        "14 CFR part 91",
+        "AIM",
+        "FAA-H-8083-2",
+        "FAA-H-8083-3",
+        "FAA-H-8083-25"
+      ],
+      "objective": "To determine the applicant exhibits satisfactory knowledge, risk management, and skills associated with normal and emergency radio communications, air traffic control (ATC) light signals, and runway lighting systems.",
+      "notes": [],
+      "knowledge": [
+        {
+          "code": "PA.III.A.K1",
+          "description": "How to obtain appropriate radio frequencies."
+        },
+        {
+          "code": "PA.III.A.K2",
+          "description": "Proper radio communication procedures and air traffic control (ATC) phraseology."
+        },
+        {
+          "code": "PA.III.A.K3",
+          "description": "ATC light signal recognition."
+        },
+        {
+          "code": "PA.III.A.K4",
+          "description": "Appropriate use of transponder(s)."
+        },
+        {
+          "code": "PA.III.A.K5",
+          "description": "Lost communication procedures."
+        },
+        {
+          "code": "PA.III.A.K6",
+          "description": "Equipment issues that could cause loss of communication."
+        },
+        {
+          "code": "PA.III.A.K7",
+          "description": "Radar assistance."
+        },
+        {
+          "code": "PA.III.A.K8",
+          "description": "National Transportation Safety Board (NTSB) accident/incident reporting."
+        },
+        {
+          "code": "PA.III.A.K9",
+          "description": "Runway Status Lighting Systems."
+        }
+      ],
+      "risk_management": [
+        {
+          "code": "PA.III.A.R1",
+          "description": "Communication."
+        },
+        {
+          "code": "PA.III.A.R2",
+          "description": "Deciding if and when to declare an emergency."
+        },
+        {
+          "code": "PA.III.A.R3",
+          "description": "[Archived]"
+        },
+        {
+          "code": "PA.III.A.R4",
+          "description": "Use of non-standard phraseology."
+        }
+      ],
+      "skills": [
+        {
+          "code": "PA.III.A.S1",
+          "description": "Select and activate appropriate frequencies."
+        },
+        {
+          "code": "PA.III.A.S2",
+          "description": "Transmit using standard phraseology and procedures as specified in the Aeronautical Information Manual (AIM) and Pilot/Controller Glossary."
+        },
+        {
+          "code": "PA.III.A.S3",
+          "description": "Acknowledge radio communications and comply with ATC instructions or as directed by the evaluator."
+        }
+      ]
+    },
+    {
+      "task": "B. Traffic Patterns",
+      "references": [
+        "14 CFR part 91",
+        "AIM",
+        "FAA-H-8083-2",
+        "FAA-H-8083-3",
+        "FAA-H-8083-25"
+      ],
+      "objective": "To determine the applicant exhibits satisfactory knowledge, risk management, and skills associated with traffic patterns.",
+      "notes": [],
+      "knowledge": [
+        {
+          "code": "PA.III.B.K1",
+          "description": "Towered and nontowered airport operations."
+        },
+        {
+          "code": "PA.III.B.K2",
+          "description": "Traffic pattern selection for the current conditions."
+        },
+        {
+          "code": "PA.III.B.K3",
+          "description": "Right-of-way rules."
+        },
+        {
+          "code": "PA.III.B.K4",
+          "description": "Use of automated weather and airport information."
+        }
+      ],
+      "risk_management": [
+        {
+          "code": "PA.III.B.R1",
+          "description": "Collision hazards."
+        },
+        {
+          "code": "PA.III.B.R2",
+          "description": "Distractions, task prioritization, loss of situational awareness, or disorientation."
+        },
+        {
+          "code": "PA.III.B.R3",
+          "description": "Windshear and wake turbulence."
+        }
+      ],
+      "skills": [
+        {
+          "code": "PA.III.B.S1",
+          "description": "Identify and interpret airport/seaplane base runways, taxiways, markings, signs, and lighting."
+        },
+        {
+          "code": "PA.III.B.S2",
+          "description": "Comply with recommended traffic pattern procedures."
+        },
+        {
+          "code": "PA.III.B.S3",
+          "description": "Correct for wind drift to maintain the proper ground track."
+        },
+        {
+          "code": "PA.III.B.S4",
+          "description": "Maintain orientation with the runway/landing area in use."
+        },
+        {
+          "code": "PA.III.B.S5",
+          "description": "Maintain traffic pattern altitude, ±100 feet, and the appropriate airspeed, ±10 knots."
+        },
+        {
+          "code": "PA.III.B.S6",
+          "description": "Maintain situational awareness and proper spacing from other aircraft in the traffic pattern."
+        }
+      ]
+    }
+  ]
+  },
+  {
+  "area_of_operation": "IV. Takeoffs, Landings, and Go-Arounds",
+  "tasks": [
+    {
+      "task": "A. Normal Takeoff and Climb",
+      "references": [
+        "FAA-H-8083-2",
+        "FAA-H-8083-3",
+        "FAA-H-8083-23",
+        "POH/AFM"
+      ],
+      "objective": "To determine the applicant exhibits satisfactory knowledge, risk management, and skills associated with a normal takeoff, climb operations, and rejected takeoff procedures.",
+      "notes": [],
+      "knowledge": [
+        {
+          "code": "PA.IV.A.K1",
+          "description": "Effects of aircraft loading and weight and balance on takeoff and climb."
+        },
+        {
+          "code": "PA.IV.A.K2",
+          "description": "Effects of atmospheric conditions on takeoff and climb performance."
+        },
+        {
+          "code": "PA.IV.A.K3",
+          "description": "Pilot technique on takeoff and climb performance (e.g., lift-off attitude, best angle/rate climb attitudes, airspeed control)."
+        },
+        {
+          "code": "PA.IV.A.K4",
+          "description": "Airplane configuration on takeoff and climb performance."
+        },
+        {
+          "code": "PA.IV.A.K5",
+          "description": "Runway surface and conditions affecting takeoff and climb performance."
+        },
+        {
+          "code": "PA.IV.A.K6",
+          "description": "Airport/runway environment and obstructions affecting takeoff distance and climb performance."
+        },
+        {
+          "code": "PA.IV.A.K7",
+          "description": "Reasons and procedures for a rejected takeoff."
+        }
+      ],
+      "risk_management": [
+        {
+          "code": "PA.IV.A.R1",
+          "description": "Selection of runway based on wind, pilot capability, airplane performance and limitations, and available distance."
+        },
+        {
+          "code": "PA.IV.A.R2",
+          "description": "Effects of:"
+        },
+        {
+          "code": "PA.IV.A.R2a",
+          "description": "a. Crosswind"
+        },
+        {
+          "code": "PA.IV.A.R2b",
+          "description": "b. Windshear"
+        },
+        {
+          "code": "PA.IV.A.R2c",
+          "description": "c. Tailwind"
+        },
+        {
+          "code": "PA.IV.A.R2d",
+          "description": "d. Wake turbulence"
+        },
+        {
+          "code": "PA.IV.A.R2e",
+          "description": "e. Runway surface/condition"
+        },
+        {
+          "code": "PA.IV.A.R3",
+          "description": "Planning for:"
+        },
+        {
+          "code": "PA.IV.A.R3a",
+          "description": "a. Rejected takeoff"
+        },
+        {
+          "code": "PA.IV.A.R3b",
+          "description": "b. Engine failure during takeoff and climb"
+        },
+        {
+          "code": "PA.IV.A.R4",
+          "description": "Collision hazards."
+        },
+        {
+          "code": "PA.IV.A.R5",
+          "description": "Low altitude maneuvering including stall, spin, or controlled flight into terrain (CFIT)."
+        },
+        {
+          "code": "PA.IV.A.R6",
+          "description": "Distractions, task prioritization, loss of situational awareness, or disorientation."
+        }
+      ],
+      "skills": [
+        {
+          "code": "PA.IV.A.S1",
+          "description": "Complete the appropriate checklist(s)."
+        },
+        {
+          "code": "PA.IV.A.S2",
+          "description": "Make radio calls as appropriate."
+        },
+        {
+          "code": "PA.IV.A.S3",
+          "description": "Verify assigned/correct runway or takeoff path."
+        },
+        {
+          "code": "PA.IV.A.S4",
+          "description": "Ascertain wind direction with or without visible wind direction indicators."
+        },
+        {
+          "code": "PA.IV.A.S5",
+          "description": "Position the flight controls for the existing wind conditions."
+        },
+        {
+          "code": "PA.IV.A.S6",
+          "description": "Clear the area; taxi into takeoff position and align the airplane on the runway centerline (ASEL, AMEL) or takeoff path (ASES, AMES)."
+        },
+        {
+          "code": "PA.IV.A.S7",
+          "description": "Confirm takeoff power and proper engine and flight instrument indications prior to rotation."
+        },
+        {
+          "code": "PA.IV.A.S8",
+          "description": "Rotate and lift off at the recommended airspeed and establish a pitch attitude for VY."
+        },
+        {
+          "code": "PA.IV.A.S9",
+          "description": "Establish a pitch attitude that will maintain VY, +10/-5 knots."
+        },
+        {
+          "code": "PA.IV.A.S10",
+          "description": "Retract flaps, if extended, and landing gear, if retractable, after a positive rate of climb has been verified and a safe landing can no longer be accomplished on the runway or takeoff path."
+        },
+        {
+          "code": "PA.IV.A.S11",
+          "description": "Maintain directional control and proper wind-drift correction throughout the takeoff and climb."
+        },
+        {
+          "code": "PA.IV.A.S12",
+          "description": "Comply with noise abatement and published departure procedures."
+        },
+        {
+          "code": "PA.IV.A.S13",
+          "description": "Accomplish the climb checklist, if applicable."
+        }
+      ]
+    },
+    {
+      "task": "B. Normal Approach and Landing",
+      "references": [
+        "FAA-H-8083-2",
+        "FAA-H-8083-3",
+        "FAA-H-8083-23",
+        "POH/AFM"
+      ],
+      "objective": "To determine the applicant exhibits satisfactory knowledge, risk management, and skills associated with a normal approach and landing with emphasis on proper use and coordination of flight controls.",
+      "notes": [],
+      "knowledge": [
+        {
+          "code": "PA.IV.B.K1",
+          "description": "Effects of atmospheric conditions, including wind, on approach and landing performance."
+        },
+        {
+          "code": "PA.IV.B.K2",
+          "description": "Wind correction techniques on approach and landing."
+        },
+        {
+          "code": "PA.IV.B.K3",
+          "description": "Runway surface and conditions affecting landing performance."
+        }
+      ],
+      "risk_management": [
+        {
+          "code": "PA.IV.B.R1",
+          "description": "Selection of runway or approach path based on wind, pilot capability, airplane performance and limitations, available distance, and aviation weather information."
+        },
+        {
+          "code": "PA.IV.B.R2",
+          "description": "Effects of:"
+        },
+        {
+          "code": "PA.IV.B.R2a",
+          "description": "a. Crosswind"
+        },
+        {
+          "code": "PA.IV.B.R2b",
+          "description": "b. Windshear"
+        },
+        {
+          "code": "PA.IV.B.R2c",
+          "description": "c. Tailwind"
+        },
+        {
+          "code": "PA.IV.B.R2d",
+          "description": "d. Wake turbulence"
+        },
+        {
+          "code": "PA.IV.B.R2e",
+          "description": "e. Runway surface/condition"
+        },
+        {
+          "code": "PA.IV.B.R3",
+          "description": "Planning for:"
+        },
+        {
+          "code": "PA.IV.B.R3a",
+          "description": "a. Go-around and rejected landing"
+        },
+        {
+          "code": "PA.IV.B.R3b",
+          "description": "b. Land and hold short operations (LAHSO)"
+        },
+        {
+          "code": "PA.IV.B.R4",
+          "description": "Collision hazards."
+        },
+        {
+          "code": "PA.IV.B.R5",
+          "description": "Low altitude maneuvering including stall, spin, or CFIT."
+        },
+        {
+          "code": "PA.IV.B.R6",
+          "description": "Distractions, task prioritization, loss of situational awareness, or disorientation."
+        }
+      ],
+      "skills": [
+        {
+          "code": "PA.IV.B.S1",
+          "description": "Complete the appropriate checklist(s)."
+        },
+        {
+          "code": "PA.IV.B.S2",
+          "description": "Make radio calls as appropriate."
+        },
+        {
+          "code": "PA.IV.B.S3",
+          "description": "Ensure the airplane is aligned with the correct/assigned runway or landing surface."
+        },
+        {
+          "code": "PA.IV.B.S4",
+          "description": "Scan the runway or landing surface and the adjoining area for traffic and obstructions."
+        },
+        {
+          "code": "PA.IV.B.S5",
+          "description": "Select and aim for a suitable touchdown point considering wind conditions, landing surface, and obstructions."
+        },
+        {
+          "code": "PA.IV.B.S6",
+          "description": "Establish the recommended approach and landing configuration and airspeed, and adjust pitch attitude and power as necessary to maintain a stabilized approach."
+        },
+        {
+          "code": "PA.IV.B.S7",
+          "description": "Maintain directional control and appropriate crosswind correction throughout the approach and landing."
+        },
+        {
+          "code": "PA.IV.B.S8",
+          "description": "Maintain a stabilized approach and recommended airspeed, or in its absence, not more than 1.3 VSO, +10/-5 knots, with appropriate wind correction to the round out (flare)."
+        },
+        {
+          "code": "PA.IV.B.S9",
+          "description": "Touch down smoothly at an appropriate airspeed within 400 feet beyond a specified point, with no drift, and with the airplane's longitudinal axis aligned with and over the runway centerline or landing path, as applicable."
+        },
+        {
+          "code": "PA.IV.B.S10",
+          "description": "Execute a timely go-around if the approach cannot be made within the tolerances specified above or for any other condition that may result in an unsafe approach or landing."
+        },
+        {
+          "code": "PA.IV.B.S11",
+          "description": "Use runway incursion avoidance procedures."
+        }
+      ]
+    },
+    {
+      "task": "C. Soft-Field Takeoff and Climb (ASEL)",
+      "references": [
+        "FAA-H-8083-2",
+        "FAA-H-8083-3",
+        "POH/AFM"
+      ],
+      "objective": "To determine the applicant exhibits satisfactory knowledge, risk management, and skills associated with a soft-field takeoff and climb.",
+      "notes": [],
+      "knowledge": [
+        {
+          "code": "PA.IV.C.K1",
+          "description": "Effects of soft or rough runway/takeoff surfaces."
+        },
+        {
+          "code": "PA.IV.C.K2",
+          "description": "Wing flap settings for takeoff from a soft or rough runway surface."
+        }
+      ],
+      "risk_management": [
+        {
+          "code": "PA.IV.C.R1",
+          "description": "Selection of runway based on wind, pilot capability, airplane performance and limitations, and available distance."
+        },
+        {
+          "code": "PA.IV.C.R2",
+          "description": "Effects of:"
+        },
+        {
+          "code": "PA.IV.C.R2a",
+          "description": "a. Crosswind"
+        },
+        {
+          "code": "PA.IV.C.R2b",
+          "description": "b. Windshear"
+        },
+        {
+          "code": "PA.IV.C.R2c",
+          "description": "c. Tailwind"
+        },
+        {
+          "code": "PA.IV.C.R2d",
+          "description": "d. Wake turbulence"
+        },
+        {
+          "code": "PA.IV.C.R2e",
+          "description": "e. Runway surface/condition"
+        },
+        {
+          "code": "PA.IV.C.R3",
+          "description": "Planning for:"
+        },
+        {
+          "code": "PA.IV.C.R3a",
+          "description": "a. Rejected takeoff"
+        },
+        {
+          "code": "PA.IV.C.R3b",
+          "description": "b. Engine failure during takeoff and climb"
+        },
+        {
+          "code": "PA.IV.C.R4",
+          "description": "Collision hazards."
+        },
+        {
+          "code": "PA.IV.C.R5",
+          "description": "Low altitude maneuvering including stall, spin, or CFIT."
+        },
+        {
+          "code": "PA.IV.C.R6",
+          "description": "Distractions, task prioritization, loss of situational awareness, or disorientation."
+        }
+      ],
+      "skills": [
+        {
+          "code": "PA.IV.C.S1",
+          "description": "Complete the appropriate checklist(s)."
+        },
+        {
+          "code": "PA.IV.C.S2",
+          "description": "Make radio calls as appropriate."
+        },
+        {
+          "code": "PA.IV.C.S3",
+          "description": "Verify assigned/correct runway."
+        },
+        {
+          "code": "PA.IV.C.S4",
+          "description": "Ascertain wind direction with or without visible wind direction indicators."
+        },
+        {
+          "code": "PA.IV.C.S5",
+          "description": "Position the flight controls for the existing wind conditions."
+        },
+        {
+          "code": "PA.IV.C.S6",
+          "description": "Clear the area; taxi into takeoff position utilizing maximum available takeoff area and align the airplane on the runway centerline."
+        },
+        {
+          "code": "PA.IV.C.S7",
+          "description": "Apply brakes (if appropriate) while advancing throttle smoothly to takeoff power."
+        },
+        {
+          "code": "PA.IV.C.S8",
+          "description": "Establish and maintain the most efficient lift-off attitude to minimize ground roll and conserve runway length."
+        },
+        {
+          "code": "PA.IV.C.S9",
+          "description": "Lift off at the recommended airspeed and accelerate to VY."
+        },
+        {
+          "code": "PA.IV.C.S10",
+          "description": "Establish a pitch attitude that maintains VY, +10/-5 knots."
+        },
+        {
+          "code": "PA.IV.C.S11",
+          "description": "Retract flaps, if extended, and landing gear, if applicable, after reaching a safe altitude."
+        },
+        {
+          "code": "PA.IV.C.S12",
+          "description": "Maintain directional control and proper wind-drift correction throughout the takeoff and climb."
+        },
+        {
+          "code": "PA.IV.C.S13",
+          "description": "Comply with noise abatement procedures."
+        }
+      ]
+    },
+    {
+      "task": "D. Soft-Field Approach and Landing (ASEL)",
+      "references": [
+        "FAA-H-8083-2",
+        "FAA-H-8083-3",
+        "POH/AFM"
+      ],
+      "objective": "To determine the applicant exhibits satisfactory knowledge, risk management, and skills associated with a soft-field approach and landing.",
+      "notes": [],
+      "knowledge": [
+        {
+          "code": "PA.IV.D.K1",
+          "description": "Effects of a soft or rough landing surface."
+        },
+        {
+          "code": "PA.IV.D.K2",
+          "description": "Wing flap settings for landing on a soft or rough surface."
+        }
+      ],
+      "risk_management": [
+        {
+          "code": "PA.IV.D.R1",
+          "description": "Selection of runway based on wind, pilot capability, airplane performance and limitations, available distance, and aviation weather information."
+        },
+        {
+          "code": "PA.IV.D.R2",
+          "description": "Effects of:"
+        },
+        {
+          "code": "PA.IV.D.R2a",
+          "description": "a. Crosswind"
+        },
+        {
+          "code": "PA.IV.D.R2b",
+          "description": "b. Windshear"
+        },
+        {
+          "code": "PA.IV.D.R2c",
+          "description": "c. Tailwind"
+        },
+        {
+          "code": "PA.IV.D.R2d",
+          "description": "d. Wake turbulence"
+        },
+        {
+          "code": "PA.IV.D.R2e",
+          "description": "e. Runway surface/condition"
+        },
+        {
+          "code": "PA.IV.D.R3",
+          "description": "Planning for:"
+        },
+        {
+          "code": "PA.IV.D.R3a",
+          "description": "a. Go-around and rejected landing"
+        },
+        {
+          "code": "PA.IV.D.R3b",
+          "description": "b. LAHSO"
+        },
+        {
+          "code": "PA.IV.D.R4",
+          "description": "Collision hazards."
+        },
+        {
+          "code": "PA.IV.D.R5",
+          "description": "Low altitude maneuvering including stall, spin, or CFIT."
+        },
+        {
+          "code": "PA.IV.D.R6",
+          "description": "Distractions, task prioritization, loss of situational awareness, or disorientation."
+        }
+      ],
+      "skills": [
+        {
+          "code": "PA.IV.D.S1",
+          "description": "Complete the appropriate checklist(s)."
+        },
+        {
+          "code": "PA.IV.D.S2",
+          "description": "Make radio calls as appropriate."
+        },
+        {
+          "code": "PA.IV.D.S3",
+          "description": "Ensure the airplane is aligned with the correct/assigned runway."
+        },
+        {
+          "code": "PA.IV.D.S4",
+          "description": "Scan the landing runway and adjoining area for traffic and obstructions."
+        },
+        {
+          "code": "PA.IV.D.S5",
+          "description": "Consider runway conditions, altitude, wind conditions, landing surface, and obstructions to select a suitable touchdown point."
+        },
+        {
+          "code": "PA.IV.D.S6",
+          "description": "Establish the recommended approach and landing configuration and airspeed, and adjust pitch attitude and power as necessary to maintain a stabilized approach."
+        },
+        {
+          "code": "PA.IV.D.S7",
+          "description": "Maintain directional control and appropriate crosswind correction throughout the approach and landing."
+        },
+        {
+          "code": "PA.IV.D.S8",
+          "description": "Maintain a stabilized approach and recommended airspeed, or in its absence, not more than 1.3 VSO, +10/-5 knots, with appropriate wind correction to the round out."
+        },
+        {
+          "code": "PA.IV.D.S9",
+          "description": "Touch down softly with no drift and with the airplane's longitudinal axis aligned with the runway centerline."
+        },
+        {
+          "code": "PA.IV.D.S10",
+          "description": "Maintain elevator control (e.g., back pressure) as recommended during roll-out to reduce weight on the nose wheel."
+        },
+        {
+          "code": "PA.IV.D.S11",
+          "description": "Execute a timely go-around if the approach cannot be made within the tolerances specified above or for any other condition that may result in an unsafe approach or landing."
+        },
+        {
+          "code": "PA.IV.D.S12",
+          "description": "Use runway incursion avoidance procedures."
+        }
+      ]
+    },
+    {
+      "task": "E. Short-Field Takeoff and Maximum Performance Climb (ASEL, AMEL)",
+      "references": [
+        "FAA-H-8083-2",
+        "FAA-H-8083-3",
+        "POH/AFM"
+      ],
+      "objective": "To determine the applicant exhibits satisfactory knowledge, risk management, and skills associated with a short-field takeoff and maximum performance climb.",
+      "notes": [],
+      "knowledge": [
+        {
+          "code": "PA.IV.E.K1",
+          "description": "Effects of a short runway/takeoff path."
+        },
+        {
+          "code": "PA.IV.E.K2",
+          "description": "Wing flap settings for takeoff from a short runway."
+        }
+      ],
+      "risk_management": [
+        {
+          "code": "PA.IV.E.R1",
+          "description": "Selection of runway based on wind, pilot capability, airplane performance and limitations, and available distance."
+        },
+        {
+          "code": "PA.IV.E.R2",
+          "description": "Effects of:"
+        },
+        {
+          "code": "PA.IV.E.R2a",
+          "description": "a. Crosswind"
+        },
+        {
+          "code": "PA.IV.E.R2b",
+          "description": "b. Windshear"
+        },
+        {
+          "code": "PA.IV.E.R2c",
+          "description": "c. Tailwind"
+        },
+        {
+          "code": "PA.IV.E.R2d",
+          "description": "d. Wake turbulence"
+        },
+        {
+          "code": "PA.IV.E.R2e",
+          "description": "e. Runway surface/condition"
+        },
+        {
+          "code": "PA.IV.E.R3",
+          "description": "Planning for:"
+        },
+        {
+          "code": "PA.IV.E.R3a",
+          "description": "a. Rejected takeoff"
+        },
+        {
+          "code": "PA.IV.E.R3b",
+          "description": "b. Engine failure during takeoff and climb"
+        },
+        {
+          "code": "PA.IV.E.R4",
+          "description": "Collision hazards."
+        },
+        {
+          "code": "PA.IV.E.R5",
+          "description": "Low altitude maneuvering including stall, spin, or CFIT."
+        },
+        {
+          "code": "PA.IV.E.R6",
+          "description": "Distractions, task prioritization, loss of situational awareness, or disorientation."
+        }
+      ],
+      "skills": [
+        {
+          "code": "PA.IV.E.S1",
+          "description": "Complete the appropriate checklist(s)."
+        },
+        {
+          "code": "PA.IV.E.S2",
+          "description": "Make radio calls as appropriate."
+        },
+        {
+          "code": "PA.IV.E.S3",
+          "description": "Verify assigned/correct runway."
+        },
+        {
+          "code": "PA.IV.E.S4",
+          "description": "Ascertain wind direction with or without visible wind direction indicators."
+        },
+        {
+          "code": "PA.IV.E.S5",
+          "description": "Position the flight controls for the existing wind conditions."
+        },
+        {
+          "code": "PA.IV.E.S6",
+          "description": "Clear the area; taxi into takeoff position utilizing maximum available takeoff area and align the airplane on the runway centerline."
+        },
+        {
+          "code": "PA.IV.E.S7",
+          "description": "Apply brakes (if appropriate) while advancing throttle smoothly to takeoff power."
+        },
+        {
+          "code": "PA.IV.E.S8",
+          "description": "Lift off at the recommended airspeed and accelerate to the recommended obstacle clearance airspeed or VX."
+        },
+        {
+          "code": "PA.IV.E.S9",
+          "description": "Establish a pitch attitude that maintains the recommended obstacle clearance airspeed or VX, +10/-5 knots, until the obstacle is cleared or until the airplane is 50 feet above the surface."
+        },
+        {
+          "code": "PA.IV.E.S10",
+          "description": "After clearing the obstacle, accelerate to VY and establish a pitch attitude that maintains VY, +10/-5 knots."
+        },
+        {
+          "code": "PA.IV.E.S11",
+          "description": "Retract flaps, if extended, and landing gear, if applicable, after reaching a safe altitude."
+        },
+        {
+          "code": "PA.IV.E.S12",
+          "description": "Maintain directional control and proper wind-drift correction throughout the takeoff and climb."
+        },
+        {
+          "code": "PA.IV.E.S13",
+          "description": "Comply with noise abatement procedures."
+        }
+      ]
+    },
+    {
+      "task": "F. Short-Field Approach and Landing (ASEL, AMEL)",
+      "references": [
+        "FAA-H-8083-2",
+        "FAA-H-8083-3",
+        "POH/AFM"
+      ],
+      "objective": "To determine the applicant exhibits satisfactory knowledge, risk management, and skills associated with a short-field approach and landing.",
+      "notes": [],
+      "knowledge": [
+        {
+          "code": "PA.IV.F.K1",
+          "description": "Effects of a short runway/landing surface."
+        },
+        {
+          "code": "PA.IV.F.K2",
+          "description": "Wing flap settings for landing on a short runway."
+        }
+      ],
+      "risk_management": [
+        {
+          "code": "PA.IV.F.R1",
+          "description": "Selection of runway based on wind, pilot capability, airplane performance and limitations, available distance, and aviation weather information."
+        },
+        {
+          "code": "PA.IV.F.R2",
+          "description": "Effects of:"
+        },
+        {
+          "code": "PA.IV.F.R2a",
+          "description": "a. Crosswind"
+        },
+        {
+          "code": "PA.IV.F.R2b",
+          "description": "b. Windshear"
+        },
+        {
+          "code": "PA.IV.F.R2c",
+          "description": "c. Tailwind"
+        },
+        {
+          "code": "PA.IV.F.R2d",
+          "description": "d. Wake turbulence"
+        },
+        {
+          "code": "PA.IV.F.R2e",
+          "description": "e. Runway surface/condition"
+        },
+        {
+          "code": "PA.IV.F.R3",
+          "description": "Planning for:"
+        },
+        {
+          "code": "PA.IV.F.R3a",
+          "description": "a. Go-around and rejected landing"
+        },
+        {
+          "code": "PA.IV.F.R3b",
+          "description": "b. LAHSO"
+        },
+        {
+          "code": "PA.IV.F.R4",
+          "description": "Collision hazards."
+        },
+        {
+          "code": "PA.IV.F.R5",
+          "description": "Low altitude maneuvering including stall, spin, or CFIT."
+        },
+        {
+          "code": "PA.IV.F.R6",
+          "description": "Distractions, task prioritization, loss of situational awareness, or disorientation."
+        }
+      ],
+      "skills": [
+        {
+          "code": "PA.IV.F.S1",
+          "description": "Complete the appropriate checklist(s)."
+        },
+        {
+          "code": "PA.IV.F.S2",
+          "description": "Make radio calls as appropriate."
+        },
+        {
+          "code": "PA.IV.F.S3",
+          "description": "Ensure the airplane is aligned with the correct/assigned runway."
+        },
+        {
+          "code": "PA.IV.F.S4",
+          "description": "Scan the landing runway and adjoining area for traffic and obstructions."
+        },
+        {
+          "code": "PA.IV.F.S5",
+          "description": "Consider runway conditions, altitude, wind conditions, landing surface, and obstructions to select a suitable touchdown point."
+        },
+        {
+          "code": "PA.IV.F.S6",
+          "description": "Establish the recommended approach and landing configuration and airspeed, and adjust pitch attitude and power as necessary to maintain a stabilized approach."
+        },
+        {
+          "code": "PA.IV.F.S7",
+          "description": "Maintain directional control and appropriate crosswind correction throughout the approach and landing."
+        },
+        {
+          "code": "PA.IV.F.S8",
+          "description": "Maintain a stabilized approach and recommended approach airspeed, or in its absence, not more than 1.3 VSO, +10/-5 knots, with appropriate wind correction to the round out."
+        },
+        {
+          "code": "PA.IV.F.S9",
+          "description": "Touch down at the specified touchdown point, approximately at minimum controllable airspeed, with no side drift, minimum float, and with the airplane's longitudinal axis aligned with and over the runway centerline."
+        },
+        {
+          "code": "PA.IV.F.S10",
+          "description": "Execute a timely go-around if the approach cannot be made within the tolerances specified above or for any other condition that may result in an unsafe approach or landing."
+        },
+        {
+          "code": "PA.IV.F.S11",
+          "description": "Apply brakes and/or initiate a maximum performance stop, as applicable, to stop in the shortest distance consistent with safety."
+        },
+        {
+          "code": "PA.IV.F.S12",
+          "description": "Use runway incursion avoidance procedures."
+        }
+      ]
+    },
+    {
+      "task": "G. Confined Area Takeoff and Maximum Performance Climb (ASES, AMES)",
+      "references": [
+        "FAA-H-8083-2",
+        "FAA-H-8083-3",
+        "FAA-H-8083-23",
+        "POH/AFM"
+      ],
+      "objective": "To determine the applicant exhibits satisfactory knowledge, risk management, and skills associated with a confined area takeoff and maximum performance climb.",
+      "notes": [],
+      "knowledge": [
+        {
+          "code": "PA.IV.G.K1",
+          "description": "Effects of a confined area takeoff path."
+        },
+        {
+          "code": "PA.IV.G.K2",
+          "description": "Wing flap settings for takeoff from a confined area."
+        },
+        {
+          "code": "PA.IV.G.K3",
+          "description": "Water surface conditions affecting takeoff performance."
+        }
+      ],
+      "risk_management": [
+        {
+          "code": "PA.IV.G.R1",
+          "description": "Selection of takeoff path based on wind, pilot capability, airplane performance and limitations, and available distance."
+        },
+        {
+          "code": "PA.IV.G.R2",
+          "description": "Effects of:"
+        },
+        {
+          "code": "PA.IV.G.R2a",
+          "description": "a. Crosswind"
+        },
+        {
+          "code": "PA.IV.G.R2b",
+          "description": "b. Windshear"
+        },
+        {
+          "code": "PA.IV.G.R2c",
+          "description": "c. Tailwind"
+        },
+        {
+          "code": "PA.IV.G.R2d",
+          "description": "d. Wake turbulence"
+        },
+        {
+          "code": "PA.IV.G.R2e",
+          "description": "e. Water surface/condition"
+        },
+        {
+          "code": "PA.IV.G.R3",
+          "description": "Planning for:"
+        },
+        {
+          "code": "PA.IV.G.R3a",
+          "description": "a. Rejected takeoff"
+        },
+        {
+          "code": "PA.IV.G.R3b",
+          "description": "b. Engine failure during takeoff and climb"
+        },
+        {
+          "code": "PA.IV.G.R4",
+          "description": "Collision hazards."
+        },
+        {
+          "code": "PA.IV.G.R5",
+          "description": "Low altitude maneuvering including stall, spin, or CFIT."
+        },
+        {
+          "code": "PA.IV.G.R6",
+          "description": "Distractions, task prioritization, loss of situational awareness, or disorientation."
+        }
+      ],
+      "skills": [
+        {
+          "code": "PA.IV.G.S1",
+          "description": "Complete the appropriate checklist(s)."
+        },
+        {
+          "code": "PA.IV.G.S2",
+          "description": "Make radio calls as appropriate."
+        },
+        {
+          "code": "PA.IV.G.S3",
+          "description": "Verify assigned/correct takeoff path."
+        },
+        {
+          "code": "PA.IV.G.S4",
+          "description": "Ascertain wind direction with or without visible wind direction indicators."
+        },
+        {
+          "code": "PA.IV.G.S5",
+          "description": "Position the flight controls for the existing wind conditions."
+        },
+        {
+          "code": "PA.IV.G.S6",
+          "description": "Clear the area; select an appropriate takeoff path."
+        },
+        {
+          "code": "PA.IV.G.S7",
+          "description": "Establish and maintain a pitch attitude that transfers the weight of the airplane from the floats to the wings as rapidly as possible."
+        },
+        {
+          "code": "PA.IV.G.S8",
+          "description": "Lift off at the recommended airspeed and accelerate to the recommended obstacle clearance airspeed or VX."
+        },
+        {
+          "code": "PA.IV.G.S9",
+          "description": "Establish a pitch attitude that maintains the recommended obstacle clearance airspeed or VX, +10/-5 knots, until the obstacle is cleared or until the airplane is 50 feet above the surface."
+        },
+        {
+          "code": "PA.IV.G.S10",
+          "description": "After clearing the obstacle, accelerate to VY and establish a pitch attitude that maintains VY, +10/-5 knots."
+        },
+        {
+          "code": "PA.IV.G.S11",
+          "description": "Retract flaps, if extended, and water rudders after reaching a safe altitude."
+        },
+        {
+          "code": "PA.IV.G.S12",
+          "description": "Maintain directional control and proper wind-drift correction throughout the takeoff and climb."
+        }
+      ]
+    },
+    {
+      "task": "H. Confined Area Approach and Landing (ASES, AMES)",
+      "references": [
+        "FAA-H-8083-2",
+        "FAA-H-8083-3",
+        "FAA-H-8083-23",
+        "POH/AFM"
+      ],
+      "objective": "To determine the applicant exhibits satisfactory knowledge, risk management, and skills associated with a confined area approach and landing.",
+      "notes": [],
+      "knowledge": [
+        {
+          "code": "PA.IV.H.K1",
+          "description": "Effects of a confined landing area."
+        },
+        {
+          "code": "PA.IV.H.K2",
+          "description": "Wing flap settings for landing in a confined area."
+        },
+        {
+          "code": "PA.IV.H.K3",
+          "description": "Water surface conditions affecting landing performance."
+        }
+      ],
+      "risk_management": [
+        {
+          "code": "PA.IV.H.R1",
+          "description": "Selection of approach path based on wind, pilot capability, airplane performance and limitations, available distance, and aviation weather information."
+        },
+        {
+          "code": "PA.IV.H.R2",
+          "description": "Effects of:"
+        },
+        {
+          "code": "PA.IV.H.R2a",
+          "description": "a. Crosswind"
+        },
+        {
+          "code": "PA.IV.H.R2b",
+          "description": "b. Windshear"
+        },
+        {
+          "code": "PA.IV.H.R2c",
+          "description": "c. Tailwind"
+        },
+        {
+          "code": "PA.IV.H.R2d",
+          "description": "d. Wake turbulence"
+        },
+        {
+          "code": "PA.IV.H.R2e",
+          "description": "e. Water surface/condition"
+        },
+        {
+          "code": "PA.IV.H.R3",
+          "description": "Planning for a go-around and rejected landing."
+        },
+        {
+          "code": "PA.IV.H.R4",
+          "description": "Collision hazards."
+        },
+        {
+          "code": "PA.IV.H.R5",
+          "description": "Low altitude maneuvering including stall, spin, or CFIT."
+        },
+        {
+          "code": "PA.IV.H.R6",
+          "description": "Distractions, task prioritization, loss of situational awareness, or disorientation."
+        }
+      ],
+      "skills": [
+        {
+          "code": "PA.IV.H.S1",
+          "description": "Complete the appropriate checklist(s)."
+        },
+        {
+          "code": "PA.IV.H.S2",
+          "description": "Make radio calls as appropriate."
+        },
+        {
+          "code": "PA.IV.H.S3",
+          "description": "Ensure the airplane is aligned with the correct/assigned landing area."
+        },
+        {
+          "code": "PA.IV.H.S4",
+          "description": "Scan the landing area and adjoining areas for traffic and obstructions."
+        },
+        {
+          "code": "PA.IV.H.S5",
+          "description": "Consider wind conditions, landing surface, and obstructions to select a suitable touchdown point."
+        },
+        {
+          "code": "PA.IV.H.S6",
+          "description": "Establish the recommended approach and landing configuration and airspeed, and adjust pitch attitude and power as necessary to maintain a stabilized approach."
+        },
+        {
+          "code": "PA.IV.H.S7",
+          "description": "Maintain directional control and appropriate crosswind correction throughout the approach and landing."
+        },
+        {
+          "code": "PA.IV.H.S8",
+          "description": "Maintain a stabilized approach and recommended approach airspeed, or in its absence, not more than 1.3 VSO, +10/-5 knots, with appropriate wind correction to touchdown."
+        },
+        {
+          "code": "PA.IV.H.S9",
+          "description": "Touch down at the specified touchdown point with no side drift, minimum float, and with the airplane's longitudinal axis aligned with the landing path."
+        },
+        {
+          "code": "PA.IV.H.S10",
+          "description": "Execute a timely go-around if the approach cannot be made within the tolerances specified above or for any other condition that may result in an unsafe approach or landing."
+        }
+      ]
+    },
+    {
+      "task": "I. Glassy Water Takeoff and Climb (ASES, AMES)",
+      "references": [
+        "FAA-H-8083-2",
+        "FAA-H-8083-3",
+        "FAA-H-8083-23",
+        "POH/AFM"
+      ],
+      "objective": "To determine the applicant exhibits satisfactory knowledge, risk management, and skills associated with a glassy water takeoff and climb.",
+      "notes": [
+        "Note: If a glassy water condition does not exist, the applicant must be evaluated by simulating the Task."
+      ],
+      "knowledge": [
+        {
+          "code": "PA.IV.I.K1",
+          "description": "Effects of glassy water on takeoff performance."
+        },
+        {
+          "code": "PA.IV.I.K2",
+          "description": "Wing flap settings for takeoff from glassy water."
+        }
+      ],
+      "risk_management": [
+        {
+          "code": "PA.IV.I.R1",
+          "description": "Selection of takeoff path based on wind, pilot capability, airplane performance and limitations, and available distance."
+        },
+        {
+          "code": "PA.IV.I.R2",
+          "description": "Effects of:"
+        },
+        {
+          "code": "PA.IV.I.R2a",
+          "description": "a. Crosswind"
+        },
+        {
+          "code": "PA.IV.I.R2b",
+          "description": "b. Windshear"
+        },
+        {
+          "code": "PA.IV.I.R2c",
+          "description": "c. Tailwind"
+        },
+        {
+          "code": "PA.IV.I.R2d",
+          "description": "d. Wake turbulence"
+        },
+        {
+          "code": "PA.IV.I.R2e",
+          "description": "e. Water surface/condition"
+        },
+        {
+          "code": "PA.IV.I.R3",
+          "description": "Planning for:"
+        },
+        {
+          "code": "PA.IV.I.R3a",
+          "description": "a. Rejected takeoff"
+        },
+        {
+          "code": "PA.IV.I.R3b",
+          "description": "b. Engine failure during takeoff and climb"
+        },
+        {
+          "code": "PA.IV.I.R4",
+          "description": "Collision hazards."
+        },
+        {
+          "code": "PA.IV.I.R5",
+          "description": "Low altitude maneuvering including stall, spin, or CFIT."
+        },
+        {
+          "code": "PA.IV.I.R6",
+          "description": "Distractions, task prioritization, loss of situational awareness, or disorientation."
+        }
+      ],
+      "skills": [
+        {
+          "code": "PA.IV.I.S1",
+          "description": "Complete the appropriate checklist(s)."
+        },
+        {
+          "code": "PA.IV.I.S2",
+          "description": "Make radio calls as appropriate."
+        },
+        {
+          "code": "PA.IV.I.S3",
+          "description": "Verify assigned/correct takeoff path."
+        },
+        {
+          "code": "PA.IV.I.S4",
+          "description": "Ascertain wind direction with or without visible wind direction indicators."
+        },
+        {
+          "code": "PA.IV.I.S5",
+          "description": "Position the flight controls for the existing wind conditions."
+        },
+        {
+          "code": "PA.IV.I.S6",
+          "description": "Clear the area; select an appropriate takeoff path."
+        },
+        {
+          "code": "PA.IV.I.S7",
+          "description": "Establish and maintain an appropriate planing attitude and lift off at the recommended airspeed."
+        },
+        {
+          "code": "PA.IV.I.S8",
+          "description": "Establish a pitch attitude for VY and accelerate to VY, +10/-5 knots."
+        },
+        {
+          "code": "PA.IV.I.S9",
+          "description": "Retract flaps, if extended, and water rudders after reaching a safe altitude."
+        },
+        {
+          "code": "PA.IV.I.S10",
+          "description": "Maintain directional control and proper wind-drift correction throughout the takeoff and climb."
+        }
+      ]
+    },
+    {
+      "task": "J. Glassy Water Approach and Landing (ASES, AMES)",
+      "references": [
+        "FAA-H-8083-2",
+        "FAA-H-8083-3",
+        "FAA-H-8083-23",
+        "POH/AFM"
+      ],
+      "objective": "To determine the applicant exhibits satisfactory knowledge, risk management, and skills associated with a glassy water approach and landing.",
+      "notes": [
+        "Note: If a glassy water condition does not exist, the applicant must be evaluated by simulating the Task."
+      ],
+      "knowledge": [
+        {
+          "code": "PA.IV.J.K1",
+          "description": "Effects of glassy water on landing performance."
+        },
+        {
+          "code": "PA.IV.J.K2",
+          "description": "Wing flap settings for landing on glassy water."
+        }
+      ],
+      "risk_management": [
+        {
+          "code": "PA.IV.J.R1",
+          "description": "Selection of approach path based on wind, pilot capability, airplane performance and limitations, available distance, and aviation weather information."
+        },
+        {
+          "code": "PA.IV.J.R2",
+          "description": "Effects of:"
+        },
+        {
+          "code": "PA.IV.J.R2a",
+          "description": "a. Crosswind"
+        },
+        {
+          "code": "PA.IV.J.R2b",
+          "description": "b. Windshear"
+        },
+        {
+          "code": "PA.IV.J.R2c",
+          "description": "c. Tailwind"
+        },
+        {
+          "code": "PA.IV.J.R2d",
+          "description": "d. Wake turbulence"
+        },
+        {
+          "code": "PA.IV.J.R2e",
+          "description": "e. Water surface/condition"
+        },
+        {
+          "code": "PA.IV.J.R3",
+          "description": "Planning for a go-around and rejected landing."
+        },
+        {
+          "code": "PA.IV.J.R4",
+          "description": "Collision hazards."
+        },
+        {
+          "code": "PA.IV.J.R5",
+          "description": "Low altitude maneuvering including stall, spin, or CFIT."
+        },
+        {
+          "code": "PA.IV.J.R6",
+          "description": "Distractions, task prioritization, loss of situational awareness, or disorientation."
+        }
+      ],
+      "skills": [
+        {
+          "code": "PA.IV.J.S1",
+          "description": "Complete the appropriate checklist(s)."
+        },
+        {
+          "code": "PA.IV.J.S2",
+          "description": "Make radio calls as appropriate."
+        },
+        {
+          "code": "PA.IV.J.S3",
+          "description": "Ensure the airplane is aligned with the correct/assigned landing area."
+        },
+        {
+          "code": "PA.IV.J.S4",
+          "description": "Scan the landing area and adjoining areas for traffic and obstructions."
+        },
+        {
+          "code": "PA.IV.J.S5",
+          "description": "Consider wind conditions, landing surface, and obstructions to select a suitable touchdown point."
+        },
+        {
+          "code": "PA.IV.J.S6",
+          "description": "Establish the recommended approach and landing configuration and airspeed, and adjust pitch attitude and power as necessary to maintain a stabilized approach."
+        },
+        {
+          "code": "PA.IV.J.S7",
+          "description": "Maintain directional control and appropriate crosswind correction throughout the approach and landing."
+        },
+        {
+          "code": "PA.IV.J.S8",
+          "description": "Maintain a stabilized approach and recommended approach airspeed, or in its absence, not more than 1.3 VSO, +10/-5 knots, with appropriate wind correction to touchdown."
+        },
+        {
+          "code": "PA.IV.J.S9",
+          "description": "Land at the specified touchdown point with no side drift and with the airplane's longitudinal axis aligned with the landing path."
+        },
+        {
+          "code": "PA.IV.J.S10",
+          "description": "Execute a timely go-around if the approach cannot be made within the tolerances specified above or for any other condition that may result in an unsafe approach or landing."
+        }
+      ]
+    },
+    {
+      "task": "K. Rough Water Takeoff and Climb (ASES, AMES)",
+      "references": [
+        "FAA-H-8083-2",
+        "FAA-H-8083-3",
+        "FAA-H-8083-23",
+        "POH/AFM"
+      ],
+      "objective": "To determine the applicant exhibits satisfactory knowledge, risk management, and skills associated with a rough water takeoff and climb.",
+      "notes": [
+        "Note: If a rough water condition does not exist, the applicant must be evaluated by simulating the Task."
+      ],
+      "knowledge": [
+        {
+          "code": "PA.IV.K.K1",
+          "description": "Effects of rough water on takeoff performance."
+        },
+        {
+          "code": "PA.IV.K.K2",
+          "description": "Wing flap settings for takeoff from rough water."
+        }
+      ],
+      "risk_management": [
+        {
+          "code": "PA.IV.K.R1",
+          "description": "Selection of takeoff path based on wind, pilot capability, airplane performance and limitations, and available distance."
+        },
+        {
+          "code": "PA.IV.K.R2",
+          "description": "Effects of:"
+        },
+        {
+          "code": "PA.IV.K.R2a",
+          "description": "a. Crosswind"
+        },
+        {
+          "code": "PA.IV.K.R2b",
+          "description": "b. Windshear"
+        },
+        {
+          "code": "PA.IV.K.R2c",
+          "description": "c. Tailwind"
+        },
+        {
+          "code": "PA.IV.K.R2d",
+          "description": "d. Wake turbulence"
+        },
+        {
+          "code": "PA.IV.K.R2e",
+          "description": "e. Water surface/condition"
+        },
+        {
+          "code": "PA.IV.K.R3",
+          "description": "Planning for:"
+        },
+        {
+          "code": "PA.IV.K.R3a",
+          "description": "a. Rejected takeoff"
+        },
+        {
+          "code": "PA.IV.K.R3b",
+          "description": "b. Engine failure during takeoff and climb"
+        },
+        {
+          "code": "PA.IV.K.R4",
+          "description": "Collision hazards."
+        },
+        {
+          "code": "PA.IV.K.R5",
+          "description": "Low altitude maneuvering including stall, spin, or CFIT."
+        },
+        {
+          "code": "PA.IV.K.R6",
+          "description": "Distractions, task prioritization, loss of situational awareness, or disorientation."
+        }
+      ],
+      "skills": [
+        {
+          "code": "PA.IV.K.S1",
+          "description": "Complete the appropriate checklist(s)."
+        },
+        {
+          "code": "PA.IV.K.S2",
+          "description": "Make radio calls as appropriate."
+        },
+        {
+          "code": "PA.IV.K.S3",
+          "description": "Verify assigned/correct takeoff path."
+        },
+        {
+          "code": "PA.IV.K.S4",
+          "description": "Ascertain wind direction with or without visible wind direction indicators."
+        },
+        {
+          "code": "PA.IV.K.S5",
+          "description": "Position the flight controls for the existing wind conditions."
+        },
+        {
+          "code": "PA.IV.K.S6",
+          "description": "Clear the area; select an appropriate takeoff path."
+        },
+        {
+          "code": "PA.IV.K.S7",
+          "description": "Establish and maintain an appropriate planing attitude that minimizes the effect of rough water and lift off at the recommended airspeed."
+        },
+        {
+          "code": "PA.IV.K.S8",
+          "description": "Establish a pitch attitude for VY and accelerate to VY, +10/-5 knots."
+        },
+        {
+          "code": "PA.IV.K.S9",
+          "description": "Retract flaps, if extended, and water rudders after reaching a safe altitude."
+        },
+        {
+          "code": "PA.IV.K.S10",
+          "description": "Maintain directional control and proper wind-drift correction throughout the takeoff and climb."
+        }
+      ]
+    },
+    {
+      "task": "L. Rough Water Approach and Landing (ASES, AMES)",
+      "references": [
+        "FAA-H-8083-2",
+        "FAA-H-8083-3",
+        "FAA-H-8083-23",
+        "POH/AFM"
+      ],
+      "objective": "To determine the applicant exhibits satisfactory knowledge, risk management, and skills associated with a rough water approach and landing.",
+      "notes": [
+        "Note: If a rough water condition does not exist, the applicant must be evaluated by simulating the Task."
+      ],
+      "knowledge": [
+        {
+          "code": "PA.IV.L.K1",
+          "description": "Effects of rough water on landing performance."
+        },
+        {
+          "code": "PA.IV.L.K2",
+          "description": "Wing flap settings for landing on rough water."
+        }
+      ],
+      "risk_management": [
+        {
+          "code": "PA.IV.L.R1",
+          "description": "Selection of approach path based on wind, pilot capability, airplane performance and limitations, available distance, and aviation weather information."
+        },
+        {
+          "code": "PA.IV.L.R2",
+          "description": "Effects of:"
+        },
+        {
+          "code": "PA.IV.L.R2a",
+          "description": "a. Crosswind"
+        },
+        {
+          "code": "PA.IV.L.R2b",
+          "description": "b. Windshear"
+        },
+        {
+          "code": "PA.IV.L.R2c",
+          "description": "c. Tailwind"
+        },
+        {
+          "code": "PA.IV.L.R2d",
+          "description": "d. Wake turbulence"
+        },
+        {
+          "code": "PA.IV.L.R2e",
+          "description": "e. Water surface/condition"
+        },
+        {
+          "code": "PA.IV.L.R3",
+          "description": "Planning for a go-around and rejected landing."
+        },
+        {
+          "code": "PA.IV.L.R4",
+          "description": "Collision hazards."
+        },
+        {
+          "code": "PA.IV.L.R5",
+          "description": "Low altitude maneuvering including stall, spin, or CFIT."
+        },
+        {
+          "code": "PA.IV.L.R6",
+          "description": "Distractions, task prioritization, loss of situational awareness, or disorientation."
+        }
+      ],
+      "skills": [
+        {
+          "code": "PA.IV.L.S1",
+          "description": "Complete the appropriate checklist(s)."
+        },
+        {
+          "code": "PA.IV.L.S2",
+          "description": "Make radio calls as appropriate."
+        },
+        {
+          "code": "PA.IV.L.S3",
+          "description": "Ensure the airplane is aligned with the correct/assigned landing area."
+        },
+        {
+          "code": "PA.IV.L.S4",
+          "description": "Scan the landing area and adjoining areas for traffic and obstructions."
+        },
+        {
+          "code": "PA.IV.L.S5",
+          "description": "Consider wind conditions, landing surface, and obstructions to select a suitable touchdown point."
+        },
+        {
+          "code": "PA.IV.L.S6",
+          "description": "Establish the recommended approach and landing configuration and airspeed, and adjust pitch attitude and power as necessary to maintain a stabilized approach."
+        },
+        {
+          "code": "PA.IV.L.S7",
+          "description": "Maintain directional control and appropriate crosswind correction throughout the approach and landing."
+        },
+        {
+          "code": "PA.IV.L.S8",
+          "description": "Maintain a stabilized approach and recommended approach airspeed, or in its absence, not more than 1.3 VSO, +10/-5 knots, with appropriate wind correction to touchdown."
+        },
+        {
+          "code": "PA.IV.L.S9",
+          "description": "Land at the specified touchdown point with no side drift and with the airplane's longitudinal axis aligned with the landing path."
+        },
+        {
+          "code": "PA.IV.L.S10",
+          "description": "Execute a timely go-around if the approach cannot be made within the tolerances specified above or for any other condition that may result in an unsafe approach or landing."
+        }
+      ]
+    },
+    {
+      "task": "M. Forward Slip to a Landing (ASEL, ASES)",
+      "references": [
+        "FAA-H-8083-2",
+        "FAA-H-8083-3",
+        "POH/AFM"
+      ],
+      "objective": "To determine the applicant exhibits satisfactory knowledge, risk management, and skills associated with a forward slip to a landing.",
+      "notes": [],
+      "knowledge": [
+        {
+          "code": "PA.IV.M.K1",
+          "description": "Concepts of a forward slip."
+        },
+        {
+          "code": "PA.IV.M.K2",
+          "description": "Airplane performance and limitations associated with a forward slip."
+        }
+      ],
+      "risk_management": [
+        {
+          "code": "PA.IV.M.R1",
+          "description": "Selection of runway or approach path based on wind, pilot capability, airplane performance and limitations, available distance, and aviation weather information."
+        },
+        {
+          "code": "PA.IV.M.R2",
+          "description": "Effects of:"
+        },
+        {
+          "code": "PA.IV.M.R2a",
+          "description": "a. Crosswind"
+        },
+        {
+          "code": "PA.IV.M.R2b",
+          "description": "b. Windshear"
+        },
+        {
+          "code": "PA.IV.M.R2c",
+          "description": "c. Tailwind"
+        },
+        {
+          "code": "PA.IV.M.R2d",
+          "description": "d. Wake turbulence"
+        },
+        {
+          "code": "PA.IV.M.R2e",
+          "description": "e. Landing surface/condition"
+        },
+        {
+          "code": "PA.IV.M.R3",
+          "description": "Planning for a go-around and rejected landing."
+        },
+        {
+          "code": "PA.IV.M.R4",
+          "description": "Collision hazards."
+        },
+        {
+          "code": "PA.IV.M.R5",
+          "description": "Low altitude maneuvering including stall, spin, or CFIT."
+        },
+        {
+          "code": "PA.IV.M.R6",
+          "description": "Distractions, task prioritization, loss of situational awareness, or disorientation."
+        }
+      ],
+      "skills": [
+        {
+          "code": "PA.IV.M.S1",
+          "description": "Complete the appropriate checklist(s)."
+        },
+        {
+          "code": "PA.IV.M.S2",
+          "description": "Make radio calls as appropriate."
+        },
+        {
+          "code": "PA.IV.M.S3",
+          "description": "Ensure the airplane is aligned with the correct/assigned runway or landing area."
+        },
+        {
+          "code": "PA.IV.M.S4",
+          "description": "Scan the landing runway or landing area and adjoining areas for traffic and obstructions."
+        },
+        {
+          "code": "PA.IV.M.S5",
+          "description": "Consider wind conditions, landing surface, and obstructions to select a suitable touchdown point."
+        },
+        {
+          "code": "PA.IV.M.S6",
+          "description": "Establish the recommended approach and landing configuration and airspeed, and adjust pitch attitude and power as necessary."
+        },
+        {
+          "code": "PA.IV.M.S7",
+          "description": "Initiate a forward slip with appropriate control inputs to increase descent rate without excessive airspeed."
+        },
+        {
+          "code": "PA.IV.M.S8",
+          "description": "Maintain a ground track aligned with the runway centerline or landing path."
+        },
+        {
+          "code": "PA.IV.M.S9",
+          "description": "Maintain a stabilized slip with a recommended airspeed, or in its absence, not more than 1.3 VSO, +10/-5 knots, to the round out."
+        },
+        {
+          "code": "PA.IV.M.S10",
+          "description": "Transition smoothly from the slip to a normal landing attitude during round out to touchdown within 400 feet beyond a specified point with no side drift, minimum float, and with the airplane's longitudinal axis aligned with and over the runway centerline or landing path."
+        },
+        {
+          "code": "PA.IV.M.S11",
+          "description": "Execute a timely go-around if the approach cannot be made within the tolerances specified above or for any other condition that may result in an unsafe approach or landing."
+        },
+        {
+          "code": "PA.IV.M.S12",
+          "description": "Use runway incursion avoidance procedures."
+        }
+      ]
+    },
+    {
+      "task": "N. Go-Around/Rejected Landing",
+      "references": [
+        "FAA-H-8083-2",
+        "FAA-H-8083-3",
+        "FAA-H-8083-23",
+        "POH/AFM"
+      ],
+      "objective": "To determine the applicant exhibits satisfactory knowledge, risk management, and skills associated with a go-around/rejected landing.",
+      "notes": [],
+      "knowledge": [
+        {
+          "code": "PA.IV.N.K1",
+          "description": "Situations where a go-around/rejected landing is appropriate."
+        },
+        {
+          "code": "PA.IV.N.K2",
+          "description": "Importance of making a timely decision to go-around/reject a landing."
+        },
+        {
+          "code": "PA.IV.N.K3",
+          "description": "Procedure for a go-around/rejected landing."
+        }
+      ],
+      "risk_management": [
+        {
+          "code": "PA.IV.N.R1",
+          "description": "Delayed recognition of the need for a go-around/rejected landing."
+        },
+        {
+          "code": "PA.IV.N.R2",
+          "description": "Effects of:"
+        },
+        {
+          "code": "PA.IV.N.R2a",
+          "description": "a. Crosswind"
+        },
+        {
+          "code": "PA.IV.N.R2b",
+          "description": "b. Windshear"
+        },
+        {
+          "code": "PA.IV.N.R2c",
+          "description": "c. Tailwind"
+        },
+        {
+          "code": "PA.IV.N.R2d",
+          "description": "d. Wake turbulence"
+        },
+        {
+          "code": "PA.IV.N.R3",
+          "description": "Collision hazards."
+        },
+        {
+          "code": "PA.IV.N.R4",
+          "description": "Low altitude maneuvering including stall, spin, or CFIT."
+        },
+        {
+          "code": "PA.IV.N.R5",
+          "description": "Distractions, task prioritization, loss of situational awareness, or disorientation."
+        }
+      ],
+      "skills": [
+        {
+          "code": "PA.IV.N.S1",
+          "description": "Complete the appropriate checklist(s)."
+        },
+        {
+          "code": "PA.IV.N.S2",
+          "description": "Make radio calls as appropriate."
+        },
+        {
+          "code": "PA.IV.N.S3",
+          "description": "Make a timely decision to go-around/reject the landing."
+        },
+        {
+          "code": "PA.IV.N.S4",
+          "description": "Apply takeoff power immediately and transition to a pitch attitude for VX or VY, as appropriate."
+        },
+        {
+          "code": "PA.IV.N.S5",
+          "description": "Retract flaps, if extended, as appropriate."
+        },
+        {
+          "code": "PA.IV.N.S6",
+          "description": "Retract landing gear, if applicable, after a positive rate of climb is established."
+        },
+        {
+          "code": "PA.IV.N.S7",
+          "description": "Maneuver to the side of the runway/landing area, as necessary, to clear and avoid conflicting traffic."
+        },
+        {
+          "code": "PA.IV.N.S8",
+          "description": "Maintain VX or VY, +10/-5 knots, as appropriate."
+        },
+        {
+          "code": "PA.IV.N.S9",
+          "description": "Maintain directional control and proper wind-drift correction throughout the maneuver."
+        },
+        {
+          "code": "PA.IV.N.S10",
+          "description": "Climb to an appropriate altitude and re-enter the traffic pattern, as applicable."
+        }
+      ]
+    }
+  ]
+  },
+  {
+  "area_of_operation": "V. Performance Maneuvers and Ground Reference Maneuvers",
+  "tasks": [
+    {
+      "task": "A. Steep Turns",
+      "references": [
+        "FAA-H-8083-2",
+        "FAA-H-8083-3",
+        "POH/AFM"
+      ],
+      "objective": "To determine the applicant exhibits satisfactory knowledge, risk management, and skills associated with steep turns.",
+      "notes": [],
+      "knowledge": [
+        {
+          "code": "PA.V.A.K1",
+          "description": "Purpose of steep turns."
+        },
+        {
+          "code": "PA.V.A.K2",
+          "description": "Aerodynamics associated with steep turns, including:"
+        },
+        {
+          "code": "PA.V.A.K2a",
+          "description": "a. Coordinated and uncoordinated flight"
+        },
+        {
+          "code": "PA.V.A.K2b",
+          "description": "b. Overbanking tendencies"
+        },
+        {
+          "code": "PA.V.A.K2c",
+          "description": "c. Maneuvering speed and how it relates to load factor"
+        },
+        {
+          "code": "PA.V.A.K2d",
+          "description": "d. Rate and radius of turn"
+        },
+        {
+          "code": "PA.V.A.K2e",
+          "description": "e. Effect of turns on stall speed"
+        }
+      ],
+      "risk_management": [
+        {
+          "code": "PA.V.A.R1",
+          "description": "Uncoordinated flight."
+        },
+        {
+          "code": "PA.V.A.R2",
+          "description": "Improper planning or exceeding airplane limitations."
+        },
+        {
+          "code": "PA.V.A.R3",
+          "description": "Collision hazards."
+        },
+        {
+          "code": "PA.V.A.R4",
+          "description": "Low altitude maneuvering including stall, spin, or CFIT."
+        },
+        {
+          "code": "PA.V.A.R5",
+          "description": "Distractions, task prioritization, loss of situational awareness, or disorientation."
+        }
+      ],
+      "skills": [
+        {
+          "code": "PA.V.A.S1",
+          "description": "Clear the area."
+        },
+        {
+          "code": "PA.V.A.S2",
+          "description": "Establish the recommended entry airspeed."
+        },
+        {
+          "code": "PA.V.A.S3",
+          "description": "Select an appropriate altitude that allows the task to be completed no lower than 1,500 feet AGL (ASEL, ASES) or 3,000 feet AGL (AMEL, AMES)."
+        },
+        {
+          "code": "PA.V.A.S4",
+          "description": "Establish and maintain a 45° bank (ASEL, ASES) or a bank angle between 50° and 60°, as specified by the evaluator (AMEL, AMES), ±5°, during the turn."
+        },
+        {
+          "code": "PA.V.A.S5",
+          "description": "Apply control inputs in a smooth and coordinated manner."
+        },
+        {
+          "code": "PA.V.A.S6",
+          "description": "Maintain altitude, ±100 feet."
+        },
+        {
+          "code": "PA.V.A.S7",
+          "description": "Maintain entry airspeed, ±10 knots."
+        },
+        {
+          "code": "PA.V.A.S8",
+          "description": "Roll out on the entry heading, ±10°."
+        },
+        {
+          "code": "PA.V.A.S9",
+          "description": "Perform the task in opposite direction."
+        }
+      ]
+    },
+    {
+      "task": "B. Ground Reference Maneuvers",
+      "references": [
+        "FAA-H-8083-2",
+        "FAA-H-8083-3"
+      ],
+      "objective": "To determine the applicant exhibits satisfactory knowledge, risk management, and skills associated with ground reference maneuvering.",
+      "notes": [
+        "Note: The evaluator must select at least one maneuver for the applicant to demonstrate."
+      ],
+      "knowledge": [
+        {
+          "code": "PA.V.B.K1",
+          "description": "Purpose of ground reference maneuvers."
+        },
+        {
+          "code": "PA.V.B.K2",
+          "description": "Effects of wind on ground track and relation to turns around a point, rectangular course, and S-turns."
+        },
+        {
+          "code": "PA.V.B.K3",
+          "description": "Aerodynamics associated with ground reference maneuvers."
+        }
+      ],
+      "risk_management": [
+        {
+          "code": "PA.V.B.R1",
+          "description": "Improper planning or exceeding airplane limitations."
+        },
+        {
+          "code": "PA.V.B.R2",
+          "description": "Collision hazards."
+        },
+        {
+          "code": "PA.V.B.R3",
+          "description": "Low altitude maneuvering including stall, spin, or CFIT."
+        },
+        {
+          "code": "PA.V.B.R4",
+          "description": "Distractions, task prioritization, loss of situational awareness, or disorientation."
+        },
+        {
+          "code": "PA.V.B.R5",
+          "description": "Emergency landing considerations."
+        }
+      ],
+      "skills": [
+        {
+          "code": "PA.V.B.S1",
+          "description": "Clear the area."
+        },
+        {
+          "code": "PA.V.B.S2",
+          "description": "Select a suitable ground-based reference and emergency landing area."
+        },
+        {
+          "code": "PA.V.B.S3",
+          "description": "Plan the maneuver and establish the recommended entry airspeed."
+        },
+        {
+          "code": "PA.V.B.S4",
+          "description": "Establish and maintain an altitude between 600 and 1,000 feet AGL, ±100 feet."
+        },
+        {
+          "code": "PA.V.B.S5",
+          "description": "Apply control inputs in a smooth and coordinated manner."
+        },
+        {
+          "code": "PA.V.B.S6",
+          "description": "Adjust bank angle as necessary to maintain a constant radius around a point or follow a prescribed ground track while correcting for the effects of wind."
+        },
+        {
+          "code": "PA.V.B.S7",
+          "description": "Maintain entry airspeed, ±10 knots."
+        },
+        {
+          "code": "PA.V.B.S8",
+          "description": "Divide attention between airplane control, traffic avoidance, and the ground track."
+        }
+      ]
+    },
+    {
+      "task": "C. Accelerated Stalls",
+      "references": [
+        "FAA-H-8083-2",
+        "FAA-H-8083-3",
+        "POH/AFM"
+      ],
+      "objective": "To determine the applicant exhibits satisfactory knowledge, risk management, and skills associated with accelerated stalls.",
+      "notes": [],
+      "knowledge": [
+        {
+          "code": "PA.V.C.K1",
+          "description": "Aerodynamics associated with accelerated stalls."
+        },
+        {
+          "code": "PA.V.C.K2",
+          "description": "Factors and situations that can lead to an accelerated stall."
+        },
+        {
+          "code": "PA.V.C.K3",
+          "description": "Hazards of accelerated stalls."
+        }
+      ],
+      "risk_management": [
+        {
+          "code": "PA.V.C.R1",
+          "description": "Improper planning or exceeding airplane limitations."
+        },
+        {
+          "code": "PA.V.C.R2",
+          "description": "Collision hazards."
+        },
+        {
+          "code": "PA.V.C.R3",
+          "description": "Low altitude maneuvering including stall, spin, or CFIT."
+        },
+        {
+          "code": "PA.V.C.R4",
+          "description": "Distractions, task prioritization, loss of situational awareness, or disorientation."
+        },
+        {
+          "code": "PA.V.C.R5",
+          "description": "Improper recovery procedure."
+        }
+      ],
+      "skills": [
+        {
+          "code": "PA.V.C.S1",
+          "description": "Clear the area."
+        },
+        {
+          "code": "PA.V.C.S2",
+          "description": "Select an entry altitude that allows the task to be completed no lower than 3,000 feet AGL."
+        },
+        {
+          "code": "PA.V.C.S3",
+          "description": "Establish the recommended entry configuration and airspeed."
+        },
+        {
+          "code": "PA.V.C.S4",
+          "description": "Maintain coordinated flight during the maneuver."
+        },
+        {
+          "code": "PA.V.C.S5",
+          "description": "Establish a bank angle between 15° and 30°, as specified by the evaluator."
+        },
+        {
+          "code": "PA.V.C.S6",
+          "description": "Apply smooth and coordinated control inputs to maintain the specified bank angle and induce an accelerated stall."
+        },
+        {
+          "code": "PA.V.C.S7",
+          "description": "Recognize the impending stall and then the actual stall."
+        },
+        {
+          "code": "PA.V.C.S8",
+          "description": "Recover promptly at the onset of a stall by simultaneously reducing the angle of attack, applying maximum allowable power, leveling the wings, and returning to the desired flight path."
+        }
+      ]
+    },
+    {
+      "task": "D. Secondary Stalls",
+      "references": [
+        "FAA-H-8083-2",
+        "FAA-H-8083-3",
+        "POH/AFM"
+      ],
+      "objective": "To determine the applicant exhibits satisfactory knowledge, risk management, and skills associated with secondary stalls.",
+      "notes": [],
+      "knowledge": [
+        {
+          "code": "PA.V.D.K1",
+          "description": "Aerodynamics associated with secondary stalls."
+        },
+        {
+          "code": "PA.V.D.K2",
+          "description": "Factors and situations that can lead to a secondary stall."
+        },
+        {
+          "code": "PA.V.D.K3",
+          "description": "Hazards of secondary stalls."
+        }
+      ],
+      "risk_management": [
+        {
+          "code": "PA.V.D.R1",
+          "description": "Improper planning or exceeding airplane limitations."
+        },
+        {
+          "code": "PA.V.D.R2",
+          "description": "Collision hazards."
+        },
+        {
+          "code": "PA.V.D.R3",
+          "description": "Low altitude maneuvering including stall, spin, or CFIT."
+        },
+        {
+          "code": "PA.V.D.R4",
+          "description": "Distractions, task prioritization, loss of situational awareness, or disorientation."
+        },
+        {
+          "code": "PA.V.D.R5",
+          "description": "Improper recovery procedure."
+        }
+      ],
+      "skills": [
+        {
+          "code": "PA.V.D.S1",
+          "description": "Clear the area."
+        },
+        {
+          "code": "PA.V.D.S2",
+          "description": "Select an entry altitude that allows the task to be completed no lower than 3,000 feet AGL."
+        },
+        {
+          "code": "PA.V.D.S3",
+          "description": "Establish the recommended entry configuration and airspeed."
+        },
+        {
+          "code": "PA.V.D.S4",
+          "description": "Transition smoothly from the approach or landing attitude to a pitch attitude that induces a stall."
+        },
+        {
+          "code": "PA.V.D.S5",
+          "description": "Maintain coordinated flight and induce a full stall."
+        },
+        {
+          "code": "PA.V.D.S6",
+          "description": "Recover by reducing the angle of attack, applying maximum allowable power, and leveling the wings."
+        },
+        {
+          "code": "PA.V.D.S7",
+          "description": "During recovery, increase pitch to induce a secondary stall."
+        },
+        {
+          "code": "PA.V.D.S8",
+          "description": "Recover promptly at the onset of the secondary stall by reducing the angle of attack, applying maximum allowable power, leveling the wings, and returning to the desired flight path."
+        }
+      ]
+    },
+    {
+      "task": "E. Elevator Trim Stalls",
+      "references": [
+        "FAA-H-8083-2",
+        "FAA-H-8083-3",
+        "POH/AFM"
+      ],
+      "objective": "To determine the applicant exhibits satisfactory knowledge, risk management, and skills associated with elevator trim stalls.",
+      "notes": [],
+      "knowledge": [
+        {
+          "code": "PA.V.E.K1",
+          "description": "Aerodynamics associated with elevator trim stalls."
+        },
+        {
+          "code": "PA.V.E.K2",
+          "description": "Factors and situations that can lead to an elevator trim stall."
+        },
+        {
+          "code": "PA.V.E.K3",
+          "description": "Hazards of elevator trim stalls."
+        }
+      ],
+      "risk_management": [
+        {
+          "code": "PA.V.E.R1",
+          "description": "Improper planning or exceeding airplane limitations."
+        },
+        {
+          "code": "PA.V.E.R2",
+          "description": "Collision hazards."
+        },
+        {
+          "code": "PA.V.E.R3",
+          "description": "Low altitude maneuvering including stall, spin, or CFIT."
+        },
+        {
+          "code": "PA.V.E.R4",
+          "description": "Distractions, task prioritization, loss of situational awareness, or disorientation."
+        },
+        {
+          "code": "PA.V.E.R5",
+          "description": "Improper recovery procedure."
+        }
+      ],
+      "skills": [
+        {
+          "code": "PA.V.E.S1",
+          "description": "Clear the area."
+        },
+        {
+          "code": "PA.V.E.S2",
+          "description": "Select an entry altitude that allows the task to be completed no lower than 3,000 feet AGL."
+        },
+        {
+          "code": "PA.V.E.S3",
+          "description": "Establish the recommended takeoff or departure configuration and airspeed."
+        },
+        {
+          "code": "PA.V.E.S4",
+          "description": "Set full nose-up trim while maintaining coordinated flight."
+        },
+        {
+          "code": "PA.V.E.S5",
+          "description": "Apply smooth and coordinated control inputs to induce a full stall."
+        },
+        {
+          "code": "PA.V.E.S6",
+          "description": "Recover promptly at the onset of a stall by reducing the angle of attack, applying maximum allowable power, leveling the wings, and returning to the desired flight path."
+        }
+      ]
+    }
+  ]
+  },
+ {
+  "area_of_operation": "VI. Navigation",
+  "tasks": [
+    {
+      "task": "A. Pilotage and Dead Reckoning",
+      "references": [
+        "14 CFR part 91",
+        "FAA-H-8083-2",
+        "FAA-H-8083-3",
+        "FAA-H-8083-25",
+        "Navigation Charts"
+      ],
+      "objective": "To determine the applicant exhibits satisfactory knowledge, risk management, and skills associated with pilotage and dead reckoning.",
+      "notes": [],
+      "knowledge": [
+        {
+          "code": "PA.VI.A.K1",
+          "description": "Pilotage."
+        },
+        {
+          "code": "PA.VI.A.K2",
+          "description": "Dead reckoning."
+        },
+        {
+          "code": "PA.VI.A.K3",
+          "description": "Navigation log and charts."
+        },
+        {
+          "code": "PA.VI.A.K4",
+          "description": "Effects of wind on ground track."
+        },
+        {
+          "code": "PA.VI.A.K5",
+          "description": "Methods to determine position."
+        }
+      ],
+      "risk_management": [
+        {
+          "code": "PA.VI.A.R1",
+          "description": "Collision hazards."
+        },
+        {
+          "code": "PA.VI.A.R2",
+          "description": "Distractions, task prioritization, loss of situational awareness, or disorientation."
+        },
+        {
+          "code": "PA.VI.A.R3",
+          "description": "Wind and weather hazards."
+        },
+        {
+          "code": "PA.VI.A.R4",
+          "description": "Fuel planning."
+        }
+      ],
+      "skills": [
+        {
+          "code": "PA.VI.A.S1",
+          "description": "Prepare and use a navigation log with pertinent flight information."
+        },
+        {
+          "code": "PA.VI.A.S2",
+          "description": "Establish a climb to an appropriate altitude after departure."
+        },
+        {
+          "code": "PA.VI.A.S3",
+          "description": "Intercept and track a course to a checkpoint or destination using pilotage and dead reckoning with wind correction applied."
+        },
+        {
+          "code": "PA.VI.A.S4",
+          "description": "Correlate visual references with charted symbols, objects, or checkpoints."
+        },
+        {
+          "code": "PA.VI.A.S5",
+          "description": "Maintain the appropriate altitude, ±200 feet, and heading, ±15°."
+        },
+        {
+          "code": "PA.VI.A.S6",
+          "description": "Verify the airplane's position within 3 nautical miles of the flight-planned route."
+        },
+        {
+          "code": "PA.VI.A.S7",
+          "description": "Determine arrival at checkpoints within 5 minutes of the estimated time of arrival (ETA) or determine an ETA that is within 5 minutes of the actual arrival time."
+        }
+      ]
+    },
+    {
+      "task": "B. Navigation Systems and Radar Services",
+      "references": [
+        "14 CFR part 91",
+        "AIM",
+        "FAA-H-8083-2",
+        "FAA-H-8083-3",
+        "FAA-H-8083-6",
+        "FAA-H-8083-15",
+        "FAA-H-8083-25"
+      ],
+      "objective": "To determine the applicant exhibits satisfactory knowledge, risk management, and skills associated with navigation systems and radar services.",
+      "notes": [],
+      "knowledge": [
+        {
+          "code": "PA.VI.B.K1",
+          "description": "Ground-based navigation (orientation, course determination, equipment, checks, tests, and limitations)."
+        },
+        {
+          "code": "PA.VI.B.K2",
+          "description": "Satellite-based navigation (orientation, course determination, equipment, checks, tests, and limitations)."
+        },
+        {
+          "code": "PA.VI.B.K3",
+          "description": "Radar assistance to VFR aircraft (e.g., operations, equipment, available services, procedures, limitations, and emergency procedures associated with lost communication)."
+        },
+        {
+          "code": "PA.VI.B.K4",
+          "description": "Transponder (operations and limitations)."
+        }
+      ],
+      "risk_management": [
+        {
+          "code": "PA.VI.B.R1",
+          "description": "Use and limitations of navigation systems."
+        },
+        {
+          "code": "PA.VI.B.R2",
+          "description": "Improper navigation planning."
+        },
+        {
+          "code": "PA.VI.B.R3",
+          "description": "Limitations of ATC services."
+        },
+        {
+          "code": "PA.VI.B.R4",
+          "description": "Distractions, task prioritization, loss of situational awareness, or disorientation."
+        }
+      ],
+      "skills": [
+        {
+          "code": "PA.VI.B.S1",
+          "description": "Use an airborne electronic navigation system."
+        },
+        {
+          "code": "PA.VI.B.S2",
+          "description": "Determine the airplane's position using a navigation system."
+        },
+        {
+          "code": "PA.VI.B.S3",
+          "description": "Intercept and track a given course or radial."
+        },
+        {
+          "code": "PA.VI.B.S4",
+          "description": "Recognize and describe the indication of station or waypoint passage."
+        },
+        {
+          "code": "PA.VI.B.S5",
+          "description": "Recognize signal loss and take appropriate action."
+        },
+        {
+          "code": "PA.VI.B.S6",
+          "description": "Use proper communication procedures when utilizing radar services."
+        },
+        {
+          "code": "PA.VI.B.S7",
+          "description": "Maintain the appropriate altitude, ±200 feet, and heading, ±15°."
+        }
+      ]
+    },
+    {
+      "task": "C. Diversion",
+      "references": [
+        "14 CFR part 91",
+        "AIM",
+        "FAA-H-8083-2",
+        "FAA-H-8083-25",
+        "Navigation Charts"
+      ],
+      "objective": "To determine the applicant exhibits satisfactory knowledge, risk management, and skills associated with diversion.",
+      "notes": [],
+      "knowledge": [
+        {
+          "code": "PA.VI.C.K1",
+          "description": "Selecting an alternate destination."
+        },
+        {
+          "code": "PA.VI.C.K2",
+          "description": "Factors to consider when diverting (e.g., distance, weather, services available, pilot needs)."
+        },
+        {
+          "code": "PA.VI.C.K3",
+          "description": "Methods to determine a new course to an alternate."
+        }
+      ],
+      "risk_management": [
+        {
+          "code": "PA.VI.C.R1",
+          "description": "Collision hazards."
+        },
+        {
+          "code": "PA.VI.C.R2",
+          "description": "Improper navigation planning."
+        },
+        {
+          "code": "PA.VI.C.R3",
+          "description": "Distractions, task prioritization, loss of situational awareness, or disorientation."
+        },
+        {
+          "code": "PA.VI.C.R4",
+          "description": "Fuel planning."
+        },
+        {
+          "code": "PA.VI.C.R5",
+          "description": "Weather hazards."
+        }
+      ],
+      "skills": [
+        {
+          "code": "PA.VI.C.S1",
+          "description": "Select a suitable destination and route for diversion."
+        },
+        {
+          "code": "PA.VI.C.S2",
+          "description": "Make a reasonable estimate of heading, groundspeed, arrival time, and fuel consumption to the divert airport."
+        },
+        {
+          "code": "PA.VI.C.S3",
+          "description": "Promptly initiate diversion toward the selected destination while maintaining the appropriate altitude, ±200 feet, and heading, ±15°."
+        },
+        {
+          "code": "PA.VI.C.S4",
+          "description": "Update/replan the flight using available and appropriate resources."
+        }
+      ]
+    },
+    {
+      "task": "D. Lost Procedures",
+      "references": [
+        "14 CFR part 91",
+        "AIM",
+        "FAA-H-8083-2",
+        "FAA-H-8083-25"
+      ],
+      "objective": "To determine the applicant exhibits satisfactory knowledge, risk management, and skills associated with lost procedures.",
+      "notes": [],
+      "knowledge": [
+        {
+          "code": "PA.VI.D.K1",
+          "description": "Methods to determine position."
+        },
+        {
+          "code": "PA.VI.D.K2",
+          "description": "Pilot actions when lost."
+        },
+        {
+          "code": "PA.VI.D.K3",
+          "description": "Assistance available if lost (e.g., radar services, communication procedures, navigation aids)."
+        }
+      ],
+      "risk_management": [
+        {
+          "code": "PA.VI.D.R1",
+          "description": "Collision hazards."
+        },
+        {
+          "code": "PA.VI.D.R2",
+          "description": "Distractions, task prioritization, loss of situational awareness, or disorientation."
+        },
+        {
+          "code": "PA.VI.D.R3",
+          "description": "Fuel planning."
+        },
+        {
+          "code": "PA.VI.D.R4",
+          "description": "Weather hazards."
+        }
+      ],
+      "skills": [
+        {
+          "code": "PA.VI.D.S1",
+          "description": "Recognize when the airplane's position is uncertain or lost."
+        },
+        {
+          "code": "PA.VI.D.S2",
+          "description": "Take appropriate action to determine the airplane's position."
+        },
+        {
+          "code": "PA.VI.D.S3",
+          "description": "Use available resources to assist in determining the airplane's position and proceed to a known position or airport."
+        },
+        {
+          "code": "PA.VI.D.S4",
+          "description": "Maintain the appropriate altitude, ±200 feet, and heading, ±15°."
+        }
+      ]
+    }
+  ]
+{
+  "area_of_operation": "VII. Slow Flight and Stalls",
+  "tasks": [
+    {
+      "task": "A. Maneuvering During Slow Flight",
+      "references": [
+        "FAA-H-8083-2",
+        "FAA-H-8083-3",
+        "POH/AFM"
+      ],
+      "objective": "To determine the applicant exhibits satisfactory knowledge, risk management, and skills associated with maneuvering during slow flight in various configurations and scenarios.",
+      "notes": [],
+      "knowledge": [
+        {
+          "code": "PA.VII.A.K1",
+          "description": "Aerodynamics associated with slow flight in various airplane configurations, including:"
+        },
+        {
+          "code": "PA.VII.A.K1a",
+          "description": "a. Relationship between airspeed and angle of attack"
+        },
+        {
+          "code": "PA.VII.A.K1b",
+          "description": "b. Airplane performance characteristics"
+        },
+        {
+          "code": "PA.VII.A.K1c",
+          "description": "c. Angle of attack indicators"
+        }
+      ],
+      "risk_management": [
+        {
+          "code": "PA.VII.A.R1",
+          "description": "Uncoordinated flight."
+        },
+        {
+          "code": "PA.VII.A.R2",
+          "description": "Improper planning or exceeding airplane limitations."
+        },
+        {
+          "code": "PA.VII.A.R3",
+          "description": "Collision hazards."
+        },
+        {
+          "code": "PA.VII.A.R4",
+          "description": "Low altitude maneuvering including stall, spin, or CFIT."
+        },
+        {
+          "code": "PA.VII.A.R5",
+          "description": "Distractions, task prioritization, loss of situational awareness, or disorientation."
+        }
+      ],
+      "skills": [
+        {
+          "code": "PA.VII.A.S1",
+          "description": "Clear the area."
+        },
+        {
+          "code": "PA.VII.A.S2",
+          "description": "Select an entry altitude that allows the task to be completed no lower than 1,500 feet AGL (ASEL, ASES) or 3,000 feet AGL (AMEL, AMES)."
+        },
+        {
+          "code": "PA.VII.A.S3",
+          "description": "Establish and maintain an airspeed at which any further increase in angle of attack, increase in load factor, or reduction in power would result in a stall warning (e.g., airplane buffet, stall horn, etc.) in configurations specified by the evaluator."
+        },
+        {
+          "code": "PA.VII.A.S4",
+          "description": "Accomplish coordinated straight-and-level flight, turns, climbs, and descents with landing gear and flap configurations specified by the evaluator."
+        },
+        {
+          "code": "PA.VII.A.S5",
+          "description": "Maintain the specified altitude, ±100 feet; specified heading, ±10°; and specified bank angle, ±10°."
+        },
+        {
+          "code": "PA.VII.A.S6",
+          "description": "Apply smooth and coordinated control inputs throughout the maneuver."
+        }
+      ]
+    },
+    {
+      "task": "B. Power-Off Stalls",
+      "references": [
+        "FAA-H-8083-2",
+        "FAA-H-8083-3",
+        "POH/AFM"
+      ],
+      "objective": "To determine the applicant exhibits satisfactory knowledge, risk management, and skills associated with power-off stalls.",
+      "notes": [],
+      "knowledge": [
+        {
+          "code": "PA.VII.B.K1",
+          "description": "Aerodynamics associated with power-off stalls in various airplane configurations, including:"
+        },
+        {
+          "code": "PA.VII.B.K1a",
+          "description": "a. Relationship between airspeed and angle of attack"
+        },
+        {
+          "code": "PA.VII.B.K1b",
+          "description": "b. Airplane performance characteristics"
+        },
+        {
+          "code": "PA.VII.B.K1c",
+          "description": "c. Angle of attack indicators"
+        },
+        {
+          "code": "PA.VII.B.K2",
+          "description": "Factors and situations that can lead to a power-off stall and actions that can be taken to prevent it."
+        },
+        {
+          "code": "PA.VII.B.K3",
+          "description": "Effects of airplane configuration on stall characteristics."
+        }
+      ],
+      "risk_management": [
+        {
+          "code": "PA.VII.B.R1",
+          "description": "Uncoordinated flight."
+        },
+        {
+          "code": "PA.VII.B.R2",
+          "description": "Improper planning or exceeding airplane limitations."
+        },
+        {
+          "code": "PA.VII.B.R3",
+          "description": "Collision hazards."
+        },
+        {
+          "code": "PA.VII.B.R4",
+          "description": "Low altitude maneuvering including stall, spin, or CFIT."
+        },
+        {
+          "code": "PA.VII.B.R5",
+          "description": "Distractions, task prioritization, loss of situational awareness, or disorientation."
+        },
+        {
+          "code": "PA.VII.B.R6",
+          "description": "Improper recovery procedure."
+        }
+      ],
+      "skills": [
+        {
+          "code": "PA.VII.B.S1",
+          "description": "Clear the area."
+        },
+        {
+          "code": "PA.VII.B.S2",
+          "description": "Select an entry altitude that allows the task to be completed no lower than 1,500 feet AGL (ASEL, ASES) or 3,000 feet AGL (AMEL, AMES)."
+        },
+        {
+          "code": "PA.VII.B.S3",
+          "description": "Establish the recommended approach or landing configuration as specified by the evaluator."
+        },
+        {
+          "code": "PA.VII.B.S4",
+          "description": "Transition smoothly from the approach or landing attitude to a pitch attitude that induces a stall."
+        },
+        {
+          "code": "PA.VII.B.S5",
+          "description": "Maintain a specified heading, ±10°, if in straight flight; or a bank angle of 15° to 30°, ±10°, if in turning flight, as specified by the evaluator."
+        },
+        {
+          "code": "PA.VII.B.S6",
+          "description": "Apply smooth and coordinated control inputs to induce a full stall."
+        },
+        {
+          "code": "PA.VII.B.S7",
+          "description": "Recover promptly at the onset of a stall by simultaneously reducing the angle of attack, applying maximum allowable power, and leveling the wings to return to a straight-and-level flight attitude with a minimum loss of altitude."
+        }
+      ]
+    },
+    {
+      "task": "C. Power-On Stalls",
+      "references": [
+        "FAA-H-8083-2",
+        "FAA-H-8083-3",
+        "POH/AFM"
+      ],
+      "objective": "To determine the applicant exhibits satisfactory knowledge, risk management, and skills associated with power-on stalls.",
+      "notes": [],
+      "knowledge": [
+        {
+          "code": "PA.VII.C.K1",
+          "description": "Aerodynamics associated with power-on stalls in various airplane configurations, including:"
+        },
+        {
+          "code": "PA.VII.C.K1a",
+          "description": "a. Relationship between airspeed and angle of attack"
+        },
+        {
+          "code": "PA.VII.C.K1b",
+          "description": "b. Airplane performance characteristics"
+        },
+        {
+          "code": "PA.VII.C.K1c",
+          "description": "c. Angle of attack indicators"
+        },
+        {
+          "code": "PA.VII.C.K2",
+          "description": "Factors and situations that can lead to a power-on stall and actions that can be taken to prevent it."
+        },
+        {
+          "code": "PA.VII.C.K3",
+          "description": "Effects of airplane configuration on stall characteristics."
+        }
+      ],
+      "risk_management": [
+        {
+          "code": "PA.VII.C.R1",
+          "description": "Uncoordinated flight."
+        },
+        {
+          "code": "PA.VII.C.R2",
+          "description": "Improper planning or exceeding airplane limitations."
+        },
+        {
+          "code": "PA.VII.C.R3",
+          "description": "Collision hazards."
+        },
+        {
+          "code": "PA.VII.C.R4",
+          "description": "Low altitude maneuvering including stall, spin, or CFIT."
+        },
+        {
+          "code": "PA.VII.C.R5",
+          "description": "Distractions, task prioritization, loss of situational awareness, or disorientation."
+        },
+        {
+          "code": "PA.VII.C.R6",
+          "description": "Improper recovery procedure."
+        }
+      ],
+      "skills": [
+        {
+          "code": "PA.VII.C.S1",
+          "description": "Clear the area."
+        },
+        {
+          "code": "PA.VII.C.S2",
+          "description": "Select an entry altitude that allows the task to be completed no lower than 1,500 feet AGL (ASEL, ASES) or 3,000 feet AGL (AMEL, AMES)."
+        },
+        {
+          "code": "PA.VII.C.S3",
+          "description": "Establish the recommended takeoff or departure configuration as specified by the evaluator."
+        },
+        {
+          "code": "PA.VII.C.S4",
+          "description": "Set power to no less than 65 percent available power or as specified by the evaluator."
+        },
+        {
+          "code": "PA.VII.C.S5",
+          "description": "Transition smoothly from the takeoff or departure attitude to a pitch attitude that induces a stall."
+        },
+        {
+          "code": "PA.VII.C.S6",
+          "description": "Maintain a specified heading, ±10°, if in straight flight; or a bank angle of 15° to 30°, ±10°, if in turning flight, as specified by the evaluator."
+        },
+        {
+          "code": "PA.VII.C.S7",
+          "description": "Apply smooth and coordinated control inputs to induce a full stall."
+        },
+        {
+          "code": "PA.VII.C.S8",
+          "description": "Recover promptly at the onset of a stall by simultaneously reducing the angle of attack, applying maximum allowable power, and leveling the wings to return to a straight-and-level flight attitude with a minimum loss of altitude."
+        }
+      ]
+    }
+  ]
+  },
+ {
+  "area_of_operation": "VIII. Basic Instrument Maneuvers",
+  "tasks": [
+    {
+      "task": "A. Straight-and-Level Flight",
+      "references": [
+        "FAA-H-8083-2",
+        "FAA-H-8083-3",
+        "FAA-H-8083-15",
+        "POH/AFM"
+      ],
+      "objective": "To determine the applicant exhibits satisfactory knowledge, risk management, and skills associated with maintaining straight-and-level flight solely by reference to instruments.",
+      "notes": [],
+      "knowledge": [
+        {
+          "code": "PA.VIII.A.K1",
+          "description": "Flight instruments used to maintain straight-and-level flight, including:"
+        },
+        {
+          "code": "PA.VIII.A.K1a",
+          "description": "a. Instrument(s) used for pitch control"
+        },
+        {
+          "code": "PA.VIII.A.K1b",
+          "description": "b. Instrument(s) used for bank control"
+        },
+        {
+          "code": "PA.VIII.A.K1c",
+          "description": "c. Instrument(s) used for power control"
+        },
+        {
+          "code": "PA.VIII.A.K2",
+          "description": "Proper instrument interpretation and associated control inputs necessary to maintain or return to straight-and-level flight."
+        }
+      ],
+      "risk_management": [
+        {
+          "code": "PA.VIII.A.R1",
+          "description": "Fixation, omission, or improper instrument interpretation."
+        },
+        {
+          "code": "PA.VIII.A.R2",
+          "description": "Improper control applications."
+        },
+        {
+          "code": "PA.VIII.A.R3",
+          "description": "Distractions, task prioritization, loss of situational awareness, or disorientation."
+        }
+      ],
+      "skills": [
+        {
+          "code": "PA.VIII.A.S1",
+          "description": "Maintain straight-and-level flight using proper instrument interpretation and coordinated control application."
+        },
+        {
+          "code": "PA.VIII.A.S2",
+          "description": "Maintain altitude, ±200 feet; heading, ±20°; and airspeed, ±10 knots."
+        }
+      ]
+    },
+    {
+      "task": "B. Constant Airspeed Climbs",
+      "references": [
+        "FAA-H-8083-2",
+        "FAA-H-8083-3",
+        "FAA-H-8083-15",
+        "POH/AFM"
+      ],
+      "objective": "To determine the applicant exhibits satisfactory knowledge, risk management, and skills associated with a constant airspeed climb solely by reference to instruments.",
+      "notes": [],
+      "knowledge": [
+        {
+          "code": "PA.VIII.B.K1",
+          "description": "Flight instruments used to maintain a constant airspeed climb, including:"
+        },
+        {
+          "code": "PA.VIII.B.K1a",
+          "description": "a. Instrument(s) used for pitch control"
+        },
+        {
+          "code": "PA.VIII.B.K1b",
+          "description": "b. Instrument(s) used for bank control"
+        },
+        {
+          "code": "PA.VIII.B.K1c",
+          "description": "c. Instrument(s) used for power control"
+        },
+        {
+          "code": "PA.VIII.B.K2",
+          "description": "Proper instrument interpretation and associated control inputs necessary to establish a constant airspeed climb."
+        }
+      ],
+      "risk_management": [
+        {
+          "code": "PA.VIII.B.R1",
+          "description": "Fixation, omission, or improper instrument interpretation."
+        },
+        {
+          "code": "PA.VIII.B.R2",
+          "description": "Improper control applications."
+        },
+        {
+          "code": "PA.VIII.B.R3",
+          "description": "Distractions, task prioritization, loss of situational awareness, or disorientation."
+        }
+      ],
+      "skills": [
+        {
+          "code": "PA.VIII.B.S1",
+          "description": "Transition to the climb pitch attitude and power setting using proper instrument interpretation and coordinated control application."
+        },
+        {
+          "code": "PA.VIII.B.S2",
+          "description": "Maintain climb airspeed, ±10 knots; wings level, ±10°; and heading, ±20°."
+        }
+      ]
+    },
+    {
+      "task": "C. Constant Airspeed Descents",
+      "references": [
+        "FAA-H-8083-2",
+        "FAA-H-8083-3",
+        "FAA-H-8083-15",
+        "POH/AFM"
+      ],
+      "objective": "To determine the applicant exhibits satisfactory knowledge, risk management, and skills associated with a constant airspeed descent solely by reference to instruments.",
+      "notes": [],
+      "knowledge": [
+        {
+          "code": "PA.VIII.C.K1",
+          "description": "Flight instruments used to maintain a constant airspeed descent, including:"
+        },
+        {
+          "code": "PA.VIII.C.K1a",
+          "description": "a. Instrument(s) used for pitch control"
+        },
+        {
+          "code": "PA.VIII.C.K1b",
+          "description": "b. Instrument(s) used for bank control"
+        },
+        {
+          "code": "PA.VIII.C.K1c",
+          "description": "c. Instrument(s) used for power control"
+        },
+        {
+          "code": "PA.VIII.C.K2",
+          "description": "Proper instrument interpretation and associated control inputs necessary to establish a constant airspeed descent."
+        }
+      ],
+      "risk_management": [
+        {
+          "code": "PA.VIII.C.R1",
+          "description": "Fixation, omission, or improper instrument interpretation."
+        },
+        {
+          "code": "PA.VIII.C.R2",
+          "description": "Improper control applications."
+        },
+        {
+          "code": "PA.VIII.C.R3",
+          "description": "Distractions, task prioritization, loss of situational awareness, or disorientation."
+        }
+      ],
+      "skills": [
+        {
+          "code": "PA.VIII.C.S1",
+          "description": "Transition to the descent pitch attitude and power setting using proper instrument interpretation and coordinated control application."
+        },
+        {
+          "code": "PA.VIII.C.S2",
+          "description": "Maintain descent airspeed, ±10 knots; wings level, ±10°; and heading, ±20°."
+        }
+      ]
+    },
+    {
+      "task": "D. Turns to Headings",
+      "references": [
+        "FAA-H-8083-2",
+        "FAA-H-8083-3",
+        "FAA-H-8083-15",
+        "POH/AFM"
+      ],
+      "objective": "To determine the applicant exhibits satisfactory knowledge, risk management, and skills associated with performing turns to headings solely by reference to instruments.",
+      "notes": [],
+      "knowledge": [
+        {
+          "code": "PA.VIII.D.K1",
+          "description": "Flight instruments used to execute turns to headings, including:"
+        },
+        {
+          "code": "PA.VIII.D.K1a",
+          "description": "a. Instrument(s) used for pitch control"
+        },
+        {
+          "code": "PA.VIII.D.K1b",
+          "description": "b. Instrument(s) used for bank control"
+        },
+        {
+          "code": "PA.VIII.D.K1c",
+          "description": "c. Instrument(s) used for power control"
+        },
+        {
+          "code": "PA.VIII.D.K2",
+          "description": "Proper instrument interpretation and associated control inputs necessary to establish turns to headings."
+        }
+      ],
+      "risk_management": [
+        {
+          "code": "PA.VIII.D.R1",
+          "description": "Fixation, omission, or improper instrument interpretation."
+        },
+        {
+          "code": "PA.VIII.D.R2",
+          "description": "Improper control applications."
+        },
+        {
+          "code": "PA.VIII.D.R3",
+          "description": "Distractions, task prioritization, loss of situational awareness, or disorientation."
+        }
+      ],
+      "skills": [
+        {
+          "code": "PA.VIII.D.S1",
+          "description": "Perform a level turn to a specified heading using proper instrument interpretation and coordinated control application."
+        },
+        {
+          "code": "PA.VIII.D.S2",
+          "description": "Maintain altitude, ±200 feet; airspeed, ±10 knots; bank angle, ±10° during the turn; and roll out on the specified heading, ±10°."
+        }
+      ]
+    },
+    {
+      "task": "E. Recovery from Unusual Flight Attitudes",
+      "references": [
+        "FAA-H-8083-2",
+        "FAA-H-8083-3",
+        "FAA-H-8083-15",
+        "POH/AFM"
+      ],
+      "objective": "To determine the applicant exhibits satisfactory knowledge, risk management, and skills associated with recovering from unusual flight attitudes solely by reference to instruments.",
+      "notes": [],
+      "knowledge": [
+        {
+          "code": "PA.VIII.E.K1",
+          "description": "Flight instruments used to recover from unusual flight attitudes, including:"
+        },
+        {
+          "code": "PA.VIII.E.K1a",
+          "description": "a. Instrument(s) used for pitch control"
+        },
+        {
+          "code": "PA.VIII.E.K1b",
+          "description": "b. Instrument(s) used for bank control"
+        },
+        {
+          "code": "PA.VIII.E.K1c",
+          "description": "c. Instrument(s) used for power control"
+        },
+        {
+          "code": "PA.VIII.E.K2",
+          "description": "Proper instrument interpretation and associated control inputs necessary to recover from unusual flight attitudes."
+        },
+        {
+          "code": "PA.VIII.E.K3",
+          "description": "Situations that could lead to unusual flight attitudes."
+        }
+      ],
+      "risk_management": [
+        {
+          "code": "PA.VIII.E.R1",
+          "description": "Fixation, omission, or improper instrument interpretation."
+        },
+        {
+          "code": "PA.VIII.E.R2",
+          "description": "Improper control applications."
+        },
+        {
+          "code": "PA.VIII.E.R3",
+          "description": "Distractions, task prioritization, loss of situational awareness, or disorientation."
+        },
+        {
+          "code": "PA.VIII.E.R4",
+          "description": "Exceeding airplane or engine limitations."
+        }
+      ],
+      "skills": [
+        {
+          "code": "PA.VIII.E.S1",
+          "description": "Recognize an unusual flight attitude using proper instrument interpretation."
+        },
+        {
+          "code": "PA.VIII.E.S2",
+          "description": "Recover to a stabilized, straight-and-level flight attitude using proper instrument interpretation and coordinated control application."
+        },
+        {
+          "code": "PA.VIII.E.S3",
+          "description": "Apply power as necessary without exceeding airplane or engine limitations."
+        }
+      ]
+    },
+    {
+      "task": "F. Radio Communications, Navigation Systems/Facilities, and Radar Services",
+      "references": [
+        "14 CFR part 91",
+        "AIM",
+        "FAA-H-8083-2",
+        "FAA-H-8083-3",
+        "FAA-H-8083-6",
+        "FAA-H-8083-15",
+        "FAA-H-8083-25"
+      ],
+      "objective": "To determine the applicant exhibits satisfactory knowledge, risk management, and skills associated with radio communications, navigation systems/facilities, and radar services while operating solely by reference to instruments.",
+      "notes": [],
+      "knowledge": [
+        {
+          "code": "PA.VIII.F.K1",
+          "description": "Operating communications equipment, including:"
+        },
+        {
+          "code": "PA.VIII.F.K1a",
+          "description": "a. When to use and limitations"
+        },
+        {
+          "code": "PA.VIII.F.K1b",
+          "description": "b. Possible malfunctions"
+        },
+        {
+          "code": "PA.VIII.F.K1c",
+          "description": "c. Lost communication procedures"
+        },
+        {
+          "code": "PA.VIII.F.K2",
+          "description": "Operating navigation equipment, including:"
+        },
+        {
+          "code": "PA.VIII.F.K2a",
+          "description": "a. When to use and limitations"
+        },
+        {
+          "code": "PA.VIII.F.K2b",
+          "description": "b. Possible malfunctions"
+        },
+        {
+          "code": "PA.VIII.F.K3",
+          "description": "Radar assistance to VFR aircraft, including:"
+        },
+        {
+          "code": "PA.VIII.F.K3a",
+          "description": "a. When to use and limitations"
+        },
+        {
+          "code": "PA.VIII.F.K3b",
+          "description": "b. Procedures to obtain assistance"
+        }
+      ],
+      "risk_management": [
+        {
+          "code": "PA.VIII.F.R1",
+          "description": "Fixation, omission, or improper instrument interpretation."
+        },
+        {
+          "code": "PA.VIII.F.R2",
+          "description": "Improper communications or navigation procedures."
+        },
+        {
+          "code": "PA.VIII.F.R3",
+          "description": "Distractions, task prioritization, loss of situational awareness, or disorientation."
+        },
+        {
+          "code": "PA.VIII.F.R4",
+          "description": "Limitations of ATC services."
+        }
+      ],
+      "skills": [
+        {
+          "code": "PA.VIII.F.S1",
+          "description": "Maintain airplane control while selecting proper communications frequencies, identifying the appropriate facility, and managing navigation equipment."
+        },
+        {
+          "code": "PA.VIII.F.S2",
+          "description": "Correctly tune, identify, and confirm usability of a navigation aid."
+        },
+        {
+          "code": "PA.VIII.F.S3",
+          "description": "Communicate effectively with ATC or the evaluator using proper phraseology."
+        },
+        {
+          "code": "PA.VIII.F.S4",
+          "description": "Use radar services, as appropriate."
+        }
+      ]
+    }
+  ]
+  },
+ {
+  "area_of_operation": "IX. Emergency Operations",
+  "tasks": [
+    {
+      "task": "A. Emergency Descent",
+      "references": [
+        "FAA-H-8083-2",
+        "FAA-H-8083-3",
+        "POH/AFM"
+      ],
+      "objective": "To determine the applicant exhibits satisfactory knowledge, risk management, and skills associated with an emergency descent.",
+      "notes": [],
+      "knowledge": [
+        {
+          "code": "PA.IX.A.K1",
+          "description": "Situations that require an emergency descent (e.g., depressurization, smoke, fire, engine fire)."
+        },
+        {
+          "code": "PA.IX.A.K2",
+          "description": "Factors to consider during an emergency descent (e.g., altitude, airspeed, terrain, weather, available landing sites)."
+        }
+      ],
+      "risk_management": [
+        {
+          "code": "PA.IX.A.R1",
+          "description": "Collision hazards."
+        },
+        {
+          "code": "PA.IX.A.R2",
+          "description": "Improper airplane configuration."
+        },
+        {
+          "code": "PA.IX.A.R3",
+          "description": "Distractions, task prioritization, loss of situational awareness, or disorientation."
+        },
+        {
+          "code": "PA.IX.A.R4",
+          "description": "Exceeding airplane or engine limitations."
+        }
+      ],
+      "skills": [
+        {
+          "code": "PA.IX.A.S1",
+          "description": "Clear the area."
+        },
+        {
+          "code": "PA.IX.A.S2",
+          "description": "Establish the appropriate airspeed and configure the airplane for an emergency descent in accordance with the POH/AFM."
+        },
+        {
+          "code": "PA.IX.A.S3",
+          "description": "Maintain positive load factors during the descent."
+        },
+        {
+          "code": "PA.IX.A.S4",
+          "description": "Maintain orientation and appropriate airspeed, +10/-0 knots, and level off at a specified altitude, ±100 feet."
+        },
+        {
+          "code": "PA.IX.A.S5",
+          "description": "Complete the appropriate checklist(s)."
+        }
+      ]
+    },
+    {
+      "task": "B. Emergency Approach and Landing (Simulated) (ASEL, ASES)",
+      "references": [
+        "FAA-H-8083-2",
+        "FAA-H-8083-3",
+        "FAA-H-8083-23",
+        "POH/AFM"
+      ],
+      "objective": "To determine the applicant exhibits satisfactory knowledge, risk management, and skills associated with an emergency approach and landing.",
+      "notes": [
+        "Note: This Task simulates an emergency situation, such as an engine or other powerplant malfunction, where the applicant must evaluate the situation and select a suitable landing area."
+      ],
+      "knowledge": [
+        {
+          "code": "PA.IX.B.K1",
+          "description": "Situations that could require an emergency approach and landing."
+        },
+        {
+          "code": "PA.IX.B.K2",
+          "description": "Factors to consider when selecting a landing area (e.g., wind, surface conditions, obstructions, glide distance, available services)."
+        },
+        {
+          "code": "PA.IX.B.K3",
+          "description": "Airplane glide performance."
+        }
+      ],
+      "risk_management": [
+        {
+          "code": "PA.IX.B.R1",
+          "description": "Collision hazards."
+        },
+        {
+          "code": "PA.IX.B.R2",
+          "description": "Improper airplane configuration."
+        },
+        {
+          "code": "PA.IX.B.R3",
+          "description": "Distractions, task prioritization, loss of situational awareness, or disorientation."
+        },
+        {
+          "code": "PA.IX.B.R4",
+          "description": "Low altitude maneuvering including stall, spin, or CFIT."
+        },
+        {
+          "code": "PA.IX.B.R5",
+          "description": "Improper emergency landing area selection."
+        }
+      ],
+      "skills": [
+        {
+          "code": "PA.IX.B.S1",
+          "description": "Establish and maintain the recommended best glide airspeed, ±10 knots."
+        },
+        {
+          "code": "PA.IX.B.S2",
+          "description": "Configure the airplane in accordance with the POH/AFM and existing conditions."
+        },
+        {
+          "code": "PA.IX.B.S3",
+          "description": "Select a suitable landing area considering altitude, wind, terrain, obstructions, glide distance, and available services."
+        },
+        {
+          "code": "PA.IX.B.S4",
+          "description": "Plan and follow an approach path to the selected landing area considering altitude, wind, terrain, and obstructions."
+        },
+        {
+          "code": "PA.IX.B.S5",
+          "description": "Maintain orientation with the selected landing area."
+        },
+        {
+          "code": "PA.IX.B.S6",
+          "description": "Complete the appropriate checklist(s)."
+        }
+      ]
+    },
+    {
+      "task": "C. Systems and Equipment Malfunctions",
+      "references": [
+        "FAA-H-8083-2",
+        "FAA-H-8083-3",
+        "POH/AFM"
+      ],
+      "objective": "To determine the applicant exhibits satisfactory knowledge, risk management, and skills associated with systems and equipment malfunctions.",
+      "notes": [
+        "Note: The evaluator must select at least one system or piece of equipment from K1 for the applicant to demonstrate."
+      ],
+      "knowledge": [
+        {
+          "code": "PA.IX.C.K1",
+          "description": "Causes and indications of malfunctions associated with:"
+        },
+        {
+          "code": "PA.IX.C.K1a",
+          "description": "a. Flight controls"
+        },
+        {
+          "code": "PA.IX.C.K1b",
+          "description": "b. Flaps"
+        },
+        {
+          "code": "PA.IX.C.K1c",
+          "description": "c. Landing gear"
+        },
+        {
+          "code": "PA.IX.C.K1d",
+          "description": "d. Engine(s) and propeller(s)"
+        },
+        {
+          "code": "PA.IX.C.K1e",
+          "description": "e. Fuel, oil, and hydraulic systems"
+        },
+        {
+          "code": "PA.IX.C.K1f",
+          "description": "f. Electrical system"
+        },
+        {
+          "code": "PA.IX.C.K1g",
+          "description": "g. Pitot-static system and associated instruments"
+        },
+        {
+          "code": "PA.IX.C.K1h",
+          "description": "h. Vacuum/pressure system and associated instruments"
+        },
+        {
+          "code": "PA.IX.C.K1i",
+          "description": "i. Avionics"
+        },
+        {
+          "code": "PA.IX.C.K1j",
+          "description": "j. Environmental control systems"
+        },
+        {
+          "code": "PA.IX.C.K1k",
+          "description": "k. Deicing and anti-icing systems"
+        },
+        {
+          "code": "PA.IX.C.K2",
+          "description": "Emergency procedures associated with the malfunctions in K1."
+        }
+      ],
+      "risk_management": [
+        {
+          "code": "PA.IX.C.R1",
+          "description": "Failure to use the appropriate checklist."
+        },
+        {
+          "code": "PA.IX.C.R2",
+          "description": "Improper emergency procedure."
+        },
+        {
+          "code": "PA.IX.C.R3",
+          "description": "Distractions, task prioritization, loss of situational awareness, or disorientation."
+        }
+      ],
+      "skills": [
+        {
+          "code": "PA.IX.C.S1",
+          "description": "Recognize a system or equipment malfunction."
+        },
+        {
+          "code": "PA.IX.C.S2",
+          "description": "Take appropriate action as specified in the POH/AFM or as required by the situation."
+        },
+        {
+          "code": "PA.IX.C.S3",
+          "description": "Complete the appropriate checklist(s)."
+        }
+      ]
+    },
+    {
+      "task": "D. Emergency Equipment and Survival Gear",
+      "references": [
+        "14 CFR part 91",
+        "FAA-H-8083-2",
+        "POH/AFM"
+      ],
+      "objective": "To determine the applicant exhibits satisfactory knowledge, risk management, and skills associated with emergency equipment and survival gear applicable to the airplane and environments the pilot may encounter.",
+      "notes": [],
+      "knowledge": [
+        {
+          "code": "PA.IX.D.K1",
+          "description": "Emergency equipment and survival gear required for the airplane and environment encountered during flight, including:"
+        },
+        {
+          "code": "PA.IX.D.K1a",
+          "description": "a. Location in the airplane"
+        },
+        {
+          "code": "PA.IX.D.K1b",
+          "description": "b. Method of operation or use"
+        },
+        {
+          "code": "PA.IX.D.K1c",
+          "description": "c. When required"
+        },
+        {
+          "code": "PA.IX.D.K1d",
+          "description": "d. Servicing requirements"
+        },
+        {
+          "code": "PA.IX.D.K2",
+          "description": "Survival gear appropriate to overwater, mountain, desert, jungle, extreme temperature environments, or other environments encountered during flight."
+        }
+      ],
+      "risk_management": [
+        {
+          "code": "PA.IX.D.R1",
+          "description": "Failure to plan for emergency equipment or survival gear appropriate to the airplane and environment."
+        },
+        {
+          "code": "PA.IX.D.R2",
+          "description": "Improper emergency equipment or survival gear selection or condition."
+        }
+      ],
+      "skills": [
+        {
+          "code": "PA.IX.D.S1",
+          "description": "Identify the emergency equipment and survival gear installed or carried in the airplane."
+        },
+        {
+          "code": "PA.IX.D.S2",
+          "description": "Describe the purpose and proper use of emergency equipment and survival gear appropriate to the airplane and environment."
+        }
+      ]
+    },
+    {
+      "task": "E. Engine Failure During Takeoff Before VMC (Simulated) (AMEL, AMES)",
+      "references": [
+        "FAA-H-8083-2",
+        "FAA-H-8083-3",
+        "POH/AFM"
+      ],
+      "objective": "To determine the applicant exhibits satisfactory knowledge, risk management, and skills associated with an engine failure during takeoff before minimum control speed (VMC).",
+      "notes": [
+        "Note: See Appendix 6: Safety of Flight."
+      ],
+      "knowledge": [
+        {
+          "code": "PA.IX.E.K1",
+          "description": "Factors affecting VMC."
+        },
+        {
+          "code": "PA.IX.E.K2",
+          "description": "VMC (red line) and VYSE (blue line)."
+        },
+        {
+          "code": "PA.IX.E.K3",
+          "description": "Emergency procedures associated with an engine failure during takeoff before VMC."
+        }
+      ],
+      "risk_management": [
+        {
+          "code": "PA.IX.E.R1",
+          "description": "Failure to plan for an engine failure during takeoff."
+        },
+        {
+          "code": "PA.IX.E.R2",
+          "description": "Improper airplane configuration."
+        },
+        {
+          "code": "PA.IX.E.R3",
+          "description": "Distractions, task prioritization, loss of situational awareness, or disorientation."
+        }
+      ],
+      "skills": [
+        {
+          "code": "PA.IX.E.S1",
+          "description": "Recognize an engine failure."
+        },
+        {
+          "code": "PA.IX.E.S2",
+          "description": "Close the throttle(s) promptly and maintain directional control."
+        },
+        {
+          "code": "PA.IX.E.S3",
+          "description": "Complete the appropriate checklist(s)."
+        }
+      ]
+    },
+    {
+      "task": "F. Engine Failure After Liftoff (Simulated) (AMEL, AMES)",
+      "references": [
+        "FAA-H-8083-2",
+        "FAA-H-8083-3",
+        "POH/AFM"
+      ],
+      "objective": "To determine the applicant exhibits satisfactory knowledge, risk management, and skills associated with an engine failure after liftoff.",
+      "notes": [
+        "Note: See Appendix 6: Safety of Flight."
+      ],
+      "knowledge": [
+        {
+          "code": "PA.IX.F.K1",
+          "description": "Factors affecting VMC."
+        },
+        {
+          "code": "PA.IX.F.K2",
+          "description": "VMC (red line), VYSE (blue line), and safe single-engine speed."
+        },
+        {
+          "code": "PA.IX.F.K3",
+          "description": "Emergency procedures associated with an engine failure after liftoff."
+        },
+        {
+          "code": "PA.IX.F.K4",
+          "description": "Single-engine performance (climb or descent), including the effects of density altitude."
+        }
+      ],
+      "risk_management": [
+        {
+          "code": "PA.IX.F.R1",
+          "description": "Failure to plan for an engine failure after liftoff."
+        },
+        {
+          "code": "PA.IX.F.R2",
+          "description": "Improper airplane configuration."
+        },
+        {
+          "code": "PA.IX.F.R3",
+          "description": "Distractions, task prioritization, loss of situational awareness, or disorientation."
+        },
+        {
+          "code": "PA.IX.F.R4",
+          "description": "Low altitude maneuvering including stall, spin, or CFIT."
+        }
+      ],
+      "skills": [
+        {
+          "code": "PA.IX.F.S1",
+          "description": "Recognize an engine failure and maintain directional control."
+        },
+        {
+          "code": "PA.IX.F.S2",
+          "description": "Establish a pitch attitude to maintain an appropriate airspeed, ±10 knots."
+        },
+        {
+          "code": "PA.IX.F.S3",
+          "description": "Configure the airplane in accordance with the POH/AFM (e.g., landing gear, flaps, propeller, etc.)."
+        },
+        {
+          "code": "PA.IX.F.S4",
+          "description": "Complete the appropriate checklist(s)."
+        }
+      ]
+    }
+  ]
+  },
+ {
+  "area_of_operation": "X. Multiengine Operations",
+  "tasks": [
+    {
+      "task": "A. Maneuvering with One Engine Inoperative (AMEL, AMES)",
+      "references": [
+        "FAA-H-8083-2",
+        "FAA-H-8083-3",
+        "POH/AFM"
+      ],
+      "objective": "To determine the applicant exhibits satisfactory knowledge, risk management, and skills associated with maneuvering with one engine inoperative.",
+      "notes": [
+        "Note: See Appendix 6: Safety of Flight."
+      ],
+      "knowledge": [
+        {
+          "code": "PA.X.A.K1",
+          "description": "Factors affecting VMC."
+        },
+        {
+          "code": "PA.X.A.K2",
+          "description": "VMC (red line), VYSE (blue line), and safe single-engine speed."
+        },
+        {
+          "code": "PA.X.A.K3",
+          "description": "How to identify and secure an inoperative engine."
+        },
+        {
+          "code": "PA.X.A.K4",
+          "description": "Single-engine performance (climb or descent), including the effects of density altitude."
+        }
+      ],
+      "risk_management": [
+        {
+          "code": "PA.X.A.R1",
+          "description": "Improper airplane configuration."
+        },
+        {
+          "code": "PA.X.A.R2",
+          "description": "Distractions, task prioritization, loss of situational awareness, or disorientation."
+        },
+        {
+          "code": "PA.X.A.R3",
+          "description": "Low altitude maneuvering including stall, spin, or CFIT."
+        }
+      ],
+      "skills": [
+        {
+          "code": "PA.X.A.S1",
+          "description": "Recognize an engine failure and maintain directional control."
+        },
+        {
+          "code": "PA.X.A.S2",
+          "description": "Establish a pitch attitude to maintain an appropriate airspeed, ±10 knots."
+        },
+        {
+          "code": "PA.X.A.S3",
+          "description": "Configure the airplane in accordance with the POH/AFM (e.g., landing gear, flaps, propeller, etc.)."
+        },
+        {
+          "code": "PA.X.A.S4",
+          "description": "Establish a bank angle toward the operating engine, as required, to maintain coordinated flight or stabilize performance."
+        },
+        {
+          "code": "PA.X.A.S5",
+          "description": "Perform turns, if required, toward the operating engine."
+        },
+        {
+          "code": "PA.X.A.S6",
+          "description": "Complete the appropriate checklist(s)."
+        }
+      ]
+    },
+    {
+      "task": "B. VMC Demonstration (AMEL, AMES)",
+      "references": [
+        "FAA-H-8083-2",
+        "FAA-H-8083-3",
+        "POH/AFM"
+      ],
+      "objective": "To determine the applicant exhibits satisfactory knowledge, risk management, and skills associated with a VMC demonstration.",
+      "notes": [
+        "Note: See Appendix 6: Safety of Flight."
+      ],
+      "knowledge": [
+        {
+          "code": "PA.X.B.K1",
+          "description": "Factors affecting VMC."
+        },
+        {
+          "code": "PA.X.B.K2",
+          "description": "VMC (red line), VYSE (blue line), and safe single-engine speed."
+        },
+        {
+          "code": "PA.X.B.K3",
+          "description": "Cause of loss of directional control at or below VMC."
+        },
+        {
+          "code": "PA.X.B.K4",
+          "description": "Relationship between VMC and stall speed."
+        }
+      ],
+      "risk_management": [
+        {
+          "code": "PA.X.B.R1",
+          "description": "Improper airplane configuration."
+        },
+        {
+          "code": "PA.X.B.R2",
+          "description": "Distractions, task prioritization, loss of situational awareness, or disorientation."
+        },
+        {
+          "code": "PA.X.B.R3",
+          "description": "Low altitude maneuvering including stall, spin, or CFIT."
+        },
+        {
+          "code": "PA.X.B.R4",
+          "description": "Improper recovery procedure."
+        }
+      ],
+      "skills": [
+        {
+          "code": "PA.X.B.S1",
+          "description": "Configure the airplane in accordance with the POH/AFM for the VMC demonstration."
+        },
+        {
+          "code": "PA.X.B.S2",
+          "description": "Establish a single-engine climb at VYSE, ±10 knots, with the operative engine at maximum allowable power."
+        },
+        {
+          "code": "PA.X.B.S3",
+          "description": "Establish a bank angle toward the operating engine, as required, to maintain coordinated flight or stabilize performance."
+        },
+        {
+          "code": "PA.X.B.S4",
+          "description": "Slowly reduce power on the operative engine or increase pitch until directional control can no longer be maintained (e.g., rudder at full deflection) or a stall warning occurs."
+        },
+        {
+          "code": "PA.X.B.S5",
+          "description": "Recover promptly by simultaneously reducing power on the operative engine, decreasing angle of attack, and leveling the wings to return to VYSE, ±10 knots, in straight flight."
+        },
+        {
+          "code": "PA.X.B.S6",
+          "description": "Advance power smoothly on the operative engine and accelerate to VYSE, ±10 knots."
+        }
+      ]
+    },
+    {
+      "task": "C. Engine Failure During Flight (by Reference to Instruments) (AMEL, AMES)",
+      "references": [
+        "FAA-H-8083-2",
+        "FAA-H-8083-3",
+        "FAA-H-8083-15",
+        "POH/AFM"
+      ],
+      "objective": "To determine the applicant exhibits satisfactory knowledge, risk management, and skills associated with an engine failure during flight by reference to instruments.",
+      "notes": [
+        "Note: See Appendix 6: Safety of Flight."
+      ],
+      "knowledge": [
+        {
+          "code": "PA.X.C.K1",
+          "description": "Factors affecting VMC."
+        },
+        {
+          "code": "PA.X.C.K2",
+          "description": "VMC (red line), VYSE (blue line), and safe single-engine speed."
+        },
+        {
+          "code": "PA.X.C.K3",
+          "description": "How to identify and secure an inoperative engine."
+        },
+        {
+          "code": "PA.X.C.K4",
+          "description": "Single-engine performance (climb or descent), including the effects of density altitude."
+        }
+      ],
+      "risk_management": [
+        {
+          "code": "PA.X.C.R1",
+          "description": "Improper airplane configuration."
+        },
+        {
+          "code": "PA.X.C.R2",
+          "description": "Distractions, task prioritization, loss of situational awareness, or disorientation."
+        },
+        {
+          "code": "PA.X.C.R3",
+          "description": "Low altitude maneuvering including stall, spin, or CFIT."
+        }
+      ],
+      "skills": [
+        {
+          "code": "PA.X.C.S1",
+          "description": "Recognize an engine failure and maintain directional control by reference to instruments."
+        },
+        {
+          "code": "PA.X.C.S2",
+          "description": "Establish a pitch attitude to maintain an appropriate airspeed, ±10 knots, by reference to instruments."
+        },
+        {
+          "code": "PA.X.C.S3",
+          "description": "Configure the airplane in accordance with the POH/AFM (e.g., landing gear, flaps, propeller, etc.)."
+        },
+        {
+          "code": "PA.X.C.S4",
+          "description": "Establish a bank angle toward the operating engine, as required, to maintain coordinated flight or stabilize performance by reference to instruments."
+        },
+        {
+          "code": "PA.X.C.S5",
+          "description": "Perform turns, if required, toward the operating engine by reference to instruments."
+        },
+        {
+          "code": "PA.X.C.S6",
+          "description": "Complete the appropriate checklist(s)."
+        }
+      ]
+    },
+    {
+      "task": "D. Instrument Approach and Landing with an Inoperative Engine (Simulated) (by Reference to Instruments) (AMEL, AMES)",
+      "references": [
+        "FAA-H-8083-2",
+        "FAA-H-8083-3",
+        "FAA-H-8083-15",
+        "POH/AFM"
+      ],
+      "objective": "To determine the applicant exhibits satisfactory knowledge, risk management, and skills associated with an instrument approach and landing with an inoperative engine by reference to instruments.",
+      "notes": [
+        "Note: See Appendix 6: Safety of Flight."
+      ],
+      "knowledge": [
+        {
+          "code": "PA.X.D.K1",
+          "description": "Factors affecting VMC."
+        },
+        {
+          "code": "PA.X.D.K2",
+          "description": "VMC (red line), VYSE (blue line), and safe single-engine speed."
+        },
+        {
+          "code": "PA.X.D.K3",
+          "description": "How to identify and secure an inoperative engine."
+        },
+        {
+          "code": "PA.X.D.K4",
+          "description": "Single-engine performance (climb or descent), including the effects of density altitude."
+        },
+        {
+          "code": "PA.X.D.K5",
+          "description": "Instrument approach procedures with an inoperative engine."
+        }
+      ],
+      "risk_management": [
+        {
+          "code": "PA.X.D.R1",
+          "description": "Improper airplane configuration."
+        },
+        {
+          "code": "PA.X.D.R2",
+          "description": "Distractions, task prioritization, loss of situational awareness, or disorientation."
+        },
+        {
+          "code": "PA.X.D.R3",
+          "description": "Low altitude maneuvering including stall, spin, or CFIT."
+        },
+        {
+          "code": "PA.X.D.R4",
+          "description": "Improper instrument approach procedures."
+        }
+      ],
+      "skills": [
+        {
+          "code": "PA.X.D.S1",
+          "description": "Recognize an engine failure and maintain directional control by reference to instruments."
+        },
+        {
+          "code": "PA.X.D.S2",
+          "description": "Establish a pitch attitude to maintain an appropriate airspeed, ±10 knots, by reference to instruments."
+        },
+        {
+          "code": "PA.X.D.S3",
+          "description": "Configure the airplane in accordance with the POH/AFM (e.g., landing gear, flaps, propeller, etc.)."
+        },
+        {
+          "code": "PA.X.D.S4",
+          "description": "Establish a bank angle toward the operating engine, as required, to maintain coordinated flight or stabilize performance by reference to instruments."
+        },
+        {
+          "code": "PA.X.D.S5",
+          "description": "Follow instrument approach procedures to a simulated landing by reference to instruments."
+        },
+        {
+          "code": "PA.X.D.S6",
+          "description": "Complete the appropriate checklist(s)."
+        }
+      ]
+    }
+  ]
+  },
+ {
+  "area_of_operation": "XI. Night Operations",
+  "tasks": [
+    {
+      "task": "A. Night Preparation",
+      "references": [
+        "14 CFR part 91",
+        "AIM",
+        "FAA-H-8083-2",
+        "FAA-H-8083-3",
+        "FAA-H-8083-25",
+        "POH/AFM"
+      ],
+      "objective": "To determine the applicant exhibits satisfactory knowledge, risk management, and skills associated with night operations.",
+      "notes": [],
+      "knowledge": [
+        {
+          "code": "PA.XI.A.K1",
+          "description": "Physiological conditions and limitations associated with night flying, including:"
+        },
+        {
+          "code": "PA.XI.A.K1a",
+          "description": "a. Night vision"
+        },
+        {
+          "code": "PA.XI.A.K1b",
+          "description": "b. Night illusions"
+        },
+        {
+          "code": "PA.XI.A.K1c",
+          "description": "c. Pilot susceptibility to disorientation"
+        },
+        {
+          "code": "PA.XI.A.K2",
+          "description": "Airplane equipment and lighting requirements for night operations."
+        },
+        {
+          "code": "PA.XI.A.K3",
+          "description": "Airport, runway, taxiway, and pilot-controlled lighting."
+        },
+        {
+          "code": "PA.XI.A.K4",
+          "description": "Personal equipment essential for night flight."
+        },
+        {
+          "code": "PA.XI.A.K5",
+          "description": "Night flight planning considerations."
+        }
+      ],
+      "risk_management": [
+        {
+          "code": "PA.XI.A.R1",
+          "description": "Collision hazards."
+        },
+        {
+          "code": "PA.XI.A.R2",
+          "description": "Distractions, task prioritization, loss of situational awareness, or disorientation."
+        },
+        {
+          "code": "PA.XI.A.R3",
+          "description": "Weather hazards unique to night operations."
+        },
+        {
+          "code": "PA.XI.A.R4",
+          "description": "Improper night flight planning."
+        }
+      ],
+      "skills": [
+        {
+          "code": "PA.XI.A.S1",
+          "description": "Perform a preflight inspection with emphasis on equipment required for night flight."
+        },
+        {
+          "code": "PA.XI.A.S2",
+          "description": "Identify terrain and obstacles during taxi and departure."
+        },
+        {
+          "code": "PA.XI.A.S3",
+          "description": "Conduct takeoffs and landings."
+        },
+        {
+          "code": "PA.XI.A.S4",
+          "description": "Complete the appropriate checklist(s)."
+        }
+      ]
+    }
+  ]
+  },
+  {
+    "area_of_operation": "XII. Postflight Procedures",
+    "tasks": [
+      {
+        "task": "A. After Landing, Parking, and Securing",
+        "references": [
+          "FAA-H-8083-2",
+          "FAA-H-8083-3",
+          "FAA-H-8083-23",
+          "POH/AFM"
+        ],
+        "objective": "To determine the applicant exhibits satisfactory knowledge, risk management, and skills associated with after-landing, parking, and securing procedures.",
+        "notes": [],
+        "knowledge": [
+          {
+            "code": "PA.XII.A.K1",
+            "description": "Airplane shutdown and securing procedures."
+          },
+          {
+            "code": "PA.XII.A.K2",
+            "description": "Airplane postflight inspection procedures."
+          },
+          {
+            "code": "PA.XII.A.K3",
+            "description": "Securing procedures unique to seaplanes (ASES, AMES)."
+          },
+          {
+            "code": "PA.XII.A.K4",
+            "description": "Documents required aboard the airplane following flight."
+          }
+        ],
+        "risk_management": [
+          {
+            "code": "PA.XII.A.R1",
+            "description": "Collision hazards."
+          },
+          {
+            "code": "PA.XII.A.R2",
+            "description": "Improper airplane securing."
+          },
+          {
+            "code": "PA.XII.A.R3",
+            "description": "Distractions, task prioritization, loss of situational awareness, or disorientation."
+          }
+        ],
+        "skills": [
+          {
+            "code": "PA.XII.A.S1",
+            "description": "Use an appropriate checklist to perform the after-landing, parking, and securing procedures."
+          },
+          {
+            "code": "PA.XII.A.S2",
+            "description": "Park in an appropriate area considering airplane security and safety of persons and property on the ground."
+          },
+          {
+            "code": "PA.XII.A.S3",
+            "description": "Conduct a postflight inspection and document airplane discrepancies, as appropriate."
+          },
+          {
+            "code": "PA.XII.A.S4",
+            "description": "Secure the airplane in accordance with the POH/AFM (e.g., install control locks, tie down, install covers, etc.)."
+          }
+        ]
+      }
+    ]
+  }
+]
