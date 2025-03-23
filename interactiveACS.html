@@ -281,7 +281,7 @@
                             taskContent.appendChild(document.createElement('hr'));
                         }
 
-                        // Skills
+                        // Skills (Fixed typo here)
                         if (task.skills && task.skills.length > 0) {
                             const header = document.createElement('h3');
                             header.textContent = 'Skills';
@@ -297,7 +297,7 @@
                                 descDiv.className = 'desc-container';
                                 descDiv.textContent = item.description;
                                 li.appendChild(codeDiv);
-                                li.appendChild(descDescDiv);
+                                li.appendChild(descDiv); // Corrected from descDescDiv to descDiv
 
                                 if (item.sub_elements && item.sub_elements.length > 0) {
                                     const subContainer = document.createElement('div');
