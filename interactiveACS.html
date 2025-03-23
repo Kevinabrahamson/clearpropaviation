@@ -5,15 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Private Pilot Airplane ACS</title>
     <style>
-        /* Color variables using provided palette */
+        /* Color variables with added blue accents */
         :root {
             --background-color: #f9f9f9;  /* Lightest grey for background */
             --text-color: #333333;       /* Darkest grey for text */
-            --header-color: #4c4c4c;     /* Medium dark grey for headers */
+            --header-color: #4c4c4c;     /* Medium dark grey for menu headers */
             --hover-color: #777777;      /* Medium grey for hover */
             --content-bg: #eeeeee;       /* Light grey for content areas */
             --code-bg: #cccccc;          /* Mid-light grey for code background */
             --code-text: #333333;        /* Dark grey for code text */
+            --blue-accent: #1e90ff;      /* Dodger blue for headings */
+            --blue-hover: #4169e1;       /* Royal blue for hover effects */
         }
 
         /* Body styling */
@@ -26,7 +28,7 @@
         }
 
         h1 {
-            color: var(--header-color);
+            color: var(--blue-accent);   /* Blue for main title */
             text-align: center;
             margin-bottom: 20px;
         }
@@ -67,7 +69,7 @@
         }
 
         h3 {
-            color: var(--header-color);
+            color: var(--blue-accent);   /* Blue for section headings */
             margin: 15px 0 5px;
         }
 
@@ -253,7 +255,7 @@
                             taskContent.appendChild(document.createElement('hr'));
                         }
 
-                        // Risk Management
+                        // Risk Management (Fixed sub-elements)
                         if (task.risk_management && task.risk_management.length > 0) {
                             const header = document.createElement('h3');
                             header.textContent = 'Risk Management';
@@ -297,7 +299,7 @@
                             taskContent.appendChild(document.createElement('hr'));
                         }
 
-                        // Skills
+                        // Skills (Fixed sub-elements)
                         if (task.skills && task.skills.length > 0) {
                             const header = document.createElement('h3');
                             header.textContent = 'Skills';
