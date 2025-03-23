@@ -78,13 +78,14 @@
         }
 
         .item {
-            display: flex;
+            display: grid;
+            grid-template-columns: minmax(100px, 1fr) 3fr; /* Responsive code column */
+            gap: 15px;
             margin-bottom: 10px;
-            align-items: flex-start;    /* Align items at the top */
+            align-items: start;
         }
 
         .code-container {
-            width: 120px;
             background-color: var(--code-bg);
             padding: 5px;
             border-radius: 3px;
@@ -92,35 +93,49 @@
         }
 
         .code-item {
-            margin-bottom: 8px;         /* Space between code items */
+            margin-bottom: 8px;
         }
 
         .sub-code {
             margin-left: 20px;
-            margin-bottom: 8px;         /* Match spacing */
+            margin-bottom: 8px;
         }
 
         .desc-container {
-            flex: 1;
-            margin-left: 15px;
             padding: 5px;
             background-color: #ffffff;
             border-radius: 3px;
         }
 
         .desc-item {
-            margin-bottom: 8px;         /* Match code spacing */
+            margin-bottom: 8px;
         }
 
         .sub-desc {
             margin-left: 20px;
-            margin-bottom: 8px;         /* Match code spacing */
+            margin-bottom: 8px;
         }
 
         hr {
             border: 0;
             border-top: 1px solid #cccccc;
             margin: 10px 0;
+        }
+
+        @media (max-width: 600px) {
+            .item {
+                grid-template-columns: 1fr; /* Stack on very narrow screens */
+                gap: 5px;
+            }
+            .code-container {
+                margin-bottom: 5px;
+            }
+            .desc-container {
+                margin-left: 0;
+            }
+            .sub-desc {
+                margin-left: 20px; /* Maintain indentation */
+            }
         }
     </style>
 </head>
