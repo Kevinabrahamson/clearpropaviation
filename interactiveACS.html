@@ -5,13 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Private Pilot Airplane ACS</title>
     <style>
+        /* Define color variables for consistency */
         :root {
-            --background-color: #f0f0f0;
-            --text-color: #333;
-            --header-color: #007bff;
-            --accent-color: #6c757d;
+            --background-color: #f0f0f0;  /* Light grey background */
+            --text-color: #333;           /* Dark grey text */
+            --header-color: #007bff;      /* Blue for headers */
+            --accent-color: #6c757d;      /* Lighter grey for codes */
+            --light-blue: #e9ecef;        /* Light blue for open sections */
         }
 
+        /* General body styling */
         body {
             background-color: var(--background-color);
             color: var(--text-color);
@@ -20,57 +23,89 @@
             line-height: 1.6;
         }
 
+        /* Main title */
         h1 {
             color: var(--header-color);
             text-align: center;
             margin-bottom: 20px;
         }
 
+        /* Styling for expandable sections */
         details {
-            margin-bottom: 10px;
-            padding: 5px;
+            margin-bottom: 15px;
         }
 
         summary {
             cursor: pointer;
             font-weight: bold;
-            color: var(--header-color);
-            padding: 5px;
-            background-color: #fff;
-            border-radius: 3px;
+            color: white;
+            background-color: var(--header-color);
+            padding: 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
         }
 
         summary:hover {
-            background-color: #e9ecef;
+            background-color: #0056b3; /* Darker blue on hover */
         }
 
         details[open] {
-            background-color: #e9ecef;
+            background-color: var(--light-blue);
             border-radius: 5px;
             padding: 10px;
         }
 
+        /* Indent nested details for hierarchy */
+        details details {
+            margin-left: 20px;
+        }
+
+        /* Section headers */
+        h3 {
+            color: var(--header-color);
+            margin-top: 15px;
+            margin-bottom: 5px;
+        }
+
+        /* Paragraphs for text content */
+        p {
+            margin: 5px 0;
+            color: var(--text-color);
+        }
+
+        /* List styling for codes and descriptions */
         ul {
             list-style-type: none;
-            padding-left: 20px;
+            padding-left: 0;
         }
 
         li {
+            display: flex;
             margin-bottom: 5px;
         }
 
-        p {
-            margin: 5px 0;
+        .code {
+            width: 120px;              /* Fixed width for codes */
+            font-weight: bold;
+            color: var(--accent-color); /* Lighter grey for differentiation */
         }
 
-        h4 {
-            color: var(--accent-color);
-            margin-top: 10px;
-            margin-bottom: 5px;
+        .description {
+            flex: 1;                   /* Takes remaining space */
+            color: var(--text-color);
         }
 
+        /* Nested lists for sub-elements */
         ul ul {
-            list-style-type: disc;
+            list-style-type: disc;     /* Bullet points for sub-items */
+            margin-left: 20px;
+        }
+
+        /* Separator lines */
+        hr {
+            border: 0;
+            border-top: 1px solid #ccc;
+            margin: 10px 0;
         }
     </style>
 </head>
@@ -79,121 +114,175 @@
     <div id="menu-container"></div>
 
     <script>
-        // Fetch and process the JSON data
+        // Fetch JSON data and build the menu
         fetch('acs_data.json')
             .then(response => response.json())
             .then(data => {
                 const container = document.getElementById('menu-container');
 
                 data.forEach(area => {
-                    // Create area of operation details element
+                    // Area of Operation section
                     const areaDetails = document.createElement('details');
                     const areaSummary = document.createElement('summary');
                     areaSummary.textContent = area.area_of_operation;
                     areaDetails.appendChild(areaSummary);
 
                     area.tasks.forEach(task => {
-                        // Create task details element
+                        // Task section
                         const taskDetails = document.createElement('details');
                         const taskSummary = document.createElement('summary');
                         taskSummary.textContent = task.task;
                         taskDetails.appendChild(taskSummary);
 
-                        // References
-                        if (task.references && task.references.length > 0) {
-                            const referencesPara = document.createElement('p');
-                            referencesPara.textContent = 'References: ' + task.references.join(', ');
-                            taskDetails.appendChild(referencesPara);
-                        }
-
                         // Objective
                         if (task.objective) {
-                            const objectivePara = document.createElement('p');
-                            objectivePara.textContent = 'Objective: ' + task.objective;
-                            taskDetails.appendChild(objectivePara);
+                            const header = document.createElement('h3');
+                            header.textContent = 'Objective';
+                            taskDetails.appendChild(header);
+                            const para = document.createElement('p');
+                            para.textContent = task.objective;
+                            taskDetails.appendChild(para);
+                            taskDetails.appendChild(document.createElement('hr'));
+                        }
+
+                        // References
+                        if (task.references && task.references.length > 0) {
+                            const header = document.createElement('h3');
+                            header.textContent = 'References';
+                            taskDetails.appendChild(header);
+                            const para = document.createElement('p');
+                            para.textContent = task.references.join(', ');
+                            taskDetails.appendChild(para);
+                            taskDetails.appendChild(document.createElement('hr'));
                         }
 
                         // Notes
                         if (task.notes && task.notes.length > 0) {
-                            const notesHeader = document.createElement('h4');
-                            notesHeader.textContent = 'Notes';
-                            taskDetails.appendChild(notesHeader);
-                            const notesList = document.createElement('ul');
+                            const header = document.createElement('h3');
+                            header.textContent = 'Notes';
+                            taskDetails.appendChild(header);
+                            const list = document.createElement('ul');
                             task.notes.forEach(note => {
-                                const noteItem = document.createElement('li');
-                                noteItem.textContent = note;
-                                notesList.appendChild(noteItem);
+                                const item = document.createElement('li');
+                                item.textContent = note;
+                                list.appendChild(item);
                             });
-                            taskDetails.appendChild(notesList);
+                            taskDetails.appendChild(list);
+                            taskDetails.appendChild(document.createElement('hr'));
                         }
 
                         // Knowledge
                         if (task.knowledge && task.knowledge.length > 0) {
-                            const knowledgeHeader = document.createElement('h4');
-                            knowledgeHeader.textContent = 'Knowledge';
-                            taskDetails.appendChild(knowledgeHeader);
-                            const knowledgeList = document.createElement('ul');
+                            const header = document.createElement('h3');
+                            header.textContent = 'Knowledge';
+                            taskDetails.appendChild(header);
+                            const list = document.createElement('ul');
                             task.knowledge.forEach(item => {
-                                const knowledgeItem = document.createElement('li');
-                                knowledgeItem.textContent = item.code + ': ' + item.description;
+                                const li = document.createElement('li');
+                                const codeSpan = document.createElement('span');
+                                codeSpan.className = 'code';
+                                codeSpan.textContent = item.code + ':';
+                                const descSpan = document.createElement('span');
+                                descSpan.className = 'description';
+                                descSpan.textContent = item.description;
+                                li.appendChild(codeSpan);
+                                li.appendChild(descSpan);
                                 if (item.sub_elements && item.sub_elements.length > 0) {
                                     const subList = document.createElement('ul');
                                     item.sub_elements.forEach(sub => {
-                                        const subItem = document.createElement('li');
-                                        subItem.textContent = sub.code + ': ' + sub.description;
-                                        subList.appendChild(subItem);
+                                        const subLi = document.createElement('li');
+                                        const subCodeSpan = document.createElement('span');
+                                        subCodeSpan.className = 'code';
+                                        subCodeSpan.textContent = sub.code + ':';
+                                        const subDescSpan = document.createElement('span');
+                                        subDescSpan.className = 'description';
+                                        subDescSpan.textContent = sub.description;
+                                        subLi.appendChild(subCodeSpan);
+                                        subLi.appendChild(subDescSpan);
+                                        subList.appendChild(subLi);
                                     });
-                                    knowledgeItem.appendChild(subList);
+                                    li.appendChild(subList);
                                 }
-                                knowledgeList.appendChild(knowledgeItem);
+                                list.appendChild(li);
                             });
-                            taskDetails.appendChild(knowledgeList);
+                            taskDetails.appendChild(list);
+                            taskDetails.appendChild(document.createElement('hr'));
                         }
 
                         // Risk Management
                         if (task.risk_management && task.risk_management.length > 0) {
-                            const riskHeader = document.createElement('h4');
-                            riskHeader.textContent = 'Risk Management';
-                            taskDetails.appendChild(riskHeader);
-                            const riskList = document.createElement('ul');
+                            const header = document.createElement('h3');
+                            header.textContent = 'Risk Management';
+                            taskDetails.appendChild(header);
+                            const list = document.createElement('ul');
                             task.risk_management.forEach(item => {
-                                const riskItem = document.createElement('li');
-                                riskItem.textContent = item.code + ': ' + item.description;
+                                const li = document.createElement('li');
+                                const codeSpan = document.createElement('span');
+                                codeSpan.className = 'code';
+                                codeSpan.textContent = item.code + ':';
+                                const descSpan = document.createElement('span');
+                                descSpan.className = 'description';
+                                descSpan.textContent = item.description;
+                                li.appendChild(codeSpan);
+                                li.appendChild(descSpan);
                                 if (item.sub_elements && item.sub_elements.length > 0) {
                                     const subList = document.createElement('ul');
                                     item.sub_elements.forEach(sub => {
-                                        const subItem = document.createElement('li');
-                                        subItem.textContent = sub.code + ': ' + sub.description;
-                                        subList.appendChild(subItem);
+                                        const subLi = document.createElement('li');
+                                        const subCodeSpan = document.createElement('span');
+                                        subCodeSpan.className = 'code';
+                                        subCodeSpan.textContent = sub.code + ':';
+                                        const subDescSpan = document.createElement('span');
+                                        subDescSpan.className = 'description';
+                                        subDescSpan.textContent = sub.description;
+                                        subLi.appendChild(subCodeSpan);
+                                        subLi.appendChild(subDescSpan);
+                                        subList.appendChild(subLi);
                                     });
-                                    riskItem.appendChild(subList);
+                                    li.appendChild(subList);
                                 }
-                                riskList.appendChild(riskItem);
+                                list.appendChild(li);
                             });
-                            taskDetails.appendChild(riskList);
+                            taskDetails.appendChild(list);
+                            taskDetails.appendChild(document.createElement('hr'));
                         }
 
                         // Skills
                         if (task.skills && task.skills.length > 0) {
-                            const skillsHeader = document.createElement('h4');
-                            skillsHeader.textContent = 'Skills';
-                            taskDetails.appendChild(skillsHeader);
-                            const skillsList = document.createElement('ul');
+                            const header = document.createElement('h3');
+                            header.textContent = 'Skills';
+                            taskDetails.appendChild(header);
+                            const list = document.createElement('ul');
                             task.skills.forEach(item => {
-                                const skillItem = document.createElement('li');
-                                skillItem.textContent = item.code + ': ' + item.description;
+                                const li = document.createElement('li');
+                                const codeSpan = document.createElement('span');
+                                codeSpan.className = 'code';
+                                codeSpan.textContent = item.code + ':';
+                                const descSpan = document.createElement('span');
+                                descSpan.className = 'description';
+                                descSpan.textContent = item.description;
+                                li.appendChild(codeSpan);
+                                li.appendChild(descSpan);
                                 if (item.sub_elements && item.sub_elements.length > 0) {
                                     const subList = document.createElement('ul');
                                     item.sub_elements.forEach(sub => {
-                                        const subItem = document.createElement('li');
-                                        subItem.textContent = sub.code + ': ' + sub.description;
-                                        subList.appendChild(subItem);
+                                        const subLi = document.createElement('li');
+                                        const subCodeSpan = document.createElement('span');
+                                        subCodeSpan.className = 'code';
+                                        subCodeSpan.textContent = sub.code + ':';
+                                        const subDescSpan = document.createElement('span');
+                                        subDescSpan.className = 'description';
+                                        subDescSpan.textContent = sub.description;
+                                        subLi.appendChild(subCodeSpan);
+                                        subLi.appendChild(subDescSpan);
+                                        subList.appendChild(subLi);
                                     });
-                                    skillItem.appendChild(subList);
+                                    li.appendChild(subList);
                                 }
-                                skillsList.appendChild(skillItem);
+                                list.appendChild(li);
                             });
-                            taskDetails.appendChild(skillsList);
+                            taskDetails.appendChild(list);
+                            taskDetails.appendChild(document.createElement('hr'));
                         }
 
                         areaDetails.appendChild(taskDetails);
