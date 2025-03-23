@@ -78,23 +78,17 @@
         }
 
         .item {
+            display: flex;
             margin-bottom: 10px;
         }
 
         .code-container {
+            width: 150px;
             background-color: var(--code-bg);
             padding: 5px;
             border-radius: 3px;
             font-weight: bold;
             color: var(--code-text);
-            width: 150px;
-        }
-
-        .desc-container {
-            background-color: #ffffff;
-            padding: 5px;
-            border-radius: 3px;
-            margin-left: 10px;
         }
 
         .sub-code {
@@ -107,12 +101,21 @@
             width: 130px;
         }
 
-        .sub-desc {
+        .desc-container {
+            flex: 1;
             margin-left: 10px;
+            padding: 5px;
+            background-color: #ffffff;
+            border-radius: 3px;
+        }
+
+        .sub-desc {
+            margin-left: 20px;
             padding: 3px;
         }
 
         .sub-item {
+            display: flex;
             margin-top: 5px;
         }
 
@@ -206,19 +209,26 @@
 
                                 const descDiv = document.createElement('div');
                                 descDiv.className = 'desc-container';
-                                descDiv.textContent = item.description;
+                                const mainDesc = document.createElement('div');
+                                mainDesc.textContent = item.description;
+                                descDiv.appendChild(mainDesc);
 
                                 if (item.sub_elements && item.sub_elements.length > 0) {
                                     item.sub_elements.forEach(sub => {
+                                        const subItem = document.createElement('div');
+                                        subItem.className = 'sub-item';
+                                        
                                         const subCode = document.createElement('div');
                                         subCode.className = 'sub-code';
                                         subCode.textContent = sub.code;
-                                        codeDiv.appendChild(subCode);
-
+                                        
                                         const subDesc = document.createElement('div');
                                         subDesc.className = 'sub-desc';
                                         subDesc.textContent = sub.description;
-                                        descDiv.appendChild(subDesc);
+                                        
+                                        subItem.appendChild(subCode);
+                                        subItem.appendChild(subDesc);
+                                        descDiv.appendChild(subItem);
                                     });
                                 }
 
@@ -246,19 +256,26 @@
 
                                 const descDiv = document.createElement('div');
                                 descDiv.className = 'desc-container';
-                                descDiv.textContent = item.description;
+                                const mainDesc = document.createElement('div');
+                                mainDesc.textContent = item.description;
+                                descDiv.appendChild(mainDesc);
 
                                 if (item.sub_elements && item.sub_elements.length > 0) {
                                     item.sub_elements.forEach(sub => {
+                                        const subItem = document.createElement('div');
+                                        subItem.className = 'sub-item';
+                                        
                                         const subCode = document.createElement('div');
                                         subCode.className = 'sub-code';
                                         subCode.textContent = sub.code;
-                                        codeDiv.appendChild(subCode);
-
+                                        
                                         const subDesc = document.createElement('div');
                                         subDesc.className = 'sub-desc';
                                         subDesc.textContent = sub.description;
-                                        descDiv.appendChild(subDesc);
+                                        
+                                        subItem.appendChild(subCode);
+                                        subItem.appendChild(subDesc);
+                                        descDiv.appendChild(subItem);
                                     });
                                 }
 
@@ -286,19 +303,26 @@
 
                                 const descDiv = document.createElement('div');
                                 descDiv.className = 'desc-container';
-                                descDiv.textContent = item.description;
+                                const mainDesc = document.createElement('div');
+                                mainDesc.textContent = item.description;
+                                descDiv.appendChild(mainDesc);
 
                                 if (item.sub_elements && item.sub_elements.length > 0) {
                                     item.sub_elements.forEach(sub => {
+                                        const subItem = document.createElement('div');
+                                        subItem.className = 'sub-item';
+                                        
                                         const subCode = document.createElement('div');
                                         subCode.className = 'sub-code';
                                         subCode.textContent = sub.code;
-                                        codeDiv.appendChild(subCode);
-
+                                        
                                         const subDesc = document.createElement('div');
                                         subDesc.className = 'sub-desc';
                                         subDesc.textContent = sub.description;
-                                        descDiv.appendChild(subDesc);
+                                        
+                                        subItem.appendChild(subCode);
+                                        subItem.appendChild(subDesc);
+                                        descDiv.appendChild(subItem);
                                     });
                                 }
 
