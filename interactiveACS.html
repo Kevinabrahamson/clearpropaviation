@@ -28,7 +28,20 @@
         h1 {
             color: var(--blue-accent);
             text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .search-container {
+            text-align: center;
             margin-bottom: 20px;
+        }
+
+        #search-input {
+            padding: 8px;
+            width: 300px;
+            border: 1px solid #cccccc;
+            border-radius: 4px;
+            font-size: 16px;
         }
 
         .menu-section {
@@ -117,6 +130,9 @@
 </head>
 <body>
     <h1>Private Pilot Airplane ACS</h1>
+    <div class="search-container">
+        <input type="text" id="search-input" placeholder="Search ACS items...">
+    </div>
     <div id="menu-container"></div>
 
     <script>
@@ -124,242 +140,239 @@
             .then(response => response.json())
             .then(data => {
                 const container = document.getElementById('menu-container');
-                data.forEach(area => {
-                    const areaSection = document.createElement('div');
-                    areaSection.className = 'menu-section';
+                const searchInput = document.getElementById('search-input');
 
-                    const areaHeader = document.createElement('div');
-                    areaHeader.className = 'menu-header';
-                    areaHeader.textContent = area.area_of_operation;
-                    areaSection.appendChild(areaHeader);
+                function collapseAllAreas() {
+                    document.querySelectorAll('.menu-section > .content').forEach(content => {
+                        content.style.display = 'none';
+                    });
+                }
 
-                    const areaContent = document.createElement('div');
-                    areaContent.className = 'content';
+                function expandArea(areaSection) {
+                    const content = areaSection.querySelector('.content');
+                    content.style.display = 'block';
+                }
 
-                    area.tasks.forEach(task => {
-                        const taskSection = document.createElement('div');
-                        taskSection.className = 'menu-section';
+                function renderMenu(searchTerm = '') {
+                    container.innerHTML = ''; // Clear existing content
+                    data.forEach(area => {
+                        const areaSection = document.createElement('div');
+                        areaSection.className = 'menu-section';
 
-                        const taskHeader = document.createElement('div');
-                        taskHeader.className = 'menu-header';
-                        taskHeader.textContent = task.task;
-                        taskSection.appendChild(taskHeader);
+                        const areaHeader = document.createElement('div');
+                        areaHeader.className = 'menu-header';
+                        areaHeader.textContent = area.area_of_operation;
+                        areaSection.appendChild(areaHeader);
 
-                        const taskContent = document.createElement('div');
-                        taskContent.className = 'content';
+                        const areaContent = document.createElement('div');
+                        areaContent.className = 'content';
 
-                        // Objective
-                        if (task.objective) {
-                            const header = document.createElement('h3');
-                            header.textContent = 'Objective';
-                            taskContent.appendChild(header);
-                            const para = document.createElement('p');
-                            para.textContent = task.objective;
-                            taskContent.appendChild(para);
-                            taskContent.appendChild(document.createElement('hr'));
-                        }
+                        area.tasks.forEach(task => {
+                            const taskSection = document.createElement('div');
+                            taskSection.className = 'menu-section';
 
-                        // References
-                        if (task.references && task.references.length > 0) {
-                            const header = document.createElement('h3');
-                            header.textContent = 'References';
-                            taskContent.appendChild(header);
-                            const para = document.createElement('p');
-                            para.textContent = task.references.join(', ');
-                            taskContent.appendChild(para);
-                            taskContent.appendChild(document.createElement('hr'));
-                        }
+                            const taskHeader = document.createElement('div');
+                            taskHeader.className = 'menu-header';
+                            taskHeader.textContent = task.task;
+                            taskSection.appendChild(taskHeader);
 
-                        // Notes
-                        if (task.notes && task.notes.length > 0) {
-                            const header = document.createElement('h3');
-                            header.textContent = 'Notes';
-                            taskContent.appendChild(header);
-                            const list = document.createElement('ul');
-                            task.notes.forEach(note => {
-                                const item = document.createElement('li');
-                                item.textContent = note;
-                                list.appendChild(item);
-                            });
-                            taskContent.appendChild(list);
-                            taskContent.appendChild(document.createElement('hr'));
-                        }
+                            const taskContent = document.createElement('div');
+                            taskContent.className = 'content';
 
-                        // Knowledge
-                        if (task.knowledge && task.knowledge.length > 0) {
-                            const header = document.createElement('h3');
-                            header.textContent = 'Knowledge';
-                            taskContent.appendChild(header);
-                            const list = document.createElement('ul');
-                            task.knowledge.forEach(item => {
-                                const li = document.createElement('li');
-                                li.className = 'item';
+                            if (task.objective) {
+                                const header = document.createElement('h3');
+                                header.textContent = 'Objective';
+                                taskContent.appendChild(header);
+                                const para = document.createElement('p');
+                                para.textContent = task.objective;
+                                taskContent.appendChild(para);
+                                taskContent.appendChild(document.createElement('hr'));
+                            }
 
-                                const containerDiv = document.createElement('div');
-                                containerDiv.className = 'element-container';
+                            if (task.references && task.references.length > 0) {
+                                const header = document.createElement('h3');
+                                header.textContent = 'References';
+                                taskContent.appendChild(header);
+                                const para = document.createElement('p');
+                                para.textContent = task.references.join(', ');
+                                taskContent.appendChild(para);
+                                taskContent.appendChild(document.createElement('hr'));
+                            }
 
-                                const mainDiv = document.createElement('div');
-                                mainDiv.className = 'main-desc';
-                                
-                                const descSpan = document.createElement('span');
-                                descSpan.className = 'description-text';
-                                descSpan.textContent = item.description;
-                                mainDiv.appendChild(descSpan);
+                            if (task.notes && task.notes.length > 0) {
+                                const header = document.createElement('h3');
+                                header.textContent = 'Notes';
+                                taskContent.appendChild(header);
+                                const list = document.createElement('ul');
+                                task.notes.forEach(note => {
+                                    const item = document.createElement('li');
+                                    item.textContent = note;
+                                    list.appendChild(item);
+                                });
+                                taskContent.appendChild(list);
+                                taskContent.appendChild(document.createElement('hr'));
+                            }
 
-                                const codeSpan = document.createElement('span');
-                                codeSpan.className = 'code-text';
-                                codeSpan.textContent = `(${item.code})`;
-                                mainDiv.appendChild(codeSpan);
-
-                                containerDiv.appendChild(mainDiv);
-
-                                if (item.sub_elements && item.sub_elements.length > 0) {
-                                    item.sub_elements.forEach(sub => {
-                                        const subDiv = document.createElement('div');
-                                        subDiv.className = 'sub-desc';
-                                        
-                                        const subDescSpan = document.createElement('span');
-                                        subDescSpan.className = 'description-text';
-                                        subDescSpan.textContent = sub.description;
-                                        subDiv.appendChild(subDescSpan);
-
-                                        const subCodeSpan = document.createElement('span');
-                                        subCodeSpan.className = 'code-text';
-                                        subCodeSpan.textContent = `(${sub.code})`;
-                                        subDiv.appendChild(subCodeSpan);
-                                        
-                                        containerDiv.appendChild(subDiv);
-                                    });
+                            if (task.knowledge && task.knowledge.length > 0) {
+                                const header = document.createElement('h3');
+                                header.textContent = 'Knowledge';
+                                taskContent.appendChild(header);
+                                const list = document.createElement('ul');
+                                task.knowledge.forEach(item => {
+                                    if (matchesSearch(item, searchTerm)) {
+                                        const li = document.createElement('li');
+                                        li.className = 'item';
+                                        li.appendChild(createElementContainer(item));
+                                        list.appendChild(li);
+                                    }
+                                });
+                                if (list.children.length > 0) {
+                                    taskContent.appendChild(list);
+                                    taskContent.appendChild(document.createElement('hr'));
                                 }
+                            }
 
-                                li.appendChild(containerDiv);
-                                list.appendChild(li);
-                            });
-                            taskContent.appendChild(list);
-                            taskContent.appendChild(document.createElement('hr'));
-                        }
-
-                        // Risk Management
-                        if (task.risk_management && task.risk_management.length > 0) {
-                            const header = document.createElement('h3');
-                            header.textContent = 'Risk Management';
-                            taskContent.appendChild(header);
-                            const list = document.createElement('ul');
-                            task.risk_management.forEach(item => {
-                                const li = document.createElement('li');
-                                li.className = 'item';
-
-                                const containerDiv = document.createElement('div');
-                                containerDiv.className = 'element-container';
-
-                                const mainDiv = document.createElement('div');
-                                mainDiv.className = 'main-desc';
-                                
-                                const descSpan = document.createElement('span');
-                                descSpan.className = 'description-text';
-                                descSpan.textContent = item.description;
-                                mainDiv.appendChild(descSpan);
-
-                                const codeSpan = document.createElement('span');
-                                codeSpan.className = 'code-text';
-                                codeSpan.textContent = `(${item.code})`;
-                                mainDiv.appendChild(codeSpan);
-
-                                containerDiv.appendChild(mainDiv);
-
-                                if (item.sub_elements && item.sub_elements.length > 0) {
-                                    item.sub_elements.forEach(sub => {
-                                        const subDiv = document.createElement('div');
-                                        subDiv.className = 'sub-desc';
-                                        
-                                        const subDescSpan = document.createElement('span');
-                                        subDescSpan.className = 'description-text';
-                                        subDescSpan.textContent = sub.description;
-                                        subDiv.appendChild(subDescSpan);
-
-                                        const subCodeSpan = document.createElement('span');
-                                        subCodeSpan.className = 'code-text';
-                                        subCodeSpan.textContent = `(${sub.code})`;
-                                        subDiv.appendChild(subCodeSpan);
-                                        
-                                        containerDiv.appendChild(subDiv);
-                                    });
+                            if (task.risk_management && task.risk_management.length > 0) {
+                                const header = document.createElement('h3');
+                                header.textContent = 'Risk Management';
+                                taskContent.appendChild(header);
+                                const list = document.createElement('ul');
+                                task.risk_management.forEach(item => {
+                                    if (matchesSearch(item, searchTerm)) {
+                                        const li = document.createElement('li');
+                                        li.className = 'item';
+                                        li.appendChild(createElementContainer(item));
+                                        list.appendChild(li);
+                                    }
+                                });
+                                if (list.children.length > 0) {
+                                    taskContent.appendChild(list);
+                                    taskContent.appendChild(document.createElement('hr'));
                                 }
+                            }
 
-                                li.appendChild(containerDiv);
-                                list.appendChild(li);
-                            });
-                            taskContent.appendChild(list);
-                            taskContent.appendChild(document.createElement('hr'));
-                        }
-
-                        // Skills
-                        if (task.skills && task.skills.length > 0) {
-                            const header = document.createElement('h3');
-                            header.textContent = 'Skills';
-                            taskContent.appendChild(header);
-                            const list = document.createElement('ul');
-                            task.skills.forEach(item => {
-                                const li = document.createElement('li');
-                                li.className = 'item';
-
-                                const containerDiv = document.createElement('div');
-                                containerDiv.className = 'element-container';
-
-                                const mainDiv = document.createElement('div');
-                                mainDiv.className = 'main-desc';
-                                
-                                const descSpan = document.createElement('span');
-                                descSpan.className = 'description-text';
-                                descSpan.textContent = item.description;
-                                mainDiv.appendChild(descSpan);
-
-                                const codeSpan = document.createElement('span');
-                                codeSpan.className = 'code-text';
-                                codeSpan.textContent = `(${item.code})`;
-                                mainDiv.appendChild(codeSpan);
-
-                                containerDiv.appendChild(mainDiv);
-
-                                if (item.sub_elements && item.sub_elements.length > 0) {
-                                    item.sub_elements.forEach(sub => {
-                                        const subDiv = document.createElement('div');
-                                        subDiv.className = 'sub-desc';
-                                        
-                                        const subDescSpan = document.createElement('span');
-                                        subDescSpan.className = 'description-text';
-                                        subDescSpan.textContent = sub.description;
-                                        subDiv.appendChild(subDescSpan);
-
-                                        const subCodeSpan = document.createElement('span');
-                                        subCodeSpan.className = 'code-text';
-                                        subCodeSpan.textContent = `(${sub.code})`;
-                                        subDiv.appendChild(subCodeSpan);
-                                        
-                                        containerDiv.appendChild(subDiv);
-                                    });
+                            if (task.skills && task.skills.length > 0) {
+                                const header = document.createElement('h3');
+                                header.textContent = 'Skills';
+                                taskContent.appendChild(header);
+                                const list = document.createElement('ul');
+                                task.skills.forEach(item => {
+                                    if (matchesSearch(item, searchTerm)) {
+                                        const li = document.createElement('li');
+                                        li.className = 'item';
+                                        li.appendChild(createElementContainer(item));
+                                        list.appendChild(li);
+                                    }
+                                });
+                                if (list.children.length > 0) {
+                                    taskContent.appendChild(list);
+                                    taskContent.appendChild(document.createElement('hr'));
                                 }
+                            }
 
-                                li.appendChild(containerDiv);
-                                list.appendChild(li);
-                            });
-                            taskContent.appendChild(list);
-                            taskContent.appendChild(document.createElement('hr'));
-                        }
+                            taskSection.appendChild(taskContent);
+                            areaContent.appendChild(taskSection);
+                        });
 
-                        taskSection.appendChild(taskContent);
-                        areaContent.appendChild(taskSection);
+                        areaSection.appendChild(areaContent);
+                        container.appendChild(areaSection);
                     });
 
-                    areaSection.appendChild(areaContent);
-                    container.appendChild(areaSection);
-                });
-
-                document.querySelectorAll('.menu-header').forEach(header => {
-                    header.addEventListener('click', () => {
-                        const content = header.nextElementSibling;
-                        content.style.display = content.style.display === 'block' ? 'none' : 'block';
+                    // Add click handlers after rendering
+                    document.querySelectorAll('.menu-header').forEach(header => {
+                        header.addEventListener('click', (e) => {
+                            const content = header.nextElementSibling;
+                            const isAreaHeader = header.parentElement.parentElement.id === 'menu-container';
+                            
+                            if (isAreaHeader) {
+                                collapseAllAreas();
+                                if (content.style.display !== 'block') {
+                                    content.style.display = 'block';
+                                }
+                            } else {
+                                content.style.display = content.style.display === 'block' ? 'none' : 'block';
+                            }
+                        });
                     });
+                }
+
+                function createElementContainer(item) {
+                    const containerDiv = document.createElement('div');
+                    containerDiv.className = 'element-container';
+
+                    const mainDiv = document.createElement('div');
+                    mainDiv.className = 'main-desc';
+                    
+                    const descSpan = document.createElement('span');
+                    descSpan.className = 'description-text';
+                    descSpan.textContent = item.description;
+                    mainDiv.appendChild(descSpan);
+
+                    const codeSpan = document.createElement('span');
+                    codeSpan.className = 'code-text';
+                    codeSpan.textContent = `(${item.code})`;
+                    mainDiv.appendChild(codeSpan);
+
+                    containerDiv.appendChild(mainDiv);
+
+                    if (item.sub_elements && item.sub_elements.length > 0) {
+                        item.sub_elements.forEach(sub => {
+                            const subDiv = document.createElement('div');
+                            subDiv.className = 'sub-desc';
+                            
+                            const subDescSpan = document.createElement('span');
+                            subDescSpan.className = 'description-text';
+                            subDescSpan.textContent = sub.description;
+                            subDiv.appendChild(subDescSpan);
+
+                            const subCodeSpan = document.createElement('span');
+                            subCodeSpan.className = 'code-text';
+                            subCodeSpan.textContent = `(${sub.code})`;
+                            subDiv.appendChild(subCodeSpan);
+                            
+                            containerDiv.appendChild(subDiv);
+                        });
+                    }
+
+                    return containerDiv;
+                }
+
+                function matchesSearch(item, searchTerm) {
+                    const term = searchTerm.toLowerCase();
+                    if (item.description.toLowerCase().includes(term) || item.code.toLowerCase().includes(term)) {
+                        return true;
+                    }
+                    if (item.sub_elements) {
+                        return item.sub_elements.some(sub => 
+                            sub.description.toLowerCase().includes(term) || 
+                            sub.code.toLowerCase().includes(term)
+                        );
+                    }
+                    return false;
+                }
+
+                // Initial render
+                renderMenu();
+
+                // Search functionality
+                searchInput.addEventListener('input', (e) => {
+                    const searchTerm = e.target.value;
+                    renderMenu(searchTerm);
+
+                    // Expand relevant sections
+                    if (searchTerm) {
+                        collapseAllAreas();
+                        document.querySelectorAll('.item').forEach(item => {
+                            const container = item.querySelector('.element-container');
+                            const areaSection = item.closest('.menu-section > .menu-section').parentElement.parentElement;
+                            const taskSection = item.closest('.menu-section');
+                            
+                            if (container.textContent.toLowerCase().includes(searchTerm.toLowerCase())) {
+                                expandArea(areaSection);
+                                taskSection.querySelector('.content').style.display = 'block';
+                            }
+                        });
+                    }
                 });
             })
             .catch(error => console.error('Error fetching data:', error));
