@@ -5,15 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Private Pilot Airplane ACS</title>
     <style>
-        /* Color variables */
+        /* Color variables inspired by RuneScape Wiki */
         :root {
-            --background-color: #f0f0f0;
-            --text-color: #333;
-            --header-color: #007bff;
-            --hover-color: #0056b3;
-            --content-bg: #e9ecef;
-            --code-bg: #d3d3d3;       /* Light grey for code background */
-            --code-text: #4a4a4a;     /* Darker grey for code text */
+            --background-color: #2a221a;  /* Dark brown background */
+            --text-color: #e0d8b0;       /* Light beige text */
+            --header-color: #3a6ea5;     /* Muted blue for headers */
+            --hover-color: #4a8ac5;      /* Lighter blue for hover */
+            --content-bg: #3c3226;       /* Dark tan for content areas */
+            --code-bg: #5a4a3a;          /* Medium brown for code background */
+            --code-text: #d8c090;        /* Light tan for code text */
         }
 
         /* Body styling */
@@ -39,7 +39,7 @@
         .menu-header {
             cursor: pointer;
             font-weight: bold;
-            color: white;
+            color: var(--text-color);
             background-color: var(--header-color);
             padding: 10px;
             border-radius: 5px;
@@ -48,7 +48,7 @@
 
         .menu-header:hover {
             background-color: var(--hover-color);
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
         }
 
         /* Content container */
@@ -58,7 +58,7 @@
             padding: 15px;
             margin-top: 5px;
             display: none; /* Hidden by default */
-            transition: height 0.3s ease; /* Smooth height transition */
+            transition: height 0.3s ease;
         }
 
         /* Nested sections */
@@ -100,7 +100,7 @@
             flex: 1;
             margin-left: 10px;
             padding: 5px;
-            background-color: white;
+            background-color: #4a3e2e; /* Slightly lighter tan for descriptions */
             border-radius: 3px;
         }
 
@@ -121,7 +121,7 @@
 
         hr {
             border: 0;
-            border-top: 1px solid #ccc;
+            border-top: 1px solid #5a4a3a; /* Match code background for cohesion */
             margin: 10px 0;
         }
     </style>
