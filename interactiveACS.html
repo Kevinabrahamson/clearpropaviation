@@ -300,7 +300,6 @@
                         container.appendChild(areaSection);
                     });
 
-                    // Add click handlers
                     document.querySelectorAll('.menu-header').forEach(header => {
                         header.addEventListener('click', () => {
                             const content = header.nextElementSibling;
@@ -311,17 +310,16 @@
 
                 function searchAndExpand(term) {
                     const searchTerm = term.toLowerCase();
+                    
+                    // First, process all tasks
                     allSections.forEach(({ areaSection, taskSection, taskContent }) => {
-                        const areaContent = areaSection.querySelector('.content');
                         const taskHeader = taskSection.querySelector('.menu-header');
                         let hasMatch = false;
 
-                        // Check task header
                         if (taskHeader.textContent.toLowerCase().includes(searchTerm)) {
                             hasMatch = true;
                         }
 
-                        // Check all items within the task
                         const items = taskContent.querySelectorAll('.element-container');
                         items.forEach(item => {
                             if (item.textContent.toLowerCase().includes(searchTerm)) {
@@ -329,12 +327,16 @@
                             }
                         });
 
-                        if (hasMatch) {
-                            areaContent.style.display = 'block';
-                            taskContent.style.display = 'block';
-                        } else {
-                            taskContent.style.display = 'none';
-                        }
+                        taskContent.style.display = hasMatch ? 'block' : 'none';
+                    });
+
+                    // Then, check each area and collapse if no tasks are visible
+                    const areaSections = document.querySelectorAll('.menu-section > .menu-header');
+                    areaSections.forEach(areaHeader => {
+                        const areaContent = areaHeader.nextElementSibling;
+                        const visibleTasks = Array.from(areaContent.querySelectorAll('.content'))
+                            .some(taskContent => taskContent.style.display === 'block');
+                        areaContent.style.display = visibleTasks ? 'block' : 'none';
                     });
                 }
 
@@ -347,7 +349,6 @@
                     if (searchTerm) {
                         searchAndExpand(searchTerm);
                     } else {
-                        // Reset to collapsed state when search is cleared
                         document.querySelectorAll('.content').forEach(content => {
                             content.style.display = 'none';
                         });
