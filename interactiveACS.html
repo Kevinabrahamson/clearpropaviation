@@ -94,11 +94,16 @@
             padding: 5px;
             border-radius: 3px;
             color: var(--code-text);
+            line-height: 1.6; /* Match body line-height */
+        }
+
+        .code-item {
+            margin-bottom: 5px; /* Base spacing between code items */
         }
 
         .sub-code {
             margin-left: 20px;
-            margin-top: 5px; /* Space between parent and sub-codes */
+            margin-bottom: 5px; /* Base spacing */
         }
 
         .desc-container {
@@ -107,11 +112,16 @@
             padding: 5px;
             background-color: #ffffff;
             border-radius: 3px;
+            line-height: 1.6; /* Match body line-height */
+        }
+
+        .desc-item {
+            margin-bottom: 5px; /* Match code spacing */
         }
 
         .sub-desc {
             margin-left: 20px;
-            margin-top: 5px; /* Match sub-code spacing */
+            margin-bottom: 5px; /* Match code spacing */
         }
 
         hr {
@@ -154,7 +164,7 @@
                         const taskContent = document.createElement('div');
                         taskContent.className = 'content';
 
-                        // Objective (reverted to original)
+                        // Objective
                         if (task.objective) {
                             const header = document.createElement('h3');
                             header.textContent = 'Objective';
@@ -165,7 +175,7 @@
                             taskContent.appendChild(document.createElement('hr'));
                         }
 
-                        // References (reverted to original)
+                        // References
                         if (task.references && task.references.length > 0) {
                             const header = document.createElement('h3');
                             header.textContent = 'References';
@@ -176,7 +186,7 @@
                             taskContent.appendChild(document.createElement('hr'));
                         }
 
-                        // Notes (reverted to original)
+                        // Notes
                         if (task.notes && task.notes.length > 0) {
                             const header = document.createElement('h3');
                             header.textContent = 'Notes';
@@ -207,12 +217,14 @@
                                 const codeDiv = document.createElement('div');
                                 codeDiv.className = 'code-container';
                                 const mainCode = document.createElement('div');
+                                mainCode.className = 'code-item';
                                 mainCode.textContent = item.code;
                                 codeDiv.appendChild(mainCode);
 
                                 const descDiv = document.createElement('div');
                                 descDiv.className = 'desc-container';
                                 const mainDesc = document.createElement('div');
+                                mainDesc.className = 'desc-item';
                                 mainDesc.textContent = item.description;
                                 descDiv.appendChild(mainDesc);
 
@@ -255,12 +267,14 @@
                                 const codeDiv = document.createElement('div');
                                 codeDiv.className = 'code-container';
                                 const mainCode = document.createElement('div');
+                                mainCode.className = 'code-item';
                                 mainCode.textContent = item.code;
                                 codeDiv.appendChild(mainCode);
 
                                 const descDiv = document.createElement('div');
                                 descDiv.className = 'desc-container';
                                 const mainDesc = document.createElement('div');
+                                mainDesc.className = 'desc-item';
                                 mainDesc.textContent = item.description;
                                 descDiv.appendChild(mainDesc);
 
@@ -303,12 +317,14 @@
                                 const codeDiv = document.createElement('div');
                                 codeDiv.className = 'code-container';
                                 const mainCode = document.createElement('div');
+                                mainCode.className = 'code-item';
                                 mainCode.textContent = item.code;
                                 codeDiv.appendChild(mainCode);
 
                                 const descDiv = document.createElement('div');
                                 descDiv.className = 'desc-container';
                                 const mainDesc = document.createElement('div');
+                                mainDesc.className = 'desc-item';
                                 mainDesc.textContent = item.description;
                                 descDiv.appendChild(mainDesc);
 
@@ -343,12 +359,48 @@
                     container.appendChild(areaSection);
                 });
 
+                // Dynamic alignment adjustment
+                function adjustCodeAlignment() {
+                    document.querySelectorAll('.code-desc-pair').forEach(pair => {
+                        const codeDiv = pair.querySelector('.code-container');
+                        const descDiv = pair.querySelector('.desc-container');
+                        const codeItems = codeDiv.querySelectorAll('.code-item, .sub-code');
+                        const descItems = descDiv.querySelectorAll('.desc-item, .sub-desc');
+
+                        if (codeItems.length === descItems.length) {
+                            const descHeight = descDiv.offsetHeight;
+                            const codeHeight = codeDiv.offsetHeight;
+
+                            if (descHeight > codeHeight) {
+                                // Calculate approximate line height
+                                const lineHeight = parseFloat(getComputedStyle(descDiv).lineHeight);
+                                const descLines = Math.ceil(descHeight / lineHeight);
+                                const codeLines = codeItems.length;
+                                const extraLines = descLines - codeLines;
+
+                                if (extraLines > 0) {
+                                    // Add spacer divs to match wrapped lines
+                                    codeDiv.querySelectorAll('.spacer').forEach(spacer => spacer.remove());
+                                    for (let i = 0; i < extraLines; i++) {
+                                        const spacer = document.createElement('div');
+                                        spacer.className = 'spacer';
+                                        spacer.style.height = `${lineHeight}px`;
+                                        codeDiv.appendChild(spacer);
+                                    }
+                                }
+                            }
+                        }
+                    });
+                }
+
                 document.querySelectorAll('.menu-header').forEach(header => {
                     header.addEventListener('click', () => {
                         const content = header.nextElementSibling;
                         const isExpanding = content.style.display !== 'block';
                         content.style.display = isExpanding ? 'block' : 'none';
-                        if (!isExpanding) {
+                        if (isExpanding) {
+                            setTimeout(adjustCodeAlignment, 0); // Adjust after render
+                        } else {
                             const nestedContents = content.querySelectorAll('.content');
                             nestedContents.forEach(nested => {
                                 nested.style.display = 'none';
@@ -356,6 +408,10 @@
                         }
                     });
                 });
+
+                // Adjust alignment on window resize
+                window.addEventListener('resize', adjustCodeAlignment);
+                setTimeout(adjustCodeAlignment, 0); // Initial adjustment
             })
             .catch(error => console.error('Error fetching data:', error));
     </script>
