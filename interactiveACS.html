@@ -11,8 +11,8 @@
             --header-color: #4c4c4c;
             --hover-color: #777777;
             --content-bg: #eeeeee;
-            --code-bg: #e8e8e8;          /* Lighter grey for less prominence */
-            --code-text: #666666;        /* Softer grey for code text */
+            --code-bg: #e8e8e8;
+            --code-text: #666666;
             --blue-accent: #1e90ff;
             --blue-hover: #4169e1;
         }
@@ -80,35 +80,41 @@
         .item {
             display: flex;
             margin-bottom: 10px;
+            align-items: flex-start;    /* Align items at the top */
         }
 
         .code-container {
-            width: 120px;                /* Reduced width */
+            width: 120px;
             background-color: var(--code-bg);
             padding: 5px;
             border-radius: 3px;
             color: var(--code-text);
-            font-size: 0.9em;           /* Slightly smaller font */
-            font-weight: normal;        /* Remove bold */
+        }
+
+        .code-item {
+            margin-bottom: 8px;         /* Space between code items */
         }
 
         .sub-code {
             margin-left: 20px;
-            padding: 3px;
+            margin-bottom: 8px;         /* Match spacing */
         }
 
         .desc-container {
             flex: 1;
-            margin-left: 15px;          /* Increased margin for separation */
+            margin-left: 15px;
             padding: 5px;
             background-color: #ffffff;
             border-radius: 3px;
-            font-size: 1em;            /* Ensure normal size for emphasis */
+        }
+
+        .desc-item {
+            margin-bottom: 8px;         /* Match code spacing */
         }
 
         .sub-desc {
             margin-left: 20px;
-            padding: 3px;
+            margin-bottom: 8px;         /* Match code spacing */
         }
 
         hr {
@@ -197,11 +203,16 @@
                                 
                                 const codeDiv = document.createElement('div');
                                 codeDiv.className = 'code-container';
-                                codeDiv.textContent = item.code;
+                                
+                                const mainCode = document.createElement('div');
+                                mainCode.className = 'code-item';
+                                mainCode.textContent = item.code;
+                                codeDiv.appendChild(mainCode);
 
                                 const descDiv = document.createElement('div');
                                 descDiv.className = 'desc-container';
                                 const mainDesc = document.createElement('div');
+                                mainDesc.className = 'desc-item';
                                 mainDesc.textContent = item.description;
                                 descDiv.appendChild(mainDesc);
 
@@ -239,11 +250,16 @@
                                 
                                 const codeDiv = document.createElement('div');
                                 codeDiv.className = 'code-container';
-                                codeDiv.textContent = item.code;
+                                
+                                const mainCode = document.createElement('div');
+                                mainCode.className = 'code-item';
+                                mainCode.textContent = item.code;
+                                codeDiv.appendChild(mainCode);
 
                                 const descDiv = document.createElement('div');
                                 descDiv.className = 'desc-container';
                                 const mainDesc = document.createElement('div');
+                                mainDesc.className = 'desc-item';
                                 mainDesc.textContent = item.description;
                                 descDiv.appendChild(mainDesc);
 
@@ -281,11 +297,16 @@
                                 
                                 const codeDiv = document.createElement('div');
                                 codeDiv.className = 'code-container';
-                                codeDiv.textContent = item.code;
+                                
+                                const mainCode = document.createElement('div');
+                                mainCode.className = 'code-item';
+                                mainCode.textContent = item.code;
+                                codeDiv.appendChild(mainCode);
 
                                 const descDiv = document.createElement('div');
                                 descDiv.className = 'desc-container';
                                 const mainDesc = document.createElement('div');
+                                mainDesc.className = 'desc-item';
                                 mainDesc.textContent = item.description;
                                 descDiv.appendChild(mainDesc);
 
