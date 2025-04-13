@@ -3,673 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flight Training Syllabus</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <title>Private Pilot Syllabus Viewer</title>
     <style>
         body {
-            font-family: 'Roboto', sans-serif;
-            margin: 30px;
-            background-color: #f4f7fa;
-            color: #000000; /* Default text color to black */
-            line-height: 1.6;
-            text-align: center;
-            font-size: 15px;
-        }
-        .dropdown-container {
-            margin-bottom: 30px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        #lessonSelect {
-            padding: 10px;
-            font-size: 16px;
-            border-radius: 8px;
-            border: 2px solid #073763;
-            background-color: #fff;
-            width: 350px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            transition: border-color 0.3s ease;
-        }
-        #lessonSelect:hover, #lessonSelect:focus {
-            border-color: #055d4f;
-            outline: none;
-        }
-        .lesson {
-            display: none;
-            background-color: #ffffff;
-            padding: 20px; /* Ensure padding on all sides */
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            margin-bottom: 20px;
-            width: 100%;
-            max-width: calc(100vw - 60px);
-            box-sizing: border-box;
-            text-align: left;
-            overflow-wrap: break-word; /* Prevent text from spilling */
-            word-wrap: break-word; /* Legacy support */
-            overflow-x: hidden; /* Prevent horizontal overflow */
-        }
-        .lesson.active {
-            display: block;
-        }
-        h1 {
-            font-size: 28px;
-            color: #2c3e50; /* Keep heading color */
-            margin-bottom: 30px;
-            font-weight: 700;
-        }
-        h2 {
-            font-size: 22px;
-            color: #073763; /* Keep heading color */
-            margin-top: 0;
-            margin-bottom: 5px;
-            font-weight: 600;
-        }
-        .lesson-subtext {
-            font-size: 15px;
-            color: #000000; /* Black instead of #555 */
-            margin-bottom: 15px;
-        }
-        .section-title {
-            font-weight: 600;
-            font-size: 18px;
-            color: #073763; /* Keep heading color */
-            margin-top: 20px;
-            margin-bottom: 10px;
-            border-bottom: 2px solid #073763;
-            padding-bottom: 5px;
-        }
-        .task-list {
-            list-style: none;
-            padding-left: 0;
             margin: 0;
-            width: 100%;
-        }
-        .objective-list {
-            list-style-type: disc !important;
-            padding-left: 33px;
-            margin: 0;
-            width: 100%;
-        }
-        .objective-list li {
-            list-style-type: disc !important;
-            margin: 8px 0;
-        }
-        .subtask-list {
-            list-style-type: disc;
-            padding-left: 33px;
-            margin-top: 4px;
-        }
-        .task-list li, .subtask-list li {
-            margin: 8px 0;
-            display: block;
-        }
-        .task-row {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
             display: flex;
+            flex-direction: column;
             align-items: center;
+            height: 100vh;
+            overflow: hidden;
         }
-        .subtask-list li {
-            display: list-item;
-            align-items: flex-start;
-            margin: 4px 0;
-        }
-        .task-list input[type="checkbox"] {
-            margin-right: 15px;
-            appearance: none;
-            border: 2px solid #073763;
-            border-radius: 4px;
-            cursor: pointer;
-            position: relative;
-            flex-shrink: 0;
-            width: 18px;
-            height: 18px;
-            font-size: 14px;
-        }
-        .task-list input[type="checkbox"]:checked {
-            background-color: #073763;
-            border-color: #073763;
-        }
-        .task-list input[type="checkbox"]:checked::after {
-            content: '\2713';
-            color: #fff;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
-        .task-item {
-            display: flex;
-            width: 100%;
-            align-items: baseline;
-        }
-        .task-name, .objective-text, .subtask-text {
-            flex-shrink: 0;
-            padding-right: 15px;
-            color: #000000; /* Black instead of #2c3e50 */
-            word-break: break-word;
-            white-space: normal;
-            max-width: 100%;
-            font-size: 15px;
-        }
-        .subtask-text {
-            padding-right: 0;
-        }
-        .dots {
-            flex-grow: 1;
-            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="6" height="10"><circle cx="3" cy="8" r="1" fill="%23000000"/></svg>') repeat-x bottom;
-            background-size: 6px 10px;
-            min-width: 10px;
-            height: 15px;
-        }
-        .task-action {
-            flex-shrink: 0;
-            text-align: right;
-            padding-left: 15px;
-            color: #000000; /* Black instead of #2c3e50 */
-            font-weight: 400;
-            word-break: break-word;
-            white-space: normal;
-            max-width: 100%;
-            font-size: 15px;
-        }
-        p {
-            font-size: 15px;
-            color: #000000; /* Ensure paragraphs are black */
-        }
-        .emergency-container {
-            margin: 20px 0;
-            padding: 15px;
-            border: 1px solid #000;
-            background: #f9f9f9;
-            overflow-wrap: break-word; /* Prevent text spill */
-            word-wrap: break-word;
-            overflow-x: hidden;
-        }
-        .emergency-container h3 {
-            margin: 0 0 15px 0;
-            padding: 5px 10px;
-            color: #ff0000; /* Keep heading color */
-            background: #ffcccc;
-            width: 100%;
-            box-sizing: border-box;
-            display: block;
-        }
-        .emergency-container #emergencyTitle {
-            color: #073763; /* Keep specific color for consistency */
-            margin-left: 10px;
-            font-size: 1.17em;
-            font-weight: bold;
-        }
-        .emergency-container button {
-            display: block;
-            margin-top: 10px;
-            margin-left: 10px;
-            padding: 5px 10px;
-            background: #073763;
+        header {
+            background-color: #333;
             color: white;
+            width: 100%;
+            padding: 20px;
+            text-align: center;
+        }
+        .pdf-container {
+            width: 80%;
+            height: 80vh;
+            position: relative;
+            margin-top: 20px;
+        }
+        iframe {
+            width: 100%;
+            height: 100%;
             border: none;
-            border-radius: 3px;
-            cursor: pointer;
-            transition: background 0.2s ease;
         }
-        .emergency-container button:hover {
-            background: #05294d;
-        }
-        #emergencyChecklist {
-            margin-top: 10px;
-            color: #000000; /* Black instead of #073763 */
-        }
-        #emergencyChecklist ol {
-            margin: 0;
-            padding-left: 25px;
-            display: none;
-        }
-        /* Responsive fix for smaller screens */
-        @media (max-width: 600px) {
-            .lesson, .emergency-container {
-                padding: 15px; /* Slightly reduce padding on small screens */
-                max-width: 100%; /* Full width on small screens */
-                margin-left: 0;
-                margin-right: 0;
-            }
-            #lessonSelect {
-                width: 100%; /* Full width dropdown on small screens */
-                max-width: 300px;
-            }
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: transparent;
+            pointer-events: auto;
+            z-index: 10;
         }
     </style>
 </head>
 <body>
-    <h1>Private Pilot Airplane Single-Engine Land Flight Training Syllabus</h1>
-    <div class="dropdown-container">
-        <select id="lessonSelect"></select>
+    <header>
+        <h1>Private Pilot Syllabus</h1>
+        <p>View the Part 61 Private Pilot Training Syllabus</p>
+    </header>
+    <div class="pdf-container">
+        <!-- Replace 'Private_Pilot_Syllabus_Mar25.pdf' with the actual path to your PDF -->
+        <iframe src="Private_Pilot_Syllabus_Mar25.pdf#toolbar=0&navpanes=0&scrollbar=0" title="Private Pilot Syllabus"></iframe>
+        <div class="overlay"></div>
     </div>
-    <div id="lessonContainer"></div>
 
     <script>
-        const lessons = [
-            {
-                id: "ground1",
-                title: "Ground Lesson 1: Preflight and Postflight Procedures",
-                sections: [
-                    {
-                        title: "Tasks",
-                        type: "task",
-                        items: [
-                            { name: "Preflight Procedures" },
-                            { name: "Operation of Systems", action: "Discuss" },
-                            { name: "Aircraft familiarization", action: "Discuss" },
-                            { name: "Cockpit familiarization", action: "Discuss" },
-                            { name: "Airplane Flight Manual (AFM) familiarization", action: "Discuss" },
-                            { name: "Location of Emergency Equipment", action: "Discuss" },
-                            { name: "Preflight Assessment (Lesson 4.A)", action: "Discuss" },
-                            { name: "Airplane Servicing", action: "Discuss" },
-                            { name: "Flight Deck Management (Lesson 4.B)", action: "Discuss" },
-                            { name: "Engine Starting (Lesson 4.C)", action: "Discuss" },
-                            { name: "Before-Takeoff Check (Lesson 4.E)", action: "Discuss" },
-                            { name: "Postflight Procedures" },
-                            { name: "After Landing, Parking, and Securing (Lesson 14.A)", action: "Discuss" }
-                        ]
-                    }
-                ]
-            },
-            {
-                id: "flight1",
-                title: "Flight Lesson 1: Fundamentals of Flight",
-                subtext: "Ground (0.5)     Dual (1.5) – Local flight to the practice area and back.",
-                sections: [
-                    {
-                        title: "Objectives",
-                        type: "objective",
-                        intro: "After this lesson, the student will be able to:",
-                        items: [
-                            { name: "Describe the purpose of and procedures for each fundamental maneuver." },
-                            { name: "Operate the flight controls without tenseness or excessive grip pressures." },
-                            { name: "Transition smoothly between the four basic maneuvers." },
-                            { name: "Apply appropriate flight control and trim techniques." },
-                            { name: "Utilize visual references effectively." }
-                        ]
-                    },
-                    {
-                        title: "Pre-flight Discussion",
-                        type: "task",
-                        items: [
-                            { name: "Basic Flight Maneuvers (Lesson 7.A)", action: "Discuss" },
-                            { name: "Positive Exchange of Flight Controls", action: "Discuss" },
-                            { name: "Use of Checklists", action: "Discuss" },
-                            { name: "Flight Overview", action: "Discuss", subtasks: ["Airport Procedures, Practice Area, Flight Plan, Maneuvers"] },
-                            { name: "Expectations and Responsibilities", action: "Discuss" }
-                        ]
-                    },
-                    {
-                        title: "Pre-flight Preparation",
-                        type: "task",
-                        items: [
-                            { name: "Weather Briefing, NOTAMs, TFRs, etc.", action: "CFI" },
-                            { name: "Performance Data", action: "CFI" },
-                            { name: "Weight and Balance", action: "CFI" },
-                            { name: "Pilot Qualifications", action: "CFI" },
-                            { name: "Airworthiness Requirements", action: "CFI" },
-                            { name: "Flight Risk Analysis Tool", action: "Discuss" }
-                        ]
-                    },
-                    {
-                        title: "Pre-flight Procedures",
-                        type: "task",
-                        items: [
-                            { name: "Self-assessment", action: "Discuss" },
-                            { name: "Airplane Servicing", action: "Directed performance" },
-                            { name: "Pre-flight Inspection", action: "Directed performance" },
-                            { name: "Passenger Briefing", action: "Demo" },
-                            { name: "Flight Deck Management", action: "Do" },
-                            { name: "Engine Starting", action: "Demo" },
-                            { name: "Before Takeoff Check/Runup", action: "Demo with student participation" }
-                        ]
-                    },
-                    {
-                        title: "Takeoffs",
-                        type: "task",
-                        items: [
-                            { name: "Takeoff Briefing", action: "Demo" },
-                            { name: "Normal or Crosswind Takeoff and Climb", action: "Demo with student follow-through" }
-                        ]
-                    },
-                    {
-                        title: "Basic Maneuvers",
-                        type: "task",
-                        items: [
-                            { name: "Collision Avoidance", action: "Demo with student participation", subtasks: ["Scanning for traffic and clearing turns."] },
-                            { name: "Straight and Level Flight", action: "Demo and directed performance" },
-                            { name: "Use of Trim Control", action: "Demo and directed performance" },
-                            { name: "Turns in Both Directions", action: "Demo and directed performance", subtasks: ["Coordination maneuvers"] },
-                            { name: "Climbs and Descents", action: "Demo and directed performance" }
-                        ]
-                    },
-                    {
-                        title: "Landings",
-                        type: "task",
-                        items: [
-                            { name: "Before Landing Briefing", action: "Demo" },
-                            { name: "Normal or Crosswind Landing", action: "Demo with student follow-through" }
-                        ]
-                    },
-                    {
-                        title: "Post-flight Procedures",
-                        type: "task",
-                        items: [
-                            { name: "After Landing, Parking, and Securing", action: "Demo" }
-                        ]
-                    },
-                    {
-                        title: "Debrief",
-                        type: "task",
-                        items: [
-                            { name: "Review the Flight", action: "Discuss" }
-                        ]
-                    },
-                    {
-                        title: "Completion Standards",
-                        type: "text",
-                        items: [
-                            { name: "This lesson is complete when the lesson objectives are met and the learner’s knowledge, risk management, and skills are determined to be adequate for the stage of training. Ultimately, the learner must meet or exceed the Airman Certification Standards." }
-                        ]
-                    }
-                ]
-            },
-            {
-                id: "flight19",
-                title: "Flight Lesson 19: Night Operations",
-                subtext: "Ground (1.0)     Dual (2.0) – Local flight to the practice area and back.<br>Note: A view limiting device is required for the 0.2 hours of dual instrument time allocated to this flight lesson.<br>Note: A minimum of 5 takeoffs and landings to a full stop are required for this lesson.",
-                sections: [
-                    {
-                        title: "Objectives",
-                        type: "objective",
-                        intro: "After this lesson, the student will be able to:",
-                        items: [
-                            { name: "Explain the physiological aspects of night flying." },
-                            { name: "Identify and describe airport lighting systems." },
-                            { name: "Recall the equipment requirements for night flights." },
-                            { name: "Use instruments to verify the aircraft’s attitude at night." },
-                            { name: "Recognize visual illusions specific to night flying and their potential impacts." },
-                            { name: "Describe procedures for night taxi operations." }
-                        ]
-                    },
-                    {
-                        title: "Pre-flight Discussion",
-                        type: "task",
-                        items: [
-                            { name: "Night Operations (Lesson 2.N)", action: "Discuss" },
-                            { name: "Flight Overview", action: "Discuss", subtasks: ["Airport Procedures, Practice Area, Flight Plan, Maneuvers"] },
-                            { name: "Expectations and Responsibilities", action: "Discuss" }
-                        ]
-                    },
-                    {
-                        title: "Pre-flight Preparation",
-                        type: "task",
-                        items: [
-                            { name: "Weather Briefing, NOTAMs, TFRs, etc.", action: "Do" },
-                            { name: "Performance Data", action: "Do" },
-                            { name: "Weight and Balance", action: "Do" },
-                            { name: "Pilot Qualifications", action: "Do" },
-                            { name: "Airworthiness Requirements", action: "Do" },
-                            { name: "Flight Risk Assessment Tool", action: "Discuss" }
-                        ]
-                    },
-                    {
-                        title: "Pre-flight Procedures",
-                        type: "task",
-                        items: [
-                            { name: "Self-assessment", action: "Do" },
-                            { name: "Airplane Servicing", action: "Do" },
-                            { name: "Pre-flight Inspection", action: "Do" },
-                            { name: "Passenger Briefing", action: "Do" },
-                            { name: "Flight Deck Management", action: "Do" },
-                            { name: "Engine Starting", action: "Do" },
-                            { name: "Before Takeoff Check/Runup", action: "Do" }
-                        ]
-                    },
-                    {
-                        title: "Airport Operations",
-                        type: "task",
-                        items: [
-                            { name: "Airport, Runway, and Taxiway Signs, Markings, and Lighting", action: "Do" },
-                            { name: "Radio Communications", action: "Do" },
-                            { name: "Runway Incursion Avoidance", action: "Do" },
-                            { name: "Taxiing", action: "Do" },
-                            { name: "Traffic Patterns, Dep., Arr., Entry and App. Procedures", action: "Do" }
-                        ]
-                    },
-                    {
-                        title: "Takeoffs",
-                        type: "task",
-                        items: [
-                            { name: "Takeoff Briefing", action: "Do" },
-                            { name: "Normal or Crosswind Takeoff and Climb", action: "Do" },
-                            { name: "Short Field Takeoff and Maximum Performance Climb", action: "Do" },
-                            { name: "Soft Field Takeoff", action: "Do" }
-                        ]
-                    },
-                    {
-                        title: "Navigation",
-                        type: "task",
-                        items: [
-                            { name: "GPS Navigation", action: "Do" },
-                            { name: "Autopilot Use (if equipped)", action: "Do" }
-                        ]
-                    },
-                    {
-                        title: "Performance Maneuvers",
-                        type: "task",
-                        items: [
-                            { name: "Steep Turns", action: "Do" }
-                        ]
-                    },
-                    {
-                        title: "Slow Flight and Stalls",
-                        type: "task",
-                        intro: "Note: Stall entries from various flight attitudes and power combinations with recovery initiated at the first indication of a stall, and recovery from a full stall.",
-                        items: [
-                            { name: "Maneuvering During Slow Flight", action: "Do" },
-                            { name: "Power-Off Stalls", action: "Do" },
-                            { name: "Power-On Stalls", action: "Do" }
-                        ]
-                    },
-                    {
-                        title: "Basic Instrument Maneuvers",
-                        type: "task",
-                        items: [
-                            { name: "Recover from Unusual Flight Attitudes (IR)", action: "Do" },
-                            { name: "VOR or GPS Navigation (IR)", action: "Do" }
-                        ]
-                    },
-                    {
-                        title: "Landings",
-                        type: "task",
-                        items: [
-                            { name: "Before Landing Briefing", action: "Do" },
-                            { name: "Normal or Crosswind Approach and Landing", action: "Do" },
-                            { name: "Short Field Approach and Landing", action: "Do" },
-                            { name: "Soft Field Approach and Landing", action: "Do" }
-                        ]
-                    },
-                    {
-                        title: "Post-flight Procedures",
-                        type: "task",
-                        items: [
-                            { name: "After Landing, Parking, and Securing", action: "Do" }
-                        ]
-                    },
-                    {
-                        title: "Debrief",
-                        type: "task",
-                        items: [
-                            { name: "Review the Flight", action: "Discuss" }
-                        ]
-                    },
-                    {
-                        title: "Completion Standards",
-                        type: "text",
-                        items: [
-                            { name: "This lesson is complete when the lesson objectives are met and the learner’s knowledge, risk management, and skills are determined to be adequate for the stage of training. Ultimately, the learner must meet or exceed the Airman Certification Standards." }
-                        ]
-                    }
-                ]
-            },
-            {
-                id: "emergency",
-                title: "Emergency of the Day",
-                isEmergency: true
+        // Disable right-click context menu on the PDF container
+        document.querySelector('.pdf-container').addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+        });
+
+        // Prevent drag-and-drop
+        document.querySelector('.pdf-container').addEventListener('dragstart', function(e) {
+            e.preventDefault();
+        });
+
+        // Attempt to disable keyboard shortcuts (e.g., Ctrl+S, Ctrl+P)
+        document.addEventListener('keydown', function(e) {
+            if (e.ctrlKey && (e.key === 's' || e.key === 'p')) {
+                e.preventDefault();
+                alert('Saving or printing is disabled.');
             }
-        ];
+        });
 
-        const emergencies = [
-            { title: "Engine Failure After Takeoff", checklist: ["Airspeed - 70 KIAS (flaps UP), 65 KIAS (flaps DOWN)", "Mixture - IDLE CUT-OFF", "Fuel Shutoff Valve - OFF", "Ignition Switch - OFF", "Wing Flaps - AS REQUIRED", "Master Switch - OFF"] },
-            { title: "Engine Fire In Flight", checklist: ["Mixture - IDLE CUT-OFF", "Fuel Shutoff Valve - OFF", "Master Switch - OFF", "Cabin Heat and Air - OFF", "Airspeed - 100 KIAS", "Forced Landing - EXECUTE"] },
-            { title: "Electrical Fire In Flight", checklist: ["Master Switch - OFF", "Avionics Switch - OFF", "All Other Switches - OFF", "Vents/Cabin Air/Heat - CLOSED", "Fire Extinguisher - ACTIVATE", "Land - AS SOON AS POSSIBLE"] },
-            { title: "Loss of Oil Pressure", checklist: ["Oil Pressure - CHECK", "If low oil pressure confirmed:", "Engine - REDUCE POWER", "Land - AS SOON AS PRACTICAL", "Be prepared for engine failure"] }
-        ];
-
-        function renderLesson(lessonData) {
-            const container = document.getElementById("lessonContainer");
-            const lessonDiv = document.createElement("div");
-            lessonDiv.id = lessonData.id;
-            lessonDiv.className = "lesson";
-
-            if (lessonData.isEmergency) {
-                const randomEmergency = emergencies[Math.floor(Math.random() * emergencies.length)];
-                lessonDiv.innerHTML = `
-                    <div class="emergency-container">
-                        <h3>${lessonData.title}</h3>
-                        <div>
-                            <strong id="emergencyTitle">${randomEmergency.title}</strong>
-                        </div>
-                        <button>Show Checklist</button>
-                        <div id="emergencyChecklist">
-                            <ol>
-                                ${randomEmergency.checklist.map(item => `<li>${item}</li>`).join("")}
-                            </ol>
-                        </div>
-                    </div>
-                `;
-                const button = lessonDiv.querySelector("button");
-                button.addEventListener("click", toggleChecklist);
-            } else {
-                lessonDiv.innerHTML = `
-                    <h2>${lessonData.title}</h2>
-                    ${lessonData.subtext ? `<div class="lesson-subtext">${lessonData.subtext}</div>` : ""}
-                    ${lessonData.sections.map(section => `
-                        <div class="section-title">${section.title}</div>
-                        ${section.intro ? `<p>${section.intro}</p>` : ""}
-                        ${section.type === "text" ? `
-                            <p>${section.items.map(item => item.name).join("")}</p>
-                        ` : `
-                            <ul class="${section.type === "task" ? "task-list" : "objective-list"}">
-                                ${section.type === "objective" ? `
-                                    ${section.items.map(item => `
-                                        <li>${item.name}</li>
-                                    `).join("")}
-                                ` : section.items.map((item, index) => `
-                                    <li>
-                                        <div class="task-row">
-                                            <input type="checkbox" id="${lessonData.id}t${index + 1}">
-                                            <div class="task-item">
-                                                <span class="task-name">${item.name}</span>
-                                                ${item.action ? `<span class="dots"></span><span class="task-action">${item.action}</span>` : ""}
-                                            </div>
-                                        </div>
-                                        ${item.subtasks ? `
-                                            <ul class="subtask-list">
-                                                ${item.subtasks.map(subtask => `<li>${subtask}</li>`).join("")}
-                                            </ul>
-                                        ` : ""}
-                                    </li>
-                                `).join("")}
-                            </ul>
-                        `}
-                    `).join("")}
-                `;
-            }
-
-            container.innerHTML = "";
-            container.appendChild(lessonDiv);
-            adjustCheckboxAndDots(lessonDiv);
-        }
-
-        function showLesson() {
-            const select = document.getElementById("lessonSelect");
-            const selectedLessonId = select.value;
-
-            if (selectedLessonId) {
-                const lessonData = lessons.find(l => l.id === selectedLessonId);
-                if (lessonData) {
-                    renderLesson(lessonData);
-                    const activeLesson = document.getElementById(selectedLessonId);
-                    if (activeLesson) {
-                        activeLesson.classList.add("active");
-                    }
-                }
-            } else {
-                document.getElementById("lessonContainer").innerHTML = "";
-            }
-        }
-
-        function adjustCheckboxAndDots(lesson) {
-            const taskItems = lesson.querySelectorAll(".task-item");
-            taskItems.forEach(item => {
-                const checkbox = item.parentElement.querySelector("input[type='checkbox']");
-                if (checkbox) {
-                    checkbox.style.width = "18px";
-                    checkbox.style.height = "18px";
-                    checkbox.style.borderWidth = "2px";
-                    checkbox.style.fontSize = "14px";
-                }
-                const dots = item.querySelector(".dots");
-                if (dots) {
-                    dots.style.height = "15px";
-                    dots.style.backgroundSize = "6px 10px";
-                    dots.style.minWidth = "10px";
-                }
-            });
-        }
-
-        function toggleChecklist(event) {
-            const checklist = event.target.nextElementSibling.querySelector("ol");
-            checklist.style.display = checklist.style.display === "block" ? "none" : "block";
-            event.target.textContent = checklist.style.display === "block" ? "Hide Checklist" : "Show Checklist";
-        }
-
-        document.addEventListener("DOMContentLoaded", function() {
-            console.log("DOM fully loaded");
-            const lessonSelect = document.getElementById("lessonSelect");
-            if (!lessonSelect) {
-                console.error("lessonSelect element not found");
-                return;
-            }
-            console.log("Lessons array:", lessons);
-
-            let options = '<option value="">-- Select a Lesson --</option>';
-            lessons.forEach(lesson => {
-                options += `<option value="${lesson.id}">${lesson.title}</option>`;
-            });
-            lessonSelect.innerHTML = options;
-            console.log("Dropdown populated with:", lessonSelect.innerHTML);
-
-            lessonSelect.addEventListener("change", showLesson);
-
-            window.addEventListener("resize", () => {
-                const activeLesson = document.querySelector(".lesson.active");
-                if (activeLesson) {
-                    adjustCheckboxAndDots(activeLesson);
-                }
-            });
-
-            window.addEventListener("load", () => {
-                const activeLesson = document.querySelector(".lesson.active");
-                if (activeLesson) {
-                    adjustCheckboxAndDots(activeLesson);
-                }
-            });
+        // Notify user if they try to interact with the overlay
+        document.querySelector('.overlay').addEventListener('click', function() {
+            alert('Direct interaction with the PDF is restricted.');
         });
     </script>
 </body>
