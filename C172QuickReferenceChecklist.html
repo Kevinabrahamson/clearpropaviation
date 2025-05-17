@@ -1,115 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>C172 Checklist PDF Viewer</title>
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      overflow: auto;
-      background-color: #f0f0f0;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      font-family: Arial, sans-serif;
-    }
-    .pdf-page {
-      margin: 0;
-      border: 1px solid #ccc; /* Border to confirm canvas visibility */
-      background-color: #fff;
-    }
-    #status {
-      font-size: 16px;
-      color: #333;
-      margin: 20px;
-      text-align: center;
-      max-width: 800px;
-    }
-    #fallback {
-      display: none;
-      margin: 20px;
-      max-width: 800px;
-    }
-    #fallback object {
-      width: 100%;
-      height: 100vh;
-      border: none;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C172S Quick Reference Checklist</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .logo {
+            max-width: 200px;
+            margin-bottom: 20px;
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+        .subtitle {
+            font-size: 14px;
+            color: #555;
+            margin-bottom: 30px;
+        }
+        .button {
+            display: block;
+            width: 200px;
+            margin: 10px auto;
+            padding: 15px 30px;
+            font-size: 18px;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .normal {
+            background-color: #007bff;
+        }
+        .normal:hover {
+            background-color: #0056b3;
+        }
+        .emergency {
+            background-color: #dc3545;
+        }
+        .emergency:hover {
+            background-color: #b02a37;
+        }
+        .briefings {
+            background-color: #6c757d;
+        }
+        .briefings:hover {
+            background-color: #565e64;
+        }
+    </style>
 </head>
 <body>
-  <div id="status">Loading PDF, please wait...</div>
-  <div id="pdf-container"></div>
-  <div id="fallback">
-    <p>PDF.js failed to render the PDF. Trying fallback viewer:</p>
-    <object data="C172 Checklist.pdf" type="application/pdf">
-      <p>Your browser does not support PDFs. Please download the PDF: <a href="C172 Checklist.pdf" download>Download PDF</a>.</p>
-    </object>
-  </div>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
-  <script>
-    // Set PDF.js worker source
-    pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
-
-    // Path to the PDF file
-    const pdfPath = 'C172 Checklist.pdf'; // Update this path if needed
-
-    // Load and render the PDF
-    async function renderPDF() {
-      const status = document.getElementById('status');
-      const container = document.getElementById('pdf-container');
-      const fallback = document.getElementById('fallback');
-
-      try {
-        // Load PDF
-        status.textContent = 'Loading PDF file...';
-        const pdf = await pdfjsLib.getDocument(pdfPath).promise;
-        const numPages = pdf.numPages;
-
-        // Render each page in its own canvas
-        status.textContent = `Rendering ${numPages} page(s)...`;
-        for (let pageNum = 1; pageNum <= numPages; pageNum++) {
-          const page = await pdf.getPage(pageNum);
-          const scale = 1.5; // Adjust scale for resolution
-          const viewport = page.getViewport({ scale });
-
-          // Create canvas for this page
-          const canvas = document.createElement('canvas');
-          canvas.className = 'pdf-page';
-          canvas.width = viewport.width;
-          canvas.height = viewport.height;
-          container.appendChild(canvas);
-
-          // Render page
-          const context = canvas.getContext('2d');
-          await page.render({
-            canvasContext: context,
-            viewport: viewport
-          }).promise;
-        }
-
-        // Success: clear status
-        status.textContent = '';
-      } catch (error) {
-        console.error('PDF Rendering Error:', error);
-        status.innerHTML = `Error loading PDF: ${error.message}. Check the console for details. <br>Try downloading the PDF: <a href="${pdfPath}" download>Download PDF</a>`;
-        fallback.style.display = 'block'; // Show fallback viewer
-      }
-    }
-
-    // Timeout to catch rendering issues
-    const timeout = setTimeout(() => {
-      const status = document.getElementById('status');
-      if (status.textContent.includes('Loading') || status.textContent.includes('Rendering')) {
-        status.innerHTML = 'Rendering took too long. The PDF file may be inaccessible or corrupted. <br>Try downloading: <a href="${pdfPath}" download>Download PDF</a>';
-        document.getElementById('fallback').style.display = 'block';
-      }
-    }, 10000); // 10-second timeout
-
-    // Execute rendering
-    renderPDF();
-  </script>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/b/b9/Cessna_Logo.svg" alt="Cessna Logo" class="logo">
+    <h1>C172S<br>Quick Reference Checklist</h1>
+    <div class="subtitle">See POH for complete information.</div>
+    <a href="C172 Checklist.pdf" target="_blank" class="button normal">Normal Procedures</a>
+    <a href="emergency_procedures.pdf" target="_blank" class="button emergency">Emergency Procedures</a>
+    <a href="briefings.pdf" target="_blank" class="button briefings">Briefings</a>
 </body>
 </html>
