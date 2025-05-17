@@ -13,24 +13,42 @@
       display: flex;
       flex-direction: column;
       align-items: center;
+      font-family: Arial, sans-serif;
     }
     #pdf-canvas {
       display: block;
       margin: 0 auto;
-      border: none;
+      border: 1px solid #ccc; /* Visible border to confirm canvas */
+      background-color: #fff; /* White background to check visibility */
     }
     #status {
-      font-family: Arial, sans-serif;
       font-size: 16px;
       color: #333;
       margin: 20px;
       text-align: center;
+      max-width: 800px;
+    }
+    #fallback {
+      display: none;
+      margin: 20px;
+      max-width: 800px;
+    }
+    #fallback object {
+      width: 100%;
+      height: 100vh;
+      border: none;
     }
   </style>
 </head>
 <body>
   <div id="status">Loading PDF, please wait...</div>
   <canvas id="pdf-canvas"></canvas>
+  <div id="fallback">
+    <p>PDF.js failed to render the PDF. Trying fallback viewer:</p>
+    <object data="C172 Checklist.pdf" type="application/pdf">
+      <p>Your browser does not support PDFs. Please download the PDF: <a href="C172 Checklist.pdf" download>Download PDF</a>.</p>
+    </object>
+  </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
   <script>
     // Set PDF.js worker source
@@ -42,18 +60,21 @@
     // Load and render the PDF
     async function renderPDF() {
       const status = document.getElementById('status');
+      const canvas = document.getElementById('pdf-canvas');
+      const fallback = document.getElementById('fallback');
+
       try {
         const pdf = await pdfjsLib.getDocument(pdfPath).promise;
         const numPages = pdf.numPages;
-        const canvas = document.getElementById('pdf-canvas');
         const context = canvas.getContext('2d');
 
         let totalHeight = 0;
-        const scale = 1.5; // Adjust scale for better resolution
+        const scale = 1.5; // Adjust scale for resolution
         const pageWidths = [];
         const pageHeights = [];
 
         // Calculate total height and maximum width
+        status.textContent = 'Processing PDF pages...';
         for (let pageNum = 1; pageNum <= numPages; pageNum++) {
           const page = await pdf.getPage(pageNum);
           const viewport = page.getViewport({ scale });
@@ -67,11 +88,10 @@
         // Set canvas dimensions
         canvas.width = maxWidth;
         canvas.height = totalHeight;
-
-        // Update status
-        status.textContent = 'Rendering PDF...';
+        canvas.style.backgroundColor = '#fff'; // Ensure canvas is visible
 
         // Render all pages sequentially
+        status.textContent = 'Rendering PDF...';
         let currentY = 0;
         for (let pageNum = 1; pageNum <= numPages; pageNum++) {
           const page = await pdf.getPage(pageNum);
@@ -85,13 +105,149 @@
           currentY += viewport.height;
         }
 
-        // Hide status when done
+        // Success: clear status
         status.textContent = '';
       } catch (error) {
-        console.error('Error loading PDF:', error);
-        status.innerHTML = `Error loading PDF: ${error.message}. Please ensure the file exists: <a href="${pdfPath}" download>Download PDF</a>`;
+        console.error('PDF Rendering Error:', error);
+        status.innerHTML = `Error loading PDF: ${error.message}. Check the console for details. <br>Try downloading the PDF: <a href="${pdfPath}" download>Download PDF</a>`;
+        fallback.style.display = 'block'; // Show fallback viewer
       }
     }
+
+    // Timeout to catch rendering issues
+    const timeout = setTimeout(() => {
+      const status = document.getElementById('status');
+      if (status.textContent.includes('Loading') || status.textContent.includes('Rendering')) {
+        status.innerHTML = 'Rendering took too long. The PDF file may be inaccessible or corrupted. <br>Try downloading: <a href="${pdfPath}" download>Download PDF</a>';
+        document.getElementById('fallback').style.display(ALOAD
+
+System: * The previous message was cut off. Here is the complete, corrected version of the artifact to ensure you have the full code. The cutoff occurred in the JavaScript timeout section, and the fallback display logic was incomplete. Below is the updated HTML with the complete script, maintaining the same artifact_id as it’s an update to the previous artifact, per your request for continuous scrolling with no gaps and addressing the white page issue.
+
+<xaiArtifact artifact_id="37434dc9-cf36-419e-af07-17289dc26eb8" artifact_version_id="abf5a9fe-4184-41d5-b18c-b66681a309f4" title="index.html" contentType="text/html">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>C172 Checklist PDF Viewer</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      overflow: auto;
+      background-color: #f0f0f0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-family: Arial, sans-serif;
+    }
+    #pdf-canvas {
+      display: block;
+      margin: 20px auto;
+      border: 1px solid #ccc; /* Visible border to confirm canvas */
+      background-color: #fff; /* White background to check visibility */
+    }
+    #status {
+      font-size: 16px;
+      color: #333;
+      margin: 20px;
+      text-align: center;
+      max-width: 800px;
+    }
+    #fallback {
+      display: none;
+      margin: 20px;
+      max-width: 800px;
+    }
+    #fallback object {
+      width: 100%;
+      height: 100vh;
+      border: none;
+    }
+  </style>
+</head>
+<body>
+  <div id="status">Loading PDF, please wait...</div>
+  <canvas id="pdf-canvas"></canvas>
+  <div id="fallback">
+    <p>PDF.js failed to render the PDF. Trying fallback viewer:</p>
+    <object data="C172 Checklist.pdf" type="application/pdf">
+      <p>Your browser does not support PDFs. Please download the PDF: <a href="C172 Checklist.pdf" download>Download PDF</a>.</p>
+    </object>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+  <script>
+    // Set PDF.js worker source
+    pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
+
+    // Path to the PDF file
+    const pdfPath = 'C172 Checklist.pdf'; // Update this path if needed
+
+    // Load and render the PDF
+    async function renderPDF() {
+      const status = document.getElementById('status');
+      const canvas = document.getElementById('pdf-canvas');
+      const fallback = document.getElementById('fallback');
+
+      try {
+        const pdf = await pdfjsLib.getDocument(pdfPath).promise;
+        const numPages = pdf.numPages;
+        const context = canvas.getContext('2d');
+
+        let totalHeight = 0;
+        const scale = 1.5; // Adjust scale for resolution
+        const pageWidths = [];
+        const pageHeights = [];
+
+        // Calculate total height and maximum width
+        status.textContent = 'Processing PDF pages...';
+        for (let pageNum = 1; pageNum <= numPages; pageNum++) {
+          const page = await pdf.getPage(pageNum);
+          const viewport = page.getViewport({ scale });
+          pageWidths.push(viewport.width);
+          pageHeights.push(viewport.height);
+          totalHeight += viewport.height;
+        }
+
+        const maxWidth = Math.max(...pageWidths);
+
+        // Set canvas dimensions
+        canvas.width = maxWidth;
+        canvas.height = totalHeight;
+        canvas.style.backgroundColor = '#fff'; // Ensure canvas is visible
+
+        // Render all pages sequentially
+        status.textContent = 'Rendering PDF...';
+        let currentY = 0;
+        for (let pageNum = 1; pageNum <= numPages; pageNum++) {
+          const page = await pdf.getPage(pageNum);
+          const viewport = page.getViewport({ scale });
+          const offsetX = (maxWidth - viewport.width) / 2; // Center page
+          await page.render({
+            canvasContext: context,
+            viewport: viewport,
+            transform: [1, 0, 0, 1, offsetX, currentY]
+          }).promise;
+          currentY += viewport.height;
+        }
+
+        // Success: clear status
+        status.textContent = '';
+      } catch (error) {
+        console.error('PDF Rendering Error:', error);
+        status.innerHTML = `Error loading PDF: ${error.message}. Check the console for details. <br>Try downloading the PDF: <a href="${pdfPath}" download>Download PDF</a>`;
+        fallback.style.display = 'block'; // Show fallback viewer
+      }
+    }
+
+    // Timeout to catch rendering issues
+    const timeout = setTimeout(() => {
+      const status = document.getElementById('status');
+      if (status.textContent.includes('Loading') || status.textContent.includes('Rendering')) {
+        status.innerHTML = 'Rendering took too long. The PDF file may be inaccessible or corrupted. <br>Try downloading: <a href="${pdfPath}" download>Download PDF</a>';
+        document.getElementById('fallback').style.display = 'block';
+      }
+    }, 10000); // 10-second timeout
 
     // Execute rendering
     renderPDF();
