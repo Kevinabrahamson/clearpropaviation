@@ -10,26 +10,38 @@
       padding: 0;
       overflow: auto;
       background-color: #f0f0f0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
     #pdf-canvas {
       display: block;
       margin: 0 auto;
       border: none;
     }
+    #status {
+      font-family: Arial, sans-serif;
+      font-size: 16px;
+      color: #333;
+      margin: 20px;
+      text-align: center;
+    }
   </style>
 </head>
 <body>
+  <div id="status">Loading PDF, please wait...</div>
   <canvas id="pdf-canvas"></canvas>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
   <script>
     // Set PDF.js worker source
-    pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.worker.min.js';
+    pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
 
     // Path to the PDF file
-    const pdfPath = 'C172 Checklist.pdf';
+    const pdfPath = 'C172 Checklist.pdf'; // Update this path if needed
 
     // Load and render the PDF
     async function renderPDF() {
+      const status = document.getElementById('status');
       try {
         const pdf = await pdfjsLib.getDocument(pdfPath).promise;
         const numPages = pdf.numPages;
@@ -56,13 +68,15 @@
         canvas.width = maxWidth;
         canvas.height = totalHeight;
 
+        // Update status
+        status.textContent = 'Rendering PDF...';
+
         // Render all pages sequentially
         let currentY = 0;
         for (let pageNum = 1; pageNum <= numPages; pageNum++) {
           const page = await pdf.getPage(pageNum);
           const viewport = page.getViewport({ scale });
-          // Center the page horizontally
-          const offsetX = (maxWidth - viewport.width) / 2;
+          const offsetX = (maxWidth - viewport.width) / 2; // Center page
           await page.render({
             canvasContext: context,
             viewport: viewport,
@@ -70,9 +84,12 @@
           }).promise;
           currentY += viewport.height;
         }
+
+        // Hide status when done
+        status.textContent = '';
       } catch (error) {
         console.error('Error loading PDF:', error);
-        document.body.innerHTML = `<p>Error loading PDF. Please ensure the file exists: <a href="${pdfPath}">${pdfPath}</a></p>`;
+        status.innerHTML = `Error loading PDF: ${error.message}. Please ensure the file exists: <a href="${pdfPath}" download>Download PDF</a>`;
       }
     }
 
