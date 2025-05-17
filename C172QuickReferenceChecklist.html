@@ -55,14 +55,111 @@
         .briefings:hover {
             background-color: #565e64;
         }
+        #pdfViewer {
+            width: 100%;
+            height: 600px;
+            margin-top: 20px;
+            border: 1px solid #ccc;
+            display: none;
+        }
     </style>
 </head>
 <body>
-    <img src="https://mms.businesswire.com/media/20230716272435/en/1842414/5/TA_logo_PMS.jpg?download=1" alt="Cessna Logo" class="logo">
+    <img src="<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C172S Quick Reference Checklist</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .logo {
+            max-width: 200px;
+            margin-bottom: 20px;
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+        .subtitle {
+            font-size: 14px;
+            color: #555;
+            margin-bottom: 30px;
+        }
+        .button {
+            display: block;
+            width: 200px;
+            margin: 10px auto;
+            padding: 15px 30px;
+            font-size: 18px;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .normal {
+            background-color: #007bff;
+        }
+        .normal:hover {
+            background-color: #0056b3;
+        }
+        .emergency {
+            background-color: #dc3545;
+        }
+        .emergency:hover {
+            background-color: #b02a37;
+        }
+        .briefings {
+            background-color: #6c757d;
+        }
+        .briefings:hover {
+            background-color: #565e64;
+        }
+        #pdfViewer {
+            width: 100%;
+            height: 600px;
+            margin-top: 20px;
+            border: 1px solid #ccc;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/b/b9/Cessna_Logo.svg" alt="Cessna Logo" class="logo">
     <h1>C172S<br>Quick Reference Checklist</h1>
     <div class="subtitle">See POH for complete information.</div>
-    <a href="C172 Checklist.pdf" target="_blank" class="button normal">Normal Procedures</a>
-    <a href="emergency_procedures.pdf" target="_blank" class="button emergency">Emergency Procedures</a>
-    <a href="briefings.pdf" target="_blank" class="button briefings">Briefings</a>
+    <a href="#" class="button normal" onclick="showPDF('normal_procedures.pdf')">Normal Procedures</a>
+    <a href="#" class="button emergency" onclick="showPDF('emergency_procedures.pdf')">Emergency Procedures</a>
+    <a href="#" class="button briefings" onclick="showPDF('briefings.pdf')">Briefings</a>
+    <iframe id="pdfViewer"></iframe>
+    <script>
+        function showPDF(pdfUrl) {
+            const viewer = document.getElementById('pdfViewer');
+            viewer.src = pdfUrl;
+            viewer.style.display = 'block';
+        }
+    </script>
+</body>
+</html>" alt="Cessna Logo" class="logo">
+    <h1>C172S<br>Quick Reference Checklist</h1>
+    <div class="subtitle">See POH for complete information.</div>
+    <a href="#" class="button normal" onclick="showPDF('C172 Checklist.pdf')">Normal Procedures</a>
+    <a href="#" class="button emergency" onclick="showPDF('emergency_procedures.pdf')">Emergency Procedures</a>
+    <a href="#" class="button briefings" onclick="showPDF('briefings.pdf')">Briefings</a>
+    <iframe id="pdfViewer"></iframe>
+    <script>
+        function showPDF(pdfUrl) {
+            const viewer = document.getElementById('pdfViewer');
+            viewer.src = pdfUrl;
+            viewer.style.display = 'block';
+        }
+    </script>
 </body>
 </html>
