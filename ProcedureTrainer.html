@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cessna 172 Cockpit Layout</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #e0e0e0;
+            margin: 0;
+            padding: 20px;
+        }
+        #instrumentPanel {
+            width: 1100px;
+            height: 500px;
+            background: linear-gradient(#444, #666);
+            border: 8px solid #222;
+            border-radius: 10px;
+            box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5), 0 4px 8px rgba(0, 0, 0, 0.3);
+            position: relative;
+        }
+        svg {
+            width: 100%;
+            height: 100%;
+        }
+        .instrument {
+            fill: #1a1a1a;
+            stroke: #555;
+            stroke-width: 2;
+        }
+        .screen {
+            fill: #0a0a0a;
+            stroke: #444;
+            stroke-width: 1;
+        }
+        .bezel {
+            fill: radial-gradient(circle at 30% 30%, #888, #333);
+            stroke: #333;
+            stroke-width: 2;
+        }
+        .label {
+            fill: #ddd;
+            font-size: 12px;
+            text-anchor: middle;
+            pointer-events: none;
+        }
+        #attitudeImg {
+            position: absolute;
+            left: 20px;
+            top: 20px;
+            width: 120px;
+            height: 120px;
+            border: 2px solid #555;
+            border-radius: 5px;
+        }
+        #tooltip {
+            position: absolute;
+            background-color: rgba(255, 255, 255, 0.9);
+            border: 1px solid #333;
+            padding: 8px;
+            border-radius: 4px;
+            font-size: 14px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            display: none;
+            pointer-events: none;
+        }
+        #description {
+            max-width: 1100px;
+            margin-top: 20px;
+            font-size: 16px;
+            text-align: center;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div id="instrumentPanel">
+        <img id="attitudeImg" src="attitude_indicator.jpg" alt="Attitude Indicator">
+        <svg viewBox="0 0 1100 500">
+            <!-- Airspeed Indicator -->
+            <g class="instrument" transform="translate(150, 0)">
+                <circle cx="70" cy="70" r="50" class="bezel"/>
+                <circle cx="70" cy="70" r="40" class="screen"/>
+            </g>
+            <text x="220" y="130" class="label">Airspeed Indicator</text>
+            <!-- Altimeter -->
+            <g class="instrument" transform="translate(280, 0)">
+                <circle cx="70" cy="70" r="50" class="bezel"/>
+                <circle cx="70" cy="70" r="40" class="screen"/>
+            </g>
+            <text x="350" y="130" class="label">Altimeter</text>
+
+            <!-- Turn Coordinator -->
+            <g class="instrument" transform="translate(0, 150)">
+                <circle cx="70" cy="70" r="50" class="bezel"/>
+                <circle cx="70" cy="70" r="40" class="screen"/>
+            </g>
+            <text x="70" y="230" class="label">Turn Coordinator</text>
+            <!-- Heading Indicator -->
+            <g class="instrument" transform="translate(150, 150)">
+                <circle cx="70" cy="70" r="50" class="bezel"/>
+                <circle cx="70" cy="70" r="40" class="screen"/>
+            </g>
+            <text x="220" y="230" class="label">Heading Indicator</text>
+            <!-- Vertical Speed Indicator -->
+            <g class="instrument" transform="translate(280, 150)">
+                <circle cx="70" cy="70" r="50" class="bezel"/>
+                <circle cx="70" cy="70" r="40" class="screen"/>
+            </g>
+            <text x="350" y="230" class="label">VSI</text>
+
+            <!-- Garmin GNS 430W (Left Screen) -->
+            <g class="instrument" transform="translate(410, 0)">
+                <rect x="0" y="0" width="120" height="120" rx="5" class="bezel"/>
+                <rect x="10" y="10" width="100" height="100" class="screen"/>
+            </g>
+            <text x="470" y="130" class="label">GNS 430W (NAV)</text>
+            <!-- Garmin GNS 430W (Right Screen) -->
+            <g class="instrument" transform="translate(540, 0)">
+                <rect x="0" y="0" width="120" height="120" rx="5" class="bezel"/>
+                <rect x="10" y="10" width="100" height="100" class="screen"/>
+            </g>
+            <text x="600" y="130" class="label">GNS 430W (COM)</text>
+            <!-- Audio Panel -->
+            <g class="instrument" transform="translate(670, 0)">
+                <rect x="0" y="0" width="160" height="60" rx="5" class="bezel"/>
+                <rect x="10" y="10" width="140" height="40" class="screen"/>
+            </g>
+            <text x="750" y="70" class="label">Audio Panel</text>
+            <!-- Transponder -->
+            <g class="instrument" transform="translate(850, 0)">
+                <rect x="0" y="0" width="80" height="60" rx="5" class="bezel"/>
+                <rect x="10" y="10" width="60" height="40" class="screen"/>
+            </g>
+            <text x="890" y="70" class="label">Transponder</text>
+
+            <!-- Tachometer -->
+            <g class="instrument" transform="translate(670, 120)">
+                <circle cx="60" cy="60" r="50" class="bezel"/>
+                <circle cx="60" cy="60" r="40" class="screen"/>
+            </g>
+            <text x="730" y="190" class="label">Tachometer</text>
+            <!-- Oil Pressure -->
+            <g class="instrument" transform="translate(770, 120)">
+                <circle cx="40" cy="40" r="30" class="bezel"/>
+                <circle cx="40" cy="40" r="20" class="screen"/>
+            </g>
+            <text x="810" y="170" class="label">Oil Pressure</text>
+            <!-- Oil Temperature -->
+            <g class="instrument" transform="translate(830, 120)">
+                <circle cx="40" cy="40" r="30" class="bezel"/>
+                <circle cx="40" cy="40" r="20" class="screen"/>
+            </g>
+            <text x="870" y="170" class="label">Oil Temp</text>
+            <!-- Fuel Quantity -->
+            <g class="instrument" transform="translate(890, 120)">
+                <circle cx="40" cy="40" r="30" class="bezel"/>
+                <circle cx="40" cy="40" r="20" class="screen"/>
+            </g>
+            <text x="930" y="170" class="label">Fuel Qty</text>
+
+            <!-- Left Yoke -->
+            <g class="instrument" transform="translate(20, 300)">
+                <rect x="0" y="0" width="120" height="120" rx="10" class="bezel"/>
+                <rect x="10" y="10" width="100" height "100" class="screen"/>
+            </g>
+            <text x="80" y="440" class="label">Left Yoke</text>
+            <!-- Right Yoke -->
+            <g class="instrument" transform="translate(960, 300)">
+                <rect x="0" y="0" width="120" height="120" rx="10" class="bezel"/>
+                <rect x="10" y="10" width="100" height "100" class="screen"/>
+            </g>
+            <text x="1020" y="440" class="label">Right Yoke</text>
+            <!-- Throttle Quadrant -->
+            <g class="instrument" transform="translate(400, 300)">
+                <rect x="0" y="0" width="300" height="120" rx="10" class="bezel"/>
+                <rect x="10" y="10" width="280" height "100" class="screen"/>
+            </g>
+            <text x="550" y="440" class="label">Throttle Quadrant</text>
+        </svg>
+        <div id="tooltip"></div>
+    </div>
+    <div id="description">
+        <p>This layout replicates the Cessna 172 cockpit (N8339L) with the attached attitude indicator image, Garmin GNS 430W, analog flight instruments, engine gauges, and controls. Hover over items for labels.</p>
+    </div>
+
+    <script>
+        const tooltip = document.getElementById('tooltip');
+        const attitudeImg = document.getElementById('attitudeImg');
+        const instruments = [
+            { id: 'attitudeImg', desc: 'Attitude Indicator (Image)' },
+            { id: 'airspeed', desc: 'Airspeed Indicator' },
+            { id: 'altimeter', desc: 'Altimeter' },
+            { id: 'turnCoordinator', desc: 'Turn Coordinator' },
+            { id: 'heading', desc: 'Heading Indicator' },
+            { id: 'vsi', desc: 'Vertical Speed Indicator' },
+            { id: 'gns430w1', desc: 'Garmin GNS 430W (NAV)' },
+            { id: 'gns430w2', desc: 'Garmin GNS 430W (COM)' },
+            { id: 'audioPanel', desc: 'Audio Panel' },
+            { id: 'transponder', desc: 'Transponder' },
+            { id: 'tachometer', desc: 'Tachometer' },
+            { id: 'oilPressure', desc: 'Oil Pressure' },
+            { id: 'oilTemp', desc: 'Oil Temperature' },
+            { id: 'fuelQty', desc: 'Fuel Quantity' },
+            { id: 'yokeLeft', desc: 'Left Control Yoke' },
+            { id: 'yokeRight', desc: 'Right Control Yoke' },
+            { id: 'throttle', desc: 'Throttle Quadrant' }
+        ];
+
+        instruments.forEach(instrument => {
+            const element = instrument.id === 'attitudeImg' ? attitudeImg : document.querySelector(`[transform="translate(${instrument.id === 'gns430w1' ? 410 : instrument.id === 'gns430w2' ? 540 : instrument.id === 'audioPanel' ? 670 : instrument.id === 'transponder' ? 850 : instrument.id === 'tachometer' ? 670 : instrument.id === 'oilPressure' ? 770 : instrument.id === 'oilTemp' ? 830 : instrument.id === 'fuelQty' ? 890 : instrument.id === 'yokeLeft' ? 20 : instrument.id === 'yokeRight' ? 960 : instrument.id === 'throttle' ? 400 : 0}, ${instrument.id.includes('yoke') || instrument.id === 'throttle' ? 300 : instrument.id.includes('tachometer') || instrument.id.includes('oil') || instrument.id.includes('fuel') ? 120 : 0})"]`);
+            if (element) {
+                element.addEventListener('mouseover', (e) => {
+                    tooltip.style.display = 'block';
+                    tooltip.textContent = instrument.desc;
+                    tooltip.style.left = `${e.pageX + 10}px`;
+                    tooltip.style.top = `${e.pageY - 40}px`;
+                });
+                element.addEventListener('mouseout', () => {
+                    tooltip.style.display = 'none';
+                });
+            }
+        });
+    </script>
+</body>
+</html>
