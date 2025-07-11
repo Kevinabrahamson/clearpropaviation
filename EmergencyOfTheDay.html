@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emergency of the Day Widget</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto&display=swap">
+    <style>
+        :root {
+            --primary-color: #073763;
+            --border-color: #000;
+            --emergency-heading-color: #ff0000;
+            --emergency-banner-color: #ffcccc;
+            --default-text-color: #073763;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            color: var(--primary-color);
+            margin: 0;
+            padding: 20px;
+        }
+
+        .emergency-container {
+            margin: 20px 0;
+            padding: 15px;
+            border: 1px solid var(--border-color);
+            background: #f9f9f9;
+        }
+
+        .emergency-container h3 {
+            margin: 0 0 15px 0;
+            padding: 5px 10px;
+            color: var(--emergency-heading-color);
+            background: var(--emergency-banner-color);
+            width: 100%;
+            box-sizing: border-box;
+            display: block;
+        }
+
+        .emergency-container #emergencyTitle {
+            color: var(--default-text-color);
+            margin-left: 10px;
+            font-size: 1.17em;
+            font-weight: bold;
+        }
+
+        .emergency-container button {
+            display: block;
+            margin-top: 10px;
+            margin-left: 10px;
+            padding: 5px 10px;
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            transition: background 0.2s ease;
+        }
+
+        .emergency-container button:hover {
+            background: #05294d;
+        }
+
+        #emergencyChecklist {
+            margin-top: 10px;
+            color: var(--default-text-color);
+        }
+
+        #emergencyChecklist ol {
+            margin: 0;
+            padding-left: 25px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="emergency-container">
+        <h3>Emergency of the Day</h3>
+        <div>
+            <strong id="emergencyTitle"></strong>
+        </div>
+        <button>Show Checklist</button>
+        <div id="emergencyChecklist"></div>
+    </div>
+
+    <script>
+        const emergencies = [
+            { title: 'Engine Failure After Takeoff', checklist: ['Airspeed - 70 KIAS (flaps UP), 65 KIAS (flaps DOWN)', 'Mixture - IDLE CUT-OFF', 'Fuel Shutoff Valve - OFF', 'Ignition Switch - OFF', 'Wing Flaps - AS REQUIRED', 'Master Switch - OFF'] },
+            { title: 'Engine Fire In Flight', checklist: ['Mixture - IDLE CUT-OFF', 'Fuel Shutoff Valve - OFF', 'Master Switch - OFF', 'Cabin Heat and Air - OFF', 'Airspeed - 100 KIAS', 'Forced Landing - EXECUTE'] },
+            { title: 'Electrical Fire In Flight', checklist: ['Master Switch - OFF', 'Avionics Switch - OFF', 'All Other Switches - OFF', 'Vents/Cabin Air/Heat - CLOSED', 'Fire Extinguisher - ACTIVATE', 'Land - AS SOON AS POSSIBLE'] },
+            { title: 'Loss of Oil Pressure', checklist: ['Oil Pressure - CHECK', 'If low oil pressure confirmed:', 'Engine - REDUCE POWER', 'Land - AS SOON AS PRACTICAL', 'Be prepared for engine failure'] }
+        ];
+
+        const emergencyTitle = document.getElementById('emergencyTitle');
+        const emergencyChecklist = document.getElementById('emergencyChecklist');
+
+        function displayRandomEmergency() {
+            const randomEmergency = emergencies[Math.floor(Math.random() * emergencies.length)];
+            emergencyTitle.textContent = randomEmergency.title;
+            emergencyChecklist.innerHTML = `
+                <ol>
+                    ${randomEmergency.checklist.map(item => `<li>${item}</li>`).join('')}
+                </ol>
+            `;
+        }
+
+        function toggleChecklist(event) {
+            const checklist = emergencyChecklist.querySelector('ol');
+            checklist.style.display = checklist.style.display === 'block' ? 'none' : 'block';
+            event.target.textContent = checklist.style.display === 'block' ? 'Hide Checklist' : 'Show Checklist';
+        }
+
+        document.querySelector('.emergency-container button').addEventListener('click', toggleChecklist);
+
+        // Initial setup
+        displayRandomEmergency();
+    </script>
+</body>
+</html>
