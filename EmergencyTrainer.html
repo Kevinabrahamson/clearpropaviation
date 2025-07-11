@@ -351,6 +351,7 @@
         let currentEmergency = null;
         let currentStepIndex = 0;
         let shuffledSteps = [];
+        let remainingSteps = [];
 
         function shuffleArray(array) {
             for (let i = array.length - 1; i > 0; i--) {
@@ -364,6 +365,7 @@
             currentEmergency = emergencies[Math.floor(Math.random() * emergencies.length)];
             currentStepIndex = 0;
             shuffledSteps = shuffleArray([...currentEmergency.checklist]);
+            remainingSteps = [...shuffledSteps];
             emergencyTitle.textContent = currentEmergency.title;
             feedback.textContent = '';
             correctSteps.innerHTML = '';
@@ -373,24 +375,28 @@
 
         function renderStepOptions() {
             stepOptions.innerHTML = '';
-            shuffledSteps.forEach((step, index) => {
-                if (!correctSteps.querySelector(`[data-step="${step}"]`)) {
-                    const div = document.createElement('div');
-                    div.className = 'step-option';
-                    div.textContent = step;
-                    div.dataset.index = index;
-                    div.dataset.step = step;
-                    div.addEventListener('click', () => checkAnswer(step, index));
-                    stepOptions.appendChild(div);
-                }
+            remainingSteps.forEach((step, index) => {
+                const div = document.createElement('div');
+                div.className = 'step-option';
+                div.textContent = step;
+                div.dataset.index = index;
+                div.dataset.step = step;
+                div.addEventListener('click', () => checkAnswer(step, index));
+                stepOptions.appendChild(div);
             });
-            feedback.textContent = `Select step ${currentStepIndex + 1} of ${currentEmergency.checklist.length}`;
+            feedback.textContent = currentStepIndex < currentEmergency.checklist.length 
+                ? `Select step ${currentStepIndex + 1} of ${currentEmergency.checklist.length}`
+                : 'Emergency completed! Well done!';
         }
 
         function checkAnswer(selectedStep, selectedIndex) {
+            if (selectedIndex < 0 || selectedIndex >= remainingSteps.length) return;
+            
             const correctStep = currentEmergency.checklist[currentStepIndex];
             const option = stepOptions.children[selectedIndex];
             
+            if (!option) return;
+
             if (selectedStep === correctStep) {
                 option.classList.add('correct');
                 feedback.textContent = 'Correct!';
@@ -402,25 +408,24 @@
                 correctDiv.dataset.step = selectedStep;
                 correctSteps.appendChild(correctDiv);
 
+                // Remove the selected step from remainingSteps
+                remainingSteps.splice(remainingSteps.indexOf(selectedStep), 1);
                 currentStepIndex++;
                 
-                if (currentStepIndex < currentEmergency.checklist.length) {
-                    setTimeout(() => {
-                        feedback.textContent = `Select step ${currentStepIndex + 1} of ${currentEmergency.checklist.length}`;
-                        option.remove();
-                        renderStepOptions();
-                    }, 1000);
-                } else {
-                    feedback.textContent = 'Emergency completed! Well done!';
-                    nextButton.style.display = 'block';
-                }
+                setTimeout(() => {
+                    renderStepOptions();
+                    if (currentStepIndex >= currentEmergency.checklist.length) {
+                        feedback.textContent = 'Emergency completed! Well done!';
+                        nextButton.style.display = 'block';
+                    }
+                }, 500);
             } else {
                 option.classList.add('incorrect');
                 feedback.textContent = 'Incorrect. Try again.';
                 setTimeout(() => {
                     option.classList.remove('incorrect');
                     feedback.textContent = `Select step ${currentStepIndex + 1} of ${currentEmergency.checklist.length}`;
-                }, 2000);
+                }, 1000);
             }
         }
 
