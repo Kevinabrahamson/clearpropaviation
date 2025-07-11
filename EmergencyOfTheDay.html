@@ -86,10 +86,224 @@
 
     <script>
         const emergencies = [
-            { title: 'Engine Failure After Takeoff', checklist: ['Airspeed - 70 KIAS (flaps UP), 65 KIAS (flaps DOWN)', 'Mixture - IDLE CUT-OFF', 'Fuel Shutoff Valve - OFF', 'Ignition Switch - OFF', 'Wing Flaps - AS REQUIRED', 'Master Switch - OFF'] },
-            { title: 'Engine Fire In Flight', checklist: ['Mixture - IDLE CUT-OFF', 'Fuel Shutoff Valve - OFF', 'Master Switch - OFF', 'Cabin Heat and Air - OFF', 'Airspeed - 100 KIAS', 'Forced Landing - EXECUTE'] },
-            { title: 'Electrical Fire In Flight', checklist: ['Master Switch - OFF', 'Avionics Switch - OFF', 'All Other Switches - OFF', 'Vents/Cabin Air/Heat - CLOSED', 'Fire Extinguisher - ACTIVATE', 'Land - AS SOON AS POSSIBLE'] },
-            { title: 'Loss of Oil Pressure', checklist: ['Oil Pressure - CHECK', 'If low oil pressure confirmed:', 'Engine - REDUCE POWER', 'Land - AS SOON AS PRACTICAL', 'Be prepared for engine failure'] }
+            {
+                title: 'Engine Failure During Takeoff Roll',
+                checklist: [
+                    'Throttle - IDLE',
+                    'Brakes - APPLY',
+                    'Flaps - RETRACT',
+                    'Mixture - CUTOFF',
+                    'Ignition Switch - OFF',
+                    'Master Switch - OFF'
+                ]
+            },
+            {
+                title: 'Engine Failure Immediately After Takeoff',
+                checklist: [
+                    'Airspeed - 70 KIAS (flaps UP), 65 KIAS (flaps DN)',
+                    'Mixture - CUTOFF',
+                    'Fuel Shutoff - OFF',
+                    'Ignition Switch - OFF',
+                    'Flaps - AS REQUIRED',
+                    'Master Switch - OFF',
+                    'Cabin Door - UNLATCH',
+                    'Land - STRAIGHT AHEAD'
+                ]
+            },
+            {
+                title: 'Engine Failure During Flight',
+                checklist: [
+                    'Airspeed - 68 KIAS',
+                    'Fuel Selector - BOTH',
+                    'Fuel Shutoff - ON',
+                    'Mixture - RICH',
+                    'Aux. Fuel Pump - ON',
+                    'Ignition Switch - BOTH/START',
+                    'Aux. Fuel Pump - OFF',
+                    'Forced Landing - EXECUTE'
+                ]
+            },
+            {
+                title: 'Fire During Start on Ground',
+                checklist: [
+                    'Ignition Switch - CONT. CRANK',
+                    'If engine starts:',
+                    'Throttle - 1800 RPM (2min)',
+                    'Engine - SHUTDOWN',
+                    'If engine fails to start:',
+                    'Ignition Switch - CONT. CRANK',
+                    'Throttle - FULL OPEN',
+                    'Mixture - CUTOFF',
+                    'Fuel Shutoff - OFF',
+                    'Aux. Fuel Pump - OFF',
+                    'Engine - SECURE',
+                    'Master Switch - OFF',
+                    'Ignition Switch - OFF',
+                    'Airplane - EVACUATE',
+                    'Fire - EXTINGUISH',
+                    'Fire Damage - INSPECT'
+                ]
+            },
+            {
+                title: 'Fire in Flight',
+                checklist: [
+                    'Mixture - CUTOFF',
+                    'Fuel Shutoff - OFF',
+                    'Aux. Fuel Pump - OFF',
+                    'Master Switch - OFF',
+                    'Cabin Heat and Air - OFF',
+                    'Cabin Vents - OPEN AS REQ.',
+                    'Airspeed - 100+ KIAS',
+                    'Forced Landing - EXECUTE'
+                ]
+            },
+            {
+                title: 'Cabin Fire',
+                checklist: [
+                    'Master Switch - OFF',
+                    'Cabin Vents - CLOSED',
+                    'Cabin Heat and Air - OFF',
+                    'Fire - EXTINGUISH',
+                    'Once fire is extinguished:',
+                    'Cabin Vents - OPEN',
+                    'Cabin Heat and Air - ON',
+                    'Land - ASAP'
+                ]
+            },
+            {
+                title: 'Electrical Fire',
+                checklist: [
+                    'Master Switch - OFF',
+                    'Cabin Vents - CLOSED',
+                    'Cabin Heat and Air - OFF',
+                    'Fire - EXTINGUISH',
+                    'Avionics Switch - OFF',
+                    'Electrical Switches - OFF',
+                    'Ignition Switch - BOTH',
+                    'If electrical equipment is necessary:',
+                    'Master Switch - ON',
+                    'Circuit Breakers - CHECK',
+                    'Avionics Switch - ON',
+                    'Electrical Switches - ON (1x1)'
+                ]
+            },
+            {
+                title: 'Wing Fire',
+                checklist: [
+                    'Landing & Taxi Lights - OFF',
+                    'Nav. & Strobe Lights - OFF',
+                    'Pitot Heat - OFF',
+                    'Sideslip - AS REQUIRED'
+                ]
+            },
+            {
+                title: 'Precautionary Landing',
+                checklist: [
+                    'Seats - UPRIGHT',
+                    'Seatbelts - SECURE',
+                    'Airspeed - 65 KIAS',
+                    'Flaps - 20°',
+                    'Field - FLY OVER',
+                    'Avionics Master - OFF',
+                    'Electrical Switches - OFF',
+                    'Flaps - 30°',
+                    'Airspeed - 65 KIAS',
+                    'Master Switch - OFF',
+                    'Doors - UNLATCH',
+                    'Touchdown - TAIL LOW',
+                    'Ignition Switch - OFF',
+                    'Brakes - APPLY HEAVILY'
+                ]
+            },
+            {
+                title: 'Forced Landing Without Engine Power',
+                checklist: [
+                    'Seats - UPRIGHT',
+                    'Seatbelts - SECURE',
+                    'Airspeed - 70 KIAS (flaps UP), 65 KIAS (flaps DN)',
+                    'Mixture - CUTOFF',
+                    'Fuel Shutoff - OFF',
+                    'Ignition Switch - OFF',
+                    'Flaps - AS REQUIRED',
+                    'Master Switch - OFF',
+                    'Doors - UNLATCH',
+                    'Touchdown - SLIGHTLY TAIL LOW',
+                    'Brakes - APPLY HEAVILY'
+                ]
+            },
+            {
+                title: 'Water Ditching',
+                checklist: [
+                    'Radio - MAYDAY',
+                    'Squawk - 7700',
+                    'Heavy Objects - SECURE or JETTISON',
+                    'Seatback - UPRIGHT',
+                    'Seatbelts - SECURE',
+                    'Flaps - 20° to 30°',
+                    'If power available:',
+                    'Power - 300 FPM DESCENT at 55 KIAS',
+                    'If no power available:',
+                    'Airspeed - 70 KIAS (flaps 0°), 65 KIAS (flaps 10°)',
+                    'If High Winds, Heavy Seas:',
+                    'Approach - INTO THE WIND',
+                    'If Light Winds, Heavy Swells:',
+                    'Approach - PARALLEL TO SWELLS',
+                    'Doors - UNLATCH',
+                    'Touchdown - LEVEL ATTITUDE',
+                    'Face - CUSHION',
+                    'ELT - ACTIVATE',
+                    'Airplane - EVACUATE',
+                    'PFD - INFLATE WHEN CLEAR'
+                ]
+            },
+            {
+                title: 'Icing in Flight',
+                checklist: [
+                    'Pitot Heat - ON',
+                    'Altitude & HDG - EXIT ICING',
+                    'Cabin Heat - ON',
+                    'Defroster Outlets - OPEN',
+                    'Adjust cabin air for max. defrost',
+                    'Continue checklist in POH'
+                ]
+            },
+            {
+                title: 'Static Source Blockage',
+                checklist: [
+                    'Alt. Static Valve - ON',
+                    'Airspeed - Consult POH'
+                ]
+            },
+            {
+                title: 'Autopilot or Trim Malfunction',
+                checklist: [
+                    'Control Wheel - GRASP FIRMLY',
+                    'A/P Disc. Switch - PRESS & HOLD',
+                    'Trim - MANUALLY A/R',
+                    'A/P Circuit Breaker - OPEN'
+                ]
+            },
+            {
+                title: 'Low Volts Annunciator',
+                checklist: [
+                    'Avionics Switch - OFF',
+                    'ALT FLD Circuit Breaker - CHECK',
+                    'Master Switch - OFF',
+                    'Master Switch - ON',
+                    'If LOW VOLTS light stays off:',
+                    'Avionics Switch - ON',
+                    'If LOW VOLTS light comes on:',
+                    'Continue checklist in POH'
+                ]
+            },
+            {
+                title: 'Ammeter Excessive Discharge',
+                checklist: [
+                    'Alternator - OFF',
+                    'Non-essential Elec. Equip. - OFF',
+                    'Flight - TERMINATE'
+                ]
+            }
         ];
 
         const emergencyTitle = document.getElementById('emergencyTitle');
