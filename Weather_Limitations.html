@@ -1,327 +1,57 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weather Limitations</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #f5f6f5;
-            color: #333;
-        }
-        h1 {
-            text-align: center;
-            color: #2c3e50;
-            margin-bottom: 20px;
-        }
-        h2 {
-            color: #34495e;
-            border-bottom: 2px solid #3498db;
-            padding-bottom: 5px;
-            margin-top: 40px;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 20px 0;
-            background-color: white;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-        th, td {
-            padding: 12px 15px;
-            text-align: center;
-            border: 1px solid #ddd;
-        }
-        th {
-            background-color: #3498db;
-            color: white;
-            font-weight: bold;
-        }
-        tr:nth-child(even) td:not([rowspan]) {
-            background-color: #f8f9fa;
-        }
-        tr:hover td:not([rowspan]) {
-            background-color: #e9ecef;
-        }
-        tr:nth-child(even) td[rowspan] {
-            background-color: #f8f9fa;
-        }
-        tr:hover td[rowspan] {
-            background-color: #e9ecef;
-        }
-        .highlight-even {
-            background-color: #f8f9fa !important;
-        }
-        .highlight-hover {
-            background-color: #e9ecef !important;
-        }
-        .toggle-container {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-        .toggle-btn, #getWxBtn {
-            padding: 10px 20px;
-            margin: 0 10px;
-            background-color: #3498db;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 16px;
-        }
-        .toggle-btn.active {
-            background-color: #2c3e50;
-        }
-        .dual-row { display: table-row; }
-        .solo-row { display: none; }
-        .showing-solo .dual-row { display: none; }
-        .showing-solo .solo-row { display: table-row; }
-        #airportInput {
-            padding: 10px;
-            font-size: 16px;
-            margin: 0 10px;
-            border-radius: 5px;
-            border: 1px solid #ddd;
-        }
-        #weatherOutput {
-            margin-top: 20px;
-            padding: 15px;
-            background-color: white;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            white-space: pre-wrap;
-        }
-    </style>
-</head>
-<body>
-    <h1>Weather Limitations</h1>
+async function getWeather() {
+    const airportId = document.getElementById('airportInput').value.trim().toUpperCase();
+    const outputDiv = document.getElementById('weatherOutput');
+    const apiKey = f19b81853f2140d9ac20aa4d05c96706; // Replace with your CheckWX API key
 
-    <div class="toggle-container">
-        <button class="toggle-btn active" onclick="showDual()">Dual</button>
-        <button class="toggle-btn" onclick="showSolo()">Solo</button>
-        <input type="text" id="airportInput" placeholder="Enter ICAO (e.g., KSEA)">
-        <button id="getWxBtn" onclick="getWeather()">Get WX</button>
-    </div>
+    if (!airportId || airportId.length !== 4) {
+        outputDiv.textContent = 'Please enter a valid 4-letter ICAO airport identifier (e.g., KSEA)';
+        return;
+    }
 
-    <div id="weatherOutput"></div>
+    outputDiv.textContent = 'Fetching weather data...';
 
-    <h2>Private Pilot Training - Weather Minima</h2>
-    <table id="private-table">
-        <tr>
-            <th>Type of Operation</th>
-            <th>Max. Surface Wind (Inc. Gusts)</th>
-            <th>Maximum Crosswind Component</th>
-            <th>Minimum Ceiling</th>
-            <th>Min. Visibility</th>
-        </tr>
-        <tr class="dual-row">
-            <td>Traffic Pattern</td>
-            <td rowspan="5" class="merged">20 KTS</td>
-            <td rowspan="5" class="merged">Maximum Demonstrated</td>
-            <td>1,500' AGL</td>
-            <td>4 SM</td>
-        </tr>
-        <tr class="dual-row">
-            <td>Local Day</td>
-            <td>2,000' AGL</td>
-            <td>5 SM</td>
-        </tr>
-        <tr class="dual-row">
-            <td>Local Night</td>
-            <td>2,500' AGL</td>
-            <td>8 SM</td>
-        </tr>
-        <tr class="dual-row">
-            <td>Cross-Country Day</td>
-            <td>3,000' AGL</td>
-            <td>6 SM</td>
-        </tr>
-        <tr class="dual-row">
-            <td>Cross-Country Night</td>
-            <td>4,000' AGL</td>
-            <td>8 SM</td>
-        </tr>
-        <tr class="solo-row">
-            <td>Traffic Pattern</td>
-            <td rowspan="3" class="merged">12 KTS</td>
-            <td rowspan="3" class="merged">8 KTS</td>
-            <td>2,500' AGL</td>
-            <td>5 SM</td>
-        </tr>
-        <tr class="solo-row">
-            <td>Local Day</td>
-            <td>4,000' AGL</td>
-            <td>8 SM</td>
-        </tr>
-        <tr class="solo-row">
-            <td>Cross-Country Day</td>
-            <td>4,000' AGL</td>
-            <td>—</td>
-        </tr>
-    </table>
+    try {
+        // Fetch METAR
+        const metarUrl = `https://api.checkwx.com/metar/${airportId}/decoded`;
+        const metarResponse = await fetch(metarUrl, {
+            headers: { 'X-API-Key': apiKey }
+        });
+        if (!metarResponse.ok) throw new Error(`METAR fetch failed: ${metarResponse.statusText}`);
+        const metarData = await metarResponse.json();
 
-    <h2>Instrument, Commercial, CFI Training - Weather Minima</h2>
-    <table id="instrument-table">
-        <tr>
-            <th>Type of Operation</th>
-            <th>Max. Surface Wind (Inc. Gusts)</th>
-            <th>Maximum Crosswind Component</th>
-            <th>Minimum Ceiling</th>
-            <th>Min. Visibility</th>
-        </tr>
-        <tr class="dual-row">
-            <td>Traffic Pattern</td>
-            <td rowspan="6" class="merged">25 KTS</td>
-            <td rowspan="6" class="merged">Maximum Demonstrated</td>
-            <td>1,500' AGL</td>
-            <td>4 SM</td>
-        </tr>
-        <tr class="dual-row">
-            <td>Local Day</td>
-            <td>2,000' AGL</td>
-            <td>5 SM</td>
-        </tr>
-        <tr class="dual-row">
-            <td>Local Night</td>
-            <td>2,500' AGL</td>
-            <td>8 SM</td>
-        </tr>
-        <tr class="dual-row">
-            <td>Cross-Country Day</td>
-            <td>3,000' AGL</td>
-            <td>6 SM</td>
-        </tr>
-        <tr class="dual-row">
-            <td>Cross-Country Night</td>
-            <td>4,000' AGL</td>
-            <td>8 SM</td>
-        </tr>
-        <tr class="dual-row">
-            <td>IFR</td>
-            <td>500' AGL</td>
-            <td>2 SM</td>
-        </tr>
-        <tr class="solo-row">
-            <td>Traffic Pattern</td>
-            <td rowspan="3" class="merged">20 KTS</td>
-            <td rowspan="3" class="merged">15 KTS</td>
-            <td>1,500' AGL</td>
-            <td>5 SM</td>
-        </tr>
-        <tr class="solo-row">
-            <td>Local Day</td>
-            <td>2,500' AGL</td>
-            <td>8 SM</td>
-        </tr>
-        <tr class="solo-row">
-            <td>Cross-Country Day</td>
-            <td>3,000' AGL</td>
-            <td>—</td>
-        </tr>
-    </table>
+        // Fetch TAF
+        const tafUrl = `https://api.checkwx.com/taf/${airportId}/decoded`;
+        const tafResponse = await fetch(tafUrl, {
+            headers: { 'X-API-Key': apiKey }
+        });
+        if (!tafResponse.ok) throw new Error(`TAF fetch failed: ${tafResponse.statusText}`);
+        const tafData = await tafResponse.json();
 
-    <script>
-        function showDual() {
-            document.body.classList.remove('showing-solo');
-            document.querySelectorAll('.toggle-btn')[0].classList.add('active');
-            document.querySelectorAll('.toggle-btn')[1].classList.remove('active');
-            updateHighlights();
+        // Parse and format METAR data
+        let metarOutput = 'Not available';
+        if (metarData.data && metarData.data.length > 0) {
+            const metar = metarData.data[0];
+            metarOutput = `
+                Station: ${metar.station.name} (${metar.icao})
+                Time: ${metar.observed || 'N/A'}
+                Wind: ${metar.wind?.direction || 'N/A'}° at ${metar.wind?.speed_kts || 'N/A'} knots
+                Visibility: ${metar.visibility?.meters || 'N/A'} meters
+                Clouds: ${metar.clouds?.[0]?.text || 'N/A'}
+                Temperature: ${metar.temperature?.celsius || 'N/A'}°C
+                Altimeter: ${metar.barometer?.hpa || 'N/A'} hPa
+                Raw METAR: ${metar.raw_text || 'N/A'}
+            `;
         }
 
-        function showSolo() {
-            document.body.classList.add('showing-solo');
-            document.querySelectorAll('.toggle-btn')[0].classList.remove('active');
-            document.querySelectorAll('.toggle-btn')[1].classList.add('active');
-            updateHighlights();
+        // Parse and format TAF data
+        let tafOutput = 'Not available';
+        if (tafData.data && tafData.data.length > 0) {
+            tafOutput = tafData.data[0].raw_text || 'Not available';
         }
 
-        function updateHighlights() {
-            const tables = document.querySelectorAll('table');
-            tables.forEach(table => {
-                const visibleRows = Array.from(table.querySelectorAll('tr')).filter(row => 
-                    row.style.display !== 'none' && !row.querySelector('th')
-                );
-
-                visibleRows.forEach((row, index) => {
-                    const cells = row.querySelectorAll('td');
-                    cells.forEach(cell => {
-                        cell.classList.remove('highlight-even', 'highlight-hover');
-                        if (index % 2 === 1) {
-                            cell.classList.add('highlight-even');
-                        }
-                    });
-
-                    row.onmouseover = () => {
-                        cells.forEach(cell => {
-                            cell.classList.add('highlight-hover');
-                        });
-                        const mergedCells = row.closest('table').querySelectorAll('td.merged');
-                        mergedCells.forEach(merged => {
-                            const mergedRowIndex = Array.from(table.querySelectorAll('tr'))
-                                .filter(r => r.style.display !== 'none')
-                                .indexOf(row.closest('tr'));
-                            const startRow = Array.from(table.querySelectorAll('tr'))
-                                .find(r => r.contains(merged));
-                            const startIndex = Array.from(table.querySelectorAll('tr'))
-                                .filter(r => r.style.display !== 'none')
-                                .indexOf(startRow);
-                            const span = parseInt(merged.getAttribute('rowspan') || 1);
-                            if (mergedRowIndex >= startIndex && mergedRowIndex < startIndex + span) {
-                                merged.classList.add('highlight-hover');
-                            }
-                        });
-                    };
-
-                    row.onmouseout = () => {
-                        cells.forEach(cell => {
-                            cell.classList.remove('highlight-hover');
-                        });
-                        const mergedCells = row.closest('table').querySelectorAll('td.merged');
-                        mergedCells.forEach(merged => {
-                            merged.classList.remove('highlight-hover');
-                        });
-                    };
-                });
-            });
-        }
-
-        async function getWeather() {
-            const airportId = document.getElementById('airportInput').value.trim().toUpperCase();
-            const outputDiv = document.getElementById('weatherOutput');
-
-            if (!airportId || airportId.length !== 4) {
-                outputDiv.textContent = 'Please enter a valid 4-letter ICAO airport identifier (e.g., KSEA)';
-                return;
-            }
-
-            outputDiv.textContent = 'Fetching weather data...';
-
-            try {
-                // Fetch METAR
-                const metarUrl = `https://aviationweather.gov/api/data/metar?ids=${airportId}&format=raw`;
-                const metarResponse = await fetch(metarUrl);
-                if (!metarResponse.ok) throw new Error('METAR fetch failed');
-                const metarData = await metarResponse.text();
-
-                // Fetch TAF
-                const tafUrl = `https://aviationweather.gov/api/data/taf?ids=${airportId}&format=raw&metars=on`;
-                const tafResponse = await fetch(tafUrl);
-                if (!tafResponse.ok) throw new Error('TAF fetch failed');
-                const tafData = await tafResponse.text();
-
-                // Display results
-                outputDiv.textContent = `Latest Weather for ${airportId}:\n\nMETAR:\n${metarData || 'Not available'}\n\nTAF:\n${tafData || 'Not available'}`;
-            } catch (error) {
-                outputDiv.textContent = `Error fetching weather data: ${error.message}`;
-            }
-        }
-
-        // Initial highlight setup
-        document.addEventListener('DOMContentLoaded', updateHighlights);
-    </script>
-</body>
-</html>
+        // Display results
+        outputDiv.textContent = `Latest Weather for ${airportId}:\n\nMETAR:\n${metarOutput}\n\nTAF:\n${tafOutput}`;
+    } catch (error) {
+        outputDiv.textContent = `Error fetching weather data: ${error.message}. Ensure your API key is valid and try again.`;
+    }
+}
