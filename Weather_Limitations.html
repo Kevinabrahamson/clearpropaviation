@@ -1,7 +1,7 @@
 async function getWeather() {
     const airportId = document.getElementById('airportInput').value.trim().toUpperCase();
     const outputDiv = document.getElementById('weatherOutput');
-    const apiKey = f19b81853f2140d9ac20aa4d05c96706; // Replace with your CheckWX API key
+    const apiKey = 'f19b81853f2140d9ac20aa4d05c96706'; // Replace with your CheckWX API key
 
     if (!airportId || airportId.length !== 4) {
         outputDiv.textContent = 'Please enter a valid 4-letter ICAO airport identifier (e.g., KSEA)';
