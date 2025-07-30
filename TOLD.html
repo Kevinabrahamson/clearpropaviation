@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cessna 172S Performance Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f9;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+            font-weight: bold;
+        }
+        input, select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+        #results {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            display: none;
+        }
+        .error {
+            color: red;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Cessna 172S Performance Calculator</h1>
+        <form id="performanceForm">
+            <label for="elevation">Airport Elevation (ft):</label>
+            <input type="number" id="elevation" required min="0" step="1">
+
+            <label for="temperature">Temperature (°C):</label>
+            <input type="number" id="temperature" required step="0.1">
+
+            <label for="pressure">Altimeter Setting (in Hg):</label>
+            <input type="number" id="pressure" required min="28" max="31" step="0.01" value="29.92">
+
+            <label for="runwayLength">Runway Length (ft):</label>
+            <input type="number" id="runwayLength" required min="0" step="1">
+
+            <label for="windSpeed">Wind Speed (kts):</label>
+            <input type="number" id="windSpeed" required min="0" step="1" value="0">
+
+            <label for="windDirection">Wind Direction Relative to Runway (degrees):</label>
+            <input type="number" id="windDirection" required min="0" max="180" step="1" value="0">
+
+            <button type="submit">Calculate Performance</button>
+        </form>
+        <div id="results">
+            <h2>Performance Results</h2>
+            <p id="pressureAltitude"></p>
+            <p id="takeoffGroundRoll"></p>
+            <p id="takeoff50ft"></p>
+            <p id="landingGroundRoll"></p>
+            <p id="landing50ft"></p>
+            <p id="runwayCheck"></p>
+        </div>
+        <p id="error" class="error"></p>
+    </div>
+
+    <script>
+        // Performance calculation logic for Cessna 172S
+        function calculatePerformance(elevation, temperature, pressure, runwayLength, windSpeed, windDirection) {
+            // Calculate pressure altitude
+            const standardPressure = 29.92;
+            const pressureAltitude = elevation + 1000 * (standardPressure - pressure);
+
+            // Base performance at ISA conditions (15°C, sea level)
+            let takeoffGroundRoll = 865; // ft, standard conditions
+            let takeoff50ft = 1475; // ft
+            let landingGroundRoll = 570; // ft
+            let landing50ft = 1330; // ft
+
+            // Adjust for pressure altitude (approx 10% increase per 1000 ft)
+            const altFactor = 1 + (pressureAltitude / 1000) * 0.1;
+            takeoffGroundRoll *= altFactor;
+            takeoff50ft *= altFactor;
+            landingGroundRoll *= altFactor;
+            landing50ft *= altFactor;
+
+            // Adjust for temperature (approx 3% increase per 5°C above 15°C)
+            const tempDiff = temperature - 15;
+            const tempFactor = 1 + (tempDiff / 5) * 0.03;
+            takeoffGroundRoll *= tempFactor;
+            takeoff50ft *= tempFactor;
+            landingGroundRoll *= tempFactor;
+            landing50ft *= tempFactor;
+
+            // Adjust for wind (headwind reduces, tailwind increases distance)
+            const headwindComponent = windSpeed * Math.cos((windDirection * Math.PI) / 180);
+            const windFactor = 1 - (headwindComponent * 0.1); // Approx 10% reduction per 10 kts headwind
+            takeoffGroundRoll *= windFactor;
+            takeoff50ft *= windFactor;
+            landingGroundRoll *= windFactor;
+            landing50ft *= windFactor;
+
+            // Ensure distances are positive
+            takeoffGroundRoll = Math.max(takeoffGroundRoll, 0);
+            takeoff50ft = Math.max(takeoff50ft, 0);
+            landingGroundRoll = Math.max(landingGroundRoll, 0);
+            landing50ft = Math.max(landing50ft, 0);
+
+            // Check runway length
+            const runwayCheck = runwayLength >= takeoff50ft && runwayLength >= landing50ft
+                ? "Runway length is sufficient."
+                : "WARNING: Runway length may be insufficient!";
+
+            return {
+                pressureAltitude: Math.round(pressureAltitude),
+                takeoffGroundRoll: Math.round(takeoffGroundRoll),
+                takeoff50ft: Math.round(takeoff50ft),
+                landingGroundRoll: Math.round(landingGroundRoll),
+                landing50ft: Math.round(landing50ft),
+                runwayCheck
+            };
+        }
+
+        // Form submission handler
+        document.getElementById('performanceForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const errorDiv = document.getElementById('error');
+            errorDiv.textContent = '';
+
+            // Get input values
+            const elevation = parseFloat(document.getElementById('elevation').value);
+            const temperature = parseFloat(document.getElementById('temperature').value);
+            const pressure = parseFloat(document.getElementById('pressure').value);
+            const runwayLength = parseFloat(document.getElementById('runwayLength').value);
+            const windSpeed = parseFloat(document.getElementById('windSpeed').value);
+            const windDirection = parseFloat(document.getElementById('windDirection').value);
+
+            // Input validation
+            if (isNaN(elevation) || isNaN(temperature) || isNaN(pressure) || isNaN(runwayLength) || isNaN(windSpeed) || isNaN(windDirection)) {
+                errorDiv.textContent = 'Please fill in all fields with valid numbers.';
+                return;
+            }
+            if (pressure < 28 || pressure > 31) {
+                errorDiv.textContent = 'Altimeter setting must be between 28 and 31 in Hg.';
+                return;
+            }
+            if (windDirection < 0 || windDirection > 180) {
+                errorDiv.textContent = 'Wind direction must be between 0 and 180 degrees.';
+                return;
+            }
+
+            // Calculate performance
+            const results = calculatePerformance(elevation, temperature, pressure, runwayLength, windSpeed, windDirection);
+
+            // Display results
+            document.getElementById('pressureAltitude').textContent = `Pressure Altitude: ${results.pressureAltitude} ft`;
+            document.getElementById('takeoffGroundRoll').textContent = `Takeoff Ground Roll: ${results.takeoffGroundRoll} ft`;
+            document.getElementById('takeoff50ft').textContent = `Takeoff Distance (50 ft): ${results.takeoff50ft} ft`;
+            document.getElementById('landingGroundRoll').textContent = `Landing Ground Roll: ${results.landingGroundRoll} ft`;
+            document.getElementById('landing50ft').textContent = `Landing Distance (50 ft): ${results.landing50ft} ft`;
+            document.getElementById('runwayCheck').textContent = results.runwayCheck;
+            document.getElementById('results').style.display = 'block';
+        });
+    </script>
+</body>
+</html>
