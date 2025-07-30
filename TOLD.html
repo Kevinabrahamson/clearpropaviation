@@ -190,6 +190,7 @@
 
         // Interpolation function for 2D table (pressure altitude and temperature)
         function bilinearInterpolate(x, y, xValues, yValues, table) {
+            console.log(`Interpolating: x=${x}, y=${y}, xValues=${xValues}, yValues=${yValues}`);
             // Find indices for interpolation
             let x1Idx = xValues.findIndex(val => val >= x);
             let x0Idx = x1Idx > 0 ? x1Idx - 1 : 0;
@@ -209,8 +210,14 @@
             const q10 = table[x1Idx][y0Idx];
             const q11 = table[x1Idx][y1Idx];
 
+            console.log(`Indices: x0Idx=${x0Idx}, x1Idx=${x1Idx}, y0Idx=${y0Idx}, y1Idx=${y1Idx}`);
+            console.log(`Values: x0=${x0}, x1=${x1}, y0=${y0}, y1=${y1}, q00=${q00}, q01=${q01}, q10=${q10}, q11=${q11}`);
+
             // Avoid division by zero
-            if (x0 === x1 || y0 === y1) return q00;
+            if (x0 === x1 || y0 === y1) {
+                console.log(`Using q00=${q00} due to equal bounds`);
+                return q00;
+            }
 
             // Bilinear interpolation formula
             const fx = (x - x0) / (x1 - x0);
@@ -219,7 +226,8 @@
                            q10 * fx * (1 - fy) +
                            q01 * (1 - fx) * fy +
                            q11 * fx * fy;
-            return Math.round(result);
+            console.log(`Interpolation result: ${result}`);
+            return isNaN(result) ? q00 : Math.round(result);
         }
 
         // Function to draw runway visualization
@@ -233,9 +241,11 @@
             ctx.clearRect(0, 0, canvasWidth, canvasHeight);
 
             // Calculate scaling factor (pixels per foot)
-            const maxDistance = Math.max(runwayLength, takeoff50ft, landing50ft);
+            const maxDistance = Math.max(runwayLength, takeoff50ft, landing50ft, 1); // Avoid division by zero
             const scale = (canvasWidth - 40) / maxDistance; // Reserve 40px for margins
             const runwayPixelLength = runwayLength * scale;
+
+            console.log(`Drawing: runwayLength=${runwayLength}, scale=${scale}, takeoffGroundRoll=${takeoffGroundRoll}, takeoff50ft=${takeoff50ft}, landingGroundRoll=${landingGroundRoll}, landing50ft=${landing50ft}`);
 
             // Draw runway (gray rectangle)
             ctx.fillStyle = '#6c757d';
@@ -247,10 +257,10 @@
 
             // Draw distance markers and labels
             const markers = [
-                { distance: takeoffGroundRoll, color: '#007bff', label: `Takeoff Ground Roll: ${takeoffGroundRoll} ft`, y: 50 },
-                { distance: takeoff50ft, color: '#003087', label: `Takeoff to 50 ft: ${takeoff50ft} ft`, y: 30 },
-                { distance: landingGroundRoll, color: '#dc3545', label: `Landing Ground Roll: ${landingGroundRoll} ft`, y: 150 },
-                { distance: landing50ft, color: '#870022', label: `Landing to 50 ft: ${landing50ft} ft`, y: 170 }
+                { distance: takeoffGroundRoll, color: '#007bff', label: `Takeoff Ground Roll: ${Math.round(takeoffGroundRoll)} ft`, y: 50 },
+                { distance: takeoff50ft, color: '#003087', label: `Takeoff to 50 ft: ${Math.round(takeoff50ft)} ft`, y: 30 },
+                { distance: landingGroundRoll, color: '#dc3545', label: `Landing Ground Roll: ${Math.round(landingGroundRoll)} ft`, y: 150 },
+                { distance: landing50ft, color: '#870022', label: `Landing to 50 ft: ${Math.round(landing50ft)} ft`, y: 170 }
             ];
 
             markers.forEach(marker => {
@@ -272,9 +282,12 @@
 
         // Performance calculation logic
         function calculatePerformance(elevation, temperature, pressure, weight, runwayLength, windSpeed, windDirection) {
+            console.log(`Inputs: elevation=${elevation}, temperature=${temperature}, pressure=${pressure}, weight=${weight}, runwayLength=${runwayLength}, windSpeed=${windSpeed}, windDirection=${windDirection}`);
+
             // Calculate pressure altitude
             const standardPressure = 29.92;
             const pressureAltitude = elevation + 1000 * (standardPressure - pressure);
+            console.log(`Pressure Altitude: ${pressureAltitude}`);
 
             // Define table points
             const altPoints = [0, 2000, 4000, 6000, 8000];
@@ -283,39 +296,46 @@
             // Clamp inputs to table bounds
             const pa = Math.max(0, Math.min(pressureAltitude, 8000));
             const temp = Math.max(0, Math.min(temperature, 40));
+            console.log(`Clamped: pa=${pa}, temp=${temp}`);
 
             // Interpolate for 2,550 lbs
             const takeoffGroundRoll2550 = bilinearInterpolate(pa, temp, altPoints, tempPoints, pohData2550.takeoffGroundRoll);
             const takeoff50ft2550 = bilinearInterpolate(pa, temp, altPoints, tempPoints, pohData2550.takeoff50ft);
             const landingGroundRoll2550 = bilinearInterpolate(pa, temp, altPoints, tempPoints, pohData2550.landingGroundRoll);
             const landing50ft2550 = bilinearInterpolate(pa, temp, altPoints, tempPoints, pohData2550.landing50ft);
+            console.log(`2550 lbs: takeoffGroundRoll=${takeoffGroundRoll2550}, takeoff50ft=${takeoff50ft2550}, landingGroundRoll=${landingGroundRoll2550}, landing50ft=${landing50ft2550}`);
 
             // Interpolate for 2,300 lbs
             const takeoffGroundRoll2300 = bilinearInterpolate(pa, temp, altPoints, tempPoints, pohData2300.takeoffGroundRoll);
             const takeoff50ft2300 = bilinearInterpolate(pa, temp, altPoints, tempPoints, pohData2300.takeoff50ft);
             const landingGroundRoll2300 = bilinearInterpolate(pa, temp, altPoints, tempPoints, pohData2300.landingGroundRoll);
             const landing50ft2300 = bilinearInterpolate(pa, temp, altPoints, tempPoints, pohData2300.landing50ft);
+            console.log(`2300 lbs: takeoffGroundRoll=${takeoffGroundRoll2300}, takeoff50ft=${takeoff50ft2300}, landingGroundRoll=${landingGroundRoll2300}, landing50ft=${landing50ft2300}`);
 
             // Interpolate between weights
-            const weightFactor = (weight - 2300) / (2550 - 2300);
+            const weightFactor = Math.max(0, Math.min(1, (weight - 2300) / (2550 - 2300)));
+            console.log(`Weight Factor: ${weightFactor}`);
             let takeoffGroundRoll = takeoffGroundRoll2300 + (takeoffGroundRoll2550 - takeoffGroundRoll2300) * weightFactor;
             let takeoff50ft = takeoff50ft2300 + (takeoff50ft2550 - takeoff50ft2300) * weightFactor;
             let landingGroundRoll = landingGroundRoll2300 + (landingGroundRoll2550 - landingGroundRoll2300) * weightFactor;
             let landing50ft = landing50ft2300 + (landing50ft2550 - landing50ft2300) * weightFactor;
+            console.log(`Before wind: takeoffGroundRoll=${takeoffGroundRoll}, takeoff50ft=${takeoff50ft}, landingGroundRoll=${landingGroundRoll}, landing50ft=${landing50ft}`);
 
             // Adjust for wind
             const headwindComponent = windSpeed * Math.cos((windDirection * Math.PI) / 180);
-            const windFactor = 1 - (headwindComponent * 0.1); // 10% reduction per 10 kts headwind
+            const windFactor = Math.max(0.1, 1 - (headwindComponent * 0.1)); // Prevent excessive reduction
+            console.log(`Wind: headwindComponent=${headwindComponent}, windFactor=${windFactor}`);
             takeoffGroundRoll *= windFactor;
             takeoff50ft *= windFactor;
             landingGroundRoll *= windFactor;
             landing50ft *= windFactor;
 
-            // Ensure distances are positive
-            takeoffGroundRoll = Math.max(takeoffGroundRoll, 0);
-            takeoff50ft = Math.max(takeoff50ft, 0);
-            landingGroundRoll = Math.max(landingGroundRoll, 0);
-            landing50ft = Math.max(landing50ft, 0);
+            // Round results and ensure non-negative
+            takeoffGroundRoll = Math.round(Math.max(takeoffGroundRoll, 100)); // Minimum 100 ft to avoid zero
+            takeoff50ft = Math.round(Math.max(takeoff50ft, 100));
+            landingGroundRoll = Math.round(Math.max(landingGroundRoll, 100));
+            landing50ft = Math.round(Math.max(landing50ft, 100));
+            console.log(`Final: takeoffGroundRoll=${takeoffGroundRoll}, takeoff50ft=${takeoff50ft}, landingGroundRoll=${landingGroundRoll}, landing50ft=${landing50ft}`);
 
             // Check runway length
             const runwayCheck = runwayLength >= takeoff50ft && runwayLength >= landing50ft
@@ -327,10 +347,10 @@
 
             return {
                 pressureAltitude: Math.round(pressureAltitude),
-                takeoffGroundRoll: Math.round(takeoffGroundRoll),
-                takeoff50ft: Math.round(takeoff50ft),
-                landingGroundRoll: Math.round(landingGroundRoll),
-                landing50ft: Math.round(landing50ft),
+                takeoffGroundRoll,
+                takeoff50ft,
+                landingGroundRoll,
+                landing50ft,
                 runwayCheck
             };
         }
@@ -367,9 +387,19 @@
                 errorDiv.textContent = 'Wind direction must be between 0 and 180 degrees.';
                 return;
             }
+            if (runwayLength < 500) {
+                errorDiv.textContent = 'Runway length must be at least 500 ft.';
+                return;
+            }
 
             // Calculate performance
             const results = calculatePerformance(elevation, temperature, pressure, weight, runwayLength, windSpeed, windDirection);
+
+            // Check for zero results
+            if (results.takeoffGroundRoll === 100 || results.takeoff50ft === 100 || results.landingGroundRoll === 100 || results.landing50ft === 100) {
+                errorDiv.textContent = 'Error: Calculated distances are invalid. Check inputs and try again.';
+                return;
+            }
 
             // Display results
             document.getElementById('pressureAltitude').textContent = `Pressure Altitude: ${results.pressureAltitude} ft`;
